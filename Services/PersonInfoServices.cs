@@ -19,13 +19,13 @@ namespace WindowsFormsApp1.Services
             var selectedPerson = _repository.GetAll.AsNoTracking().FirstOrDefault(x => x.ID == id);
             return selectedPerson;
         }
-        public void InsertPerson(PersonInfo academicAttachment)
+        public void InsertPerson(PersonInfo personinfo)
         {
-            this._repository.Insert(academicAttachment);
+            _repository.Insert(personinfo);
         }
-        public void UpdatePerson(PersonInfo academicAttachment)
+        public void UpdatePerson(PersonInfo personinfo)
         {
-            this._repository.Update(academicAttachment);
+            _repository.Update(personinfo);
         }
         public void DeletePerson(int id)
         {
@@ -34,7 +34,7 @@ namespace WindowsFormsApp1.Services
         }
         public IEnumerable<PersonInfo> GetAllPersons()
         {
-            return this._repository.GetAll.AsNoTracking();
+            return _repository.GetAll.AsNoTracking();
         }
     }
 }

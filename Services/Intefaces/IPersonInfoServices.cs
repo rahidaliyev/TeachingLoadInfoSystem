@@ -10,8 +10,8 @@ namespace WindowsFormsApp1.Services.Intefaces
     public interface IPersonInfoServices
     {
         PersonInfo GetPersonByID(int id);
-        void InsertPerson(PersonInfo academicAttachment);
-        void UpdatePerson(PersonInfo academicAttachment);
+        void InsertPerson(PersonInfo personinfo);
+        void UpdatePerson(PersonInfo personinfo);
         void DeletePerson(int id);
         IEnumerable<PersonInfo> GetAllPersons();
     }
