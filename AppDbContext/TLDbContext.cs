@@ -1,26 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Microsoft.Extensions.Logging;
-using MySqlConnector;
-using System;
-using System.Collections.Generic;
 using System.Configuration;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using WindowsFormsApp1.Models;
 
 namespace WindowsFormsApp1.AppDbContext
 {
     public class TLDbContext : DbContext
     {
-        protected override void OnConfiguring(DbContextOptionsBuilder optionBuilder)
+        private static string _connectionString = ConfigurationManager.ConnectionStrings["DefaultConStr"].ConnectionString.ToString();
+        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            var connectionString = ConfigurationManager.ConnectionStrings["test"].ConnectionString;
-            optionBuilder.UseMySql(connectionString, ServerVersion.AutoDetect(connectionString))
-                .UseLoggerFactory(LoggerFactory.Create(b => b
-                .AddFilter(level => level >= LogLevel.Information)))
-                .EnableSensitiveDataLogging()
-                .EnableDetailedErrors();
+            optionsBuilder.UseSqlServer(_connectionString);
         }
         public DbSet<PersonInfo> PersonInfos { get; set; }
     }
