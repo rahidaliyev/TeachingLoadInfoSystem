@@ -11,6 +11,13 @@ namespace WindowsFormsApp1.AppDbContext
         {
             optionsBuilder.UseSqlServer(_connectionString);
         }
-        public DbSet<PersonInfo> PersonInfos { get; set; }
+        public DbSet<TeacherInfo> TeacherInfos { get; set; }
+        public DbSet<Book> Books{ get; set; }
+        public DbSet<Certificate> Certificates { get; set; }
+        public DbSet<Department> Departments { get; set; }
+        public DbSet<Gender> Genders { get; set; }
+        public DbSet<ScientificDegree> ScientificDegrees { get; set; }
+        public DbSet<ScientificName> ScientificNames { get; set; }
+        public DbSet<WorkTime> WorkTimes { get; set; }
     }
 }
