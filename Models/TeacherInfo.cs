@@ -17,10 +17,11 @@ namespace WindowsFormsApp1.Models
             WorkTime = new WorkTime();
             Books = new List<Book>();
             Certificates = new List<Certificate>();
+            PreviousJobs = new List<PreviousJob>();
         } 
         public string TeacherName { get; set; } 
         public string TeacherSurname{ get; set; } 
-        public string FatherName { get; set; }
+        public string TeacherFather { get; set; }
         public DateTime BirthDate { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
@@ -36,5 +37,6 @@ namespace WindowsFormsApp1.Models
         public int WorkTimeID { get; set; }
         public virtual List<Book>? Books { get; set; }
         public virtual List<Certificate>? Certificates { get; set; } 
+        public virtual List<PreviousJob> PreviousJobs { get; set; } 
     }
 }

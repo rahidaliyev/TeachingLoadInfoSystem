@@ -11,7 +11,7 @@ namespace TeachingLoadInfoSystemDotNet6
     {
         PersonInfo personInfo = new PersonInfo();
         TLDbContext db = new TLDbContext(); 
-        IPersonInfoServices _personServices;
+        ITeacherInfoServices _personServices;
         public void RefreshGrid()
         {
             gridControl1.DataSource = _personServices.GetAllPersons().ToList();
@@ -20,7 +20,7 @@ namespace TeachingLoadInfoSystemDotNet6
         {
             InitializeComponent();
             TLDbContext db = new TLDbContext();
-            _personServices = new PersonInfoServices(new Repository<PersonInfo>(db));
+            _personServices = new teacherInfoServices(new Repository<PersonInfo>(db));
             RefreshGrid();
         }
 

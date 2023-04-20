@@ -9,9 +9,15 @@ namespace WindowsFormsApp1.Models
 {
     public class Certificate : EntityBase
     {
+        public Certificate()
+        {
+            Subject = new Subject();
+        }    
         public int TeacherInfoID { get; set; }
         public string? CertificateName { get; set; }
         public string? ReceivedCountry { get; set; }
+        public virtual Subject Subject { get; set; }
+        public int SubjectID { get; set; }
         public bool IsLocal { get; set; }
     }
 }

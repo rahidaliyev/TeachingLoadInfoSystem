@@ -10,39 +10,39 @@ namespace WindowsFormsApp1
 {
     public partial class PersonCRUDForm : DevExpress.XtraEditors.XtraForm
     {
-        PersonInfo personInfo = new PersonInfo();
-        IPersonInfoServices _personInfoServices { get; set; }
-        public PersonCRUDForm(PersonInfo personInfo,TLDbContext context,IPersonInfoServices services)
+        TeacherInfo TeacherInfo = new TeacherInfo();
+        ITeacherInfoServices _teacherInfoServices { get; set; }
+        public PersonCRUDForm(TeacherInfo TeacherInfo,TLDbContext context,ITeacherInfoServices services)
         {
             InitializeComponent();
             TLDbContext db = new TLDbContext();
-            _personInfoServices = new PersonInfoServices(new Repository<PersonInfo>(db));
-            this.personInfo = personInfo;
+            _teacherInfoServices = new TeacherInfoServices(new Repository<TeacherInfo>(db));
+            this.TeacherInfo = TeacherInfo;
             db = context;
-            this._personInfoServices= services;
+            this._teacherInfoServices= services;
         }
         public void InsertData()
         {
-            personInfo.Name = NameTxt.Text;
-            personInfo.Surname = SurnameTxt.Text;
-            personInfo.FatherName = FatherTxt.Text;
-            personInfo.Description = DescriptionTxt.Text;
+            //TeacherInfo.Name = NameTxt.Text;
+            //TeacherInfo.Surname = SurnameTxt.Text;
+            //TeacherInfo.FatherName = FatherTxt.Text;
+            //TeacherInfo.Description = DescriptionTxt.Text;
         }
         public void LoadData()
         {
-            NameTxt.Text = personInfo.Name;
-            SurnameTxt.Text = personInfo.Surname;
-            FatherTxt.Text = personInfo.FatherName;
-            DescriptionTxt.Text = personInfo.Description;
+            //NameTxt.Text = TeacherInfo.Name;
+            //SurnameTxt.Text = TeacherInfo.Surname;
+            //FatherTxt.Text = TeacherInfo.FatherName;
+            //DescriptionTxt.Text = TeacherInfo.Description;
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
             InsertData();
-            if (personInfo.ID != 0)
+            if (TeacherInfo.ID != 0)
             {
                 try
                 {
-                    this._personInfoServices.UpdatePerson(personInfo);
+                    this._teacherInfoServices.UpdateTeacherInfo(TeacherInfo);
                     MessageBox.Show("Data updated", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception)
@@ -54,7 +54,7 @@ namespace WindowsFormsApp1
             {
                 try
                 {
-                    this._personInfoServices.InsertPerson(personInfo);
+                    this._teacherInfoServices.InsertTeacherInfo(TeacherInfo);
 
                     MessageBox.Show("New data inserted.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
