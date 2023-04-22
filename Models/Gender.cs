@@ -9,7 +9,7 @@ namespace WindowsFormsApp1.Models
 {
     public class Gender : EntityBase
     {
-        public string GenderCode { get; set; }
-        public string GenderName{ get; set; } 
+        public string? GenderCode { get; set; }
+        public string? GenderName{ get; set; } 
     }
 }
