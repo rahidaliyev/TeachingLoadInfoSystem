@@ -11,5 +11,6 @@ namespace WindowsFormsApp1.Models
     {
         public string? SubjectCode { get; set; }
         public bool SubjectName { get; set; }
+        public int DepartmentID { get; set; }
     }
 }

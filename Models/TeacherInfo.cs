@@ -37,6 +37,7 @@ namespace WindowsFormsApp1.Models
         public int WorkTimeID { get; set; }
         public virtual List<Book>? Books { get; set; }
         public virtual List<Certificate>? Certificates { get; set; } 
-        public virtual List<PreviousJob> PreviousJobs { get; set; } 
+        public virtual List<PreviousJob>? PreviousJobs { get; set; } 
+        public virtual List<Language>? Languages { get; set; }
     }
 }

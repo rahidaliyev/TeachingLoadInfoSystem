@@ -9,24 +9,24 @@ namespace TeachingLoadInfoSystemDotNet6
 {
     public partial class PersonGridForm : DevExpress.XtraEditors.XtraForm
     {
-        PersonInfo personInfo = new PersonInfo();
+        TeacherInfo TeacherInfo = new TeacherInfo();
         TLDbContext db = new TLDbContext(); 
-        ITeacherInfoServices _personServices;
+        ITeacherInfoServices _teacherInfoServices;
         public void RefreshGrid()
         {
-            gridControl1.DataSource = _personServices.GetAllPersons().ToList();
+            gridControl1.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
         }
         public PersonGridForm()
         {
             InitializeComponent();
             TLDbContext db = new TLDbContext();
-            _personServices = new teacherInfoServices(new Repository<PersonInfo>(db));
+            _teacherInfoServices = new TeacherInfoServices(new Repository<TeacherInfo>(db));
             RefreshGrid();
         }
 
         private void newBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            PersonCRUDForm frm = new PersonCRUDForm(personInfo,db, _personServices);
+            PersonCRUDForm frm = new PersonCRUDForm(TeacherInfo,db, _teacherInfoServices);
             frm.ShowDialog();
             RefreshGrid();
         }
