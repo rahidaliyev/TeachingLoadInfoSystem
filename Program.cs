@@ -13,8 +13,7 @@ namespace TeachingLoadInfoSystemDotNet6
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new PersonCRUDForm());
-            Application.Run(new PersonGridForm());
+            Application.Run(new WorkTimeGridForm());
         }
     }
 }
