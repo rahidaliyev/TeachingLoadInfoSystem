@@ -25,15 +25,15 @@ namespace WindowsFormsApp1.Models
         public DateTime BirthDate { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
-        public virtual Gender Gender { get; set; }
+        public virtual Gender? Gender { get; set; }
         public int GenderID { get; set; }
-        public virtual ScientificName ScientificName{ get; set; }
+        public virtual ScientificName? ScientificName{ get; set; }
         public int ScientificNameID { get; set; }
-        public virtual ScientificDegree ScientificDegree { get; set; }
+        public virtual ScientificDegree? ScientificDegree { get; set; }
         public int ScientificDegreeID { get; set; }
-        public virtual Department Department { get; set; }
+        public virtual Department? Department { get; set; }
         public int DepartmentID { get; set; }
-        public virtual WorkTime WorkTime { get; set; }
+        public virtual WorkTime? WorkTime { get; set; }
         public int WorkTimeID { get; set; }
         public virtual List<Book>? Books { get; set; }
         public virtual List<Certificate>? Certificates { get; set; } 

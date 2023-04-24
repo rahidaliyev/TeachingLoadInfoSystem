@@ -14,7 +14,13 @@ namespace WindowsFormsApp1.Services
         }
         public TeacherInfo GetTeacherInfoByID(int id)
         {
-            var selectedTeacher = _repository.GetAll.AsNoTracking().FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository.GetAll
+                .Include(x => x.Gender)
+                .Include(x => x.Department)
+                .Include(x => x.ScientificName)
+                .Include(x => x.ScientificDegree)
+                .Include(x => x.WorkTime)
+                .AsNoTracking().FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
         public void InsertTeacherInfo(TeacherInfo teacherInfo)
@@ -32,7 +38,13 @@ namespace WindowsFormsApp1.Services
         }
         public IEnumerable<TeacherInfo> GetAllTeacherInfos()
         {
-            return _repository.GetAll.AsNoTracking();
+            return _repository.GetAll
+                .Include(x => x.Gender)
+                .Include(x => x.Department)
+                .Include(x => x.ScientificName)
+                .Include(x => x.ScientificDegree)
+                .Include(x => x.WorkTime)
+                .AsNoTracking();
         }
     }
 }
