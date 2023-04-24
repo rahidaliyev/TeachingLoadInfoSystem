@@ -29,9 +29,22 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(DepartmentGridForm));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherInfoGridForm));
             this.gridControl = new DevExpress.XtraGrid.GridControl();
+            this.teacherInfosBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTeacherName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTeacherSurname = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTeacherFather = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colBirthDate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEmail = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPhoneNumber = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colGender = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colScientificName = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colScientificDegree = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDepartment = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colWorkTime = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.newBtn = new DevExpress.XtraBars.BarButtonItem();
@@ -43,12 +56,14 @@
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherInfosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
             // gridControl
             // 
+            this.gridControl.DataSource = this.teacherInfosBindingSource;
             this.gridControl.Dock = System.Windows.Forms.DockStyle.Fill;
             this.gridControl.Location = new System.Drawing.Point(0, 30);
             this.gridControl.MainView = this.gridView;
@@ -59,11 +74,151 @@
             this.gridView});
             this.gridControl.DoubleClick += new System.EventHandler(this.gridControl_DoubleClick);
             // 
+            // teacherInfosBindingSource
+            // 
+            this.teacherInfosBindingSource.DataSource = typeof(WindowsFormsApp1.Models.TeacherInfo);
+            // 
             // gridView
             // 
+            this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTeacherName,
+            this.colTeacherSurname,
+            this.colTeacherFather,
+            this.colBirthDate,
+            this.colEmail,
+            this.colPhoneNumber,
+            this.colGender,
+            this.colScientificName,
+            this.colScientificDegree,
+            this.colDepartment,
+            this.colWorkTime,
+            this.colID});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
+            // 
+            // colTeacherName
+            // 
+            this.colTeacherName.Caption = "Ad";
+            this.colTeacherName.FieldName = "TeacherName";
+            this.colTeacherName.MinWidth = 25;
+            this.colTeacherName.Name = "colTeacherName";
+            this.colTeacherName.Visible = true;
+            this.colTeacherName.VisibleIndex = 0;
+            this.colTeacherName.Width = 94;
+            // 
+            // colTeacherSurname
+            // 
+            this.colTeacherSurname.Caption = "Soyad";
+            this.colTeacherSurname.FieldName = "TeacherSurname";
+            this.colTeacherSurname.MinWidth = 25;
+            this.colTeacherSurname.Name = "colTeacherSurname";
+            this.colTeacherSurname.Visible = true;
+            this.colTeacherSurname.VisibleIndex = 1;
+            this.colTeacherSurname.Width = 94;
+            // 
+            // colTeacherFather
+            // 
+            this.colTeacherFather.Caption = "Ata adı";
+            this.colTeacherFather.FieldName = "TeacherFather";
+            this.colTeacherFather.MinWidth = 25;
+            this.colTeacherFather.Name = "colTeacherFather";
+            this.colTeacherFather.Visible = true;
+            this.colTeacherFather.VisibleIndex = 2;
+            this.colTeacherFather.Width = 94;
+            // 
+            // colBirthDate
+            // 
+            this.colBirthDate.Caption = "Doğum tarixi";
+            this.colBirthDate.DisplayFormat.FormatString = "dd-MM-yyyy";
+            this.colBirthDate.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colBirthDate.FieldName = "BirthDate";
+            this.colBirthDate.GroupFormat.FormatString = "dd-MM-yyyy";
+            this.colBirthDate.GroupFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.colBirthDate.MinWidth = 25;
+            this.colBirthDate.Name = "colBirthDate";
+            this.colBirthDate.Visible = true;
+            this.colBirthDate.VisibleIndex = 3;
+            this.colBirthDate.Width = 94;
+            // 
+            // colEmail
+            // 
+            this.colEmail.Caption = "Mail";
+            this.colEmail.FieldName = "Email";
+            this.colEmail.MinWidth = 25;
+            this.colEmail.Name = "colEmail";
+            this.colEmail.Visible = true;
+            this.colEmail.VisibleIndex = 4;
+            this.colEmail.Width = 94;
+            // 
+            // colPhoneNumber
+            // 
+            this.colPhoneNumber.Caption = "Nömrə";
+            this.colPhoneNumber.FieldName = "PhoneNumber";
+            this.colPhoneNumber.MinWidth = 25;
+            this.colPhoneNumber.Name = "colPhoneNumber";
+            this.colPhoneNumber.Visible = true;
+            this.colPhoneNumber.VisibleIndex = 5;
+            this.colPhoneNumber.Width = 94;
+            // 
+            // colGender
+            // 
+            this.colGender.Caption = "Cins";
+            this.colGender.FieldName = "Gender.GenderName";
+            this.colGender.MinWidth = 25;
+            this.colGender.Name = "colGender";
+            this.colGender.Visible = true;
+            this.colGender.VisibleIndex = 6;
+            this.colGender.Width = 94;
+            // 
+            // colScientificName
+            // 
+            this.colScientificName.Caption = "Elmi adı";
+            this.colScientificName.FieldName = "ScientificName.Name";
+            this.colScientificName.MinWidth = 25;
+            this.colScientificName.Name = "colScientificName";
+            this.colScientificName.Visible = true;
+            this.colScientificName.VisibleIndex = 7;
+            this.colScientificName.Width = 94;
+            // 
+            // colScientificDegree
+            // 
+            this.colScientificDegree.Caption = "Elmi dərəcəsi";
+            this.colScientificDegree.FieldName = "ScientificDegree.DegreeName";
+            this.colScientificDegree.MinWidth = 25;
+            this.colScientificDegree.Name = "colScientificDegree";
+            this.colScientificDegree.Visible = true;
+            this.colScientificDegree.VisibleIndex = 8;
+            this.colScientificDegree.Width = 94;
+            // 
+            // colDepartment
+            // 
+            this.colDepartment.Caption = "Kafedra";
+            this.colDepartment.FieldName = "Department.DepartmentName";
+            this.colDepartment.MinWidth = 25;
+            this.colDepartment.Name = "colDepartment";
+            this.colDepartment.Visible = true;
+            this.colDepartment.VisibleIndex = 9;
+            this.colDepartment.Width = 94;
+            // 
+            // colWorkTime
+            // 
+            this.colWorkTime.Caption = "Ştat";
+            this.colWorkTime.FieldName = "WorkTime.WorkTimeName";
+            this.colWorkTime.MinWidth = 25;
+            this.colWorkTime.Name = "colWorkTime";
+            this.colWorkTime.Visible = true;
+            this.colWorkTime.VisibleIndex = 10;
+            this.colWorkTime.Width = 94;
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.MinWidth = 25;
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 11;
+            this.colID.Width = 94;
             // 
             // barManager1
             // 
@@ -169,7 +324,7 @@
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
             // 
-            // DepartmentGridForm
+            // TeacherInfoGridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -179,9 +334,10 @@
             this.Controls.Add(this.barDockControlRight);
             this.Controls.Add(this.barDockControlBottom);
             this.Controls.Add(this.barDockControlTop);
-            this.Name = "DepartmentGridForm";
+            this.Name = "TeacherInfoGridForm";
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherInfosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
@@ -203,5 +359,18 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem RefreshBtn;
+        private BindingSource teacherInfosBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colTeacherName;
+        private DevExpress.XtraGrid.Columns.GridColumn colTeacherSurname;
+        private DevExpress.XtraGrid.Columns.GridColumn colTeacherFather;
+        private DevExpress.XtraGrid.Columns.GridColumn colBirthDate;
+        private DevExpress.XtraGrid.Columns.GridColumn colEmail;
+        private DevExpress.XtraGrid.Columns.GridColumn colPhoneNumber;
+        private DevExpress.XtraGrid.Columns.GridColumn colGender;
+        private DevExpress.XtraGrid.Columns.GridColumn colScientificName;
+        private DevExpress.XtraGrid.Columns.GridColumn colScientificDegree;
+        private DevExpress.XtraGrid.Columns.GridColumn colDepartment;
+        private DevExpress.XtraGrid.Columns.GridColumn colWorkTime;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
     }
 }
