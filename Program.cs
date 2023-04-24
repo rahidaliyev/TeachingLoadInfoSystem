@@ -1,3 +1,4 @@
+using EncodeHrPayroll;
 using WindowsFormsApp1;
 
 namespace TeachingLoadInfoSystemDotNet6
@@ -13,7 +14,7 @@ namespace TeachingLoadInfoSystemDotNet6
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            Application.Run(new TeacherInfoGridForm());
+            Application.Run(new TLMenu());
         }
     }
 }
