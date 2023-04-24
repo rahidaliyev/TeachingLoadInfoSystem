@@ -1,4 +1,3 @@
-using EncodeHrPayroll;
 using WindowsFormsApp1;
 
 namespace TeachingLoadInfoSystemDotNet6

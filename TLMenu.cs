@@ -1,7 +1,8 @@
 ﻿using DevExpress.XtraBars;
 using TeachingLoadInfoSystemDotNet6;
+using WindowsFormsApp1.Models;
 
-namespace EncodeHrPayroll
+namespace TeachingLoadInfoSystemDotNet6
 {
     public partial class TLMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
@@ -31,6 +32,16 @@ namespace EncodeHrPayroll
         private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
         {
             newTabbedForm(new TeacherInfoGridForm(), "Müəllim haqqında");
+        }
+
+        private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            newTabbedForm(new WorkTimeGridForm(), "Ştat");
+        }
+
+        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            newTabbedForm(new DepartmentGridForm(), "Kafedra");
         }
     }
 }
