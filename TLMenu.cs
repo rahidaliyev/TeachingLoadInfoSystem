@@ -1,8 +1,6 @@
 ﻿using DevExpress.XtraBars;
-using TeachingLoadInfoSystemDotNet6;
-using WindowsFormsApp1.Models;
 
-namespace TeachingLoadInfoSystemDotNet6
+namespace TeachingLoadInfoSystem
 {
     public partial class TLMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {

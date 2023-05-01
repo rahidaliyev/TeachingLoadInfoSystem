@@ -1,6 +1,6 @@
-﻿using WindowsFormsApp1.Models;
+﻿using TeachingLoadInfoSystem.Models;
 
-namespace WindowsFormsApp1.Services.Intefaces
+namespace TeachingLoadInfoSystem.Services.Intefaces
 {
     public interface ICertificateServices
     {

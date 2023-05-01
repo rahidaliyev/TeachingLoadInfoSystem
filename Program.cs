@@ -1,6 +1,7 @@
-using WindowsFormsApp1;
+using TeachingLoadInfoSystem;
+using TeachingLoadInfoSystem;
 
-namespace TeachingLoadInfoSystemDotNet6
+namespace TeachingLoadInfoSystem
 {
     internal static class Program
     {

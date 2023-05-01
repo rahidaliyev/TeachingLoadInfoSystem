@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace TeachingLoadInfoSystem.Models
 {
     public class Gender : EntityBase
     {
         public string? GenderCode { get; set; }
-        public string? GenderName{ get; set; } 
+        public string? GenderName { get; set; }
     }
 }

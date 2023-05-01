@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace TeachingLoadInfoSystem.Models
 {
     public class ScientificDegree : EntityBase
     {
-        public string DegreeCode { get; set; } 
-        public string DegreeName{ get; set; } 
+        public string DegreeCode { get; set; }
+        public string DegreeName { get; set; }
     }
 }

@@ -1,8 +1,9 @@
-﻿namespace WindowsFormsApp1.Models
+﻿namespace TeachingLoadInfoSystem.Models
 {
     public class Language : EntityBase
     {
         public string LanguageCode { get; set; }
         public string LanguageName { get; set; }
+        //public int PreferedLanguage { get; set; }
     }
 }

@@ -5,14 +5,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace TeachingLoadInfoSystem.Models
 {
     public class Certificate : EntityBase
     {
         public Certificate()
         {
             Subject = new Subject();
-        }    
+        }
         public int TeacherInfoID { get; set; }
         public string? CertificateName { get; set; }
         public string? ReceivedCountry { get; set; }

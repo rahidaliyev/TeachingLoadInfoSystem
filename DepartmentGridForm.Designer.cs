@@ -1,4 +1,4 @@
-﻿namespace TeachingLoadInfoSystemDotNet6
+﻿namespace TeachingLoadInfoSystem
 {
     partial class DepartmentGridForm
     {

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Models;
+using TeachingLoadInfoSystem.Models;
 
-namespace WindowsFormsApp1.Services.Intefaces
+namespace TeachingLoadInfoSystem.Services.Intefaces
 {
     public interface ITeacherInfoServices
     {

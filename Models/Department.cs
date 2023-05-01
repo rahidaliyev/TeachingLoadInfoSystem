@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace TeachingLoadInfoSystem.Models
 {
     public class Department : EntityBase
     {
         public string? DepartmentCode { get; set; }
-        public string? DepartmentName{ get; set; } 
+        public string? DepartmentName { get; set; }
     }
 }

@@ -1,13 +1,15 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories.Interfaces;
-using WindowsFormsApp1.Services.Intefaces;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Repositories.Interfaces;
+using TeachingLoadInfoSystem.Services.Intefaces;
+using TeachingLoadInfoSystem.Repositories;
 
-namespace WindowsFormsApp1.Services
+namespace TeachingLoadInfoSystem.Services
 {
     public class BookServices : IBookServices
     {
         private IRepository<Book> _repository;
+
         public BookServices(IRepository<Book> repository)
         {
             _repository = repository;

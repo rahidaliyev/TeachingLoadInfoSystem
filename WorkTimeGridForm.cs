@@ -1,11 +1,11 @@
-﻿using WindowsFormsApp1;
-using WindowsFormsApp1.AppDbContext;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories;
-using WindowsFormsApp1.Services;
-using WindowsFormsApp1.Services.Intefaces;
+﻿using TeachingLoadInfoSystem.AppDbContext;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Services.Intefaces;
+using TeachingLoadInfoSystem;
+using TeachingLoadInfoSystem.Repositories;
+using TeachingLoadInfoSystem.Services;
 
-namespace TeachingLoadInfoSystemDotNet6
+namespace TeachingLoadInfoSystem
 {
     public partial class WorkTimeGridForm : DevExpress.XtraEditors.XtraForm
     {

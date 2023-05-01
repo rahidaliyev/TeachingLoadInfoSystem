@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace WindowsFormsApp1.Models
+namespace TeachingLoadInfoSystem.Models
 {
     public class TeacherInfo : EntityBase
     {
@@ -18,16 +18,16 @@ namespace WindowsFormsApp1.Models
             Books = new List<Book>();
             Certificates = new List<Certificate>();
             PreviousJobs = new List<PreviousJob>();
-        } 
-        public string TeacherName { get; set; } 
-        public string TeacherSurname{ get; set; } 
+        }
+        public string TeacherName { get; set; }
+        public string TeacherSurname { get; set; }
         public string TeacherFather { get; set; }
         public DateTime BirthDate { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }
         public virtual Gender? Gender { get; set; }
         public int GenderID { get; set; }
-        public virtual ScientificName? ScientificName{ get; set; }
+        public virtual ScientificName? ScientificName { get; set; }
         public int ScientificNameID { get; set; }
         public virtual ScientificDegree? ScientificDegree { get; set; }
         public int ScientificDegreeID { get; set; }
@@ -36,8 +36,8 @@ namespace WindowsFormsApp1.Models
         public virtual WorkTime? WorkTime { get; set; }
         public int WorkTimeID { get; set; }
         public virtual List<Book>? Books { get; set; }
-        public virtual List<Certificate>? Certificates { get; set; } 
-        public virtual List<PreviousJob>? PreviousJobs { get; set; } 
+        public virtual List<Certificate>? Certificates { get; set; }
+        public virtual List<PreviousJob>? PreviousJobs { get; set; }
         public virtual List<Language>? Languages { get; set; }
     }
 }

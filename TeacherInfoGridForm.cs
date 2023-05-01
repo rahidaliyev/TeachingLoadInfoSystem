@@ -1,11 +1,11 @@
 ﻿using TeachingLoadInfoSystem;
-using WindowsFormsApp1.AppDbContext;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories;
-using WindowsFormsApp1.Services;
-using WindowsFormsApp1.Services.Intefaces;
+using TeachingLoadInfoSystem.AppDbContext;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Services.Intefaces;
+using TeachingLoadInfoSystem.Repositories;
+using TeachingLoadInfoSystem.Services;
 
-namespace TeachingLoadInfoSystemDotNet6
+namespace TeachingLoadInfoSystem
 {
     public partial class TeacherInfoGridForm : DevExpress.XtraEditors.XtraForm
     {
@@ -45,7 +45,7 @@ namespace TeachingLoadInfoSystemDotNet6
                     var selectedCode = gridView.GetFocusedRowCellValue("WorkTimeCode");
 
                     _teacherInfoServices.DeleteTeacherInfo(selectedRow);
-                    Refresh();
+                    RefreshGrid();
 
                     MessageBox.Show(selectedCode + " kodlu məlumat uğurla silindi.");
                 }
@@ -69,6 +69,7 @@ namespace TeachingLoadInfoSystemDotNet6
             TeacherInfoCRUDForm frm = new TeacherInfoCRUDForm(teacherinfo, _teacherInfoServices);
             frm.ShowDialog();
             RefreshGrid();
+            teacherinfo = new TeacherInfo();   
         }
 
         private void RefreshBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)

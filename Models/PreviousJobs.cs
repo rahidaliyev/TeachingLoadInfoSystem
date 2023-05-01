@@ -1,4 +1,4 @@
-﻿namespace WindowsFormsApp1.Models
+﻿namespace TeachingLoadInfoSystem.Models
 {
     public class PreviousJob : EntityBase
     {

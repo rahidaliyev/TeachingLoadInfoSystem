@@ -1,4 +1,4 @@
-﻿namespace TeachingLoadInfoSystemDotNet6
+﻿namespace TeachingLoadInfoSystem
 {
     partial class TLMenu
     {
@@ -483,7 +483,7 @@
             this.Name = "TLMenu";
             this.Ribbon = this.ribbon;
             this.StatusBar = this.ribbonStatusBar;
-            this.Text = "HrPayroll";
+            this.Text = "UNEC Tədris yükü";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();

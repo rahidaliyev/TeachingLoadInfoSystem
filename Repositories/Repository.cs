@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.AppDbContext;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories.Interfaces;
+using TeachingLoadInfoSystem.AppDbContext;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Repositories.Interfaces;
 
-namespace WindowsFormsApp1.Repositories
+namespace TeachingLoadInfoSystem.Repositories
 {
     public class Repository<T> : IRepository<T> where T : EntityBase
     {
@@ -17,12 +17,12 @@ namespace WindowsFormsApp1.Repositories
 
         public Repository(TLDbContext context)
         {
-            this._context = context;
+            _context = context;
         }
 
         public T Get(T entity)
         {
-            return this.Entities.Find(entity);
+            return Entities.Find(entity);
         }
 
         public void Insert(T entity)
@@ -33,12 +33,12 @@ namespace WindowsFormsApp1.Repositories
                 {
                     throw new ArgumentNullException("entity");
                 }
-                this.Entities.Add(entity);
-                this._context.SaveChanges();
+                Entities.Add(entity);
+                _context.SaveChanges();
             }
             catch (Exception)
             {
-                throw; 
+                throw;
             }
         }
 
@@ -56,7 +56,7 @@ namespace WindowsFormsApp1.Repositories
             }
             catch (Exception)
             {
-                throw; 
+                throw;
             }
         }
 
@@ -68,12 +68,12 @@ namespace WindowsFormsApp1.Repositories
                 {
                     throw new ArgumentNullException("entity");
                 }
-                this.Entities.Remove(entity);
-                this._context.SaveChanges();
+                Entities.Remove(entity);
+                _context.SaveChanges();
             }
             catch (Exception)
             {
-                throw; 
+                throw;
             }
         }
 
@@ -81,7 +81,7 @@ namespace WindowsFormsApp1.Repositories
         {
             get
             {
-                return this.Entities;
+                return Entities;
             }
         }
 

@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using WindowsFormsApp1.AppDbContext;
+using TeachingLoadInfoSystem.AppDbContext;
 
 #nullable disable
 

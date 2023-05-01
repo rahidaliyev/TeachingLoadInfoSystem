@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using System.Configuration;
-using WindowsFormsApp1.Models;
+using TeachingLoadInfoSystem.Models;
 
-namespace WindowsFormsApp1.AppDbContext
+namespace TeachingLoadInfoSystem.AppDbContext
 {
     public class TLDbContext : DbContext
     {

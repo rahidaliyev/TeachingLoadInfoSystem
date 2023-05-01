@@ -1,4 +1,6 @@
-﻿namespace TeachingLoadInfoSystemDotNet6
+﻿using TeachingLoadInfoSystem.Models;
+
+namespace TeachingLoadInfoSystem
 {
     partial class TeacherInfoGridForm
     {
@@ -76,7 +78,7 @@
             // 
             // teacherInfosBindingSource
             // 
-            this.teacherInfosBindingSource.DataSource = typeof(WindowsFormsApp1.Models.TeacherInfo);
+            this.teacherInfosBindingSource.DataSource = typeof(TeacherInfo);
             // 
             // gridView
             // 

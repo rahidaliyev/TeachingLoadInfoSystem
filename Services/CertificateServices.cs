@@ -1,9 +1,9 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories.Interfaces;
-using WindowsFormsApp1.Services.Intefaces;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Repositories.Interfaces;
+using TeachingLoadInfoSystem.Services.Intefaces;
 
-namespace WindowsFormsApp1.Services
+namespace TeachingLoadInfoSystem.Services
 {
     public class CertificateServices : ICertificateServices
     {

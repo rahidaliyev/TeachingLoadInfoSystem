@@ -1,8 +1,8 @@
-﻿using WindowsFormsApp1.AppDbContext;
-using WindowsFormsApp1.Models;
-using WindowsFormsApp1.Repositories;
-using WindowsFormsApp1.Services;
-using WindowsFormsApp1.Services.Intefaces;
+﻿using TeachingLoadInfoSystem.AppDbContext;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Services.Intefaces;
+using TeachingLoadInfoSystem.Repositories;
+using TeachingLoadInfoSystem.Services;
 
 namespace TeachingLoadInfoSystem
 {
@@ -150,6 +150,16 @@ namespace TeachingLoadInfoSystem
             {
                 genderCmb.EditValue = _genderServices.GetGenderByID(teacherinfo.GenderID);
             }
+        }
+
+        private void addBookBtn_Click(object sender, EventArgs e)
+        {
+            var userControl = new UserControlBook(db)
+            {
+                Dock = DockStyle.Fill,  
+            };
+            bookPanelControl.AutoScroll = true;
+            bookPanelControl.Controls.Add(userControl);
         }
     }
 }

@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using WindowsFormsApp1.Models;
+using TeachingLoadInfoSystem.Models;
 
-namespace WindowsFormsApp1.Repositories.Interfaces
+namespace TeachingLoadInfoSystem.Repositories.Interfaces
 {
     public interface IRepository<T> where T : EntityBase
     {
