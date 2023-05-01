@@ -54,5 +54,19 @@ namespace TeachingLoadInfoSystem
         {
             Books.IsTextBook = isTextBookCheck.Checked;
         }
+
+        private void deleteBtn_Click(object sender, EventArgs e)
+        {
+            this.Parent.Controls.Remove(this);
+            if (Books.ID != 0)
+            {
+                _bookServices.DeleteBook(Books.ID);
+                BookList.Remove(Books);
+            }
+            else if (Books != null)
+            {
+                BookList.Remove(Books);
+            }
+        }
     }
 }

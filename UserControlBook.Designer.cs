@@ -69,6 +69,8 @@
             this.deleteBtn.Size = new System.Drawing.Size(52, 27);
             this.deleteBtn.StyleController = this.layoutControl1;
             this.deleteBtn.TabIndex = 4;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+
             // 
             // isTextBookCheck
             // 

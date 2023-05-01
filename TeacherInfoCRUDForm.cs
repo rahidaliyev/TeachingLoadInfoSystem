@@ -56,6 +56,7 @@ namespace TeachingLoadInfoSystem
             teacherinfo.ScientificDegree = _scientificDegree;
             teacherinfo.ScientificName= _scientificName;
             teacherinfo.WorkTime = _workTime;
+            teacherinfo.Books = GetBooks(); 
         }
         public void LoadData()
         {
@@ -70,6 +71,7 @@ namespace TeachingLoadInfoSystem
             scientificNameCmb.EditValue = teacherinfo.ScientificName;
             departmentCmb.EditValue = teacherinfo.Department;
             workTimeCmb.EditValue = teacherinfo.WorkTime;
+            GetBooksToPanel(teacherinfo.Books);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -107,6 +109,30 @@ namespace TeachingLoadInfoSystem
             Close();
         }
 
+        #region Book, Certificates and etc.
+        private List<Book> GetBooks()
+        {
+            var books = new List<Book>();
+            foreach (UserControlBook controll in bookPanelControl.Controls)
+            {
+                books.Add(controll.Books);
+            }
+            return books;
+        }
+        private void GetBooksToPanel(List<Book> books)
+        {
+            foreach (var item in books)
+            {
+                var userControl = new UserControlBook(db, item)
+                {
+                    Dock = DockStyle.Top
+                };
+                bookPanelControl.AutoScroll = true;
+                bookPanelControl.Controls.Add(userControl);
+
+            }
+        }
+        #endregion
         private void scientificNameCmb_EditValueChanged(object sender, EventArgs e)
         {
             _scientificName = scientificNameCmb.GetSelectedDataRow() as ScientificName;
