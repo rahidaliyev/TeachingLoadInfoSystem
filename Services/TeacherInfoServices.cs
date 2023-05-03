@@ -20,6 +20,7 @@ namespace TeachingLoadInfoSystem.Services
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)
                 .Include(x => x.WorkTime)
+                .Include(x => x.Books)
                 .AsNoTracking().FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
@@ -44,6 +45,7 @@ namespace TeachingLoadInfoSystem.Services
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)
                 .Include(x => x.WorkTime)
+                .Include(x => x.Books)
                 .AsNoTracking();
         }
     }

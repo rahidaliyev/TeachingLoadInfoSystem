@@ -56,42 +56,39 @@
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(545, 68);
+            this.layoutControl1.Size = new System.Drawing.Size(464, 49);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
             // deleteBtn
             // 
             this.deleteBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("deleteBtn.ImageOptions.Image")));
-            this.deleteBtn.Location = new System.Drawing.Point(481, 12);
+            this.deleteBtn.Location = new System.Drawing.Point(404, 12);
             this.deleteBtn.Name = "deleteBtn";
             this.deleteBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.deleteBtn.Size = new System.Drawing.Size(52, 27);
+            this.deleteBtn.Size = new System.Drawing.Size(27, 27);
             this.deleteBtn.StyleController = this.layoutControl1;
             this.deleteBtn.TabIndex = 4;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
-
             // 
             // isTextBookCheck
             // 
-            this.isTextBookCheck.Location = new System.Drawing.Point(410, 12);
+            this.isTextBookCheck.Location = new System.Drawing.Point(333, 12);
             this.isTextBookCheck.Name = "isTextBookCheck";
             this.isTextBookCheck.Properties.Caption = "Dərslik";
             this.isTextBookCheck.Size = new System.Drawing.Size(67, 24);
             this.isTextBookCheck.StyleController = this.layoutControl1;
             this.isTextBookCheck.TabIndex = 3;
             this.isTextBookCheck.CheckedChanged += new System.EventHandler(this.isTextBookCheck_CheckedChanged);
-
             // 
             // bookNameTxt
             // 
             this.bookNameTxt.Location = new System.Drawing.Point(73, 12);
             this.bookNameTxt.Name = "bookNameTxt";
-            this.bookNameTxt.Size = new System.Drawing.Size(333, 22);
+            this.bookNameTxt.Size = new System.Drawing.Size(256, 22);
             this.bookNameTxt.StyleController = this.layoutControl1;
             this.bookNameTxt.TabIndex = 0;
             this.bookNameTxt.EditValueChanged += new System.EventHandler(this.bookNameTxt_EditValueChanged);
-
             // 
             // Root
             // 
@@ -102,7 +99,7 @@
             this.layoutControlItem2,
             this.layoutControlItem3});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(545, 68);
+            this.Root.Size = new System.Drawing.Size(443, 51);
             this.Root.TextVisible = false;
             // 
             // layoutControlItem1
@@ -110,35 +107,35 @@
             this.layoutControlItem1.Control = this.bookNameTxt;
             this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(398, 48);
+            this.layoutControlItem1.Size = new System.Drawing.Size(321, 31);
             this.layoutControlItem1.Text = "Kitab adı";
             this.layoutControlItem1.TextSize = new System.Drawing.Size(49, 16);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.isTextBookCheck;
-            this.layoutControlItem2.Location = new System.Drawing.Point(398, 0);
+            this.layoutControlItem2.Location = new System.Drawing.Point(321, 0);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(71, 48);
+            this.layoutControlItem2.Size = new System.Drawing.Size(71, 31);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.deleteBtn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(469, 0);
+            this.layoutControlItem3.Location = new System.Drawing.Point(392, 0);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(56, 48);
+            this.layoutControlItem3.Size = new System.Drawing.Size(31, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
-            // BookUserControl1
+            // UserControlBook
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.layoutControl1);
-            this.Name = "BookUserControl1";
-            this.Size = new System.Drawing.Size(545, 68);
+            this.Name = "UserControlBook";
+            this.Size = new System.Drawing.Size(464, 49);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.isTextBookCheck.Properties)).EndInit();

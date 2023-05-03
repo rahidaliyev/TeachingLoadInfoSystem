@@ -129,7 +129,6 @@ namespace TeachingLoadInfoSystem
                 };
                 bookPanelControl.AutoScroll = true;
                 bookPanelControl.Controls.Add(userControl);
-
             }
         }
         #endregion
