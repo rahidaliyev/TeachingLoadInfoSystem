@@ -22,7 +22,7 @@ namespace TeachingLoadInfoSystem.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder);
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Book", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Book", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -46,7 +46,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Certificate", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Certificate", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -78,7 +78,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("Certificates");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Department", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Department", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -97,7 +97,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("Departments");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Gender", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Gender", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -106,11 +106,9 @@ namespace TeachingLoadInfoSystem.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
                     b.Property<string>("GenderCode")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("GenderName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
@@ -118,7 +116,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("Genders");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Language", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Language", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -144,7 +142,35 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("Languages");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.PreviousJob", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.LayoutInfo", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("FormName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GridName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Stream")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("UserID")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("LayoutInfos");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.PreviousJob", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -171,7 +197,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("PreviousJobs");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.ScientificDegree", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.ScientificDegree", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -192,7 +218,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("ScientificDegrees");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.ScientificName", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.ScientificName", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -211,7 +237,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("ScientificNames");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Subject", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Subject", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -219,18 +245,21 @@ namespace TeachingLoadInfoSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
+                    b.Property<int>("DepartmentID")
+                        .HasColumnType("int");
+
                     b.Property<string>("SubjectCode")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<bool>("SubjectName")
-                        .HasColumnType("bit");
+                    b.Property<string>("SubjectName")
+                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
                     b.ToTable("Subjects");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.TeacherInfo", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -289,7 +318,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("TeacherInfos");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.WorkTime", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.WorkTime", b =>
                 {
                     b.Property<int>("ID")
                         .ValueGeneratedOnAdd()
@@ -308,24 +337,24 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("WorkTimes");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Book", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Book", b =>
                 {
-                    b.HasOne("WindowsFormsApp1.Models.TeacherInfo", null)
+                    b.HasOne("TeachingLoadInfoSystem.Models.TeacherInfo", null)
                         .WithMany("Books")
                         .HasForeignKey("TeacherInfoID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Certificate", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Certificate", b =>
                 {
-                    b.HasOne("WindowsFormsApp1.Models.Subject", "Subject")
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subject")
                         .WithMany()
                         .HasForeignKey("SubjectID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WindowsFormsApp1.Models.TeacherInfo", null)
+                    b.HasOne("TeachingLoadInfoSystem.Models.TeacherInfo", null)
                         .WithMany("Certificates")
                         .HasForeignKey("TeacherInfoID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -334,49 +363,49 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Navigation("Subject");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.Language", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Language", b =>
                 {
-                    b.HasOne("WindowsFormsApp1.Models.TeacherInfo", null)
+                    b.HasOne("TeachingLoadInfoSystem.Models.TeacherInfo", null)
                         .WithMany("Languages")
                         .HasForeignKey("TeacherInfoID");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.PreviousJob", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.PreviousJob", b =>
                 {
-                    b.HasOne("WindowsFormsApp1.Models.TeacherInfo", null)
+                    b.HasOne("TeachingLoadInfoSystem.Models.TeacherInfo", null)
                         .WithMany("PreviousJobs")
                         .HasForeignKey("TeacherInfoID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.TeacherInfo", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>
                 {
-                    b.HasOne("WindowsFormsApp1.Models.Department", "Department")
+                    b.HasOne("TeachingLoadInfoSystem.Models.Department", "Department")
                         .WithMany()
                         .HasForeignKey("DepartmentID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WindowsFormsApp1.Models.Gender", "Gender")
+                    b.HasOne("TeachingLoadInfoSystem.Models.Gender", "Gender")
                         .WithMany()
                         .HasForeignKey("GenderID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WindowsFormsApp1.Models.ScientificDegree", "ScientificDegree")
+                    b.HasOne("TeachingLoadInfoSystem.Models.ScientificDegree", "ScientificDegree")
                         .WithMany()
                         .HasForeignKey("ScientificDegreeID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WindowsFormsApp1.Models.ScientificName", "ScientificName")
+                    b.HasOne("TeachingLoadInfoSystem.Models.ScientificName", "ScientificName")
                         .WithMany()
                         .HasForeignKey("ScientificNameID")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("WindowsFormsApp1.Models.WorkTime", "WorkTime")
+                    b.HasOne("TeachingLoadInfoSystem.Models.WorkTime", "WorkTime")
                         .WithMany()
                         .HasForeignKey("WorkTimeID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -393,7 +422,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Navigation("WorkTime");
                 });
 
-            modelBuilder.Entity("WindowsFormsApp1.Models.TeacherInfo", b =>
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>
                 {
                     b.Navigation("Books");
 

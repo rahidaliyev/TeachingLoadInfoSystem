@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="UserControlCertificate.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="WorkTimeCRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -28,6 +31,10 @@
     <Compile Update="WorkTimeGridForm.cs">
       <SubType>Form</SubType>
     </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
 
 </Project>

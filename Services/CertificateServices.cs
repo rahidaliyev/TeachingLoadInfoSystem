@@ -14,7 +14,11 @@ namespace TeachingLoadInfoSystem.Services
         }
         public Certificate GetCertificateByID(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository
+                .GetAll
+                .Include(x => x.Subject)
+                .AsNoTracking()
+                .FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
         public void InsertCertificate(Certificate certificate)
@@ -32,7 +36,11 @@ namespace TeachingLoadInfoSystem.Services
         }
         public IEnumerable<Certificate> GetAllCertificates()
         {
-            return _repository.GetAll;
+            return _repository
+                .GetAll
+                .AsNoTracking()
+                .Include(x => x.Subject)
+                ;
         }
     }
 }

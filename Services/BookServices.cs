@@ -1,8 +1,6 @@
-﻿using Microsoft.EntityFrameworkCore;
-using TeachingLoadInfoSystem.Models;
+﻿using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories.Interfaces;
 using TeachingLoadInfoSystem.Services.Intefaces;
-using TeachingLoadInfoSystem.Repositories;
 
 namespace TeachingLoadInfoSystem.Services
 {

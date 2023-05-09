@@ -53,6 +53,12 @@ namespace TeachingLoadInfoSystem
             this.previewBtn = new DevExpress.XtraBars.BarButtonItem();
             this.RefreshBtn = new DevExpress.XtraBars.BarButtonItem();
             this.DeleteBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.barSubItem1 = new DevExpress.XtraBars.BarSubItem();
+            this.ExcelTest = new DevExpress.XtraBars.BarButtonItem();
+            this.WordBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.PDFBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.HTMLBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.saveLayoutBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -78,7 +84,7 @@ namespace TeachingLoadInfoSystem
             // 
             // teacherInfosBindingSource
             // 
-            this.teacherInfosBindingSource.DataSource = typeof(TeacherInfo);
+            this.teacherInfosBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeacherInfo);
             // 
             // gridView
             // 
@@ -235,9 +241,15 @@ namespace TeachingLoadInfoSystem
             this.newBtn,
             this.previewBtn,
             this.DeleteBtn,
-            this.RefreshBtn});
+            this.RefreshBtn,
+            this.barSubItem1,
+            this.ExcelTest,
+            this.WordBtn,
+            this.PDFBtn,
+            this.HTMLBtn,
+            this.saveLayoutBtn});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 4;
+            this.barManager1.MaxItemId = 16;
             // 
             // bar2
             // 
@@ -249,7 +261,9 @@ namespace TeachingLoadInfoSystem
             new DevExpress.XtraBars.LinkPersistInfo(this.newBtn),
             new DevExpress.XtraBars.LinkPersistInfo(this.previewBtn),
             new DevExpress.XtraBars.LinkPersistInfo(this.RefreshBtn),
-            new DevExpress.XtraBars.LinkPersistInfo(this.DeleteBtn)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.DeleteBtn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
+            new DevExpress.XtraBars.LinkPersistInfo(this.saveLayoutBtn)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -293,6 +307,58 @@ namespace TeachingLoadInfoSystem
             this.DeleteBtn.Name = "DeleteBtn";
             this.DeleteBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.DeleteBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.DeleteBtn_ItemClick);
+            // 
+            // barSubItem1
+            // 
+            this.barSubItem1.Caption = "Export";
+            this.barSubItem1.Id = 10;
+            this.barSubItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.Image")));
+            this.barSubItem1.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barSubItem1.ImageOptions.LargeImage")));
+            this.barSubItem1.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.ExcelTest),
+            new DevExpress.XtraBars.LinkPersistInfo(this.WordBtn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.PDFBtn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.HTMLBtn)});
+            this.barSubItem1.Name = "barSubItem1";
+            this.barSubItem1.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            // 
+            // ExcelTest
+            // 
+            this.ExcelTest.Caption = "EXCEL";
+            this.ExcelTest.Id = 11;
+            this.ExcelTest.Name = "ExcelTest";
+            this.ExcelTest.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.ExcelTest_ItemClick);
+            // 
+            // WordBtn
+            // 
+            this.WordBtn.Caption = "Word";
+            this.WordBtn.Id = 12;
+            this.WordBtn.Name = "WordBtn";
+            this.WordBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.WordBtn_ItemClick);
+            // 
+            // PDFBtn
+            // 
+            this.PDFBtn.Caption = "PDF";
+            this.PDFBtn.Id = 13;
+            this.PDFBtn.Name = "PDFBtn";
+            this.PDFBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.PDFBtn_ItemClick);
+            // 
+            // HTMLBtn
+            // 
+            this.HTMLBtn.Caption = "HTML";
+            this.HTMLBtn.Id = 14;
+            this.HTMLBtn.Name = "HTMLBtn";
+            this.HTMLBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.HTMLBtn_ItemClick);
+            // 
+            // saveLayoutBtn
+            // 
+            this.saveLayoutBtn.Caption = "Şablonu yadda saxla";
+            this.saveLayoutBtn.Id = 15;
+            this.saveLayoutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
+            this.saveLayoutBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.saveLayoutBtn.Name = "saveLayoutBtn";
+            this.saveLayoutBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.saveLayoutBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.saveLayoutBtn_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -374,5 +440,11 @@ namespace TeachingLoadInfoSystem
         private DevExpress.XtraGrid.Columns.GridColumn colDepartment;
         private DevExpress.XtraGrid.Columns.GridColumn colWorkTime;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraBars.BarSubItem barSubItem1;
+        private DevExpress.XtraBars.BarButtonItem ExcelTest;
+        private DevExpress.XtraBars.BarButtonItem WordBtn;
+        private DevExpress.XtraBars.BarButtonItem PDFBtn;
+        private DevExpress.XtraBars.BarButtonItem HTMLBtn;
+        private DevExpress.XtraBars.BarButtonItem saveLayoutBtn;
     }
 }

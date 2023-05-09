@@ -30,36 +30,27 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(TeacherInfoCRUDForm));
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
+            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.nameTxt = new DevExpress.XtraEditors.TextEdit();
             this.workTimeCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit5View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.surnameTxt = new DevExpress.XtraEditors.TextEdit();
             this.departmentCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit4View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.exitBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.saveBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.degreeCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.scientificNameCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
-            this.searchLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.teacherFatherNameTxt = new DevExpress.XtraEditors.TextEdit();
+            this.birthDate = new DevExpress.XtraEditors.DateEdit();
             this.genderCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.numberTxt = new DevExpress.XtraEditors.TextEdit();
+            this.degreeCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit3View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.mailTxt = new DevExpress.XtraEditors.TextEdit();
-            this.birthDate = new DevExpress.XtraEditors.DateEdit();
-            this.teacherFatherNameTxt = new DevExpress.XtraEditors.TextEdit();
-            this.surnameTxt = new DevExpress.XtraEditors.TextEdit();
-            this.nameTxt = new DevExpress.XtraEditors.TextEdit();
-            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.xtraTabControl1 = new DevExpress.XtraTab.XtraTabControl();
-            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.xtraTabPage1 = new DevExpress.XtraTab.XtraTabPage();
-            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
-            this.layoutControl2 = new DevExpress.XtraLayout.LayoutControl();
+            this.scientificNameCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.searchLookUpEdit2View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.numberTxt = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlGroup1 = new DevExpress.XtraLayout.LayoutControlGroup();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -69,45 +60,71 @@
             this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabPage5 = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl4 = new DevExpress.XtraLayout.LayoutControl();
+            this.addlanguageBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.languagePanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.layoutControlGroup3 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem17 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem18 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabPage3 = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl5 = new DevExpress.XtraLayout.LayoutControl();
+            this.addCertificateBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.certificatePanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.layoutControlGroup4 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem19 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem20 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabPage4 = new DevExpress.XtraTab.XtraTabPage();
+            this.layoutControl6 = new DevExpress.XtraLayout.LayoutControl();
+            this.previousJobPanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.addPreviousJobBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.layoutControlGroup5 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem21 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem22 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.xtraTabPage2 = new DevExpress.XtraTab.XtraTabPage();
             this.layoutControl3 = new DevExpress.XtraLayout.LayoutControl();
-            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
-            this.bookPanelControl = new DevExpress.XtraEditors.PanelControl();
-            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.addBookBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.bookPanelControl = new DevExpress.XtraEditors.PanelControl();
+            this.layoutControlGroup2 = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem15 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem16 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.exitBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.saveBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.panelControl2 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl3 = new DevExpress.XtraEditors.PanelControl();
+            this.panelControl4 = new DevExpress.XtraEditors.PanelControl();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.workTimeCmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentCmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeCmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit3View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scientificNameCmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderCmb.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mailTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherFatherNameTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surnameTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nameTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).BeginInit();
             this.xtraTabControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             this.xtraTabPage1.SuspendLayout();
-            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).BeginInit();
             this.layoutControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.nameTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workTimeCmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surnameTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentCmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherFatherNameTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderCmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeCmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit3View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mailTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificNameCmb.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
@@ -117,12 +134,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
+            this.xtraTabPage5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).BeginInit();
+            this.layoutControl4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.languagePanelControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).BeginInit();
+            this.xtraTabPage3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).BeginInit();
+            this.layoutControl5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.certificatePanelControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).BeginInit();
+            this.xtraTabPage4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).BeginInit();
+            this.layoutControl6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.previousJobPanelControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).BeginInit();
+            this.xtraTabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).BeginInit();
             this.layoutControl3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookPanelControl)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).BeginInit();
+            this.panelControl2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).BeginInit();
+            this.panelControl3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -137,6 +187,56 @@
             this.layoutControl1.Size = new System.Drawing.Size(856, 313);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // xtraTabControl1
+            // 
+            this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
+            this.xtraTabControl1.Name = "xtraTabControl1";
+            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
+            this.xtraTabControl1.Size = new System.Drawing.Size(832, 258);
+            this.xtraTabControl1.TabIndex = 0;
+            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
+            this.xtraTabPage1,
+            this.xtraTabPage5,
+            this.xtraTabPage3,
+            this.xtraTabPage4,
+            this.xtraTabPage2});
+            // 
+            // xtraTabPage1
+            // 
+            this.xtraTabPage1.Controls.Add(this.layoutControl2);
+            this.xtraTabPage1.Name = "xtraTabPage1";
+            this.xtraTabPage1.Size = new System.Drawing.Size(830, 228);
+            this.xtraTabPage1.Text = "Müəllim";
+            // 
+            // layoutControl2
+            // 
+            this.layoutControl2.Controls.Add(this.nameTxt);
+            this.layoutControl2.Controls.Add(this.workTimeCmb);
+            this.layoutControl2.Controls.Add(this.surnameTxt);
+            this.layoutControl2.Controls.Add(this.departmentCmb);
+            this.layoutControl2.Controls.Add(this.teacherFatherNameTxt);
+            this.layoutControl2.Controls.Add(this.birthDate);
+            this.layoutControl2.Controls.Add(this.genderCmb);
+            this.layoutControl2.Controls.Add(this.degreeCmb);
+            this.layoutControl2.Controls.Add(this.mailTxt);
+            this.layoutControl2.Controls.Add(this.scientificNameCmb);
+            this.layoutControl2.Controls.Add(this.numberTxt);
+            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl2.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl2.Name = "layoutControl2";
+            this.layoutControl2.Root = this.layoutControlGroup1;
+            this.layoutControl2.Size = new System.Drawing.Size(830, 228);
+            this.layoutControl2.TabIndex = 0;
+            this.layoutControl2.Text = "layoutControl2";
+            // 
+            // nameTxt
+            // 
+            this.nameTxt.Location = new System.Drawing.Point(100, 12);
+            this.nameTxt.Name = "nameTxt";
+            this.nameTxt.Size = new System.Drawing.Size(313, 22);
+            this.nameTxt.StyleController = this.layoutControl2;
+            this.nameTxt.TabIndex = 0;
             // 
             // workTimeCmb
             // 
@@ -160,6 +260,14 @@
             this.searchLookUpEdit5View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit5View.OptionsView.ShowGroupPanel = false;
             // 
+            // surnameTxt
+            // 
+            this.surnameTxt.Location = new System.Drawing.Point(505, 12);
+            this.surnameTxt.Name = "surnameTxt";
+            this.surnameTxt.Size = new System.Drawing.Size(313, 22);
+            this.surnameTxt.StyleController = this.layoutControl2;
+            this.surnameTxt.TabIndex = 2;
+            // 
             // departmentCmb
             // 
             this.departmentCmb.Location = new System.Drawing.Point(100, 142);
@@ -182,69 +290,32 @@
             this.searchLookUpEdit4View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit4View.OptionsView.ShowGroupPanel = false;
             // 
-            // exitBtn
+            // teacherFatherNameTxt
             // 
-            this.exitBtn.Location = new System.Drawing.Point(709, 274);
-            this.exitBtn.Name = "exitBtn";
-            this.exitBtn.Size = new System.Drawing.Size(135, 27);
-            this.exitBtn.StyleController = this.layoutControl1;
-            this.exitBtn.TabIndex = 3;
-            this.exitBtn.Text = "Çıxış";
-            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            this.teacherFatherNameTxt.Location = new System.Drawing.Point(100, 38);
+            this.teacherFatherNameTxt.Name = "teacherFatherNameTxt";
+            this.teacherFatherNameTxt.Size = new System.Drawing.Size(313, 22);
+            this.teacherFatherNameTxt.StyleController = this.layoutControl2;
+            this.teacherFatherNameTxt.TabIndex = 3;
             // 
-            // saveBtn
+            // birthDate
             // 
-            this.saveBtn.Location = new System.Drawing.Point(581, 274);
-            this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(124, 27);
-            this.saveBtn.StyleController = this.layoutControl1;
-            this.saveBtn.TabIndex = 2;
-            this.saveBtn.Text = "Yadda saxla";
-            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
-            // 
-            // degreeCmb
-            // 
-            this.degreeCmb.Location = new System.Drawing.Point(100, 116);
-            this.degreeCmb.Name = "degreeCmb";
-            this.degreeCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.birthDate.EditValue = null;
+            this.birthDate.Location = new System.Drawing.Point(505, 38);
+            this.birthDate.Name = "birthDate";
+            this.birthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.degreeCmb.Properties.DisplayMember = "DegreeName";
-            this.degreeCmb.Properties.NullText = "";
-            this.degreeCmb.Properties.PopupView = this.searchLookUpEdit3View;
-            this.degreeCmb.Properties.ValueMember = "Id";
-            this.degreeCmb.Size = new System.Drawing.Size(313, 22);
-            this.degreeCmb.StyleController = this.layoutControl2;
-            this.degreeCmb.TabIndex = 9;
-            this.degreeCmb.EditValueChanged += new System.EventHandler(this.degreeCmb_EditValueChanged);
-            // 
-            // searchLookUpEdit3View
-            // 
-            this.searchLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit3View.Name = "searchLookUpEdit3View";
-            this.searchLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit3View.OptionsView.ShowGroupPanel = false;
-            // 
-            // scientificNameCmb
-            // 
-            this.scientificNameCmb.Location = new System.Drawing.Point(100, 90);
-            this.scientificNameCmb.Name = "scientificNameCmb";
-            this.scientificNameCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.birthDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.scientificNameCmb.Properties.DisplayMember = "Name";
-            this.scientificNameCmb.Properties.NullText = "";
-            this.scientificNameCmb.Properties.PopupView = this.searchLookUpEdit2View;
-            this.scientificNameCmb.Properties.ValueMember = "Id";
-            this.scientificNameCmb.Size = new System.Drawing.Size(313, 22);
-            this.scientificNameCmb.StyleController = this.layoutControl2;
-            this.scientificNameCmb.TabIndex = 7;
-            this.scientificNameCmb.EditValueChanged += new System.EventHandler(this.scientificNameCmb_EditValueChanged);
-            // 
-            // searchLookUpEdit2View
-            // 
-            this.searchLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit2View.Name = "searchLookUpEdit2View";
-            this.searchLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit2View.OptionsView.ShowGroupPanel = false;
+            this.birthDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
+            this.birthDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.birthDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
+            this.birthDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.birthDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
+            this.birthDate.Properties.UseMaskAsDisplayFormat = true;
+            this.birthDate.Size = new System.Drawing.Size(313, 22);
+            this.birthDate.StyleController = this.layoutControl2;
+            this.birthDate.TabIndex = 4;
             // 
             // genderCmb
             // 
@@ -269,13 +340,27 @@
             this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
             this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
-            // numberTxt
+            // degreeCmb
             // 
-            this.numberTxt.Location = new System.Drawing.Point(505, 90);
-            this.numberTxt.Name = "numberTxt";
-            this.numberTxt.Size = new System.Drawing.Size(313, 22);
-            this.numberTxt.StyleController = this.layoutControl2;
-            this.numberTxt.TabIndex = 8;
+            this.degreeCmb.Location = new System.Drawing.Point(100, 116);
+            this.degreeCmb.Name = "degreeCmb";
+            this.degreeCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.degreeCmb.Properties.DisplayMember = "DegreeName";
+            this.degreeCmb.Properties.NullText = "";
+            this.degreeCmb.Properties.PopupView = this.searchLookUpEdit3View;
+            this.degreeCmb.Properties.ValueMember = "Id";
+            this.degreeCmb.Size = new System.Drawing.Size(313, 22);
+            this.degreeCmb.StyleController = this.layoutControl2;
+            this.degreeCmb.TabIndex = 9;
+            this.degreeCmb.EditValueChanged += new System.EventHandler(this.degreeCmb_EditValueChanged);
+            // 
+            // searchLookUpEdit3View
+            // 
+            this.searchLookUpEdit3View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit3View.Name = "searchLookUpEdit3View";
+            this.searchLookUpEdit3View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit3View.OptionsView.ShowGroupPanel = false;
             // 
             // mailTxt
             // 
@@ -285,142 +370,35 @@
             this.mailTxt.StyleController = this.layoutControl2;
             this.mailTxt.TabIndex = 6;
             // 
-            // birthDate
+            // scientificNameCmb
             // 
-            this.birthDate.EditValue = null;
-            this.birthDate.Location = new System.Drawing.Point(505, 38);
-            this.birthDate.Name = "birthDate";
-            this.birthDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.scientificNameCmb.Location = new System.Drawing.Point(100, 90);
+            this.scientificNameCmb.Name = "scientificNameCmb";
+            this.scientificNameCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.birthDate.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
-            this.birthDate.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.birthDate.Properties.EditFormat.FormatString = "dd-MM-yyyy";
-            this.birthDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.birthDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
-            this.birthDate.Properties.UseMaskAsDisplayFormat = true;
-            this.birthDate.Size = new System.Drawing.Size(313, 22);
-            this.birthDate.StyleController = this.layoutControl2;
-            this.birthDate.TabIndex = 4;
+            this.scientificNameCmb.Properties.DisplayMember = "Name";
+            this.scientificNameCmb.Properties.NullText = "";
+            this.scientificNameCmb.Properties.PopupView = this.searchLookUpEdit2View;
+            this.scientificNameCmb.Properties.ValueMember = "Id";
+            this.scientificNameCmb.Size = new System.Drawing.Size(313, 22);
+            this.scientificNameCmb.StyleController = this.layoutControl2;
+            this.scientificNameCmb.TabIndex = 7;
+            this.scientificNameCmb.EditValueChanged += new System.EventHandler(this.scientificNameCmb_EditValueChanged);
             // 
-            // teacherFatherNameTxt
+            // searchLookUpEdit2View
             // 
-            this.teacherFatherNameTxt.Location = new System.Drawing.Point(100, 38);
-            this.teacherFatherNameTxt.Name = "teacherFatherNameTxt";
-            this.teacherFatherNameTxt.Size = new System.Drawing.Size(313, 22);
-            this.teacherFatherNameTxt.StyleController = this.layoutControl2;
-            this.teacherFatherNameTxt.TabIndex = 3;
+            this.searchLookUpEdit2View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit2View.Name = "searchLookUpEdit2View";
+            this.searchLookUpEdit2View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit2View.OptionsView.ShowGroupPanel = false;
             // 
-            // surnameTxt
+            // numberTxt
             // 
-            this.surnameTxt.Location = new System.Drawing.Point(505, 12);
-            this.surnameTxt.Name = "surnameTxt";
-            this.surnameTxt.Size = new System.Drawing.Size(313, 22);
-            this.surnameTxt.StyleController = this.layoutControl2;
-            this.surnameTxt.TabIndex = 2;
-            // 
-            // nameTxt
-            // 
-            this.nameTxt.Location = new System.Drawing.Point(100, 12);
-            this.nameTxt.Name = "nameTxt";
-            this.nameTxt.Size = new System.Drawing.Size(313, 22);
-            this.nameTxt.StyleController = this.layoutControl2;
-            this.nameTxt.TabIndex = 0;
-            // 
-            // Root
-            // 
-            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
-            this.Root.GroupBordersVisible = false;
-            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
-            this.layoutControlItem10,
-            this.layoutControlItem11,
-            this.emptySpaceItem2,
-            this.layoutControlItem1});
-            this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(856, 313);
-            this.Root.TextVisible = false;
-            // 
-            // layoutControlItem10
-            // 
-            this.layoutControlItem10.Control = this.saveBtn;
-            this.layoutControlItem10.Location = new System.Drawing.Point(569, 262);
-            this.layoutControlItem10.Name = "layoutControlItem10";
-            this.layoutControlItem10.Size = new System.Drawing.Size(128, 31);
-            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem10.TextVisible = false;
-            // 
-            // layoutControlItem11
-            // 
-            this.layoutControlItem11.Control = this.exitBtn;
-            this.layoutControlItem11.Location = new System.Drawing.Point(697, 262);
-            this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(139, 31);
-            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem11.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 262);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(569, 31);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
-            // 
-            // xtraTabControl1
-            // 
-            this.xtraTabControl1.Location = new System.Drawing.Point(12, 12);
-            this.xtraTabControl1.Name = "xtraTabControl1";
-            this.xtraTabControl1.SelectedTabPage = this.xtraTabPage1;
-            this.xtraTabControl1.Size = new System.Drawing.Size(832, 258);
-            this.xtraTabControl1.TabIndex = 0;
-            this.xtraTabControl1.TabPages.AddRange(new DevExpress.XtraTab.XtraTabPage[] {
-            this.xtraTabPage1,
-            this.xtraTabPage2});
-            // 
-            // layoutControlItem1
-            // 
-            this.layoutControlItem1.Control = this.xtraTabControl1;
-            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
-            this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(836, 262);
-            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem1.TextVisible = false;
-            // 
-            // xtraTabPage1
-            // 
-            this.xtraTabPage1.Controls.Add(this.layoutControl2);
-            this.xtraTabPage1.Name = "xtraTabPage1";
-            this.xtraTabPage1.Size = new System.Drawing.Size(830, 228);
-            this.xtraTabPage1.Text = "Müəllim";
-            // 
-            // xtraTabPage2
-            // 
-            this.xtraTabPage2.Controls.Add(this.layoutControl3);
-            this.xtraTabPage2.Name = "xtraTabPage2";
-            this.xtraTabPage2.Size = new System.Drawing.Size(830, 228);
-            this.xtraTabPage2.Text = "Kitablar";
-            // 
-            // layoutControl2
-            // 
-            this.layoutControl2.Controls.Add(this.nameTxt);
-            this.layoutControl2.Controls.Add(this.workTimeCmb);
-            this.layoutControl2.Controls.Add(this.surnameTxt);
-            this.layoutControl2.Controls.Add(this.departmentCmb);
-            this.layoutControl2.Controls.Add(this.teacherFatherNameTxt);
-            this.layoutControl2.Controls.Add(this.birthDate);
-            this.layoutControl2.Controls.Add(this.genderCmb);
-            this.layoutControl2.Controls.Add(this.degreeCmb);
-            this.layoutControl2.Controls.Add(this.mailTxt);
-            this.layoutControl2.Controls.Add(this.scientificNameCmb);
-            this.layoutControl2.Controls.Add(this.numberTxt);
-            this.layoutControl2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.layoutControl2.Location = new System.Drawing.Point(0, 0);
-            this.layoutControl2.Name = "layoutControl2";
-            this.layoutControl2.Root = this.layoutControlGroup1;
-            this.layoutControl2.Size = new System.Drawing.Size(830, 228);
-            this.layoutControl2.TabIndex = 0;
-            this.layoutControl2.Text = "layoutControl2";
+            this.numberTxt.Location = new System.Drawing.Point(505, 90);
+            this.numberTxt.Name = "numberTxt";
+            this.numberTxt.Size = new System.Drawing.Size(313, 22);
+            this.numberTxt.StyleController = this.layoutControl2;
+            this.numberTxt.TabIndex = 8;
             // 
             // layoutControlGroup1
             // 
@@ -450,15 +428,6 @@
             this.layoutControlItem2.Size = new System.Drawing.Size(405, 26);
             this.layoutControlItem2.Text = "Ad";
             this.layoutControlItem2.TextSize = new System.Drawing.Size(76, 16);
-            // 
-            // layoutControlItem4
-            // 
-            this.layoutControlItem4.Control = this.surnameTxt;
-            this.layoutControlItem4.Location = new System.Drawing.Point(405, 0);
-            this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(405, 26);
-            this.layoutControlItem4.Text = "Soyad";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(76, 16);
             // 
             // layoutControlItem3
             // 
@@ -541,6 +510,219 @@
             this.layoutControlItem13.Text = "Ştat";
             this.layoutControlItem13.TextSize = new System.Drawing.Size(76, 16);
             // 
+            // layoutControlItem4
+            // 
+            this.layoutControlItem4.Control = this.surnameTxt;
+            this.layoutControlItem4.Location = new System.Drawing.Point(405, 0);
+            this.layoutControlItem4.Name = "layoutControlItem4";
+            this.layoutControlItem4.Size = new System.Drawing.Size(405, 26);
+            this.layoutControlItem4.Text = "Soyad";
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(76, 16);
+            // 
+            // xtraTabPage5
+            // 
+            this.xtraTabPage5.Controls.Add(this.layoutControl4);
+            this.xtraTabPage5.Name = "xtraTabPage5";
+            this.xtraTabPage5.Size = new System.Drawing.Size(830, 228);
+            this.xtraTabPage5.Text = "Dil bilikləri";
+            // 
+            // layoutControl4
+            // 
+            this.layoutControl4.Controls.Add(this.addlanguageBtn);
+            this.layoutControl4.Controls.Add(this.languagePanelControl);
+            this.layoutControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl4.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl4.Name = "layoutControl4";
+            this.layoutControl4.Root = this.layoutControlGroup3;
+            this.layoutControl4.Size = new System.Drawing.Size(830, 228);
+            this.layoutControl4.TabIndex = 0;
+            this.layoutControl4.Text = "layoutControl4";
+            // 
+            // addlanguageBtn
+            // 
+            this.addlanguageBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addlanguageBtn.ImageOptions.Image")));
+            this.addlanguageBtn.Location = new System.Drawing.Point(12, 12);
+            this.addlanguageBtn.Name = "addlanguageBtn";
+            this.addlanguageBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.addlanguageBtn.Size = new System.Drawing.Size(22, 27);
+            this.addlanguageBtn.StyleController = this.layoutControl4;
+            this.addlanguageBtn.TabIndex = 5;
+            this.addlanguageBtn.Click += new System.EventHandler(this.addlanguageBtn_Click);
+            // 
+            // languagePanelControl
+            // 
+            this.languagePanelControl.Location = new System.Drawing.Point(38, 12);
+            this.languagePanelControl.Name = "languagePanelControl";
+            this.languagePanelControl.Size = new System.Drawing.Size(780, 204);
+            this.languagePanelControl.TabIndex = 4;
+            // 
+            // layoutControlGroup3
+            // 
+            this.layoutControlGroup3.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup3.GroupBordersVisible = false;
+            this.layoutControlGroup3.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem17,
+            this.layoutControlItem18});
+            this.layoutControlGroup3.Name = "layoutControlGroup3";
+            this.layoutControlGroup3.Size = new System.Drawing.Size(830, 228);
+            this.layoutControlGroup3.TextVisible = false;
+            // 
+            // layoutControlItem17
+            // 
+            this.layoutControlItem17.Control = this.languagePanelControl;
+            this.layoutControlItem17.Location = new System.Drawing.Point(26, 0);
+            this.layoutControlItem17.Name = "layoutControlItem17";
+            this.layoutControlItem17.Size = new System.Drawing.Size(784, 208);
+            this.layoutControlItem17.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem17.TextVisible = false;
+            // 
+            // layoutControlItem18
+            // 
+            this.layoutControlItem18.Control = this.addlanguageBtn;
+            this.layoutControlItem18.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem18.Name = "layoutControlItem18";
+            this.layoutControlItem18.Size = new System.Drawing.Size(26, 208);
+            this.layoutControlItem18.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem18.TextVisible = false;
+            // 
+            // xtraTabPage3
+            // 
+            this.xtraTabPage3.Controls.Add(this.layoutControl5);
+            this.xtraTabPage3.Name = "xtraTabPage3";
+            this.xtraTabPage3.Size = new System.Drawing.Size(830, 228);
+            this.xtraTabPage3.Text = "Sertifikat";
+            // 
+            // layoutControl5
+            // 
+            this.layoutControl5.Controls.Add(this.addCertificateBtn);
+            this.layoutControl5.Controls.Add(this.certificatePanelControl);
+            this.layoutControl5.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl5.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl5.Name = "layoutControl5";
+            this.layoutControl5.Root = this.layoutControlGroup4;
+            this.layoutControl5.Size = new System.Drawing.Size(830, 228);
+            this.layoutControl5.TabIndex = 0;
+            this.layoutControl5.Text = "layoutControl5";
+            // 
+            // addCertificateBtn
+            // 
+            this.addCertificateBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addCertificateBtn.ImageOptions.Image")));
+            this.addCertificateBtn.Location = new System.Drawing.Point(12, 12);
+            this.addCertificateBtn.Name = "addCertificateBtn";
+            this.addCertificateBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.addCertificateBtn.Size = new System.Drawing.Size(22, 27);
+            this.addCertificateBtn.StyleController = this.layoutControl5;
+            this.addCertificateBtn.TabIndex = 4;
+            this.addCertificateBtn.Click += new System.EventHandler(this.addCertificateBtn_Click);
+            // 
+            // certificatePanelControl
+            // 
+            this.certificatePanelControl.Location = new System.Drawing.Point(38, 12);
+            this.certificatePanelControl.Name = "certificatePanelControl";
+            this.certificatePanelControl.Size = new System.Drawing.Size(780, 204);
+            this.certificatePanelControl.TabIndex = 3;
+            // 
+            // layoutControlGroup4
+            // 
+            this.layoutControlGroup4.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup4.GroupBordersVisible = false;
+            this.layoutControlGroup4.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem19,
+            this.layoutControlItem20});
+            this.layoutControlGroup4.Name = "layoutControlGroup4";
+            this.layoutControlGroup4.Size = new System.Drawing.Size(830, 228);
+            this.layoutControlGroup4.TextVisible = false;
+            // 
+            // layoutControlItem19
+            // 
+            this.layoutControlItem19.Control = this.certificatePanelControl;
+            this.layoutControlItem19.Location = new System.Drawing.Point(26, 0);
+            this.layoutControlItem19.Name = "layoutControlItem19";
+            this.layoutControlItem19.Size = new System.Drawing.Size(784, 208);
+            this.layoutControlItem19.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem19.TextVisible = false;
+            // 
+            // layoutControlItem20
+            // 
+            this.layoutControlItem20.Control = this.addCertificateBtn;
+            this.layoutControlItem20.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem20.Name = "layoutControlItem20";
+            this.layoutControlItem20.Size = new System.Drawing.Size(26, 208);
+            this.layoutControlItem20.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem20.TextVisible = false;
+            // 
+            // xtraTabPage4
+            // 
+            this.xtraTabPage4.Controls.Add(this.layoutControl6);
+            this.xtraTabPage4.Name = "xtraTabPage4";
+            this.xtraTabPage4.Size = new System.Drawing.Size(830, 228);
+            this.xtraTabPage4.Text = "İş yerləri";
+            // 
+            // layoutControl6
+            // 
+            this.layoutControl6.Controls.Add(this.previousJobPanelControl);
+            this.layoutControl6.Controls.Add(this.addPreviousJobBtn);
+            this.layoutControl6.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.layoutControl6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControl6.Name = "layoutControl6";
+            this.layoutControl6.Root = this.layoutControlGroup5;
+            this.layoutControl6.Size = new System.Drawing.Size(830, 228);
+            this.layoutControl6.TabIndex = 0;
+            this.layoutControl6.Text = "layoutControl6";
+            // 
+            // previousJobPanelControl
+            // 
+            this.previousJobPanelControl.Location = new System.Drawing.Point(38, 12);
+            this.previousJobPanelControl.Name = "previousJobPanelControl";
+            this.previousJobPanelControl.Size = new System.Drawing.Size(780, 204);
+            this.previousJobPanelControl.TabIndex = 5;
+            // 
+            // addPreviousJobBtn
+            // 
+            this.addPreviousJobBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addPreviousJobBtn.ImageOptions.Image")));
+            this.addPreviousJobBtn.Location = new System.Drawing.Point(12, 12);
+            this.addPreviousJobBtn.Name = "addPreviousJobBtn";
+            this.addPreviousJobBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.addPreviousJobBtn.Size = new System.Drawing.Size(22, 27);
+            this.addPreviousJobBtn.StyleController = this.layoutControl6;
+            this.addPreviousJobBtn.TabIndex = 4;
+            // 
+            // layoutControlGroup5
+            // 
+            this.layoutControlGroup5.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.layoutControlGroup5.GroupBordersVisible = false;
+            this.layoutControlGroup5.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem21,
+            this.layoutControlItem22});
+            this.layoutControlGroup5.Name = "layoutControlGroup5";
+            this.layoutControlGroup5.Size = new System.Drawing.Size(830, 228);
+            this.layoutControlGroup5.TextVisible = false;
+            // 
+            // layoutControlItem21
+            // 
+            this.layoutControlItem21.Control = this.addPreviousJobBtn;
+            this.layoutControlItem21.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem21.Name = "layoutControlItem21";
+            this.layoutControlItem21.Size = new System.Drawing.Size(26, 208);
+            this.layoutControlItem21.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem21.TextVisible = false;
+            // 
+            // layoutControlItem22
+            // 
+            this.layoutControlItem22.Control = this.previousJobPanelControl;
+            this.layoutControlItem22.Location = new System.Drawing.Point(26, 0);
+            this.layoutControlItem22.Name = "layoutControlItem22";
+            this.layoutControlItem22.Size = new System.Drawing.Size(784, 208);
+            this.layoutControlItem22.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem22.TextVisible = false;
+            // 
+            // xtraTabPage2
+            // 
+            this.xtraTabPage2.Controls.Add(this.layoutControl3);
+            this.xtraTabPage2.Name = "xtraTabPage2";
+            this.xtraTabPage2.Size = new System.Drawing.Size(830, 228);
+            this.xtraTabPage2.Text = "Kitablar";
+            // 
             // layoutControl3
             // 
             this.layoutControl3.Controls.Add(this.addBookBtn);
@@ -553,6 +735,24 @@
             this.layoutControl3.TabIndex = 0;
             this.layoutControl3.Text = "layoutControl3";
             // 
+            // addBookBtn
+            // 
+            this.addBookBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("addBookBtn.ImageOptions.Image")));
+            this.addBookBtn.Location = new System.Drawing.Point(12, 12);
+            this.addBookBtn.Name = "addBookBtn";
+            this.addBookBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
+            this.addBookBtn.Size = new System.Drawing.Size(22, 27);
+            this.addBookBtn.StyleController = this.layoutControl3;
+            this.addBookBtn.TabIndex = 0;
+            this.addBookBtn.Click += new System.EventHandler(this.addBookBtn_Click);
+            // 
+            // bookPanelControl
+            // 
+            this.bookPanelControl.Location = new System.Drawing.Point(38, 12);
+            this.bookPanelControl.Name = "bookPanelControl";
+            this.bookPanelControl.Size = new System.Drawing.Size(780, 204);
+            this.bookPanelControl.TabIndex = 4;
+            // 
             // layoutControlGroup2
             // 
             this.layoutControlGroup2.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
@@ -564,13 +764,6 @@
             this.layoutControlGroup2.Size = new System.Drawing.Size(830, 228);
             this.layoutControlGroup2.TextVisible = false;
             // 
-            // bookPanelControl
-            // 
-            this.bookPanelControl.Location = new System.Drawing.Point(38, 12);
-            this.bookPanelControl.Name = "bookPanelControl";
-            this.bookPanelControl.Size = new System.Drawing.Size(780, 204);
-            this.bookPanelControl.TabIndex = 4;
-            // 
             // layoutControlItem15
             // 
             this.layoutControlItem15.Control = this.bookPanelControl;
@@ -580,17 +773,6 @@
             this.layoutControlItem15.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem15.TextVisible = false;
             // 
-            // addBookBtn
-            // 
-            this.addBookBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("simpleButton1.ImageOptions.Image")));
-            this.addBookBtn.Location = new System.Drawing.Point(12, 12);
-            this.addBookBtn.Name = "addBookBtn";
-            this.addBookBtn.PaintStyle = DevExpress.XtraEditors.Controls.PaintStyles.Light;
-            this.addBookBtn.Size = new System.Drawing.Size(22, 27);
-            this.addBookBtn.StyleController = this.layoutControl3;
-            this.addBookBtn.TabIndex = 0;
-            this.addBookBtn.Click += new System.EventHandler(this.addBookBtn_Click);
-            // 
             // layoutControlItem16
             // 
             this.layoutControlItem16.Control = this.addBookBtn;
@@ -599,6 +781,100 @@
             this.layoutControlItem16.Size = new System.Drawing.Size(26, 208);
             this.layoutControlItem16.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem16.TextVisible = false;
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Location = new System.Drawing.Point(709, 274);
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.Size = new System.Drawing.Size(135, 27);
+            this.exitBtn.StyleController = this.layoutControl1;
+            this.exitBtn.TabIndex = 3;
+            this.exitBtn.Text = "Çıxış";
+            this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
+            // 
+            // saveBtn
+            // 
+            this.saveBtn.Location = new System.Drawing.Point(581, 274);
+            this.saveBtn.Name = "saveBtn";
+            this.saveBtn.Size = new System.Drawing.Size(124, 27);
+            this.saveBtn.StyleController = this.layoutControl1;
+            this.saveBtn.TabIndex = 2;
+            this.saveBtn.Text = "Yadda saxla";
+            this.saveBtn.Click += new System.EventHandler(this.saveBtn_Click);
+            // 
+            // Root
+            // 
+            this.Root.EnableIndentsWithoutBorders = DevExpress.Utils.DefaultBoolean.True;
+            this.Root.GroupBordersVisible = false;
+            this.Root.Items.AddRange(new DevExpress.XtraLayout.BaseLayoutItem[] {
+            this.layoutControlItem10,
+            this.layoutControlItem11,
+            this.emptySpaceItem2,
+            this.layoutControlItem1});
+            this.Root.Name = "Root";
+            this.Root.Size = new System.Drawing.Size(856, 313);
+            this.Root.TextVisible = false;
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.saveBtn;
+            this.layoutControlItem10.Location = new System.Drawing.Point(569, 262);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(128, 31);
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem10.TextVisible = false;
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.exitBtn;
+            this.layoutControlItem11.Location = new System.Drawing.Point(697, 262);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(139, 31);
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem11.TextVisible = false;
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 262);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(569, 31);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem1
+            // 
+            this.layoutControlItem1.Control = this.xtraTabControl1;
+            this.layoutControlItem1.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem1.Name = "layoutControlItem1";
+            this.layoutControlItem1.Size = new System.Drawing.Size(836, 262);
+            this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem1.TextVisible = false;
+            // 
+            // panelControl2
+            // 
+            this.panelControl2.Controls.Add(this.panelControl3);
+            this.panelControl2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl2.Location = new System.Drawing.Point(1, 29);
+            this.panelControl2.Name = "panelControl2";
+            this.panelControl2.Size = new System.Drawing.Size(830, 228);
+            this.panelControl2.TabIndex = 5;
+            // 
+            // panelControl3
+            // 
+            this.panelControl3.Controls.Add(this.panelControl4);
+            this.panelControl3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl3.Location = new System.Drawing.Point(2, 2);
+            this.panelControl3.Name = "panelControl3";
+            this.panelControl3.Size = new System.Drawing.Size(826, 224);
+            this.panelControl3.TabIndex = 0;
+            // 
+            // panelControl4
+            // 
+            this.panelControl4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelControl4.Location = new System.Drawing.Point(2, 2);
+            this.panelControl4.Name = "panelControl4";
+            this.panelControl4.Size = new System.Drawing.Size(822, 220);
+            this.panelControl4.TabIndex = 0;
             // 
             // TeacherInfoCRUDForm
             // 
@@ -611,37 +887,30 @@
             this.Text = "Müəllim haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.workTimeCmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.departmentCmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.degreeCmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit3View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.scientificNameCmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.genderCmb.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numberTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.mailTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherFatherNameTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.surnameTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.nameTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabControl1)).EndInit();
             this.xtraTabControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             this.xtraTabPage1.ResumeLayout(false);
-            this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl2)).EndInit();
             this.layoutControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.nameTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workTimeCmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit5View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.surnameTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.departmentCmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit4View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teacherFatherNameTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.birthDate.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.genderCmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.degreeCmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit3View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mailTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificNameCmb.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit2View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numberTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
@@ -651,12 +920,45 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
+            this.xtraTabPage5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl4)).EndInit();
+            this.layoutControl4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.languagePanelControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem17)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem18)).EndInit();
+            this.xtraTabPage3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl5)).EndInit();
+            this.layoutControl5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.certificatePanelControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem19)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem20)).EndInit();
+            this.xtraTabPage4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControl6)).EndInit();
+            this.layoutControl6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.previousJobPanelControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem21)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem22)).EndInit();
+            this.xtraTabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl3)).EndInit();
             this.layoutControl3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.bookPanelControl)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlGroup2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem15)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem16)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl2)).EndInit();
+            this.panelControl2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl3)).EndInit();
+            this.panelControl3.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.panelControl4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -709,5 +1011,29 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem15;
         private DevExpress.XtraEditors.SimpleButton addBookBtn;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem16;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage3;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage4;
+        private DevExpress.XtraTab.XtraTabPage xtraTabPage5;
+        private DevExpress.XtraEditors.PanelControl panelControl2;
+        private DevExpress.XtraEditors.PanelControl panelControl3;
+        private DevExpress.XtraEditors.PanelControl panelControl4;
+        private DevExpress.XtraLayout.LayoutControl layoutControl4;
+        private DevExpress.XtraEditors.SimpleButton addlanguageBtn;
+        private DevExpress.XtraEditors.PanelControl languagePanelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup3;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem17;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem18;
+        private DevExpress.XtraLayout.LayoutControl layoutControl5;
+        private DevExpress.XtraEditors.SimpleButton addCertificateBtn;
+        private DevExpress.XtraEditors.PanelControl certificatePanelControl;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup4;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem19;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem20;
+        private DevExpress.XtraLayout.LayoutControl layoutControl6;
+        private DevExpress.XtraEditors.PanelControl previousJobPanelControl;
+        private DevExpress.XtraEditors.SimpleButton addPreviousJobBtn;
+        private DevExpress.XtraLayout.LayoutControlGroup layoutControlGroup5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem21;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem22;
     }
 }

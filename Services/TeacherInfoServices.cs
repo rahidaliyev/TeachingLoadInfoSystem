@@ -15,12 +15,14 @@ namespace TeachingLoadInfoSystem.Services
         public TeacherInfo GetTeacherInfoByID(int id)
         {
             var selectedTeacher = _repository.GetAll
-                .Include(x => x.Gender)
                 .Include(x => x.Department)
+                .Include(x => x.Gender)
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)
                 .Include(x => x.WorkTime)
                 .Include(x => x.Books)
+                .Include(x => x.Certificates)
+                .Include(x => x.Certificates).ThenInclude(y => y.Subject)
                 .AsNoTracking().FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
@@ -46,6 +48,8 @@ namespace TeachingLoadInfoSystem.Services
                 .Include(x => x.ScientificDegree)
                 .Include(x => x.WorkTime)
                 .Include(x => x.Books)
+                .Include(x => x.Certificates)
+                .Include(x => x.Certificates).ThenInclude(y => y.Subject)
                 .AsNoTracking();
         }
     }

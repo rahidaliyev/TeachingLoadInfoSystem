@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeachingLoadInfoSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class tlsunec : Migration
+    public partial class teachingload : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -31,12 +31,28 @@ namespace TeachingLoadInfoSystem.Migrations
                 {
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    GenderCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    GenderName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    GenderCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GenderName = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Genders", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "LayoutInfos",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    UserID = table.Column<int>(type: "int", nullable: false),
+                    GridName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    FormName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Stream = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_LayoutInfos", x => x.ID);
                 });
 
             migrationBuilder.CreateTable(
@@ -74,7 +90,8 @@ namespace TeachingLoadInfoSystem.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SubjectCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SubjectName = table.Column<bool>(type: "bit", nullable: false)
+                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    DepartmentID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -302,6 +319,9 @@ namespace TeachingLoadInfoSystem.Migrations
 
             migrationBuilder.DropTable(
                 name: "Languages");
+
+            migrationBuilder.DropTable(
+                name: "LayoutInfos");
 
             migrationBuilder.DropTable(
                 name: "PreviousJobs");

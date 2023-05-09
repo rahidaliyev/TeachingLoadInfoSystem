@@ -22,5 +22,6 @@ namespace TeachingLoadInfoSystem.AppDbContext
         public DbSet<Subject> Subjects { get; set; }
         public DbSet<Language> Languages { get; set; }
         public DbSet<PreviousJob> PreviousJobs { get; set; }
+        public DbSet<LayoutInfo> LayoutInfos { get; set; }
     }
 }

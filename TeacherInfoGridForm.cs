@@ -4,12 +4,15 @@ using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Services.Intefaces;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
+using TeachingLoadInfoSystem.Controllers;
+using DevExpress.Charts.Native;
 
 namespace TeachingLoadInfoSystem
 {
     public partial class TeacherInfoGridForm : DevExpress.XtraEditors.XtraForm
     {
         TeacherInfo teacherinfo = new TeacherInfo();
+        //LayoutInfo layoutInfo = new LayoutInfo();
         ITeacherInfoServices _teacherInfoServices;
         public void RefreshGrid()
         {
@@ -69,7 +72,7 @@ namespace TeachingLoadInfoSystem
             TeacherInfoCRUDForm frm = new TeacherInfoCRUDForm(teacherinfo, _teacherInfoServices);
             frm.ShowDialog();
             RefreshGrid();
-            teacherinfo = new TeacherInfo();   
+            teacherinfo = new TeacherInfo();
         }
 
         private void RefreshBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -90,6 +93,30 @@ namespace TeachingLoadInfoSystem
         private void DeleteBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             RemoveData();
+        }
+        private void ExcelTest_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ExportDocument.ToExcel("TeacherInfo", gridControl);
+        }
+
+        private void WordBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ExportDocument.ToWord("TeacherInfo", gridControl);
+        }
+
+        private void PDFBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ExportDocument.ToPDF("TeacherInfo", gridControl);
+        }
+
+        private void HTMLBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            ExportDocument.ToHTML("TeacherInfo", gridControl);
+        }
+
+        private void saveLayoutBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+            //LayoutController.SaveLayout(1, "AccordingToTypeGrid", "AccordingToTypeForm", gridView, layoutInfo);
         }
     }
 }

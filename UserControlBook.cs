@@ -1,16 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TeachingLoadInfoSystem.AppDbContext;
+﻿using TeachingLoadInfoSystem.AppDbContext;
 using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;
-using TeachingLoadInfoSystem.Repositories;
 
 namespace TeachingLoadInfoSystem
 {

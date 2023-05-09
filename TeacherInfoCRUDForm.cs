@@ -54,9 +54,10 @@ namespace TeachingLoadInfoSystem
             teacherinfo.Gender = _gender;
             teacherinfo.Department = _department;
             teacherinfo.ScientificDegree = _scientificDegree;
-            teacherinfo.ScientificName= _scientificName;
+            teacherinfo.ScientificName = _scientificName;
             teacherinfo.WorkTime = _workTime;
-            teacherinfo.Books = GetBooks(); 
+            teacherinfo.Books = GetBooks();
+            teacherinfo.Certificates = GetCertificates();
         }
         public void LoadData()
         {
@@ -72,6 +73,7 @@ namespace TeachingLoadInfoSystem
             departmentCmb.EditValue = teacherinfo.Department;
             workTimeCmb.EditValue = teacherinfo.WorkTime;
             GetBooksToPanel(teacherinfo.Books);
+            GetCertificatesToPanel(teacherinfo.Certificates);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -119,6 +121,15 @@ namespace TeachingLoadInfoSystem
             }
             return books;
         }
+        private List<Certificate> GetCertificates() 
+        {
+            var certificates = new List<Certificate>();
+            foreach (UserControlCertificate control in certificatePanelControl.Controls)
+            {
+                certificates.Add(control.certificate);
+            }
+            return certificates;
+        }
         private void GetBooksToPanel(List<Book> books)
         {
             foreach (var item in books)
@@ -130,6 +141,38 @@ namespace TeachingLoadInfoSystem
                 bookPanelControl.AutoScroll = true;
                 bookPanelControl.Controls.Add(userControl);
             }
+        }
+        private void GetCertificatesToPanel(List<Certificate> certificates) 
+        {
+            foreach (var item in certificates)
+            {
+                var userControl = new UserControlCertificate(db, item)
+                {
+                    Dock = DockStyle.Top
+                };
+                certificatePanelControl.AutoScroll = true;
+                certificatePanelControl.Controls.Add(userControl);
+            }
+        }
+        private void addBookBtn_Click(object sender, EventArgs e)
+        {
+            var userControl = new UserControlBook(db)
+            {
+                Dock = DockStyle.Fill,
+            };
+            bookPanelControl.Controls.Add(userControl);
+        }
+        private void addCertificateBtn_Click(object sender, EventArgs e)
+        {
+            var userControl = new UserControlCertificate(db)
+            {
+                Dock = DockStyle.Fill,
+            };
+            certificatePanelControl.Controls.Add(userControl);
+        }
+        private void addlanguageBtn_Click(object sender, EventArgs e)
+        {
+
         }
         #endregion
         private void scientificNameCmb_EditValueChanged(object sender, EventArgs e)
@@ -152,7 +195,7 @@ namespace TeachingLoadInfoSystem
 
         private void degreeCmb_EditValueChanged(object sender, EventArgs e)
         {
-            _scientificDegree= degreeCmb.GetSelectedDataRow() as ScientificDegree;
+            _scientificDegree = degreeCmb.GetSelectedDataRow() as ScientificDegree;
             if (_scientificDegree == null)
             {
                 degreeCmb.EditValue = _degreeServices.GetScientificDegreeByID(teacherinfo.ScientificDegreeID);
@@ -177,14 +220,6 @@ namespace TeachingLoadInfoSystem
             }
         }
 
-        private void addBookBtn_Click(object sender, EventArgs e)
-        {
-            var userControl = new UserControlBook(db)
-            {
-                Dock = DockStyle.Fill,  
-            };
-            bookPanelControl.AutoScroll = true;
-            bookPanelControl.Controls.Add(userControl);
-        }
+   
     }
 }
