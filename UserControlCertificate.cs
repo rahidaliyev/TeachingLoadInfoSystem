@@ -8,11 +8,11 @@ namespace TeachingLoadInfoSystem
 {
     public partial class UserControlCertificate : UserControl
     {
+        TLDbContext db = new TLDbContext();
         public Certificate certificate { get; set; } = new Certificate();
         public List<Certificate> CertificateList { get; set; } = new List<Certificate>();
         ICertificateServices _certificateServices;
         ISubjectServices _subjectServices;
-        TLDbContext db = new TLDbContext();
         public UserControlCertificate(TLDbContext db)
         {
             InitializeComponent();
@@ -67,7 +67,9 @@ namespace TeachingLoadInfoSystem
         private void subjectCmb_EditValueChanged(object sender, EventArgs e)
         {
             if (certificate.Subject == null)
+            {
                 certificate.Subject = subjectCmb.GetSelectedDataRow() as Subject;
+            }
         }
         private void isLocalCheck_CheckedChanged(object sender, EventArgs e)
         {

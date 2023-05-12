@@ -16,6 +16,8 @@ namespace TeachingLoadInfoSystem
         IScientificDegreeServices _degreeServices { get; set; }
         IDepartmentServices _departmentServices { get; set; }
         IWorkTimeServices _workTimeServices { get; set; }
+        ILanguageServices _languageServices { get; set; }
+        ITeacherLanguageServices _teacherLanguageServices { get; set; }
         private Gender _gender { get; set; } = new Gender();
         private ScientificName _scientificName { get; set; } = new ScientificName();
         private ScientificDegree _scientificDegree { get; set; } = new ScientificDegree();
@@ -40,6 +42,8 @@ namespace TeachingLoadInfoSystem
             _degreeServices = new ScientificDegreeServices(new Repository<ScientificDegree>(db));
             _departmentServices = new DepartmentServices(new Repository<Department>(db));
             _workTimeServices = new WorkTimeServices(new Repository<WorkTime>(db));
+            _languageServices  = new LanguageServices(new Repository<Language>(db));
+            _teacherLanguageServices = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
             LoadComboboxes();
             LoadData();
         }
@@ -58,6 +62,7 @@ namespace TeachingLoadInfoSystem
             teacherinfo.WorkTime = _workTime;
             teacherinfo.Books = GetBooks();
             teacherinfo.Certificates = GetCertificates();
+            teacherinfo.TeacherLanguages = GetTeacherLanguages();
         }
         public void LoadData()
         {
@@ -74,6 +79,7 @@ namespace TeachingLoadInfoSystem
             workTimeCmb.EditValue = teacherinfo.WorkTime;
             GetBooksToPanel(teacherinfo.Books);
             GetCertificatesToPanel(teacherinfo.Certificates);
+            GetLanguagesToPanel(teacherinfo.TeacherLanguages);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -130,6 +136,27 @@ namespace TeachingLoadInfoSystem
             }
             return certificates;
         }
+        private List<TeacherLanguage> GetTeacherLanguages() 
+        {
+            var languages = new List<TeacherLanguage>();
+            foreach (UserControlTeacherLanguage control in languagePanelControl.Controls)
+            {
+                languages.Add(control.TeacherLanguages);
+            }
+            return languages;
+        }
+        private void GetLanguagesToPanel(List<TeacherLanguage> languages)
+        {
+            foreach (var item in languages)
+            {
+                var userControl = new UserControlTeacherLanguage(db, item)
+                {
+                    Dock = DockStyle.Top
+                };
+                languagePanelControl.AutoScroll = true;
+                languagePanelControl.Controls.Add(userControl);
+            }
+        }
         private void GetBooksToPanel(List<Book> books)
         {
             foreach (var item in books)
@@ -172,7 +199,11 @@ namespace TeachingLoadInfoSystem
         }
         private void addlanguageBtn_Click(object sender, EventArgs e)
         {
-
+            var userControl = new UserControlTeacherLanguage(db)
+            {
+                Dock = DockStyle.Fill,
+            };
+            languagePanelControl.Controls.Add(userControl);
         }
         #endregion
         private void scientificNameCmb_EditValueChanged(object sender, EventArgs e)

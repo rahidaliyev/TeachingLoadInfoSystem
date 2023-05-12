@@ -17,7 +17,6 @@ namespace TeachingLoadInfoSystem.Services
             var selectedTeacher = _repository
                 .GetAll
                 .Include(x => x.Subject)
-                .AsNoTracking()
                 .FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
@@ -38,7 +37,6 @@ namespace TeachingLoadInfoSystem.Services
         {
             return _repository
                 .GetAll
-                .AsNoTracking()
                 .Include(x => x.Subject)
                 ;
         }

@@ -4,6 +4,5 @@
     {
         public string LanguageCode { get; set; }
         public string LanguageName { get; set; }
-        //public int PreferedLanguage { get; set; }
     }
 }

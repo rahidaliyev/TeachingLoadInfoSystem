@@ -11,6 +11,7 @@
             Books = new List<Book>();
             Certificates = new List<Certificate>();
             PreviousJobs = new List<PreviousJob>();
+            TeacherLanguages = new List<TeacherLanguage>();
         }
         public string TeacherName { get; set; }
         public string TeacherSurname { get; set; }
@@ -31,6 +32,6 @@
         public virtual List<Book>? Books { get; set; }
         public virtual List<Certificate>? Certificates { get; set; }
         public virtual List<PreviousJob>? PreviousJobs { get; set; }
-        public virtual List<Language>? Languages { get; set; }
+        public virtual List<TeacherLanguage>? TeacherLanguages { get; set; }
     }
 }
