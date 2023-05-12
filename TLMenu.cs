@@ -46,5 +46,30 @@ namespace TeachingLoadInfoSystem
         {
             newTabbedForm(new SubjectGridForm(), "Fənn");
         }
+
+        private void scientificNameAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new ScientificNameGridForm(), "Elmi ad");
+        }
+
+        private void teacherInfoAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new TeacherInfoGridForm(), "Müəllim haqqında");
+        }
+
+        private void WorkHoursAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new WorkTimeGridForm(), "Ştat");
+        }
+
+        private void departmentAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new DepartmentGridForm(), "Kafedra");
+        }
+
+        private void scientificDegreeAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new ScientificDegreeGridForm(), "Elmi dərəcə");
+        }
     }
 }

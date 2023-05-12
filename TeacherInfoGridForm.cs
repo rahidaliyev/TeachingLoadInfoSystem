@@ -12,11 +12,16 @@ namespace TeachingLoadInfoSystem
     public partial class TeacherInfoGridForm : DevExpress.XtraEditors.XtraForm
     {
         TeacherInfo teacherinfo = new TeacherInfo();
-        //LayoutInfo layoutInfo = new LayoutInfo();
+        Models.LayoutInfo layoutInfo = new Models.LayoutInfo();
         ITeacherInfoServices _teacherInfoServices;
         public void RefreshGrid()
         {
             gridControl.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
+        }
+        private void TeacherInfoGridForm_Load(object sender, EventArgs e)
+        {
+            gridControl.ForceInitialize();
+            LayoutController.RestoreLayout(1, "TeacherGrid", "TeacherForm", gridControl, layoutInfo);
         }
         public void PreviewData()
         {
@@ -116,7 +121,16 @@ namespace TeachingLoadInfoSystem
 
         private void saveLayoutBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            //LayoutController.SaveLayout(1, "AccordingToTypeGrid", "AccordingToTypeForm", gridView, layoutInfo);
+            LayoutController.SaveLayout(1, "TeacherGrid", "TeacherForm", gridView, layoutInfo);
+        }
+
+        private void downloadTemplateBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
+        }
+        private void importBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
+        {
+
         }
     }
 }

@@ -59,6 +59,8 @@ namespace TeachingLoadInfoSystem
             this.PDFBtn = new DevExpress.XtraBars.BarButtonItem();
             this.HTMLBtn = new DevExpress.XtraBars.BarButtonItem();
             this.saveLayoutBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.downloadTemplateBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.importBtn = new DevExpress.XtraBars.BarButtonItem();
             this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
@@ -247,9 +249,11 @@ namespace TeachingLoadInfoSystem
             this.WordBtn,
             this.PDFBtn,
             this.HTMLBtn,
-            this.saveLayoutBtn});
+            this.saveLayoutBtn,
+            this.downloadTemplateBtn,
+            this.importBtn});
             this.barManager1.MainMenu = this.bar2;
-            this.barManager1.MaxItemId = 16;
+            this.barManager1.MaxItemId = 18;
             // 
             // bar2
             // 
@@ -263,7 +267,9 @@ namespace TeachingLoadInfoSystem
             new DevExpress.XtraBars.LinkPersistInfo(this.RefreshBtn),
             new DevExpress.XtraBars.LinkPersistInfo(this.DeleteBtn),
             new DevExpress.XtraBars.LinkPersistInfo(this.barSubItem1),
-            new DevExpress.XtraBars.LinkPersistInfo(this.saveLayoutBtn)});
+            new DevExpress.XtraBars.LinkPersistInfo(this.saveLayoutBtn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.downloadTemplateBtn),
+            new DevExpress.XtraBars.LinkPersistInfo(this.importBtn)});
             this.bar2.OptionsBar.MultiLine = true;
             this.bar2.OptionsBar.UseWholeRow = true;
             this.bar2.Text = "Main menu";
@@ -354,11 +360,31 @@ namespace TeachingLoadInfoSystem
             // 
             this.saveLayoutBtn.Caption = "Şablonu yadda saxla";
             this.saveLayoutBtn.Id = 15;
-            this.saveLayoutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.Image")));
-            this.saveLayoutBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("barButtonItem1.ImageOptions.LargeImage")));
+            this.saveLayoutBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("saveLayoutBtn.ImageOptions.Image")));
+            this.saveLayoutBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("saveLayoutBtn.ImageOptions.LargeImage")));
             this.saveLayoutBtn.Name = "saveLayoutBtn";
             this.saveLayoutBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             this.saveLayoutBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.saveLayoutBtn_ItemClick);
+            // 
+            // downloadTemplateBtn
+            // 
+            this.downloadTemplateBtn.Caption = "Şablonu yüklə";
+            this.downloadTemplateBtn.Id = 16;
+            this.downloadTemplateBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("downloadTemplateBtn.ImageOptions.Image")));
+            this.downloadTemplateBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("downloadTemplateBtn.ImageOptions.LargeImage")));
+            this.downloadTemplateBtn.Name = "downloadTemplateBtn";
+            this.downloadTemplateBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.downloadTemplateBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.downloadTemplateBtn_ItemClick);
+            // 
+            // importBtn
+            // 
+            this.importBtn.Caption = "Import Excel";
+            this.importBtn.Id = 17;
+            this.importBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("importBtn.ImageOptions.Image")));
+            this.importBtn.ImageOptions.LargeImage = ((System.Drawing.Image)(resources.GetObject("importBtn.ImageOptions.LargeImage")));
+            this.importBtn.Name = "importBtn";
+            this.importBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.importBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.importBtn_ItemClick);
             // 
             // barDockControlTop
             // 
@@ -404,6 +430,7 @@ namespace TeachingLoadInfoSystem
             this.Controls.Add(this.barDockControlTop);
             this.Name = "TeacherInfoGridForm";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.TeacherInfoGridForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherInfosBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
@@ -446,5 +473,7 @@ namespace TeachingLoadInfoSystem
         private DevExpress.XtraBars.BarButtonItem PDFBtn;
         private DevExpress.XtraBars.BarButtonItem HTMLBtn;
         private DevExpress.XtraBars.BarButtonItem saveLayoutBtn;
+        private DevExpress.XtraBars.BarButtonItem downloadTemplateBtn;
+        private DevExpress.XtraBars.BarButtonItem importBtn;
     }
 }

@@ -19,6 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="ScientificNameCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScientificNameGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="SubjectCRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -34,10 +40,16 @@
     <Compile Update="UserControlCertificate.cs">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Update="ScientificDegreeCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="WorkTimeCRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="TeacherInfoGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="ScientificDegreeGridForm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Update="WorkTimeGridForm.cs">

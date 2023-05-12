@@ -78,13 +78,18 @@
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.teacherInfoAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.subjectAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.scientificNameAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.WorkHoursAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.departmentAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.scientificDegreeAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.subjectAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -430,7 +435,12 @@
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
-            this.subjectAccBtn});
+            this.teacherInfoAccBtn,
+            this.subjectAccBtn,
+            this.scientificNameAccBtn,
+            this.WorkHoursAccBtn,
+            this.departmentAccBtn,
+            this.scientificDegreeAccBtn});
             this.accordionControl1.Location = new System.Drawing.Point(0, 193);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.accordionControl1.Name = "accordionControl1";
@@ -438,6 +448,54 @@
             this.accordionControl1.Size = new System.Drawing.Size(312, 524);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
+            // 
+            // teacherInfoAccBtn
+            // 
+            this.teacherInfoAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("teacherInfoAccBtn.ImageOptions.Image")));
+            this.teacherInfoAccBtn.Name = "teacherInfoAccBtn";
+            this.teacherInfoAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.teacherInfoAccBtn.Text = "Müəllim haqqında";
+            this.teacherInfoAccBtn.Click += new System.EventHandler(this.teacherInfoAccBtn_Click);
+            // 
+            // subjectAccBtn
+            // 
+            this.subjectAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("subjectAccBtn.ImageOptions.Image")));
+            this.subjectAccBtn.Name = "subjectAccBtn";
+            this.subjectAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.subjectAccBtn.Text = "Fənnlər";
+            this.subjectAccBtn.Click += new System.EventHandler(this.subjectAccBtn_Click);
+            // 
+            // scientificNameAccBtn
+            // 
+            this.scientificNameAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("scientificNameAccBtn.ImageOptions.Image")));
+            this.scientificNameAccBtn.Name = "scientificNameAccBtn";
+            this.scientificNameAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.scientificNameAccBtn.Text = "Elmi adlar";
+            this.scientificNameAccBtn.Click += new System.EventHandler(this.scientificNameAccBtn_Click);
+            // 
+            // WorkHoursAccBtn
+            // 
+            this.WorkHoursAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("WorkHoursAccBtn.ImageOptions.Image")));
+            this.WorkHoursAccBtn.Name = "WorkHoursAccBtn";
+            this.WorkHoursAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.WorkHoursAccBtn.Text = "Ştat";
+            this.WorkHoursAccBtn.Click += new System.EventHandler(this.WorkHoursAccBtn_Click);
+            // 
+            // departmentAccBtn
+            // 
+            this.departmentAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("departmentAccBtn.ImageOptions.Image")));
+            this.departmentAccBtn.Name = "departmentAccBtn";
+            this.departmentAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.departmentAccBtn.Text = "Kafedra";
+            this.departmentAccBtn.Click += new System.EventHandler(this.departmentAccBtn_Click);
+            // 
+            // scientificDegreeAccBtn
+            // 
+            this.scientificDegreeAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("scientificDegreeAccBtn.ImageOptions.Image")));
+            this.scientificDegreeAccBtn.Name = "scientificDegreeAccBtn";
+            this.scientificDegreeAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.scientificDegreeAccBtn.Text = "Elmi dərəcə";
+            this.scientificDegreeAccBtn.Click += new System.EventHandler(this.scientificDegreeAccBtn_Click);
             // 
             // accordionControlElement12
             // 
@@ -472,14 +530,6 @@
             this.accordionControlElement17.Name = "accordionControlElement17";
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement17.Text = "Element17";
-            // 
-            // subjectAccBtn
-            // 
-            this.subjectAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("subjectAccBtn.ImageOptions.Image")));
-            this.subjectAccBtn.Name = "subjectAccBtn";
-            this.subjectAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.subjectAccBtn.Text = "Fənnlər";
-            this.subjectAccBtn.Click += new System.EventHandler(this.subjectAccBtn_Click);
             // 
             // TLMenu
             // 
@@ -562,5 +612,10 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
         private DevExpress.XtraBars.Navigation.AccordionControlElement subjectAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement scientificNameAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement teacherInfoAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement WorkHoursAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement departmentAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement scientificDegreeAccBtn;
     }
 }
