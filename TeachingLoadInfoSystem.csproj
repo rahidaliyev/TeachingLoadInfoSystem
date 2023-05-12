@@ -19,6 +19,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="UserControlPreviousJob.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Update="UserControlTeacherLanguage.cs">
       <SubType>UserControl</SubType>
     </Compile>

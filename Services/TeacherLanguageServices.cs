@@ -1,4 +1,5 @@
-﻿using TeachingLoadInfoSystem.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories.Interfaces;
 using TeachingLoadInfoSystem.Services.Intefaces;
 
@@ -14,7 +15,10 @@ namespace TeachingLoadInfoSystem.Services
         }
         public TeacherLanguage GetTeacherLanguageByID(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository
+                .GetAll
+                .Include(x => x.Language)
+                .FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
         public void InsertTeacherLanguage(TeacherLanguage TeacherLanguage)
@@ -32,7 +36,10 @@ namespace TeachingLoadInfoSystem.Services
         }
         public IEnumerable<TeacherLanguage> GetAllTeacherLanguages()
         {
-            return _repository.GetAll;
+            return _repository
+                .GetAll
+                .Include(x => x.Language)
+                ;
         }
     }
 }

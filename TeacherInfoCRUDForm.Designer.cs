@@ -686,6 +686,7 @@
             this.addPreviousJobBtn.Size = new System.Drawing.Size(22, 27);
             this.addPreviousJobBtn.StyleController = this.layoutControl6;
             this.addPreviousJobBtn.TabIndex = 4;
+            this.addPreviousJobBtn.Click += new System.EventHandler(this.addPreviousJobBtn_Click);
             // 
             // layoutControlGroup5
             // 

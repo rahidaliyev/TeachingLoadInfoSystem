@@ -63,6 +63,7 @@ namespace TeachingLoadInfoSystem
             teacherinfo.Books = GetBooks();
             teacherinfo.Certificates = GetCertificates();
             teacherinfo.TeacherLanguages = GetTeacherLanguages();
+            teacherinfo.PreviousJobs = GetPreviousJobs();
         }
         public void LoadData()
         {
@@ -80,6 +81,7 @@ namespace TeachingLoadInfoSystem
             GetBooksToPanel(teacherinfo.Books);
             GetCertificatesToPanel(teacherinfo.Certificates);
             GetLanguagesToPanel(teacherinfo.TeacherLanguages);
+            GetJobsToPanel(teacherinfo.PreviousJobs);
         }
 
         private void saveBtn_Click(object sender, EventArgs e)
@@ -145,6 +147,15 @@ namespace TeachingLoadInfoSystem
             }
             return languages;
         }
+        private List<PreviousJob> GetPreviousJobs()
+        {
+            var jobs = new List<PreviousJob>();
+            foreach (UserControlPreviousJob control in previousJobPanelControl.Controls)
+            {
+                jobs.Add(control.PreviousJobs);
+            }
+            return jobs;
+        }
         private void GetLanguagesToPanel(List<TeacherLanguage> languages)
         {
             foreach (var item in languages)
@@ -155,6 +166,18 @@ namespace TeachingLoadInfoSystem
                 };
                 languagePanelControl.AutoScroll = true;
                 languagePanelControl.Controls.Add(userControl);
+            }
+        }
+        private void GetJobsToPanel(List<PreviousJob> jobs)
+        {
+            foreach (var item in jobs)
+            {
+                var userControl = new UserControlPreviousJob(db, item)
+                {
+                    Dock = DockStyle.Top
+                };
+                previousJobPanelControl.AutoScroll = true;
+                previousJobPanelControl.Controls.Add(userControl);
             }
         }
         private void GetBooksToPanel(List<Book> books)
@@ -187,6 +210,7 @@ namespace TeachingLoadInfoSystem
             {
                 Dock = DockStyle.Fill,
             };
+            bookPanelControl.AutoScroll = true;
             bookPanelControl.Controls.Add(userControl);
         }
         private void addCertificateBtn_Click(object sender, EventArgs e)
@@ -204,6 +228,15 @@ namespace TeachingLoadInfoSystem
                 Dock = DockStyle.Fill,
             };
             languagePanelControl.Controls.Add(userControl);
+        }
+
+        private void addPreviousJobBtn_Click(object sender, EventArgs e)
+        {
+            var userControl = new UserControlPreviousJob(db)
+            {
+                Dock = DockStyle.Fill,
+            };
+            previousJobPanelControl.Controls.Add(userControl);
         }
         #endregion
         private void scientificNameCmb_EditValueChanged(object sender, EventArgs e)
@@ -251,6 +284,5 @@ namespace TeachingLoadInfoSystem
             }
         }
 
-   
     }
 }

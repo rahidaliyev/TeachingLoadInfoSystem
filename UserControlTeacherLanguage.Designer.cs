@@ -73,6 +73,7 @@
             this.preferenceTxt.Name = "preferenceTxt";
             this.preferenceTxt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.preferenceTxt.Properties.MaskSettings.Set("mask", "d");
             this.preferenceTxt.Size = new System.Drawing.Size(70, 24);
             this.preferenceTxt.StyleController = this.layoutControl1;
             this.preferenceTxt.TabIndex = 6;
@@ -84,7 +85,10 @@
             this.languageCmb.Name = "languageCmb";
             this.languageCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.languageCmb.Properties.DisplayMember = "LanguageName";
+            this.languageCmb.Properties.NullText = "";
             this.languageCmb.Properties.PopupView = this.searchLookUpEdit1View;
+            this.languageCmb.Properties.ValueMember = "ID";
             this.languageCmb.Size = new System.Drawing.Size(202, 22);
             this.languageCmb.StyleController = this.layoutControl1;
             this.languageCmb.TabIndex = 5;

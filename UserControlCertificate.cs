@@ -38,7 +38,7 @@ namespace TeachingLoadInfoSystem
             if (certificate != null) 
             {
                 certificateNameTxt.Text = certificate.CertificateName;
-                subjectCmb.EditValue= certificate.Subject;
+                subjectCmb.EditValue= certificate.SubjectID;
                 isLocalCheck.Checked = certificate.IsLocal;
                 countryTxt.Text = certificate.ReceivedCountry;
             }
@@ -66,10 +66,7 @@ namespace TeachingLoadInfoSystem
         }
         private void subjectCmb_EditValueChanged(object sender, EventArgs e)
         {
-            if (certificate.Subject == null)
-            {
                 certificate.Subject = subjectCmb.GetSelectedDataRow() as Subject;
-            }
         }
         private void isLocalCheck_CheckedChanged(object sender, EventArgs e)
         {

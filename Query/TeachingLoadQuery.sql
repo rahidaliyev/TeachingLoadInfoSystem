@@ -1,4 +1,4 @@
-﻿use TeachinLoad
+﻿use TeachinLoad1
 insert into Genders 
 values('gc0001', N'Kisi'),
 ('gc0002',N'Qadin')
@@ -24,3 +24,19 @@ values
 ('sn0001',N'Elmlər namizədi'),
 ('sn0005',N'Aspirant'),
 ('sn0006',N'Yoxdur')
+
+insert into WorkTimes
+values
+('wc0001','Tam Ştat'),
+('wc0002','0.75 Ştat'),
+('wc0003','Yarım Ştat'),
+('wc0004','0.25 Ştat'),
+('wc0005','Saat Hesabı'),
+('wc0006','Müddətli müqavilə əsasında')
+
+insert into Languages
+values
+('AZE','Azərbaycan'),
+('ENG','İngilis'),
+('TR','Türk'),
+('RUS','Rus')

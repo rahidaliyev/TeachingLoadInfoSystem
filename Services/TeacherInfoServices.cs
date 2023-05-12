@@ -19,10 +19,12 @@ namespace TeachingLoadInfoSystem.Services
                 .Include(x => x.Gender)
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)
+                .Include(x => x.PreviousJobs)
                 .Include(x => x.WorkTime)
                 .Include(x => x.Books)
                 .Include(x => x.Certificates)
                 .Include(x => x.TeacherLanguages)
+                .Include(x => x.TeacherLanguages).ThenInclude(y => y.Language)
                 .Include(x => x.Certificates).ThenInclude(y => y.Subject)
                 .AsNoTracking().FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
@@ -49,7 +51,9 @@ namespace TeachingLoadInfoSystem.Services
                 .Include(x => x.ScientificDegree)
                 .Include(x => x.WorkTime)
                 .Include(x => x.Books)
+                .Include(x => x.PreviousJobs)
                 .Include(x => x.TeacherLanguages)
+                .Include(x => x.TeacherLanguages).ThenInclude(y => y.Language)
                 .Include(x => x.Certificates)
                 .Include(x => x.Certificates).ThenInclude(y => y.Subject)
                 .AsNoTracking();

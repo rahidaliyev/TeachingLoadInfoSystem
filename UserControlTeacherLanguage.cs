@@ -37,8 +37,8 @@ namespace TeachingLoadInfoSystem
         {
             if (TeacherLanguages != null)
             {
-                preferenceLbl.Text= TeacherLanguages.PreferenceLevel.ToString();
-                languageCmb.EditValue = TeacherLanguages.Language;
+                preferenceTxt.Text= TeacherLanguages.PreferenceLevel.ToString();
+                languageCmb.EditValue = TeacherLanguages.LanguageID;
             }
         }
             
@@ -56,10 +56,7 @@ namespace TeachingLoadInfoSystem
 
         private void languageCmb_EditValueChanged(object sender, EventArgs e)
         {
-            if (TeacherLanguages.Language == null)
-            {
                 TeacherLanguages.Language = languageCmb.GetSelectedDataRow() as Language;
-            }
         }
 
         private void preferenceTxt_EditValueChanged(object sender, EventArgs e)

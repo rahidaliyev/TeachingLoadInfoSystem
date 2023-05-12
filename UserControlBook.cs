@@ -56,9 +56,7 @@ namespace TeachingLoadInfoSystem
                 BookList.Remove(Books);
             }
             else if (Books != null)
-            {
                 BookList.Remove(Books);
-            }
         }
     }
 }
