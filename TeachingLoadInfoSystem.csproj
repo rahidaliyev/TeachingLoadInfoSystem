@@ -19,6 +19,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="SubjectCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="SubjectGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="UserControlPreviousJob.cs">
       <SubType>UserControl</SubType>
     </Compile>

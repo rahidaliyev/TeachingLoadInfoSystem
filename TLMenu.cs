@@ -41,5 +41,10 @@ namespace TeachingLoadInfoSystem
         {
             newTabbedForm(new DepartmentGridForm(), "Kafedra");
         }
+
+        private void subjectAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new SubjectGridForm(), "Fənn");
+        }
     }
 }

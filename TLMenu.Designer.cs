@@ -84,6 +84,7 @@
             this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.subjectAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -428,6 +429,8 @@
             // accordionControl1
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.subjectAccBtn});
             this.accordionControl1.Location = new System.Drawing.Point(0, 193);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.accordionControl1.Name = "accordionControl1";
@@ -469,6 +472,14 @@
             this.accordionControlElement17.Name = "accordionControlElement17";
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement17.Text = "Element17";
+            // 
+            // subjectAccBtn
+            // 
+            this.subjectAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("subjectAccBtn.ImageOptions.Image")));
+            this.subjectAccBtn.Name = "subjectAccBtn";
+            this.subjectAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.subjectAccBtn.Text = "Fənnlər";
+            this.subjectAccBtn.Click += new System.EventHandler(this.subjectAccBtn_Click);
             // 
             // TLMenu
             // 
@@ -550,5 +561,6 @@
         private DevExpress.XtraBars.BarButtonItem barButtonItem31;
         private DevExpress.XtraBars.BarButtonItem barButtonItem32;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement subjectAccBtn;
     }
 }

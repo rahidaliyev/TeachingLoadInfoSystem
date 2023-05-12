@@ -78,8 +78,10 @@
             this.subjectCmb.Name = "subjectCmb";
             this.subjectCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.subjectCmb.Properties.DisplayMember = "SubjectName";
             this.subjectCmb.Properties.NullText = "";
             this.subjectCmb.Properties.PopupView = this.searchLookUpEdit1View;
+            this.subjectCmb.Properties.ValueMember = "ID";
             this.subjectCmb.Size = new System.Drawing.Size(320, 22);
             this.subjectCmb.StyleController = this.layoutControl1;
             this.subjectCmb.TabIndex = 5;
