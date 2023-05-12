@@ -84,6 +84,7 @@
             this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.languageAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
@@ -387,7 +388,8 @@
             this.scientificNameAccBtn,
             this.WorkHoursAccBtn,
             this.departmentAccBtn,
-            this.scientificDegreeAccBtn});
+            this.scientificDegreeAccBtn,
+            this.languageAccBtn});
             this.accordionControl1.Location = new System.Drawing.Point(0, 71);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.accordionControl1.Name = "accordionControl1";
@@ -478,6 +480,13 @@
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement17.Text = "Element17";
             // 
+            // languageAccBtn
+            // 
+            this.languageAccBtn.Name = "languageAccBtn";
+            this.languageAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.languageAccBtn.Text = "Dil";
+            this.languageAccBtn.Click += new System.EventHandler(this.languageAccBtn_Click);
+            // 
             // TLMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -558,5 +567,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement WorkHoursAccBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement departmentAccBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement scientificDegreeAccBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement languageAccBtn;
     }
 }

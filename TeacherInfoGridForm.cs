@@ -15,8 +15,10 @@ namespace TeachingLoadInfoSystem
     public partial class TeacherInfoGridForm : DevExpress.XtraEditors.XtraForm
     {
         TeacherInfo teacherinfo = new TeacherInfo();
+        List<TeacherInfo> teacherInfoList = new List<TeacherInfo>();
         Models.LayoutInfo layoutInfo = new Models.LayoutInfo();
         ITeacherInfoServices _teacherInfoServices;
+        WorkTime _workTime { get; set; }
         public void RefreshGrid()
         {
             gridControl.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
@@ -175,7 +177,38 @@ namespace TeachingLoadInfoSystem
         }
         private void importBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            OpenFileDialog dlg = new OpenFileDialog();
+            dlg.Filter = "Choose Excel Sheet(*.xlsx)|*.xlsx";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
+                var ep = new ExcelPackage(new FileInfo(dlg.FileName));
+                var ws = ep.Workbook.Worksheets[0];
+                for (int i = 2; i <= ws.Dimension.End.Row; i++)
+                {
+                    var importRow = new TeacherInfo();
+                    importRow.ID = 0;
+                    if (ws.Cells[i, 1].Value != null)
+                        importRow.TeacherName = ws.Cells[i, 1].Value.ToString();
+                    if (ws.Cells[i, 2].Value != null)
+                        importRow.TeacherSurname = ws.Cells[i, 2].Value.ToString();
+                    if (ws.Cells[i, 3].Value != null)
+                        importRow.TeacherFather = ws.Cells[i, 3].Value.ToString();
+                    if (ws.Cells[i, 4].Value != null)
+                        importRow.BirthDate = DateTime.Parse(ws.Cells[i, 4].Value.ToString());
+                    else
+                    {
+                        MessageBox.Show("Tarixi daxil edin.", "Date", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                        continue;
+                    }
+                    if (ws.Cells[i, 5].Value != null)
+                        importRow.Email = ws.Cells[i, 5].Value.ToString();
+                    teacherInfoList.Add(importRow);
+                }
+                gridControl.DataSource = teacherInfoList;
+                RefreshGrid();
+                Refresh();
+            }
         }
     }
 }

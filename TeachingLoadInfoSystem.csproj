@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="LanguageCRUDForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="LanguageGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="ScientificNameCRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>

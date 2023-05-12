@@ -71,5 +71,9 @@ namespace TeachingLoadInfoSystem
         {
             newTabbedForm(new ScientificDegreeGridForm(), "Elmi dərəcə");
         }
+        private void languageAccBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new LanguageGridForm(), "Dil haqqında");
+        }
     }
 }

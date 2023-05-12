@@ -33,8 +33,8 @@ namespace TeachingLoadInfoSystem
             if (PreviousJobs != null)
             {
                 jobNameTxt.Text= PreviousJobs.JobName.ToString();
-                fromDate.Text = PreviousJobs.StartDate.ToString("dd-MM-yyyy");
-                toDate.Text = PreviousJobs.EndDate.ToString("dd-MM-yyyy");
+                fromDate.Text = PreviousJobs.StartDate.ToString("MM-dd-yyyy");
+                toDate.Text = PreviousJobs.EndDate.ToString("MM-dd-yyyy");
             }
         }
             
