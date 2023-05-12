@@ -6,6 +6,9 @@ using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Controllers;
 using DevExpress.Charts.Native;
+using System.Diagnostics;
+using System.IO;
+using OfficeOpenXml;
 
 namespace TeachingLoadInfoSystem
 {
@@ -126,7 +129,49 @@ namespace TeachingLoadInfoSystem
 
         private void downloadTemplateBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-
+            SaveFileDialog dlg = new SaveFileDialog();
+            dlg.Filter = @"Excel(*.xlsx)|*.xlsx";
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                var ep = new ExcelPackage(new FileInfo(dlg.FileName));
+                var ws = ep.Workbook.Worksheets.FirstOrDefault();
+                if (ws == null)
+                    ws = ep.Workbook.Worksheets.Add("Sheet1");
+                ws.TabColor = Color.Black;
+                ws.DefaultRowHeight = 12;
+                ws.Row(1).Height = 16;
+                ws.Row(1).Style.HorizontalAlignment = OfficeOpenXml.Style.ExcelHorizontalAlignment.Center;
+                ws.Row(1).Style.VerticalAlignment = OfficeOpenXml.Style.ExcelVerticalAlignment.Center;
+                ws.Row(1).Style.Font.Bold = true;
+                ws.Row(1).Style.Font.Size = 12;
+                ws.Cells[1, 1].Value = "TeacherName";
+                ws.Cells[1, 2].Value = "TeacherSurname";
+                ws.Cells[1, 3].Value = "TeacherFather";
+                ws.Cells[1, 4].Value = "BirthDate";
+                ws.Cells[1, 5].Value = "Email";
+                ws.Cells[1, 6].Value = "PhoneNumber";
+                ws.Cells[1, 7].Value = "GenderID";
+                ws.Cells[1, 8].Value = "ScientificNameID";
+                ws.Cells[1, 9].Value = "ScientificDegreeID";
+                ws.Cells[1, 10].Value = "DepartmentID";
+                ws.Cells[1, 11].Value = "WorkTimeID";
+                for (int i = 1; i <= 11; i++)
+                {
+                    ws.Column(i).AutoFit();
+                }
+                ep.Save();
+            }
+            MessageBox.Show($"Şablon yükləndi\n{dlg.FileName}");
+            var message = MessageBox.Show("Faylı açmaq istəyirsinizmi?", "Şablon", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (message == DialogResult.Yes)
+            {
+                ProcessStartInfo startInfo = new ProcessStartInfo()
+                {
+                    FileName = dlg.FileName,
+                    UseShellExecute = true
+                };
+                Process.Start(startInfo);
+            }
         }
         private void importBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
