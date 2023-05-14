@@ -336,6 +336,27 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("TeacherLanguages");
                 });
 
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.User", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Users");
+                });
+
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.WorkTime", b =>
                 {
                     b.Property<int>("ID")

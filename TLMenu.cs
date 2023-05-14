@@ -4,9 +4,12 @@ namespace TeachingLoadInfoSystem
 {
     public partial class TLMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        public TLMenu()
+        Models.User user  = new Models.User();
+        public TLMenu(Models.User user)
         {
             InitializeComponent();
+            this.user = user;
+            usernameTxt.Caption = $"Welcome {user.UserName}!";
         }
         private void newTabbedForm(Form frm, string titleName)
         {
@@ -74,6 +77,12 @@ namespace TeachingLoadInfoSystem
         private void languageAccBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new LanguageGridForm(), "Dil haqqında");
+        }
+
+        private void exitBtn_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            //Login frm = new Login();
+            //frm.ShowDialog();
         }
     }
 }

@@ -67,6 +67,11 @@
             this.barButtonItem27 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem28 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
+            this.usernameTxt = new DevExpress.XtraBars.BarStaticItem();
+            this.exitBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
+            this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
+            this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
@@ -78,14 +83,15 @@
             this.WorkHoursAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.departmentAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.scientificDegreeAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.languageAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement12 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement13 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement14 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            this.languageAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -134,13 +140,19 @@
             this.taxTypeBtn,
             this.barButtonItem27,
             this.barButtonItem28,
-            this.barButtonItem29});
+            this.barButtonItem29,
+            this.usernameTxt,
+            this.exitBtn});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.ribbon.MaxItemId = 74;
+            this.ribbon.MaxItemId = 77;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
-            this.ribbon.Size = new System.Drawing.Size(1318, 71);
+            this.ribbon.Pages.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPage[] {
+            this.ribbonPage1});
+            this.ribbon.RepositoryItems.AddRange(new DevExpress.XtraEditors.Repository.RepositoryItem[] {
+            this.repositoryItemHypertextLabel1});
+            this.ribbon.Size = new System.Drawing.Size(1318, 193);
             this.ribbon.StatusBar = this.ribbonStatusBar;
             // 
             // barButtonGroup1
@@ -346,8 +358,41 @@
             this.barButtonItem29.Id = 70;
             this.barButtonItem29.Name = "barButtonItem29";
             // 
+            // usernameTxt
+            // 
+            this.usernameTxt.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.usernameTxt.Caption = "barStaticItem1";
+            this.usernameTxt.Id = 75;
+            this.usernameTxt.Name = "usernameTxt";
+            // 
+            // exitBtn
+            // 
+            this.exitBtn.Alignment = DevExpress.XtraBars.BarItemLinkAlignment.Right;
+            this.exitBtn.Caption = "Çıxış";
+            this.exitBtn.Id = 76;
+            this.exitBtn.Name = "exitBtn";
+            this.exitBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.exitBtn_ItemClick);
+            // 
+            // ribbonPage1
+            // 
+            this.ribbonPage1.Groups.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageGroup[] {
+            this.ribbonPageGroup1});
+            this.ribbonPage1.Name = "ribbonPage1";
+            this.ribbonPage1.Text = "ribbonPage1";
+            // 
+            // ribbonPageGroup1
+            // 
+            this.ribbonPageGroup1.Name = "ribbonPageGroup1";
+            this.ribbonPageGroup1.Text = "ribbonPageGroup1";
+            // 
+            // repositoryItemHypertextLabel1
+            // 
+            this.repositoryItemHypertextLabel1.Name = "repositoryItemHypertextLabel1";
+            // 
             // ribbonStatusBar
             // 
+            this.ribbonStatusBar.ItemLinks.Add(this.usernameTxt);
+            this.ribbonStatusBar.ItemLinks.Add(this.exitBtn);
             this.ribbonStatusBar.Location = new System.Drawing.Point(0, 717);
             this.ribbonStatusBar.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ribbonStatusBar.Name = "ribbonStatusBar";
@@ -390,11 +435,11 @@
             this.departmentAccBtn,
             this.scientificDegreeAccBtn,
             this.languageAccBtn});
-            this.accordionControl1.Location = new System.Drawing.Point(0, 71);
+            this.accordionControl1.Location = new System.Drawing.Point(0, 193);
             this.accordionControl1.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.accordionControl1.Name = "accordionControl1";
             this.accordionControl1.ScrollBarMode = DevExpress.XtraBars.Navigation.ScrollBarMode.Hidden;
-            this.accordionControl1.Size = new System.Drawing.Size(312, 646);
+            this.accordionControl1.Size = new System.Drawing.Size(312, 524);
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
@@ -446,6 +491,13 @@
             this.scientificDegreeAccBtn.Text = "Elmi dərəcə";
             this.scientificDegreeAccBtn.Click += new System.EventHandler(this.scientificDegreeAccBtn_Click);
             // 
+            // languageAccBtn
+            // 
+            this.languageAccBtn.Name = "languageAccBtn";
+            this.languageAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.languageAccBtn.Text = "Dil";
+            this.languageAccBtn.Click += new System.EventHandler(this.languageAccBtn_Click);
+            // 
             // accordionControlElement12
             // 
             this.accordionControlElement12.Name = "accordionControlElement12";
@@ -480,13 +532,6 @@
             this.accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.accordionControlElement17.Text = "Element17";
             // 
-            // languageAccBtn
-            // 
-            this.languageAccBtn.Name = "languageAccBtn";
-            this.languageAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            this.languageAccBtn.Text = "Dil";
-            this.languageAccBtn.Click += new System.EventHandler(this.languageAccBtn_Click);
-            // 
             // TLMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -502,6 +547,7 @@
             this.StatusBar = this.ribbonStatusBar;
             this.Text = "UNEC Tədris yükü";
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
@@ -568,5 +614,10 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement departmentAccBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement scientificDegreeAccBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement languageAccBtn;
+        private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
+        private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
+        private DevExpress.XtraBars.BarStaticItem usernameTxt;
+        private DevExpress.XtraBars.BarButtonItem exitBtn;
+        private DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel repositoryItemHypertextLabel1;
     }
 }

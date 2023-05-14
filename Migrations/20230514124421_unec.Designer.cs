@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230512144249_unec")]
+    [Migration("20230514124421_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -337,6 +337,27 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.HasIndex("TeacherInfoID");
 
                     b.ToTable("TeacherLanguages");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.User", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("UserName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("UserPassword")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Users");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.WorkTime", b =>
