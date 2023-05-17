@@ -10,29 +10,14 @@ namespace TeachingLoadInfoSystem
     public partial class TLIncludedGridForm : DevExpress.XtraEditors.XtraForm
     {
         TLDbContext db = new TLDbContext(); 
-        Department department = new Department();
-        IDepartmentServices _departmentServices;
+        TLIncluded department = new TLIncluded();
+        ITLIncludedServices _includedServices;
         public void RefreshGrid()
         {
-            gridControl.DataSource = _departmentServices.GetAllDepartments().ToList();
+            gridControl.DataSource = _includedServices.GetAllTLIncludeds().ToList();
         }
         public void PreviewData()
         {
-            var index = gridView.FocusedRowHandle;
-            if (index > -1)
-            {
-                var selectedRow = Convert.ToInt32(gridView.GetFocusedRowCellValue("ID"));
-                department = _departmentServices.GetDepartmentByID(selectedRow);
-                var SkillForm = new DepartmentCRUDForm(department,db,_departmentServices);
-                SkillForm.ShowDialog();
-                department = new Department();
-                RefreshGrid();
-            }
-            else
-            {
-                MessageBox.Show("Hər hansı bir sətri seçin!");
-            }
-            RefreshGrid();
         }
         public void RemoveData()
         {
@@ -43,9 +28,9 @@ namespace TeachingLoadInfoSystem
                 if (message == DialogResult.Yes)
                 {
                     var selectedRow = Convert.ToInt32(gridView.GetFocusedRowCellValue("ID"));
-                    var selectedCode = gridView.GetFocusedRowCellValue("DepartmentCode");
+                    var selectedCode = gridView.GetFocusedRowCellValue("TLIncludedCode");
 
-                    _departmentServices.DeleteDepartment(selectedRow);
+                    _includedServices.DeleteTLIncluded(selectedRow);
                     Refresh();
 
                     MessageBox.Show(selectedCode + " kodlu məlumat uğurla silindi.");
@@ -61,15 +46,12 @@ namespace TeachingLoadInfoSystem
         {
             InitializeComponent();
             TLDbContext db = new TLDbContext();
-            _departmentServices = new DepartmentServices(new Repository<Department>(db));
+            _includedServices = new TLIncludedServices(new Repository<TLIncluded>(db));
             RefreshGrid();
         }
 
         private void newBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
-            DepartmentCRUDForm frm = new DepartmentCRUDForm(department,db, _departmentServices);
-            frm.ShowDialog();
-            RefreshGrid();
         }
 
         private void RefreshBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
