@@ -69,20 +69,22 @@
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.usernameTxt = new DevExpress.XtraBars.BarStaticItem();
             this.exitBtn = new DevExpress.XtraBars.BarButtonItem();
-            this.barEditItem1 = new DevExpress.XtraBars.BarEditItem();
-            this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
             this.repositoryItemHypertextLabel1 = new DevExpress.XtraEditors.Repository.RepositoryItemHypertextLabel();
             this.repositoryItemPictureEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.repositoryItemImageEdit1 = new DevExpress.XtraEditors.Repository.RepositoryItemImageEdit();
+            this.repositoryItemPictureEdit2 = new DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit();
             this.ribbonStatusBar = new DevExpress.XtraBars.Ribbon.RibbonStatusBar();
             this.documentManager1 = new DevExpress.XtraBars.Docking2010.DocumentManager(this.components);
             this.tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(this.components);
             this.dockManager1 = new DevExpress.XtraBars.Docking.DockManager(this.components);
             this.accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            this.includedBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.excludedBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.teacherInfoAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
+            this.teachingLoadBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.subjectAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.scientificNameAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.WorkHoursAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -96,10 +98,10 @@
             this.accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             this.accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).BeginInit();
@@ -151,8 +153,7 @@
             this.barButtonItem28,
             this.barButtonItem29,
             this.usernameTxt,
-            this.exitBtn,
-            this.barEditItem1});
+            this.exitBtn});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
             this.ribbon.MaxItemId = 83;
@@ -386,18 +387,6 @@
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.exitBtn_ItemClick);
             // 
-            // barEditItem1
-            // 
-            this.barEditItem1.Caption = "barEditItem1";
-            this.barEditItem1.Edit = this.repositoryItemPictureEdit2;
-            this.barEditItem1.Id = 82;
-            this.barEditItem1.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("barEditItem1.ImageOptions.Image")));
-            this.barEditItem1.Name = "barEditItem1";
-            // 
-            // repositoryItemPictureEdit2
-            // 
-            this.repositoryItemPictureEdit2.Name = "repositoryItemPictureEdit2";
-            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -414,7 +403,6 @@
             // 
             // ribbonPageGroup1
             // 
-            this.ribbonPageGroup1.ItemLinks.Add(this.barEditItem1);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -432,6 +420,10 @@
             this.repositoryItemImageEdit1.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.repositoryItemImageEdit1.Name = "repositoryItemImageEdit1";
+            // 
+            // repositoryItemPictureEdit2
+            // 
+            this.repositoryItemPictureEdit2.Name = "repositoryItemPictureEdit2";
             // 
             // ribbonStatusBar
             // 
@@ -472,7 +464,10 @@
             // 
             this.accordionControl1.Dock = System.Windows.Forms.DockStyle.Left;
             this.accordionControl1.Elements.AddRange(new DevExpress.XtraBars.Navigation.AccordionControlElement[] {
+            this.includedBtn,
+            this.excludedBtn,
             this.teacherInfoAccBtn,
+            this.teachingLoadBtn,
             this.subjectAccBtn,
             this.scientificNameAccBtn,
             this.WorkHoursAccBtn,
@@ -487,6 +482,22 @@
             this.accordionControl1.TabIndex = 0;
             this.accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
+            // includedBtn
+            // 
+            this.includedBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("includedBtn.ImageOptions.Image")));
+            this.includedBtn.Name = "includedBtn";
+            this.includedBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.includedBtn.Text = "Kafedraya daxil olan yük";
+            this.includedBtn.Click += new System.EventHandler(this.includedBtn_Click);
+            // 
+            // excludedBtn
+            // 
+            this.excludedBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("excludedBtn.ImageOptions.Image")));
+            this.excludedBtn.Name = "excludedBtn";
+            this.excludedBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.excludedBtn.Text = "Kafedradan çıxan yük";
+            this.excludedBtn.Click += new System.EventHandler(this.excludedBtn_Click);
+            // 
             // teacherInfoAccBtn
             // 
             this.teacherInfoAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("teacherInfoAccBtn.ImageOptions.Image")));
@@ -494,6 +505,14 @@
             this.teacherInfoAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.teacherInfoAccBtn.Text = "Müəllim haqqında";
             this.teacherInfoAccBtn.Click += new System.EventHandler(this.teacherInfoAccBtn_Click);
+            // 
+            // teachingLoadBtn
+            // 
+            this.teachingLoadBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("teachingLoadBtn.ImageOptions.Image")));
+            this.teachingLoadBtn.Name = "teachingLoadBtn";
+            this.teachingLoadBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            this.teachingLoadBtn.Text = "Tədris yükünün bölünməsi";
+            this.teachingLoadBtn.Click += new System.EventHandler(this.teachingLoadBtn_Click);
             // 
             // subjectAccBtn
             // 
@@ -537,6 +556,7 @@
             // 
             // languageAccBtn
             // 
+            this.languageAccBtn.ImageOptions.Image = ((System.Drawing.Image)(resources.GetObject("languageAccBtn.ImageOptions.Image")));
             this.languageAccBtn.Name = "languageAccBtn";
             this.languageAccBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             this.languageAccBtn.Text = "Dil";
@@ -592,10 +612,10 @@
             this.Text = "UNEC Tədris yükü";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             ((System.ComponentModel.ISupportInitialize)(this.ribbon)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemHypertextLabel1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.repositoryItemImageEdit1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.repositoryItemPictureEdit2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.documentManager1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.tabbedView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dockManager1)).EndInit();
@@ -670,7 +690,9 @@
         private DevExpress.XtraBars.Ribbon.RibbonPageCategory ribbonPageCategory1;
         private DevExpress.XtraBars.Ribbon.RibbonPage ribbonPage1;
         private DevExpress.XtraBars.Ribbon.RibbonPageGroup ribbonPageGroup1;
-        private DevExpress.XtraBars.BarEditItem barEditItem1;
         private DevExpress.XtraEditors.Repository.RepositoryItemPictureEdit repositoryItemPictureEdit2;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement includedBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement excludedBtn;
+        private DevExpress.XtraBars.Navigation.AccordionControlElement teachingLoadBtn;
     }
 }

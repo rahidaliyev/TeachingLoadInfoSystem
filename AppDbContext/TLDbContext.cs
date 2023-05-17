@@ -27,5 +27,7 @@ namespace TeachingLoadInfoSystem.AppDbContext
         public DbSet<User> Users { get; set; }
         public DbSet<TLExcluded> TLExcludeds { get; set; }
         public DbSet<TLIncluded> TLIncludeds { get; set; }
+        public DbSet<PreferedSubject> PreferedSubjects { get; set; }
+        public DbSet<Profession> Professions { get; set; }
     }
 }

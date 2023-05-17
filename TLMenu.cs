@@ -85,5 +85,20 @@ namespace TeachingLoadInfoSystem
             Login frm = new Login();
             frm.ShowDialog();
         }
+
+        private void includedBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new TLIncludedGridForm(), "Kafedraya daxil olan yük");
+        }
+
+        private void excludedBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new TLExcludedGridForm(), "Kafedradan çıxan yük");
+        }
+
+        private void teachingLoadBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new TeachingLoadCRUDForm(), "Sorğu");
+        }
     }
 }
