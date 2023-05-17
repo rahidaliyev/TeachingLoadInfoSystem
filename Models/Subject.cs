@@ -11,6 +11,5 @@ namespace TeachingLoadInfoSystem.Models
     {
         public string? SubjectCode { get; set; }
         public string? SubjectName { get; set; }
-        //public int DepartmentID { get; set; }
     }
 }

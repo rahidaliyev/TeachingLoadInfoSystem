@@ -20,6 +20,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="TLExcludedGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Update="TLIncludedGridForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Update="LanguageCRUDForm.cs">
       <SubType>Form</SubType>
     </Compile>

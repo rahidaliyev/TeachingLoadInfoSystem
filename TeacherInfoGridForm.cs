@@ -1,11 +1,9 @@
-﻿using TeachingLoadInfoSystem;
-using TeachingLoadInfoSystem.AppDbContext;
+﻿using TeachingLoadInfoSystem.AppDbContext;
 using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Services.Intefaces;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Controllers;
-using DevExpress.Charts.Native;
 using System.Diagnostics;
 using System.IO;
 using OfficeOpenXml;

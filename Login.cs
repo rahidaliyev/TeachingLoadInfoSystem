@@ -32,7 +32,10 @@ namespace TeachingLoadInfoSystem
             else
             {
                 TLMenu frm= new TLMenu(user);
-                frm.ShowDialog();
+                if (frm.ShowDialog() != DialogResult.OK)
+                    Application.Exit();
+                else
+                    this.Show();
                 passwordTxt.Text = "";
             }
         }

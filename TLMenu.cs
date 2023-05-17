@@ -81,8 +81,9 @@ namespace TeachingLoadInfoSystem
 
         private void exitBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
-            //Login frm = new Login();
-            //frm.ShowDialog();
+            Dispose();
+            Login frm = new Login();
+            frm.ShowDialog();
         }
     }
 }

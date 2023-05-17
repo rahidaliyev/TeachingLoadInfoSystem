@@ -25,5 +25,7 @@ namespace TeachingLoadInfoSystem.AppDbContext
         public DbSet<LayoutInfo> LayoutInfos { get; set; }
         public DbSet<TeacherLanguage> TeacherLanguages { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<TLExcluded> TLExcludeds { get; set; }
+        public DbSet<TLIncluded> TLIncludeds { get; set; }
     }
 }
