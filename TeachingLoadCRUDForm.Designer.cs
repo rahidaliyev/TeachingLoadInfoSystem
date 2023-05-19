@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
             this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
             this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
             this.teacherNameTxt = new DevExpress.XtraEditors.TextEdit();
@@ -45,12 +46,16 @@
             this.teacherCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateTxt = new DevExpress.XtraLayout.LayoutControlItem();
+            this.dateLbl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).BeginInit();
@@ -65,14 +70,17 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateLbl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.dateEdit2);
             this.layoutControl1.Controls.Add(this.addTeachingLoad);
             this.layoutControl1.Controls.Add(this.dateEdit1);
             this.layoutControl1.Controls.Add(this.teacherNameTxt);
@@ -87,6 +95,26 @@
             this.layoutControl1.Size = new System.Drawing.Size(1179, 567);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dateEdit2
+            // 
+            this.dateEdit2.EditValue = null;
+            this.dateEdit2.Location = new System.Drawing.Point(274, 64);
+            this.dateEdit2.Name = "dateEdit2";
+            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.dateEdit2.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateEdit2.Properties.DisplayFormat.FormatString = "yyyy";
+            this.dateEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit2.Properties.EditFormat.FormatString = "yyyy";
+            this.dateEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.dateEdit2.Properties.MaskSettings.Set("mask", "yyyy");
+            this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateEdit2.Size = new System.Drawing.Size(161, 22);
+            this.dateEdit2.StyleController = this.layoutControl1;
+            this.dateEdit2.TabIndex = 5;
             // 
             // addTeachingLoad
             // 
@@ -107,12 +135,14 @@
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "dd-MM-yyyy";
+            this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.dateEdit1.Properties.DisplayFormat.FormatString = "yyyy";
             this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.EditFormat.FormatString = "dd-MM-yyyy";
+            this.dateEdit1.Properties.EditFormat.FormatString = "yyyy";
             this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
-            this.dateEdit1.Size = new System.Drawing.Size(469, 22);
+            this.dateEdit1.Properties.MaskSettings.Set("mask", "yyyy");
+            this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.dateEdit1.Size = new System.Drawing.Size(161, 22);
             this.dateEdit1.StyleController = this.layoutControl1;
             this.dateEdit1.TabIndex = 4;
             // 
@@ -130,7 +160,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1155, 434);
-            this.gridControl1.TabIndex = 5;
+            this.gridControl1.TabIndex = 6;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -193,10 +223,12 @@
             this.teacherCode,
             this.layoutControlItem2,
             this.layoutControlItem5,
-            this.dateTxt,
+            this.dateLbl,
             this.layoutControlItem1,
             this.emptySpaceItem2,
-            this.emptySpaceItem3});
+            this.emptySpaceItem3,
+            this.layoutControlItem6,
+            this.emptySpaceItem4});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1179, 567);
             this.Root.TextVisible = false;
@@ -254,14 +286,14 @@
             this.layoutControlItem5.Text = "Ad";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 16);
             // 
-            // dateTxt
+            // dateLbl
             // 
-            this.dateTxt.Control = this.dateEdit1;
-            this.dateTxt.Location = new System.Drawing.Point(0, 52);
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(570, 26);
-            this.dateTxt.Text = "Tarix";
-            this.dateTxt.TextSize = new System.Drawing.Size(85, 16);
+            this.dateLbl.Control = this.dateEdit1;
+            this.dateLbl.Location = new System.Drawing.Point(0, 52);
+            this.dateLbl.Name = "dateLbl";
+            this.dateLbl.Size = new System.Drawing.Size(262, 26);
+            this.dateLbl.Text = "Tarix";
+            this.dateLbl.TextSize = new System.Drawing.Size(85, 16);
             // 
             // layoutControlItem1
             // 
@@ -288,6 +320,23 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(589, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // layoutControlItem6
+            // 
+            this.layoutControlItem6.Control = this.dateEdit2;
+            this.layoutControlItem6.Location = new System.Drawing.Point(262, 52);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(165, 26);
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.TextVisible = false;
+            // 
+            // emptySpaceItem4
+            // 
+            this.emptySpaceItem4.AllowHotTrack = false;
+            this.emptySpaceItem4.Location = new System.Drawing.Point(427, 52);
+            this.emptySpaceItem4.Name = "emptySpaceItem4";
+            this.emptySpaceItem4.Size = new System.Drawing.Size(143, 26);
+            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // TeachingLoadCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -299,6 +348,8 @@
             this.Text = "Kafedra haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).EndInit();
@@ -313,10 +364,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateLbl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -340,10 +393,13 @@
         private DevExpress.XtraEditors.TextEdit teacherNameTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.DateEdit dateEdit1;
-        private DevExpress.XtraLayout.LayoutControlItem dateTxt;
+        private DevExpress.XtraLayout.LayoutControlItem dateLbl;
         private DevExpress.XtraEditors.SimpleButton addTeachingLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
+        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
     }
 }
 

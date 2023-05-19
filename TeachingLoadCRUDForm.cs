@@ -27,15 +27,21 @@ namespace TeachingLoadInfoSystem
         {
             for (int i = 0; i < _teacherInfo.WorkTime.WorkTimeFactor * 550; i++)
             {
-                teachingload.TeachingLoadSubjects.Add(new TeachingLoadSubject()
-                {
-                    SubjectID = i,
-                    TeachingLoadID = 0,
-                    Thesis = 0,
-                    EPedTETedTTKITA = 0,
-                    Doctorate = 0,
-                });
-                gridControl1.DataSource = teachingLoadSubject;
+                int updateIndex = teachingload.TeachingLoadSubjects.IndexOf(teachingLoadSubject);
+                if (updateIndex != -1)
+                    teachingload.TeachingLoadSubjects[updateIndex] = teachingLoadSubject;
+                else
+                    teachingload.TeachingLoadSubjects.Add(teachingLoadSubject);
+                teachingLoadSubject = new TeachingLoadSubject();
+                //teachingload.TeachingLoadSubjects.Add(new TeachingLoadSubject()
+                //{
+                //    SubjectID = i,
+                //    TeachingLoadID = 0,
+                //    Thesis = 0,
+                //    EPedTETedTTKITA = 0,
+                //    Doctorate = 0,
+                //});
+                //gridControl1.DataSource = teachingLoadSubject;
             }
         }
         public void InsertData()
@@ -43,7 +49,7 @@ namespace TeachingLoadInfoSystem
             teachingload.TeacherInfoID = _teacherInfo.ID;
             teachingload.TeacherName = _teacherInfo.TeacherName;
             teachingload.TeacherSurname = _teacherInfo.TeacherSurname;
-            teachingload.SemesterTime = DateTime.ParseExact(dateTxt.Text, "dd-MM-yyyy", null);
+            teachingload.SemesterTime = DateTime.ParseExact(dateLbl.Text, "dd-MM-yyyy", null);
         }
         public void LoadData()
         {

@@ -3,7 +3,7 @@
     public class TeachingLoadSubject : EntityBase
     {
         public int TeachingLoadID { get; set; }
-        public virtual Subject Subjects { get; set; }
+        public virtual Subject? Subjects { get; set; }
         public int SubjectID { get; set; }
         public int ExerciseFirstSem { get; set; }
         public int LectureFirstSem { get; set; }
