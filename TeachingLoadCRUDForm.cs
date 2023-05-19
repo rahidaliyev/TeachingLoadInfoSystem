@@ -52,7 +52,7 @@ namespace TeachingLoadInfoSystem
             teachingload.TeacherInfoID = _teacherInfo.ID;
             teachingload.TeacherName = _teacherInfo.TeacherName;
             teachingload.TeacherSurname = _teacherInfo.TeacherSurname;
-            teachingload.SemesterTime = DateTime.ParseExact(dateLbl.Text, "dd-MM-yyyy", null);
+            teachingload.SemesterTime = dateTxt.Text;
         }
         public void LoadData()
         {
@@ -107,8 +107,7 @@ namespace TeachingLoadInfoSystem
                 var teachingLoads = _teachingLoadServices.GetAllTeachingLoads().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
                 foreach (var item in teachingLoads)
                 {
-                    semestrTimeTxt.Text = item.SemesterTime.ToString();
-                    semestrTimeTxt1.Text = item.SemesterTime.AddYears(1).ToString();
+                    dateTxt.Text = item.SemesterTime;
                     gridControl1.DataSource = item.TeachingLoadSubjects;
                 }
                 teachingload = new TeachingLoad();

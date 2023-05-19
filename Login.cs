@@ -1,4 +1,5 @@
-﻿using TeachingLoadInfoSystem.AppDbContext;
+﻿using DevExpress.XtraReports.UserDesigner.Native;
+using TeachingLoadInfoSystem.AppDbContext;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;

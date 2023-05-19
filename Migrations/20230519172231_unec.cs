@@ -135,7 +135,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     TeacherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeacherSurname = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     TeacherFather = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    SemesterTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                    SemesterTime = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
                 {

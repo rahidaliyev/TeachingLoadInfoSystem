@@ -96,9 +96,10 @@
             // exitBtn
             // 
             this.exitBtn.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.exitBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.exitBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.exitBtn.Appearance.Options.UseBackColor = true;
             this.exitBtn.Appearance.Options.UseFont = true;
+            this.exitBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.exitBtn.Location = new System.Drawing.Point(307, 227);
             this.exitBtn.Name = "exitBtn";
             this.exitBtn.Size = new System.Drawing.Size(154, 42);
@@ -109,9 +110,10 @@
             // loginBtn
             // 
             this.loginBtn.Appearance.BackColor = DevExpress.LookAndFeel.DXSkinColors.FillColors.Primary;
-            this.loginBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.loginBtn.Appearance.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.loginBtn.Appearance.Options.UseBackColor = true;
             this.loginBtn.Appearance.Options.UseFont = true;
+            this.loginBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.loginBtn.Location = new System.Drawing.Point(147, 227);
             this.loginBtn.Name = "loginBtn";
             this.loginBtn.Size = new System.Drawing.Size(154, 42);

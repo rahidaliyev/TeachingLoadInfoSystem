@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230519104138_unec")]
+    [Migration("20230519172231_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -546,8 +546,9 @@ namespace TeachingLoadInfoSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<DateTime>("SemesterTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("SemesterTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TeacherFather")
                         .IsRequired()

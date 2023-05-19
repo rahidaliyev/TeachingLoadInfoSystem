@@ -30,9 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.semestrTimeTxt1 = new DevExpress.XtraEditors.DateEdit();
             this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.semestrTimeTxt = new DevExpress.XtraEditors.DateEdit();
             this.teacherNameTxt = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -71,18 +69,14 @@
             this.teacherCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.dateLbl = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.dateTxt = new DevExpress.XtraEditors.TextEdit();
+            this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
@@ -96,19 +90,18 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateLbl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.semestrTimeTxt1);
+            this.layoutControl1.Controls.Add(this.dateTxt);
             this.layoutControl1.Controls.Add(this.addTeachingLoad);
-            this.layoutControl1.Controls.Add(this.semestrTimeTxt);
             this.layoutControl1.Controls.Add(this.teacherNameTxt);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.teacherCmb);
@@ -122,27 +115,6 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // semestrTimeTxt1
-            // 
-            this.semestrTimeTxt1.EditValue = null;
-            this.semestrTimeTxt1.Location = new System.Drawing.Point(274, 64);
-            this.semestrTimeTxt1.Name = "semestrTimeTxt1";
-            this.semestrTimeTxt1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.semestrTimeTxt1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.semestrTimeTxt1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.semestrTimeTxt1.Properties.DisplayFormat.FormatString = "yyyy";
-            this.semestrTimeTxt1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.semestrTimeTxt1.Properties.EditFormat.FormatString = "yyyy";
-            this.semestrTimeTxt1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.semestrTimeTxt1.Properties.MaskSettings.Set("mask", "yyyy");
-            this.semestrTimeTxt1.Properties.UseMaskAsDisplayFormat = true;
-            this.semestrTimeTxt1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.semestrTimeTxt1.Size = new System.Drawing.Size(161, 22);
-            this.semestrTimeTxt1.StyleController = this.layoutControl1;
-            this.semestrTimeTxt1.TabIndex = 5;
-            // 
             // addTeachingLoad
             // 
             this.addTeachingLoad.Location = new System.Drawing.Point(963, 38);
@@ -152,27 +124,6 @@
             this.addTeachingLoad.TabIndex = 3;
             this.addTeachingLoad.Text = "Tədris yükünü yarat";
             this.addTeachingLoad.Click += new System.EventHandler(this.addTeachingLoad_Click);
-            // 
-            // semestrTimeTxt
-            // 
-            this.semestrTimeTxt.EditValue = null;
-            this.semestrTimeTxt.Location = new System.Drawing.Point(109, 64);
-            this.semestrTimeTxt.Name = "semestrTimeTxt";
-            this.semestrTimeTxt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.semestrTimeTxt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.semestrTimeTxt.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.semestrTimeTxt.Properties.DisplayFormat.FormatString = "yyyy";
-            this.semestrTimeTxt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.semestrTimeTxt.Properties.EditFormat.FormatString = "yyyy";
-            this.semestrTimeTxt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.semestrTimeTxt.Properties.MaskSettings.Set("mask", "yyyy");
-            this.semestrTimeTxt.Properties.UseMaskAsDisplayFormat = true;
-            this.semestrTimeTxt.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.semestrTimeTxt.Size = new System.Drawing.Size(161, 22);
-            this.semestrTimeTxt.StyleController = this.layoutControl1;
-            this.semestrTimeTxt.TabIndex = 4;
             // 
             // teacherNameTxt
             // 
@@ -489,12 +440,11 @@
             this.teacherCode,
             this.layoutControlItem2,
             this.layoutControlItem5,
-            this.dateLbl,
             this.layoutControlItem1,
             this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.layoutControlItem6,
-            this.emptySpaceItem4});
+            this.emptySpaceItem4,
+            this.layoutControlItem7});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1179, 567);
             this.Root.TextVisible = false;
@@ -552,15 +502,6 @@
             this.layoutControlItem5.Text = "Ad";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 16);
             // 
-            // dateLbl
-            // 
-            this.dateLbl.Control = this.semestrTimeTxt;
-            this.dateLbl.Location = new System.Drawing.Point(0, 52);
-            this.dateLbl.Name = "dateLbl";
-            this.dateLbl.Size = new System.Drawing.Size(262, 26);
-            this.dateLbl.Text = "Tarix";
-            this.dateLbl.TextSize = new System.Drawing.Size(85, 16);
-            // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.addTeachingLoad;
@@ -586,22 +527,30 @@
             this.emptySpaceItem3.Size = new System.Drawing.Size(589, 26);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // layoutControlItem6
-            // 
-            this.layoutControlItem6.Control = this.semestrTimeTxt1;
-            this.layoutControlItem6.Location = new System.Drawing.Point(262, 52);
-            this.layoutControlItem6.Name = "layoutControlItem6";
-            this.layoutControlItem6.Size = new System.Drawing.Size(165, 26);
-            this.layoutControlItem6.TextSize = new System.Drawing.Size(0, 0);
-            this.layoutControlItem6.TextVisible = false;
-            // 
             // emptySpaceItem4
             // 
             this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(427, 52);
+            this.emptySpaceItem4.Location = new System.Drawing.Point(560, 52);
             this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(143, 26);
+            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // dateTxt
+            // 
+            this.dateTxt.Location = new System.Drawing.Point(109, 64);
+            this.dateTxt.Name = "dateTxt";
+            this.dateTxt.Size = new System.Drawing.Size(459, 22);
+            this.dateTxt.StyleController = this.layoutControl1;
+            this.dateTxt.TabIndex = 8;
+            // 
+            // layoutControlItem7
+            // 
+            this.layoutControlItem7.Control = this.dateTxt;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem7.Name = "layoutControlItem7";
+            this.layoutControlItem7.Size = new System.Drawing.Size(560, 26);
+            this.layoutControlItem7.Text = "Tarix";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(85, 16);
             // 
             // TeachingLoadCRUDForm
             // 
@@ -614,10 +563,6 @@
             this.Text = "Kafedra haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
@@ -631,12 +576,12 @@
             ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateLbl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -659,13 +604,9 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit teacherNameTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.DateEdit semestrTimeTxt;
-        private DevExpress.XtraLayout.LayoutControlItem dateLbl;
         private DevExpress.XtraEditors.SimpleButton addTeachingLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.DateEdit semestrTimeTxt1;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private BindingSource teachingLoadSubjectsBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colTeachingLoadID;
@@ -691,6 +632,8 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSecondSemSum;
         private DevExpress.XtraGrid.Columns.GridColumn colFinalResult;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
+        private DevExpress.XtraEditors.TextEdit dateTxt;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
     }
 }
 

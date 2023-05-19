@@ -54,11 +54,6 @@
             this.colDoctorate = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSecondSemSum = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colFinalResult = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.teachingLoadSubjectsBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
-            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.teachingLoadsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.tLExcludedsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
             this.bar2 = new DevExpress.XtraBars.Bar();
             this.newBtn = new DevExpress.XtraBars.BarButtonItem();
@@ -71,10 +66,6 @@
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLExcludedsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,235 +105,230 @@
             this.colMasterThesis,
             this.colDoctorate,
             this.colSecondSemSum,
-            this.colFinalResult,
-            this.colID});
+            this.colFinalResult});
             this.gridView.GridControl = this.gridControl;
             this.gridView.Name = "gridView";
             this.gridView.OptionsBehavior.Editable = false;
+            this.gridView.OptionsImageLoad.DesiredThumbnailSize = new System.Drawing.Size(200, 0);
             // 
             // colTeachingLoadID
             // 
             this.colTeachingLoadID.Caption = "Fənnin kodu";
             this.colTeachingLoadID.FieldName = "Subjects.SubjectCode";
-            this.colTeachingLoadID.MinWidth = 25;
+            this.colTeachingLoadID.MinWidth = 80;
             this.colTeachingLoadID.Name = "colTeachingLoadID";
             this.colTeachingLoadID.Visible = true;
             this.colTeachingLoadID.VisibleIndex = 0;
-            this.colTeachingLoadID.Width = 94;
+            this.colTeachingLoadID.Width = 80;
             // 
             // colSubjects
             // 
+            this.colSubjects.Caption = "Fənnin adı";
             this.colSubjects.FieldName = "Subjects.SubjectName";
-            this.colSubjects.MinWidth = 25;
+            this.colSubjects.MaxWidth = 300;
+            this.colSubjects.MinWidth = 80;
             this.colSubjects.Name = "colSubjects";
+            this.colSubjects.OptionsColumn.FixedWidth = true;
             this.colSubjects.Visible = true;
             this.colSubjects.VisibleIndex = 1;
-            this.colSubjects.Width = 94;
+            this.colSubjects.Width = 150;
             // 
             // colSubjectID
             // 
             this.colSubjectID.FieldName = "SubjectID";
-            this.colSubjectID.MinWidth = 25;
+            this.colSubjectID.MinWidth = 80;
             this.colSubjectID.Name = "colSubjectID";
             this.colSubjectID.Visible = true;
             this.colSubjectID.VisibleIndex = 2;
-            this.colSubjectID.Width = 94;
+            this.colSubjectID.Width = 80;
             // 
             // colExerciseFirstSem
             // 
+            this.colExerciseFirstSem.Caption = "Məşğələ";
             this.colExerciseFirstSem.FieldName = "ExerciseFirstSem";
-            this.colExerciseFirstSem.MinWidth = 25;
+            this.colExerciseFirstSem.MinWidth = 80;
             this.colExerciseFirstSem.Name = "colExerciseFirstSem";
             this.colExerciseFirstSem.Visible = true;
             this.colExerciseFirstSem.VisibleIndex = 3;
-            this.colExerciseFirstSem.Width = 94;
+            this.colExerciseFirstSem.Width = 80;
             // 
             // colLectureFirstSem
             // 
+            this.colLectureFirstSem.Caption = "Mühazirə";
             this.colLectureFirstSem.FieldName = "LectureFirstSem";
-            this.colLectureFirstSem.MinWidth = 25;
+            this.colLectureFirstSem.MinWidth = 80;
             this.colLectureFirstSem.Name = "colLectureFirstSem";
             this.colLectureFirstSem.Visible = true;
             this.colLectureFirstSem.VisibleIndex = 4;
-            this.colLectureFirstSem.Width = 94;
+            this.colLectureFirstSem.Width = 80;
             // 
             // colLaboratoryFirstSem
             // 
+            this.colLaboratoryFirstSem.Caption = "Laboratoriya";
             this.colLaboratoryFirstSem.FieldName = "LaboratoryFirstSem";
-            this.colLaboratoryFirstSem.MinWidth = 25;
+            this.colLaboratoryFirstSem.MinWidth = 80;
             this.colLaboratoryFirstSem.Name = "colLaboratoryFirstSem";
             this.colLaboratoryFirstSem.Visible = true;
             this.colLaboratoryFirstSem.VisibleIndex = 5;
-            this.colLaboratoryFirstSem.Width = 94;
+            this.colLaboratoryFirstSem.Width = 80;
             // 
             // colRecommendationFirstSem
             // 
+            this.colRecommendationFirstSem.Caption = "Məsləhət saatı";
             this.colRecommendationFirstSem.FieldName = "RecommendationFirstSem";
-            this.colRecommendationFirstSem.MinWidth = 25;
+            this.colRecommendationFirstSem.MinWidth = 80;
             this.colRecommendationFirstSem.Name = "colRecommendationFirstSem";
             this.colRecommendationFirstSem.Visible = true;
             this.colRecommendationFirstSem.VisibleIndex = 6;
-            this.colRecommendationFirstSem.Width = 94;
+            this.colRecommendationFirstSem.Width = 80;
             // 
             // colExamFirstSem
             // 
+            this.colExamFirstSem.Caption = "İmtahan";
             this.colExamFirstSem.FieldName = "ExamFirstSem";
-            this.colExamFirstSem.MinWidth = 25;
+            this.colExamFirstSem.MinWidth = 80;
             this.colExamFirstSem.Name = "colExamFirstSem";
             this.colExamFirstSem.Visible = true;
             this.colExamFirstSem.VisibleIndex = 7;
-            this.colExamFirstSem.Width = 94;
+            this.colExamFirstSem.Width = 80;
             // 
             // colFirstSemSum
             // 
+            this.colFirstSemSum.Caption = "Birinci semestr yekun";
             this.colFirstSemSum.FieldName = "FirstSemSum";
-            this.colFirstSemSum.MinWidth = 25;
+            this.colFirstSemSum.MinWidth = 80;
             this.colFirstSemSum.Name = "colFirstSemSum";
             this.colFirstSemSum.Visible = true;
             this.colFirstSemSum.VisibleIndex = 8;
-            this.colFirstSemSum.Width = 94;
+            this.colFirstSemSum.Width = 80;
             // 
             // colExerciseSecondSem
             // 
+            this.colExerciseSecondSem.Caption = "Məşğələ";
             this.colExerciseSecondSem.FieldName = "ExerciseSecondSem";
-            this.colExerciseSecondSem.MinWidth = 25;
+            this.colExerciseSecondSem.MinWidth = 80;
             this.colExerciseSecondSem.Name = "colExerciseSecondSem";
             this.colExerciseSecondSem.Visible = true;
             this.colExerciseSecondSem.VisibleIndex = 9;
-            this.colExerciseSecondSem.Width = 94;
+            this.colExerciseSecondSem.Width = 80;
             // 
             // colLectureSecondSem
             // 
+            this.colLectureSecondSem.Caption = "Mühazirə";
             this.colLectureSecondSem.FieldName = "LectureSecondSem";
-            this.colLectureSecondSem.MinWidth = 25;
+            this.colLectureSecondSem.MinWidth = 80;
             this.colLectureSecondSem.Name = "colLectureSecondSem";
             this.colLectureSecondSem.Visible = true;
             this.colLectureSecondSem.VisibleIndex = 10;
-            this.colLectureSecondSem.Width = 94;
+            this.colLectureSecondSem.Width = 80;
             // 
             // colLaboratorySecondSem
             // 
+            this.colLaboratorySecondSem.Caption = "Laboratoriya";
             this.colLaboratorySecondSem.FieldName = "LaboratorySecondSem";
-            this.colLaboratorySecondSem.MinWidth = 25;
+            this.colLaboratorySecondSem.MinWidth = 80;
             this.colLaboratorySecondSem.Name = "colLaboratorySecondSem";
             this.colLaboratorySecondSem.Visible = true;
             this.colLaboratorySecondSem.VisibleIndex = 11;
-            this.colLaboratorySecondSem.Width = 94;
+            this.colLaboratorySecondSem.Width = 80;
             // 
             // colRecommendationSecondSem
             // 
+            this.colRecommendationSecondSem.Caption = "Məsləhətət saatı";
             this.colRecommendationSecondSem.FieldName = "RecommendationSecondSem";
-            this.colRecommendationSecondSem.MinWidth = 25;
+            this.colRecommendationSecondSem.MinWidth = 80;
             this.colRecommendationSecondSem.Name = "colRecommendationSecondSem";
             this.colRecommendationSecondSem.Visible = true;
             this.colRecommendationSecondSem.VisibleIndex = 12;
-            this.colRecommendationSecondSem.Width = 94;
+            this.colRecommendationSecondSem.Width = 80;
             // 
             // colExamSecondSem
             // 
+            this.colExamSecondSem.Caption = "İmtahan";
             this.colExamSecondSem.FieldName = "ExamSecondSem";
-            this.colExamSecondSem.MinWidth = 25;
+            this.colExamSecondSem.MinWidth = 80;
             this.colExamSecondSem.Name = "colExamSecondSem";
             this.colExamSecondSem.Visible = true;
             this.colExamSecondSem.VisibleIndex = 13;
-            this.colExamSecondSem.Width = 94;
+            this.colExamSecondSem.Width = 80;
             // 
             // colPrLeader
             // 
             this.colPrLeader.FieldName = "PrLeader";
-            this.colPrLeader.MinWidth = 25;
+            this.colPrLeader.MinWidth = 80;
             this.colPrLeader.Name = "colPrLeader";
             this.colPrLeader.Visible = true;
             this.colPrLeader.VisibleIndex = 14;
-            this.colPrLeader.Width = 94;
+            this.colPrLeader.Width = 80;
             // 
             // colPractise
             // 
+            this.colPractise.Caption = "İstehsalat təcrübəsi";
             this.colPractise.FieldName = "Practise";
-            this.colPractise.MinWidth = 25;
+            this.colPractise.MinWidth = 80;
             this.colPractise.Name = "colPractise";
             this.colPractise.Visible = true;
             this.colPractise.VisibleIndex = 15;
-            this.colPractise.Width = 94;
+            this.colPractise.Width = 80;
             // 
             // colEPedTETedTTKITA
             // 
             this.colEPedTETedTTKITA.FieldName = "EPedTETedTTKITA";
-            this.colEPedTETedTTKITA.MinWidth = 25;
+            this.colEPedTETedTTKITA.MinWidth = 80;
             this.colEPedTETedTTKITA.Name = "colEPedTETedTTKITA";
             this.colEPedTETedTTKITA.Visible = true;
             this.colEPedTETedTTKITA.VisibleIndex = 16;
-            this.colEPedTETedTTKITA.Width = 94;
+            this.colEPedTETedTTKITA.Width = 80;
             // 
             // colThesis
             // 
+            this.colThesis.Caption = "Tezis";
             this.colThesis.FieldName = "Thesis";
-            this.colThesis.MinWidth = 25;
+            this.colThesis.MinWidth = 80;
             this.colThesis.Name = "colThesis";
             this.colThesis.Visible = true;
             this.colThesis.VisibleIndex = 17;
-            this.colThesis.Width = 94;
+            this.colThesis.Width = 80;
             // 
             // colMasterThesis
             // 
+            this.colMasterThesis.Caption = "Master tezis";
             this.colMasterThesis.FieldName = "MasterThesis";
-            this.colMasterThesis.MinWidth = 25;
+            this.colMasterThesis.MinWidth = 80;
             this.colMasterThesis.Name = "colMasterThesis";
             this.colMasterThesis.Visible = true;
             this.colMasterThesis.VisibleIndex = 18;
-            this.colMasterThesis.Width = 94;
+            this.colMasterThesis.Width = 80;
             // 
             // colDoctorate
             // 
+            this.colDoctorate.Caption = "Doktorantura";
             this.colDoctorate.FieldName = "Doctorate";
-            this.colDoctorate.MinWidth = 25;
+            this.colDoctorate.MinWidth = 80;
             this.colDoctorate.Name = "colDoctorate";
             this.colDoctorate.Visible = true;
             this.colDoctorate.VisibleIndex = 19;
-            this.colDoctorate.Width = 94;
+            this.colDoctorate.Width = 80;
             // 
             // colSecondSemSum
             // 
+            this.colSecondSemSum.Caption = "İkinci semestr Yekun";
             this.colSecondSemSum.FieldName = "SecondSemSum";
-            this.colSecondSemSum.MinWidth = 25;
+            this.colSecondSemSum.MinWidth = 80;
             this.colSecondSemSum.Name = "colSecondSemSum";
             this.colSecondSemSum.Visible = true;
             this.colSecondSemSum.VisibleIndex = 20;
-            this.colSecondSemSum.Width = 94;
+            this.colSecondSemSum.Width = 80;
             // 
             // colFinalResult
             // 
+            this.colFinalResult.Caption = "Yekun";
             this.colFinalResult.FieldName = "FinalResult";
-            this.colFinalResult.MinWidth = 25;
+            this.colFinalResult.MinWidth = 80;
             this.colFinalResult.Name = "colFinalResult";
             this.colFinalResult.Visible = true;
             this.colFinalResult.VisibleIndex = 21;
-            this.colFinalResult.Width = 94;
-            // 
-            // colID
-            // 
-            this.colID.FieldName = "ID";
-            this.colID.MinWidth = 25;
-            this.colID.Name = "colID";
-            this.colID.Visible = true;
-            this.colID.VisibleIndex = 22;
-            this.colID.Width = 94;
-            // 
-            // teachingLoadSubjectsBindingSource1
-            // 
-            this.teachingLoadSubjectsBindingSource1.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
-            // 
-            // teachingLoadSubjectsBindingSource
-            // 
-            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
-            // 
-            // teachingLoadsBindingSource
-            // 
-            this.teachingLoadsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoad);
-            // 
-            // tLExcludedsBindingSource
-            // 
-            this.tLExcludedsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TLExcluded);
+            this.colFinalResult.Width = 80;
             // 
             // barManager1
             // 
@@ -463,10 +449,6 @@
             this.Text = "Form1";
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tLExcludedsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -487,10 +469,6 @@
         private DevExpress.XtraBars.BarDockControl barDockControlLeft;
         private DevExpress.XtraBars.BarDockControl barDockControlRight;
         private DevExpress.XtraBars.BarButtonItem RefreshBtn;
-        private BindingSource tLExcludedsBindingSource;
-        private BindingSource teachingLoadsBindingSource;
-        private BindingSource teachingLoadSubjectsBindingSource;
-        private BindingSource teachingLoadSubjectsBindingSource1;
         private DevExpress.XtraGrid.Columns.GridColumn colTeachingLoadID;
         private DevExpress.XtraGrid.Columns.GridColumn colSubjects;
         private DevExpress.XtraGrid.Columns.GridColumn colSubjectID;
@@ -513,6 +491,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colDoctorate;
         private DevExpress.XtraGrid.Columns.GridColumn colSecondSemSum;
         private DevExpress.XtraGrid.Columns.GridColumn colFinalResult;
-        private DevExpress.XtraGrid.Columns.GridColumn colID;
     }
 }

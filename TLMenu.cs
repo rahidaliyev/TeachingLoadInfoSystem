@@ -9,7 +9,7 @@ namespace TeachingLoadInfoSystem
         {
             InitializeComponent();
             this.user = user;
-            usernameTxt.Caption = $"Welcome {user.UserName}!";
+            usernameTxt.Caption = $" Xoş gəlmisiniz {user.UserName}!";
         }
         private void newTabbedForm(Form frm, string titleName)
         {

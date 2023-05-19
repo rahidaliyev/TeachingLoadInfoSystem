@@ -52,8 +52,6 @@ namespace TeachingLoadInfoSystem
             _excludedServices = new TLExcludedServices(new Repository<TLExcluded>(db));
             RefreshGrid();
             repositoryItemButtonEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            //repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            //repositoryItemButtonEdit1.Appearance.Options.UseBackColor = true;
             repositoryItemButtonEdit1.Appearance.BackColor = Color.Red;
         }
 

@@ -543,8 +543,9 @@ namespace TeachingLoadInfoSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<DateTime>("SemesterTime")
-                        .HasColumnType("datetime2");
+                    b.Property<string>("SemesterTime")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("TeacherFather")
                         .IsRequired()
