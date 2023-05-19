@@ -6,21 +6,22 @@ using TeachingLoadInfoSystem.Services.Intefaces;
 
 namespace TeachingLoadInfoSystem
 {
-    public partial class TLExcludedGridForm : DevExpress.XtraEditors.XtraForm
+    public partial class TLExcludedInnerGridForm : DevExpress.XtraEditors.XtraForm
     {
         TLDbContext db = new TLDbContext();
         TLExcluded excluded = new TLExcluded();
-        ITLExcludedServices _excludedServices;
+        ITeachingLoadServices _teachingLoadServices;
         string argument;
         public void RefreshGrid()
         {
-            gridControl.DataSource = _excludedServices.GetAllTLExcludeds().ToList();
+            var teachingLoads = _teachingLoadServices.GetAllTeachingLoads().ToList();
+                foreach (var item in teachingLoads)
+                {
+                    gridControl.DataSource = item.TeachingLoadSubjects;
+                }
         }
         public void PreviewData()
         {
-            var frm = new TLExcludedInnerGridForm();
-            frm.ShowDialog();
-
         }
         public void RemoveData()
         {
@@ -33,7 +34,7 @@ namespace TeachingLoadInfoSystem
                     var selectedRow = Convert.ToInt32(gridView.GetFocusedRowCellValue("ID"));
                     var selectedCode = gridView.GetFocusedRowCellValue("TLExcludedCode");
 
-                    _excludedServices.DeleteTLExcluded(selectedRow);
+                    _teachingLoadServices.DeleteTeachingLoad(selectedRow);
                     Refresh();
 
                     MessageBox.Show(selectedCode + " kodlu məlumat uğurla silindi.");
@@ -45,16 +46,12 @@ namespace TeachingLoadInfoSystem
                 RefreshGrid();
             }
         }
-        public TLExcludedGridForm()
+        public TLExcludedInnerGridForm()
         {
             InitializeComponent();
             TLDbContext db = new TLDbContext();
-            _excludedServices = new TLExcludedServices(new Repository<TLExcluded>(db));
+            _teachingLoadServices = new TeachingLoadServices(new Repository<TeachingLoad>(db));
             RefreshGrid();
-            repositoryItemButtonEdit1.BorderStyle = DevExpress.XtraEditors.Controls.BorderStyles.Office2003;
-            //repositoryItemButtonEdit1.TextEditStyle = DevExpress.XtraEditors.Controls.TextEditStyles.Standard;
-            //repositoryItemButtonEdit1.Appearance.Options.UseBackColor = true;
-            repositoryItemButtonEdit1.Appearance.BackColor = Color.Red;
         }
 
         private void newBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
@@ -79,11 +76,6 @@ namespace TeachingLoadInfoSystem
         private void DeleteBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             RemoveData();
-        }
-
-        private void gridControl_Click(object sender, EventArgs e)
-        {
-            PreviewData();
         }
     }
 }

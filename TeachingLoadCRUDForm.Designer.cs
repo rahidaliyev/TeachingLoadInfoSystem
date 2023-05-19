@@ -28,13 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dateEdit2 = new DevExpress.XtraEditors.DateEdit();
+            this.semestrTimeTxt1 = new DevExpress.XtraEditors.DateEdit();
             this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.dateEdit1 = new DevExpress.XtraEditors.DateEdit();
+            this.semestrTimeTxt = new DevExpress.XtraEditors.DateEdit();
             this.teacherNameTxt = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colTeachingLoadID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSubjects = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSubjectID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExerciseFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLectureFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLaboratoryFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRecommendationFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExamFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFirstSemSum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExerciseSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLectureSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLaboratorySecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colRecommendationSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colExamSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPrLeader = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colPractise = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colEPedTETedTTKITA = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colThesis = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colMasterThesis = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colDoctorate = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSecondSemSum = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colFinalResult = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.teacherCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.closeBtn = new DevExpress.XtraEditors.SimpleButton();
@@ -54,12 +79,13 @@
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties.CalendarTimeProperties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties.CalendarTimeProperties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
@@ -80,9 +106,9 @@
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.dateEdit2);
+            this.layoutControl1.Controls.Add(this.semestrTimeTxt1);
             this.layoutControl1.Controls.Add(this.addTeachingLoad);
-            this.layoutControl1.Controls.Add(this.dateEdit1);
+            this.layoutControl1.Controls.Add(this.semestrTimeTxt);
             this.layoutControl1.Controls.Add(this.teacherNameTxt);
             this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.teacherCmb);
@@ -96,25 +122,26 @@
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateEdit2
+            // semestrTimeTxt1
             // 
-            this.dateEdit2.EditValue = null;
-            this.dateEdit2.Location = new System.Drawing.Point(274, 64);
-            this.dateEdit2.Name = "dateEdit2";
-            this.dateEdit2.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.semestrTimeTxt1.EditValue = null;
+            this.semestrTimeTxt1.Location = new System.Drawing.Point(274, 64);
+            this.semestrTimeTxt1.Name = "semestrTimeTxt1";
+            this.semestrTimeTxt1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.semestrTimeTxt1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit2.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dateEdit2.Properties.DisplayFormat.FormatString = "yyyy";
-            this.dateEdit2.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.EditFormat.FormatString = "yyyy";
-            this.dateEdit2.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit2.Properties.MaskSettings.Set("mask", "yyyy");
-            this.dateEdit2.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit2.Size = new System.Drawing.Size(161, 22);
-            this.dateEdit2.StyleController = this.layoutControl1;
-            this.dateEdit2.TabIndex = 5;
+            this.semestrTimeTxt1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.semestrTimeTxt1.Properties.DisplayFormat.FormatString = "yyyy";
+            this.semestrTimeTxt1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.semestrTimeTxt1.Properties.EditFormat.FormatString = "yyyy";
+            this.semestrTimeTxt1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.semestrTimeTxt1.Properties.MaskSettings.Set("mask", "yyyy");
+            this.semestrTimeTxt1.Properties.UseMaskAsDisplayFormat = true;
+            this.semestrTimeTxt1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.semestrTimeTxt1.Size = new System.Drawing.Size(161, 22);
+            this.semestrTimeTxt1.StyleController = this.layoutControl1;
+            this.semestrTimeTxt1.TabIndex = 5;
             // 
             // addTeachingLoad
             // 
@@ -126,25 +153,26 @@
             this.addTeachingLoad.Text = "Tədris yükünü yarat";
             this.addTeachingLoad.Click += new System.EventHandler(this.addTeachingLoad_Click);
             // 
-            // dateEdit1
+            // semestrTimeTxt
             // 
-            this.dateEdit1.EditValue = null;
-            this.dateEdit1.Location = new System.Drawing.Point(109, 64);
-            this.dateEdit1.Name = "dateEdit1";
-            this.dateEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.semestrTimeTxt.EditValue = null;
+            this.semestrTimeTxt.Location = new System.Drawing.Point(109, 64);
+            this.semestrTimeTxt.Name = "semestrTimeTxt";
+            this.semestrTimeTxt.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            this.semestrTimeTxt.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.dateEdit1.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
-            this.dateEdit1.Properties.DisplayFormat.FormatString = "yyyy";
-            this.dateEdit1.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.EditFormat.FormatString = "yyyy";
-            this.dateEdit1.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
-            this.dateEdit1.Properties.MaskSettings.Set("mask", "yyyy");
-            this.dateEdit1.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
-            this.dateEdit1.Size = new System.Drawing.Size(161, 22);
-            this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 4;
+            this.semestrTimeTxt.Properties.CalendarView = DevExpress.XtraEditors.Repository.CalendarView.TouchUI;
+            this.semestrTimeTxt.Properties.DisplayFormat.FormatString = "yyyy";
+            this.semestrTimeTxt.Properties.DisplayFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.semestrTimeTxt.Properties.EditFormat.FormatString = "yyyy";
+            this.semestrTimeTxt.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
+            this.semestrTimeTxt.Properties.MaskSettings.Set("mask", "yyyy");
+            this.semestrTimeTxt.Properties.UseMaskAsDisplayFormat = true;
+            this.semestrTimeTxt.Properties.VistaDisplayMode = DevExpress.Utils.DefaultBoolean.False;
+            this.semestrTimeTxt.Size = new System.Drawing.Size(161, 22);
+            this.semestrTimeTxt.StyleController = this.layoutControl1;
+            this.semestrTimeTxt.TabIndex = 4;
             // 
             // teacherNameTxt
             // 
@@ -156,6 +184,7 @@
             // 
             // gridControl1
             // 
+            this.gridControl1.DataSource = this.teachingLoadSubjectsBindingSource;
             this.gridControl1.Location = new System.Drawing.Point(12, 90);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
@@ -164,10 +193,247 @@
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
+            // teachingLoadSubjectsBindingSource
+            // 
+            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
+            // 
             // gridView1
             // 
+            this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.colTeachingLoadID,
+            this.colSubjects,
+            this.colSubjectID,
+            this.colExerciseFirstSem,
+            this.colLectureFirstSem,
+            this.colLaboratoryFirstSem,
+            this.colRecommendationFirstSem,
+            this.colExamFirstSem,
+            this.colFirstSemSum,
+            this.colExerciseSecondSem,
+            this.colLectureSecondSem,
+            this.colLaboratorySecondSem,
+            this.colRecommendationSecondSem,
+            this.colExamSecondSem,
+            this.colPrLeader,
+            this.colPractise,
+            this.colEPedTETedTTKITA,
+            this.colThesis,
+            this.colMasterThesis,
+            this.colDoctorate,
+            this.colSecondSemSum,
+            this.colFinalResult,
+            this.colID});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
+            // 
+            // colTeachingLoadID
+            // 
+            this.colTeachingLoadID.Caption = "Fənnin kodu";
+            this.colTeachingLoadID.FieldName = "Subjects.SubjectCode";
+            this.colTeachingLoadID.MinWidth = 25;
+            this.colTeachingLoadID.Name = "colTeachingLoadID";
+            this.colTeachingLoadID.Visible = true;
+            this.colTeachingLoadID.VisibleIndex = 0;
+            this.colTeachingLoadID.Width = 94;
+            // 
+            // colSubjects
+            // 
+            this.colSubjects.Caption = "Fənn";
+            this.colSubjects.FieldName = "Subjects.SubjectName";
+            this.colSubjects.MinWidth = 25;
+            this.colSubjects.Name = "colSubjects";
+            this.colSubjects.Visible = true;
+            this.colSubjects.VisibleIndex = 1;
+            this.colSubjects.Width = 94;
+            // 
+            // colSubjectID
+            // 
+            this.colSubjectID.FieldName = "SubjectID";
+            this.colSubjectID.MinWidth = 25;
+            this.colSubjectID.Name = "colSubjectID";
+            this.colSubjectID.Visible = true;
+            this.colSubjectID.VisibleIndex = 2;
+            this.colSubjectID.Width = 94;
+            // 
+            // colExerciseFirstSem
+            // 
+            this.colExerciseFirstSem.FieldName = "ExerciseFirstSem";
+            this.colExerciseFirstSem.MinWidth = 25;
+            this.colExerciseFirstSem.Name = "colExerciseFirstSem";
+            this.colExerciseFirstSem.Visible = true;
+            this.colExerciseFirstSem.VisibleIndex = 3;
+            this.colExerciseFirstSem.Width = 94;
+            // 
+            // colLectureFirstSem
+            // 
+            this.colLectureFirstSem.FieldName = "LectureFirstSem";
+            this.colLectureFirstSem.MinWidth = 25;
+            this.colLectureFirstSem.Name = "colLectureFirstSem";
+            this.colLectureFirstSem.Visible = true;
+            this.colLectureFirstSem.VisibleIndex = 4;
+            this.colLectureFirstSem.Width = 94;
+            // 
+            // colLaboratoryFirstSem
+            // 
+            this.colLaboratoryFirstSem.FieldName = "LaboratoryFirstSem";
+            this.colLaboratoryFirstSem.MinWidth = 25;
+            this.colLaboratoryFirstSem.Name = "colLaboratoryFirstSem";
+            this.colLaboratoryFirstSem.Visible = true;
+            this.colLaboratoryFirstSem.VisibleIndex = 5;
+            this.colLaboratoryFirstSem.Width = 94;
+            // 
+            // colRecommendationFirstSem
+            // 
+            this.colRecommendationFirstSem.FieldName = "RecommendationFirstSem";
+            this.colRecommendationFirstSem.MinWidth = 25;
+            this.colRecommendationFirstSem.Name = "colRecommendationFirstSem";
+            this.colRecommendationFirstSem.Visible = true;
+            this.colRecommendationFirstSem.VisibleIndex = 6;
+            this.colRecommendationFirstSem.Width = 94;
+            // 
+            // colExamFirstSem
+            // 
+            this.colExamFirstSem.FieldName = "ExamFirstSem";
+            this.colExamFirstSem.MinWidth = 25;
+            this.colExamFirstSem.Name = "colExamFirstSem";
+            this.colExamFirstSem.Visible = true;
+            this.colExamFirstSem.VisibleIndex = 7;
+            this.colExamFirstSem.Width = 94;
+            // 
+            // colFirstSemSum
+            // 
+            this.colFirstSemSum.FieldName = "FirstSemSum";
+            this.colFirstSemSum.MinWidth = 25;
+            this.colFirstSemSum.Name = "colFirstSemSum";
+            this.colFirstSemSum.Visible = true;
+            this.colFirstSemSum.VisibleIndex = 8;
+            this.colFirstSemSum.Width = 94;
+            // 
+            // colExerciseSecondSem
+            // 
+            this.colExerciseSecondSem.FieldName = "ExerciseSecondSem";
+            this.colExerciseSecondSem.MinWidth = 25;
+            this.colExerciseSecondSem.Name = "colExerciseSecondSem";
+            this.colExerciseSecondSem.Visible = true;
+            this.colExerciseSecondSem.VisibleIndex = 9;
+            this.colExerciseSecondSem.Width = 94;
+            // 
+            // colLectureSecondSem
+            // 
+            this.colLectureSecondSem.FieldName = "LectureSecondSem";
+            this.colLectureSecondSem.MinWidth = 25;
+            this.colLectureSecondSem.Name = "colLectureSecondSem";
+            this.colLectureSecondSem.Visible = true;
+            this.colLectureSecondSem.VisibleIndex = 10;
+            this.colLectureSecondSem.Width = 94;
+            // 
+            // colLaboratorySecondSem
+            // 
+            this.colLaboratorySecondSem.FieldName = "LaboratorySecondSem";
+            this.colLaboratorySecondSem.MinWidth = 25;
+            this.colLaboratorySecondSem.Name = "colLaboratorySecondSem";
+            this.colLaboratorySecondSem.Visible = true;
+            this.colLaboratorySecondSem.VisibleIndex = 11;
+            this.colLaboratorySecondSem.Width = 94;
+            // 
+            // colRecommendationSecondSem
+            // 
+            this.colRecommendationSecondSem.FieldName = "RecommendationSecondSem";
+            this.colRecommendationSecondSem.MinWidth = 25;
+            this.colRecommendationSecondSem.Name = "colRecommendationSecondSem";
+            this.colRecommendationSecondSem.Visible = true;
+            this.colRecommendationSecondSem.VisibleIndex = 12;
+            this.colRecommendationSecondSem.Width = 94;
+            // 
+            // colExamSecondSem
+            // 
+            this.colExamSecondSem.FieldName = "ExamSecondSem";
+            this.colExamSecondSem.MinWidth = 25;
+            this.colExamSecondSem.Name = "colExamSecondSem";
+            this.colExamSecondSem.Visible = true;
+            this.colExamSecondSem.VisibleIndex = 13;
+            this.colExamSecondSem.Width = 94;
+            // 
+            // colPrLeader
+            // 
+            this.colPrLeader.FieldName = "PrLeader";
+            this.colPrLeader.MinWidth = 25;
+            this.colPrLeader.Name = "colPrLeader";
+            this.colPrLeader.Visible = true;
+            this.colPrLeader.VisibleIndex = 14;
+            this.colPrLeader.Width = 94;
+            // 
+            // colPractise
+            // 
+            this.colPractise.FieldName = "Practise";
+            this.colPractise.MinWidth = 25;
+            this.colPractise.Name = "colPractise";
+            this.colPractise.Visible = true;
+            this.colPractise.VisibleIndex = 15;
+            this.colPractise.Width = 94;
+            // 
+            // colEPedTETedTTKITA
+            // 
+            this.colEPedTETedTTKITA.FieldName = "EPedTETedTTKITA";
+            this.colEPedTETedTTKITA.MinWidth = 25;
+            this.colEPedTETedTTKITA.Name = "colEPedTETedTTKITA";
+            this.colEPedTETedTTKITA.Visible = true;
+            this.colEPedTETedTTKITA.VisibleIndex = 16;
+            this.colEPedTETedTTKITA.Width = 94;
+            // 
+            // colThesis
+            // 
+            this.colThesis.FieldName = "Thesis";
+            this.colThesis.MinWidth = 25;
+            this.colThesis.Name = "colThesis";
+            this.colThesis.Visible = true;
+            this.colThesis.VisibleIndex = 17;
+            this.colThesis.Width = 94;
+            // 
+            // colMasterThesis
+            // 
+            this.colMasterThesis.FieldName = "MasterThesis";
+            this.colMasterThesis.MinWidth = 25;
+            this.colMasterThesis.Name = "colMasterThesis";
+            this.colMasterThesis.Visible = true;
+            this.colMasterThesis.VisibleIndex = 18;
+            this.colMasterThesis.Width = 94;
+            // 
+            // colDoctorate
+            // 
+            this.colDoctorate.FieldName = "Doctorate";
+            this.colDoctorate.MinWidth = 25;
+            this.colDoctorate.Name = "colDoctorate";
+            this.colDoctorate.Visible = true;
+            this.colDoctorate.VisibleIndex = 19;
+            this.colDoctorate.Width = 94;
+            // 
+            // colSecondSemSum
+            // 
+            this.colSecondSemSum.FieldName = "SecondSemSum";
+            this.colSecondSemSum.MinWidth = 25;
+            this.colSecondSemSum.Name = "colSecondSemSum";
+            this.colSecondSemSum.Visible = true;
+            this.colSecondSemSum.VisibleIndex = 20;
+            this.colSecondSemSum.Width = 94;
+            // 
+            // colFinalResult
+            // 
+            this.colFinalResult.FieldName = "FinalResult";
+            this.colFinalResult.MinWidth = 25;
+            this.colFinalResult.Name = "colFinalResult";
+            this.colFinalResult.Visible = true;
+            this.colFinalResult.VisibleIndex = 21;
+            this.colFinalResult.Width = 94;
+            // 
+            // colID
+            // 
+            this.colID.FieldName = "ID";
+            this.colID.MinWidth = 25;
+            this.colID.Name = "colID";
+            this.colID.Visible = true;
+            this.colID.VisibleIndex = 22;
+            this.colID.Width = 94;
             // 
             // teacherCmb
             // 
@@ -288,7 +554,7 @@
             // 
             // dateLbl
             // 
-            this.dateLbl.Control = this.dateEdit1;
+            this.dateLbl.Control = this.semestrTimeTxt;
             this.dateLbl.Location = new System.Drawing.Point(0, 52);
             this.dateLbl.Name = "dateLbl";
             this.dateLbl.Size = new System.Drawing.Size(262, 26);
@@ -322,7 +588,7 @@
             // 
             // layoutControlItem6
             // 
-            this.layoutControlItem6.Control = this.dateEdit2;
+            this.layoutControlItem6.Control = this.semestrTimeTxt1;
             this.layoutControlItem6.Location = new System.Drawing.Point(262, 52);
             this.layoutControlItem6.Name = "layoutControlItem6";
             this.layoutControlItem6.Size = new System.Drawing.Size(165, 26);
@@ -348,12 +614,13 @@
             this.Text = "Kafedra haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties.CalendarTimeProperties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties.CalendarTimeProperties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.semestrTimeTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
@@ -392,14 +659,38 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
         private DevExpress.XtraEditors.TextEdit teacherNameTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
-        private DevExpress.XtraEditors.DateEdit dateEdit1;
+        private DevExpress.XtraEditors.DateEdit semestrTimeTxt;
         private DevExpress.XtraLayout.LayoutControlItem dateLbl;
         private DevExpress.XtraEditors.SimpleButton addTeachingLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraEditors.DateEdit dateEdit2;
+        private DevExpress.XtraEditors.DateEdit semestrTimeTxt1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
+        private BindingSource teachingLoadSubjectsBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colTeachingLoadID;
+        private DevExpress.XtraGrid.Columns.GridColumn colSubjects;
+        private DevExpress.XtraGrid.Columns.GridColumn colSubjectID;
+        private DevExpress.XtraGrid.Columns.GridColumn colExerciseFirstSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colLectureFirstSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colLaboratoryFirstSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colRecommendationFirstSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colExamFirstSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colFirstSemSum;
+        private DevExpress.XtraGrid.Columns.GridColumn colExerciseSecondSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colLectureSecondSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colLaboratorySecondSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colRecommendationSecondSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colExamSecondSem;
+        private DevExpress.XtraGrid.Columns.GridColumn colPrLeader;
+        private DevExpress.XtraGrid.Columns.GridColumn colPractise;
+        private DevExpress.XtraGrid.Columns.GridColumn colEPedTETedTTKITA;
+        private DevExpress.XtraGrid.Columns.GridColumn colThesis;
+        private DevExpress.XtraGrid.Columns.GridColumn colMasterThesis;
+        private DevExpress.XtraGrid.Columns.GridColumn colDoctorate;
+        private DevExpress.XtraGrid.Columns.GridColumn colSecondSemSum;
+        private DevExpress.XtraGrid.Columns.GridColumn colFinalResult;
+        private DevExpress.XtraGrid.Columns.GridColumn colID;
     }
 }
 

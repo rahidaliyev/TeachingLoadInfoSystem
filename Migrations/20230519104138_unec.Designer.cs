@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230519094920_unec")]
+    [Migration("20230519104138_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -538,6 +538,117 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("TeacherLanguages");
                 });
 
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoad", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<DateTime>("SemesterTime")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("TeacherFather")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("TeacherInfoID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("TeacherName")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TeacherSurname")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("TeachingLoads");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoadSubject", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("Doctorate")
+                        .HasColumnType("int");
+
+                    b.Property<int>("EPedTETedTTKITA")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExamFirstSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExamSecondSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExerciseFirstSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("ExerciseSecondSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FinalResult")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FirstSemSum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LaboratoryFirstSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LaboratorySecondSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LectureFirstSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LectureSecondSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("MasterThesis")
+                        .HasColumnType("int");
+
+                    b.Property<int>("PrLeader")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Practise")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecommendationFirstSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("RecommendationSecondSem")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SecondSemSum")
+                        .HasColumnType("int");
+
+                    b.Property<int>("SubjectID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TeachingLoadID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Thesis")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("SubjectID");
+
+                    b.HasIndex("TeachingLoadID");
+
+                    b.ToTable("TeachingLoadSubjects");
+                });
+
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.User", b =>
                 {
                     b.Property<int>("ID")
@@ -712,6 +823,23 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Navigation("Language");
                 });
 
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoadSubject", b =>
+                {
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subjects")
+                        .WithMany()
+                        .HasForeignKey("SubjectID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("TeachingLoadInfoSystem.Models.TeachingLoad", null)
+                        .WithMany("TeachingLoadSubjects")
+                        .HasForeignKey("TeachingLoadID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subjects");
+                });
+
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>
                 {
                     b.Navigation("Books");
@@ -723,6 +851,11 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Navigation("PreviousJobs");
 
                     b.Navigation("TeacherLanguages");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoad", b =>
+                {
+                    b.Navigation("TeachingLoadSubjects");
                 });
 #pragma warning restore 612, 618
         }

@@ -126,6 +126,23 @@ namespace TeachingLoadInfoSystem.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "TeachingLoads",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeacherInfoID = table.Column<int>(type: "int", nullable: false),
+                    TeacherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TeacherSurname = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TeacherFather = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SemesterTime = table.Column<DateTime>(type: "datetime2", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeachingLoads", x => x.ID);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "TLIncludeds",
                 columns: table => new
                 {
@@ -220,6 +237,51 @@ namespace TeachingLoadInfoSystem.Migrations
                         name: "FK_TLExcludeds_Departments_DepartmentID",
                         column: x => x.DepartmentID,
                         principalTable: "Departments",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "TeachingLoadSubjects",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    TeachingLoadID = table.Column<int>(type: "int", nullable: false),
+                    SubjectID = table.Column<int>(type: "int", nullable: false),
+                    ExerciseFirstSem = table.Column<int>(type: "int", nullable: false),
+                    LectureFirstSem = table.Column<int>(type: "int", nullable: false),
+                    LaboratoryFirstSem = table.Column<int>(type: "int", nullable: false),
+                    RecommendationFirstSem = table.Column<int>(type: "int", nullable: false),
+                    ExamFirstSem = table.Column<int>(type: "int", nullable: false),
+                    FirstSemSum = table.Column<int>(type: "int", nullable: false),
+                    ExerciseSecondSem = table.Column<int>(type: "int", nullable: false),
+                    LectureSecondSem = table.Column<int>(type: "int", nullable: false),
+                    LaboratorySecondSem = table.Column<int>(type: "int", nullable: false),
+                    RecommendationSecondSem = table.Column<int>(type: "int", nullable: false),
+                    ExamSecondSem = table.Column<int>(type: "int", nullable: false),
+                    PrLeader = table.Column<int>(type: "int", nullable: false),
+                    Practise = table.Column<int>(type: "int", nullable: false),
+                    EPedTETedTTKITA = table.Column<int>(type: "int", nullable: false),
+                    Thesis = table.Column<int>(type: "int", nullable: false),
+                    MasterThesis = table.Column<int>(type: "int", nullable: false),
+                    Doctorate = table.Column<int>(type: "int", nullable: false),
+                    SecondSemSum = table.Column<int>(type: "int", nullable: false),
+                    FinalResult = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_TeachingLoadSubjects", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_TeachingLoadSubjects_Subjects_SubjectID",
+                        column: x => x.SubjectID,
+                        principalTable: "Subjects",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                    table.ForeignKey(
+                        name: "FK_TeachingLoadSubjects_TeachingLoads_TeachingLoadID",
+                        column: x => x.TeachingLoadID,
+                        principalTable: "TeachingLoads",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -481,6 +543,16 @@ namespace TeachingLoadInfoSystem.Migrations
                 column: "TeacherInfoID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_TeachingLoadSubjects_SubjectID",
+                table: "TeachingLoadSubjects",
+                column: "SubjectID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_TeachingLoadSubjects_TeachingLoadID",
+                table: "TeachingLoadSubjects",
+                column: "TeachingLoadID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_TLExcludeds_DepartmentID",
                 table: "TLExcludeds",
                 column: "DepartmentID");
@@ -508,6 +580,9 @@ namespace TeachingLoadInfoSystem.Migrations
                 name: "TeacherLanguages");
 
             migrationBuilder.DropTable(
+                name: "TeachingLoadSubjects");
+
+            migrationBuilder.DropTable(
                 name: "TLExcludeds");
 
             migrationBuilder.DropTable(
@@ -517,13 +592,16 @@ namespace TeachingLoadInfoSystem.Migrations
                 name: "Users");
 
             migrationBuilder.DropTable(
-                name: "Subjects");
-
-            migrationBuilder.DropTable(
                 name: "Languages");
 
             migrationBuilder.DropTable(
                 name: "TeacherInfos");
+
+            migrationBuilder.DropTable(
+                name: "Subjects");
+
+            migrationBuilder.DropTable(
+                name: "TeachingLoads");
 
             migrationBuilder.DropTable(
                 name: "Departments");

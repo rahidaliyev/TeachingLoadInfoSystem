@@ -3,6 +3,7 @@ using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace TeachingLoadInfoSystem
 {
@@ -13,12 +14,14 @@ namespace TeachingLoadInfoSystem
         TLDbContext db = new TLDbContext();
         ITeachingLoadServices _teachingLoadServices { get; set; }
         ITeacherInfoServices _teacherInfoServices { get; set; }
+        ITeachingLoadSubjectServices _teachingLoadSubjectServices { get; set; }
         private TeacherInfo _teacherInfo { get; set; } = new TeacherInfo();
         public TeachingLoadCRUDForm()
         {
             InitializeComponent();
             _teachingLoadServices = new TeachingLoadServices(new Repository<TeachingLoad>(db));
             _teacherInfoServices = new TeacherInfoServices(new Repository<TeacherInfo>(db));
+            _teachingLoadSubjectServices = new TeachingLoadSubjectServices(new Repository<TeachingLoadSubject>(db));
             this.teachingload = teachingload;
             teacherCmb.Properties.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
             LoadData();
@@ -53,6 +56,7 @@ namespace TeachingLoadInfoSystem
         }
         public void LoadData()
         {
+
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
@@ -98,9 +102,18 @@ namespace TeachingLoadInfoSystem
         {
             _teacherInfo = teacherCmb.GetSelectedDataRow() as TeacherInfo;
             if (_teacherInfo != null)
+            {
                 teacherNameTxt.Text = _teacherInfo.TeacherName + " " + _teacherInfo.TeacherSurname + " " + _teacherInfo.TeacherFather;
+                var teachingLoads = _teachingLoadServices.GetAllTeachingLoads().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                foreach (var item in teachingLoads)
+                {
+                    semestrTimeTxt.Text = item.SemesterTime.ToString();
+                    semestrTimeTxt1.Text = item.SemesterTime.AddYears(1).ToString();
+                    gridControl1.DataSource = item.TeachingLoadSubjects;
+                }
+                teachingload = new TeachingLoad();
+            }
         }
-
         private void teacherCmb_QueryPopUp(object sender, System.ComponentModel.CancelEventArgs e)
         {
             for (int i = 4; i <= 19; i++)
