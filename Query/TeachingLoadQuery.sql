@@ -31,12 +31,12 @@ values
 
 insert into WorkTimes
 values
-('wc0001','Tam Ştat'),
-('wc0002','0.75 Ştat'),
-('wc0003','Yarım Ştat'),
-('wc0004','0.25 Ştat'),
-('wc0005','Saat Hesabı'),
-('wc0006','Müddətli müqavilə əsasında')
+('wc0001','Tam Ştat',1),
+('wc0002','0.75 Ştat',0.75),
+('wc0003','Yarım Ştat',0.5),
+('wc0004','0.25 Ştat',0.25),
+('wc0005','Saat Hesabı',0),
+('wc0006','Müddətli müqavilə əsasında',0)
 
 insert into Languages
 values

@@ -178,7 +178,8 @@ namespace TeachingLoadInfoSystem.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     WorkTimeCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    WorkTimeName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    WorkTimeName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WorkTimeFactor = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {

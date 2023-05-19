@@ -170,13 +170,13 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(461, 73);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // ScientifiDegreeCRUDForm
+            // ScientificDegreeCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(481, 176);
             this.Controls.Add(this.layoutControl1);
-            this.Name = "ScientifiDegreeCRUDForm";
+            this.Name = "ScientificDegreeCRUDForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Ştat haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();

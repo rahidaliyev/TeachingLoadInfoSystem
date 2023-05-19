@@ -117,6 +117,7 @@
             // 
             // colDepartment
             // 
+            this.colDepartment.Caption = "Kafedra";
             this.colDepartment.FieldName = "Department.DepartmentName";
             this.colDepartment.MinWidth = 25;
             this.colDepartment.Name = "colDepartment";
@@ -126,6 +127,7 @@
             // 
             // colExerciseFirstSem
             // 
+            this.colExerciseFirstSem.Caption = "Məşğələ";
             this.colExerciseFirstSem.FieldName = "ExerciseFirstSem";
             this.colExerciseFirstSem.MinWidth = 25;
             this.colExerciseFirstSem.Name = "colExerciseFirstSem";
@@ -135,6 +137,7 @@
             // 
             // colLectureFirstSem
             // 
+            this.colLectureFirstSem.Caption = "Mühazirə";
             this.colLectureFirstSem.FieldName = "LectureFirstSem";
             this.colLectureFirstSem.MinWidth = 25;
             this.colLectureFirstSem.Name = "colLectureFirstSem";
@@ -144,6 +147,7 @@
             // 
             // colLaboratoryFirstSem
             // 
+            this.colLaboratoryFirstSem.Caption = "Laboratoriya";
             this.colLaboratoryFirstSem.FieldName = "LaboratoryFirstSem";
             this.colLaboratoryFirstSem.MinWidth = 25;
             this.colLaboratoryFirstSem.Name = "colLaboratoryFirstSem";
@@ -153,6 +157,7 @@
             // 
             // colRecommendationFirstSem
             // 
+            this.colRecommendationFirstSem.Caption = "Məsləhət saatı";
             this.colRecommendationFirstSem.FieldName = "RecommendationFirstSem";
             this.colRecommendationFirstSem.MinWidth = 25;
             this.colRecommendationFirstSem.Name = "colRecommendationFirstSem";
@@ -162,6 +167,7 @@
             // 
             // colExamFirstSem
             // 
+            this.colExamFirstSem.Caption = "İmtahan";
             this.colExamFirstSem.FieldName = "ExamFirstSem";
             this.colExamFirstSem.MinWidth = 25;
             this.colExamFirstSem.Name = "colExamFirstSem";
@@ -171,6 +177,7 @@
             // 
             // colFirstSemSum
             // 
+            this.colFirstSemSum.Caption = "Birinci semestr yekun";
             this.colFirstSemSum.FieldName = "FirstSemSum";
             this.colFirstSemSum.MinWidth = 25;
             this.colFirstSemSum.Name = "colFirstSemSum";
@@ -180,6 +187,7 @@
             // 
             // colExerciseSecondSem
             // 
+            this.colExerciseSecondSem.Caption = "Məşğələ";
             this.colExerciseSecondSem.FieldName = "ExerciseSecondSem";
             this.colExerciseSecondSem.MinWidth = 25;
             this.colExerciseSecondSem.Name = "colExerciseSecondSem";
@@ -189,6 +197,7 @@
             // 
             // colLectureSecondSem
             // 
+            this.colLectureSecondSem.Caption = "Mühazirə";
             this.colLectureSecondSem.FieldName = "LectureSecondSem";
             this.colLectureSecondSem.MinWidth = 25;
             this.colLectureSecondSem.Name = "colLectureSecondSem";
@@ -198,6 +207,7 @@
             // 
             // colLaboratorySecondSem
             // 
+            this.colLaboratorySecondSem.Caption = "Laboratoriya";
             this.colLaboratorySecondSem.FieldName = "LaboratorySecondSem";
             this.colLaboratorySecondSem.MinWidth = 25;
             this.colLaboratorySecondSem.Name = "colLaboratorySecondSem";
@@ -207,6 +217,7 @@
             // 
             // colRecommendationSecondSem
             // 
+            this.colRecommendationSecondSem.Caption = "Məsləhət saatı";
             this.colRecommendationSecondSem.FieldName = "RecommendationSecondSem";
             this.colRecommendationSecondSem.MinWidth = 25;
             this.colRecommendationSecondSem.Name = "colRecommendationSecondSem";
@@ -216,6 +227,7 @@
             // 
             // colExamSecondSem
             // 
+            this.colExamSecondSem.Caption = "İmtahan";
             this.colExamSecondSem.FieldName = "ExamSecondSem";
             this.colExamSecondSem.MinWidth = 25;
             this.colExamSecondSem.Name = "colExamSecondSem";
@@ -234,6 +246,7 @@
             // 
             // colPractise
             // 
+            this.colPractise.Caption = "Praktika";
             this.colPractise.FieldName = "Practise";
             this.colPractise.MinWidth = 25;
             this.colPractise.Name = "colPractise";
@@ -252,6 +265,7 @@
             // 
             // colThesis
             // 
+            this.colThesis.Caption = "Tezis";
             this.colThesis.FieldName = "Thesis";
             this.colThesis.MinWidth = 25;
             this.colThesis.Name = "colThesis";
@@ -261,6 +275,7 @@
             // 
             // colMasterThesis
             // 
+            this.colMasterThesis.Caption = "Magistr tezis";
             this.colMasterThesis.FieldName = "MasterThesis";
             this.colMasterThesis.MinWidth = 25;
             this.colMasterThesis.Name = "colMasterThesis";
@@ -270,6 +285,7 @@
             // 
             // colDoctorate
             // 
+            this.colDoctorate.Caption = "Doktorantura";
             this.colDoctorate.FieldName = "Doctorate";
             this.colDoctorate.MinWidth = 25;
             this.colDoctorate.Name = "colDoctorate";
@@ -279,6 +295,7 @@
             // 
             // colSecondSemSum
             // 
+            this.colSecondSemSum.Caption = "İkinci semestr yekun";
             this.colSecondSemSum.FieldName = "SecondSemSum";
             this.colSecondSemSum.MinWidth = 25;
             this.colSecondSemSum.Name = "colSecondSemSum";
@@ -288,6 +305,7 @@
             // 
             // colFinalResult
             // 
+            this.colFinalResult.Caption = "Yekun";
             this.colFinalResult.FieldName = "FinalResult";
             this.colFinalResult.MinWidth = 25;
             this.colFinalResult.Name = "colFinalResult";

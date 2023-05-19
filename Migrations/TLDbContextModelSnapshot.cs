@@ -567,6 +567,9 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Property<string>("WorkTimeCode")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<double>("WorkTimeFactor")
+                        .HasColumnType("float");
+
                     b.Property<string>("WorkTimeName")
                         .HasColumnType("nvarchar(max)");
 

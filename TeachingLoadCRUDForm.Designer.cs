@@ -48,6 +48,7 @@
             this.dateTxt = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dateEdit1.Properties)).BeginInit();
@@ -67,6 +68,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateTxt)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -92,7 +94,7 @@
             this.addTeachingLoad.Name = "addTeachingLoad";
             this.addTeachingLoad.Size = new System.Drawing.Size(204, 27);
             this.addTeachingLoad.StyleController = this.layoutControl1;
-            this.addTeachingLoad.TabIndex = 10;
+            this.addTeachingLoad.TabIndex = 3;
             this.addTeachingLoad.Text = "Tədris yükünü yarat";
             this.addTeachingLoad.Click += new System.EventHandler(this.addTeachingLoad_Click);
             // 
@@ -112,7 +114,7 @@
             this.dateEdit1.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.dateEdit1.Size = new System.Drawing.Size(469, 22);
             this.dateEdit1.StyleController = this.layoutControl1;
-            this.dateEdit1.TabIndex = 9;
+            this.dateEdit1.TabIndex = 4;
             // 
             // teacherNameTxt
             // 
@@ -120,7 +122,7 @@
             this.teacherNameTxt.Name = "teacherNameTxt";
             this.teacherNameTxt.Size = new System.Drawing.Size(469, 22);
             this.teacherNameTxt.StyleController = this.layoutControl1;
-            this.teacherNameTxt.TabIndex = 7;
+            this.teacherNameTxt.TabIndex = 2;
             // 
             // gridControl1
             // 
@@ -128,7 +130,7 @@
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
             this.gridControl1.Size = new System.Drawing.Size(1155, 434);
-            this.gridControl1.TabIndex = 6;
+            this.gridControl1.TabIndex = 5;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
@@ -147,9 +149,9 @@
             this.teacherCmb.Properties.NullText = "";
             this.teacherCmb.Properties.PopupView = this.searchLookUpEdit1View;
             this.teacherCmb.Properties.ValueMember = "ID";
-            this.teacherCmb.Size = new System.Drawing.Size(1058, 22);
+            this.teacherCmb.Size = new System.Drawing.Size(469, 22);
             this.teacherCmb.StyleController = this.layoutControl1;
-            this.teacherCmb.TabIndex = 5;
+            this.teacherCmb.TabIndex = 0;
             this.teacherCmb.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.teacherCmb_QueryPopUp);
             this.teacherCmb.EditValueChanged += new System.EventHandler(this.teacherCmb_EditValueChanged);
             // 
@@ -166,7 +168,7 @@
             this.closeBtn.Name = "closeBtn";
             this.closeBtn.Size = new System.Drawing.Size(288, 27);
             this.closeBtn.StyleController = this.layoutControl1;
-            this.closeBtn.TabIndex = 4;
+            this.closeBtn.TabIndex = 7;
             this.closeBtn.Text = "Çıxış";
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
@@ -176,7 +178,7 @@
             this.saveBtn.Name = "saveBtn";
             this.saveBtn.Size = new System.Drawing.Size(285, 27);
             this.saveBtn.StyleController = this.layoutControl1;
-            this.saveBtn.TabIndex = 3;
+            this.saveBtn.TabIndex = 6;
             this.saveBtn.Text = "Yadda saxla";
             this.saveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -193,7 +195,8 @@
             this.layoutControlItem5,
             this.dateTxt,
             this.layoutControlItem1,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.emptySpaceItem3});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1179, 567);
             this.Root.TextVisible = false;
@@ -229,7 +232,7 @@
             this.teacherCode.Control = this.teacherCmb;
             this.teacherCode.Location = new System.Drawing.Point(0, 0);
             this.teacherCode.Name = "teacherCode";
-            this.teacherCode.Size = new System.Drawing.Size(1159, 26);
+            this.teacherCode.Size = new System.Drawing.Size(570, 26);
             this.teacherCode.Text = "Müəllimin kodu";
             this.teacherCode.TextSize = new System.Drawing.Size(85, 16);
             // 
@@ -277,6 +280,14 @@
             this.emptySpaceItem2.Size = new System.Drawing.Size(381, 52);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
+            // emptySpaceItem3
+            // 
+            this.emptySpaceItem3.AllowHotTrack = false;
+            this.emptySpaceItem3.Location = new System.Drawing.Point(570, 0);
+            this.emptySpaceItem3.Name = "emptySpaceItem3";
+            this.emptySpaceItem3.Size = new System.Drawing.Size(589, 26);
+            this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
+            // 
             // TeachingLoadCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -305,6 +316,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.dateTxt)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -331,6 +343,7 @@
         private DevExpress.XtraLayout.LayoutControlItem dateTxt;
         private DevExpress.XtraEditors.SimpleButton addTeachingLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
     }
 }
 

@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230517123914_unec")]
+    [Migration("20230519094920_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -569,6 +569,9 @@ namespace TeachingLoadInfoSystem.Migrations
 
                     b.Property<string>("WorkTimeCode")
                         .HasColumnType("nvarchar(max)");
+
+                    b.Property<double>("WorkTimeFactor")
+                        .HasColumnType("float");
 
                     b.Property<string>("WorkTimeName")
                         .HasColumnType("nvarchar(max)");

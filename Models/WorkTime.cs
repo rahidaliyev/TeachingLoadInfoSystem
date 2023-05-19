@@ -11,6 +11,6 @@ namespace TeachingLoadInfoSystem.Models
     {
         public string? WorkTimeCode { get; set; }
         public string? WorkTimeName { get; set; }
-        //tam stat yarim stat 0.25 stat cedveli
+        public double WorkTimeFactor { get; set; }
     }
 }
