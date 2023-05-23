@@ -20,41 +20,21 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="TeachingLoadCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TLExcludedInnerGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TLExcludedGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TLIncludedGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="LanguageCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="LanguageGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="TeachingLoadCRUDForm.cs" />
+    <Compile Update="TLExcludedInnerGridForm.cs" />
+    <Compile Update="TLExcludedGridForm.cs" />
+    <Compile Update="TLIncludedGridForm.cs" />
+    <Compile Update="LanguageCRUDForm.cs" />
+    <Compile Update="LanguageGridForm.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="ScientificNameCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScientificNameGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="SubjectCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="SubjectGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="ScientificNameCRUDForm.cs" />
+    <Compile Update="ScientificNameGridForm.cs" />
+    <Compile Update="SubjectCRUDForm.cs" />
+    <Compile Update="SubjectGridForm.cs" />
     <Compile Update="UserControlPreviousJob.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -64,21 +44,11 @@
     <Compile Update="UserControlCertificate.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ScientificDegreeCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="WorkTimeCRUDForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="TeacherInfoGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ScientificDegreeGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="WorkTimeGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="ScientificDegreeCRUDForm.cs" />
+    <Compile Update="WorkTimeCRUDForm.cs" />
+    <Compile Update="TeacherInfoGridForm.cs" />
+    <Compile Update="ScientificDegreeGridForm.cs" />
+    <Compile Update="WorkTimeGridForm.cs" />
   </ItemGroup>
 
   <ItemGroup>
