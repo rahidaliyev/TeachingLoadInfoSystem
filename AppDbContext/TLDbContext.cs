@@ -31,6 +31,6 @@ namespace TeachingLoadInfoSystem.AppDbContext
         public DbSet<Profession> Professions { get; set; }
         public DbSet<TeachingLoad> TeachingLoads { get; set; }
         public DbSet<TeachingLoadSubject> TeachingLoadSubjects { get; set; }
-        public DbSet<EducationPlanGridForm> EducationPlans { get; set; }
+        public DbSet<EducationPlan> EducationPlans { get; set; }
     }
 }

@@ -81,6 +81,7 @@
             tabbedView1 = new DevExpress.XtraBars.Docking2010.Views.Tabbed.TabbedView(components);
             dockManager1 = new DevExpress.XtraBars.Docking.DockManager(components);
             accordionControl1 = new DevExpress.XtraBars.Navigation.AccordionControl();
+            specialityBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             includedBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             excludedBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             teacherInfoAccBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
@@ -93,7 +94,6 @@
             accordionControlElement15 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement16 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             accordionControlElement17 = new DevExpress.XtraBars.Navigation.AccordionControlElement();
-            specialityBtn = new DevExpress.XtraBars.Navigation.AccordionControlElement();
             ((System.ComponentModel.ISupportInitialize)ribbon).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemHypertextLabel1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)repositoryItemPictureEdit1).BeginInit();
@@ -405,6 +405,14 @@
             accordionControl1.TabIndex = 0;
             accordionControl1.ViewType = DevExpress.XtraBars.Navigation.AccordionControlViewType.HamburgerMenu;
             // 
+            // specialityBtn
+            // 
+            specialityBtn.ImageOptions.Image = (Image)resources.GetObject("specialityBtn.ImageOptions.Image");
+            specialityBtn.Name = "specialityBtn";
+            specialityBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
+            specialityBtn.Text = "İxtisaslar üzrə tədris planı";
+            specialityBtn.Click += specialityBtn_Click;
+            // 
             // includedBtn
             // 
             includedBtn.ImageOptions.Image = (Image)resources.GetObject("includedBtn.ImageOptions.Image");
@@ -486,14 +494,6 @@
             accordionControlElement17.Name = "accordionControlElement17";
             accordionControlElement17.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
             accordionControlElement17.Text = "Element17";
-            // 
-            // specialityBtn
-            // 
-            specialityBtn.ImageOptions.Image = (Image)resources.GetObject("specialityBtn.ImageOptions.Image");
-            specialityBtn.Name = "specialityBtn";
-            specialityBtn.Style = DevExpress.XtraBars.Navigation.ElementStyle.Item;
-            specialityBtn.Text = "İxtisaslar üzrə tədris planı";
-            specialityBtn.Click += specialityBtn_Click;
             // 
             // TLMenu
             // 

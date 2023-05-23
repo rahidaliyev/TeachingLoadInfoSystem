@@ -6,31 +6,31 @@ namespace TeachingLoadInfoSystem.Services
 {
     public class EducationPlanServices : IEducationPlanServices
     {
-        private IRepository<EducationPlanGridForm> _repository;
+        private IRepository<EducationPlan> _repository;
 
-        public EducationPlanServices(IRepository<EducationPlanGridForm> repository)
+        public EducationPlanServices(IRepository<EducationPlan> repository)
         {
             _repository = repository;
         }
-        public EducationPlanGridForm GetEducationPlanByID(int id)
+        public EducationPlan GetEducationPlanByID(int id)
         {
             var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
-        public void InsertEducationPlan(EducationPlanGridForm EducationPlan)
+        public void InsertEducationPlan(EducationPlan educationPlan)
         {
-            _repository.Insert(EducationPlan);
+            _repository.Insert(educationPlan);
         }
-        public void UpdateEducationPlan(EducationPlanGridForm EducationPlan)
+        public void UpdateEducationPlan(EducationPlan educationPlan)
         {
-            _repository.Update(EducationPlan);
+            _repository.Update(educationPlan);
         }
         public void DeleteEducationPlan(int id)
         {
             var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
             _repository.Delete(selectedTeacher);
         }
-        public IEnumerable<EducationPlanGridForm> GetAllEducationPlans()
+        public IEnumerable<EducationPlan> GetAllEducationPlans()
         {
             return _repository.GetAll;
         }
