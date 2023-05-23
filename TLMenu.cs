@@ -4,7 +4,7 @@ namespace TeachingLoadInfoSystem
 {
     public partial class TLMenu : DevExpress.XtraBars.Ribbon.RibbonForm
     {
-        Models.User user  = new Models.User();
+        Models.User user = new Models.User();
         public TLMenu(Models.User user)
         {
             InitializeComponent();
@@ -99,6 +99,11 @@ namespace TeachingLoadInfoSystem
         private void teachingLoadBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new TeachingLoadCRUDForm(), "Sorğu");
+        }
+
+        private void specialityBtn_Click(object sender, EventArgs e)
+        {
+            newTabbedForm(new EducationPlanGridForm(), "Tədris planı");
         }
     }
 }
