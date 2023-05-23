@@ -36,15 +36,6 @@ namespace TeachingLoadInfoSystem
                 else
                     teachingload.TeachingLoadSubjects.Add(teachingLoadSubject);
                 teachingLoadSubject = new TeachingLoadSubject();
-                //teachingload.TeachingLoadSubjects.Add(new TeachingLoadSubject()
-                //{
-                //    SubjectID = i,
-                //    TeachingLoadID = 0,
-                //    Thesis = 0,
-                //    EPedTETedTTKITA = 0,
-                //    Doctorate = 0,
-                //});
-                //gridControl1.DataSource = teachingLoadSubject;
             }
         }
         public void InsertData()
@@ -105,12 +96,14 @@ namespace TeachingLoadInfoSystem
             {
                 teacherNameTxt.Text = _teacherInfo.TeacherName + " " + _teacherInfo.TeacherSurname + " " + _teacherInfo.TeacherFather;
                 var teachingLoads = _teachingLoadServices.GetAllTeachingLoads().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                if (teachingLoads.Count == 0)
+                    gridControl1.DataSource = null;
                 foreach (var item in teachingLoads)
                 {
                     dateTxt.Text = item.SemesterTime;
                     gridControl1.DataSource = item.TeachingLoadSubjects;
                 }
-                teachingload = new TeachingLoad();
+                gridControl1.Refresh();
             }
         }
         private void teacherCmb_QueryPopUp(object sender, System.ComponentModel.CancelEventArgs e)

@@ -30,6 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
+            this.dateTxt = new DevExpress.XtraEditors.TextEdit();
             this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
             this.teacherNameTxt = new DevExpress.XtraEditors.TextEdit();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -73,10 +74,10 @@
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.dateTxt = new DevExpress.XtraEditors.TextEdit();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
@@ -94,7 +95,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
             this.SuspendLayout();
             // 
@@ -114,6 +114,14 @@
             this.layoutControl1.Size = new System.Drawing.Size(1179, 567);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
+            // 
+            // dateTxt
+            // 
+            this.dateTxt.Location = new System.Drawing.Point(109, 64);
+            this.dateTxt.Name = "dateTxt";
+            this.dateTxt.Size = new System.Drawing.Size(459, 22);
+            this.dateTxt.StyleController = this.layoutControl1;
+            this.dateTxt.TabIndex = 8;
             // 
             // addTeachingLoad
             // 
@@ -535,14 +543,6 @@
             this.emptySpaceItem4.Size = new System.Drawing.Size(10, 26);
             this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // dateTxt
-            // 
-            this.dateTxt.Location = new System.Drawing.Point(109, 64);
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(459, 22);
-            this.dateTxt.StyleController = this.layoutControl1;
-            this.dateTxt.TabIndex = 8;
-            // 
             // layoutControlItem7
             // 
             this.layoutControlItem7.Control = this.dateTxt;
@@ -563,6 +563,7 @@
             this.Text = "Kafedra haqqında";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
@@ -580,7 +581,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
             this.ResumeLayout(false);
 
