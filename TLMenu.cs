@@ -88,12 +88,12 @@ namespace TeachingLoadInfoSystem
 
         private void includedBtn_Click(object sender, EventArgs e)
         {
-            newTabbedForm(new TLIncludedGridForm(), "Kafedraya daxil olan yük");
+            newTabbedForm(new IncludedEducationPlanGridForm(), "Kafedraya daxil olan yük");
         }
 
         private void excludedBtn_Click(object sender, EventArgs e)
         {
-            newTabbedForm(new TLExcludedGridForm(), "Kafedradan çıxan yük");
+            newTabbedForm(new ExcludedEducationPlanGridForm(), "Kafedradan çıxan yük");
         }
 
         private void teachingLoadBtn_Click(object sender, EventArgs e)
