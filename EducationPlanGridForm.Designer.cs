@@ -28,171 +28,178 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
-            speciality1Btn = new DevExpress.XtraEditors.SimpleButton();
-            speciality2Btn = new DevExpress.XtraEditors.SimpleButton();
-            speciality3Btn = new DevExpress.XtraEditors.SimpleButton();
-            speciality4Btn = new DevExpress.XtraEditors.SimpleButton();
-            speciality5Btn = new DevExpress.XtraEditors.SimpleButton();
-            gridControl1 = new DevExpress.XtraGrid.GridControl();
-            gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            barManager1 = new DevExpress.XtraBars.BarManager(components);
-            bar2 = new DevExpress.XtraBars.Bar();
-            backBtn = new DevExpress.XtraBars.BarButtonItem();
-            barDockControlTop = new DevExpress.XtraBars.BarDockControl();
-            barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
-            barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
-            barDockControlRight = new DevExpress.XtraBars.BarDockControl();
-            ((System.ComponentModel.ISupportInitialize)gridControl1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)barManager1).BeginInit();
-            SuspendLayout();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(EducationPlanGridForm));
+            this.speciality1Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.speciality2Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.speciality3Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.speciality4Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.speciality5Btn = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.barManager1 = new DevExpress.XtraBars.BarManager(this.components);
+            this.bar2 = new DevExpress.XtraBars.Bar();
+            this.backBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.barDockControlTop = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
+            this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).BeginInit();
+            this.SuspendLayout();
             // 
             // speciality1Btn
             // 
-            speciality1Btn.Location = new Point(378, 111);
-            speciality1Btn.Name = "speciality1Btn";
-            speciality1Btn.Size = new Size(118, 36);
-            speciality1Btn.TabIndex = 0;
-            speciality1Btn.Text = "Ixtisas I";
+            this.speciality1Btn.Location = new System.Drawing.Point(378, 111);
+            this.speciality1Btn.Name = "speciality1Btn";
+            this.speciality1Btn.Size = new System.Drawing.Size(118, 36);
+            this.speciality1Btn.TabIndex = 0;
+            this.speciality1Btn.Text = "Ixtisas I";
             speciality1Btn.Click += speciality1Btn_Click;
             // 
             // speciality2Btn
             // 
-            speciality2Btn.Location = new Point(378, 173);
-            speciality2Btn.Name = "speciality2Btn";
-            speciality2Btn.Size = new Size(118, 36);
-            speciality2Btn.TabIndex = 1;
-            speciality2Btn.Text = "İxtisas II";
+            this.speciality2Btn.Location = new System.Drawing.Point(378, 173);
+            this.speciality2Btn.Name = "speciality2Btn";
+            this.speciality2Btn.Size = new System.Drawing.Size(118, 36);
+            this.speciality2Btn.TabIndex = 1;
+            this.speciality2Btn.Text = "İxtisas II";
             speciality2Btn.Click += specaility2Btn_Click;
             // 
             // speciality3Btn
             // 
-            speciality3Btn.Location = new Point(378, 234);
-            speciality3Btn.Name = "speciality3Btn";
-            speciality3Btn.Size = new Size(118, 36);
-            speciality3Btn.TabIndex = 2;
-            speciality3Btn.Text = "İxtisas III";
+            this.speciality3Btn.Location = new System.Drawing.Point(378, 234);
+            this.speciality3Btn.Name = "speciality3Btn";
+            this.speciality3Btn.Size = new System.Drawing.Size(118, 36);
+            this.speciality3Btn.TabIndex = 2;
+            this.speciality3Btn.Text = "İxtisas III";
             speciality3Btn.Click += speciality3Btn_Click;
             // 
             // speciality4Btn
             // 
-            speciality4Btn.Location = new Point(378, 299);
-            speciality4Btn.Name = "speciality4Btn";
-            speciality4Btn.Size = new Size(118, 36);
-            speciality4Btn.TabIndex = 3;
-            speciality4Btn.Text = "İxtisas IV";
+            this.speciality4Btn.Location = new System.Drawing.Point(378, 299);
+            this.speciality4Btn.Name = "speciality4Btn";
+            this.speciality4Btn.Size = new System.Drawing.Size(118, 36);
+            this.speciality4Btn.TabIndex = 3;
+            this.speciality4Btn.Text = "İxtisas IV";
             speciality4Btn.Click += speciality4Btn_Click;
             // 
             // speciality5Btn
             // 
-            speciality5Btn.Location = new Point(378, 368);
-            speciality5Btn.Name = "speciality5Btn";
-            speciality5Btn.Size = new Size(118, 36);
-            speciality5Btn.TabIndex = 4;
-            speciality5Btn.Text = "Ixtisas V";
+            this.speciality5Btn.Location = new System.Drawing.Point(378, 368);
+            this.speciality5Btn.Name = "speciality5Btn";
+            this.speciality5Btn.Size = new System.Drawing.Size(118, 36);
+            this.speciality5Btn.TabIndex = 4;
+            this.speciality5Btn.Text = "Ixtisas V";
             speciality5Btn.Click += speciality5Btn_Click;
             // 
             // gridControl1
             // 
-            gridControl1.Dock = DockStyle.Fill;
-            gridControl1.Location = new Point(0, 25);
-            gridControl1.MainView = gridView1;
-            gridControl1.Name = "gridControl1";
-            gridControl1.Size = new Size(911, 523);
-            gridControl1.TabIndex = 5;
-            gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] { gridView1 });
-            gridControl1.Visible = false;
+            this.gridControl1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridControl1.Location = new System.Drawing.Point(0, 30);
+            this.gridControl1.MainView = this.gridView1;
+            this.gridControl1.Name = "gridControl1";
+            this.gridControl1.Size = new System.Drawing.Size(911, 518);
+            this.gridControl1.TabIndex = 5;
+            this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
+            this.gridView1});
+            this.gridControl1.Visible = false;
             // 
             // gridView1
             // 
-            gridView1.GridControl = gridControl1;
-            gridView1.Name = "gridView1";
+            this.gridView1.GridControl = this.gridControl1;
+            this.gridView1.Name = "gridView1";
             // 
             // barManager1
             // 
-            barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] { bar2 });
-            barManager1.DockControls.Add(barDockControlTop);
-            barManager1.DockControls.Add(barDockControlBottom);
-            barManager1.DockControls.Add(barDockControlLeft);
-            barManager1.DockControls.Add(barDockControlRight);
-            barManager1.Form = this;
-            barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] { backBtn });
-            barManager1.MainMenu = bar2;
-            barManager1.MaxItemId = 1;
+            this.barManager1.Bars.AddRange(new DevExpress.XtraBars.Bar[] {
+            this.bar2});
+            this.barManager1.DockControls.Add(this.barDockControlTop);
+            this.barManager1.DockControls.Add(this.barDockControlBottom);
+            this.barManager1.DockControls.Add(this.barDockControlLeft);
+            this.barManager1.DockControls.Add(this.barDockControlRight);
+            this.barManager1.Form = this;
+            this.barManager1.Items.AddRange(new DevExpress.XtraBars.BarItem[] {
+            this.backBtn});
+            this.barManager1.MainMenu = this.bar2;
+            this.barManager1.MaxItemId = 1;
             // 
             // bar2
             // 
-            bar2.BarName = "Main menu";
-            bar2.DockCol = 0;
-            bar2.DockRow = 0;
-            bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
-            bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] { new DevExpress.XtraBars.LinkPersistInfo(backBtn) });
-            bar2.OptionsBar.MultiLine = true;
-            bar2.OptionsBar.UseWholeRow = true;
-            bar2.Text = "Main menu";
+            this.bar2.BarName = "Main menu";
+            this.bar2.DockCol = 0;
+            this.bar2.DockRow = 0;
+            this.bar2.DockStyle = DevExpress.XtraBars.BarDockStyle.Top;
+            this.bar2.LinksPersistInfo.AddRange(new DevExpress.XtraBars.LinkPersistInfo[] {
+            new DevExpress.XtraBars.LinkPersistInfo(this.backBtn)});
+            this.bar2.OptionsBar.MultiLine = true;
+            this.bar2.OptionsBar.UseWholeRow = true;
+            this.bar2.Text = "Main menu";
             // 
             // backBtn
             // 
-            backBtn.Caption = "barButtonItem1";
-            backBtn.Id = 0;
-            backBtn.Name = "backBtn";
+            this.backBtn.Caption = "Geri";
+            this.backBtn.Id = 0;
+            this.backBtn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("backBtn.ImageOptions.SvgImage")));
             backBtn.ItemClick += backBtn_ItemClick;
+            this.backBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barDockControlTop
             // 
-            barDockControlTop.CausesValidation = false;
-            barDockControlTop.Dock = DockStyle.Top;
-            barDockControlTop.Location = new Point(0, 0);
-            barDockControlTop.Manager = barManager1;
-            barDockControlTop.Size = new Size(911, 25);
+            this.barDockControlTop.CausesValidation = false;
+            this.barDockControlTop.Dock = System.Windows.Forms.DockStyle.Top;
+            this.barDockControlTop.Location = new System.Drawing.Point(0, 0);
+            this.barDockControlTop.Manager = this.barManager1;
+            this.barDockControlTop.Size = new System.Drawing.Size(911, 30);
             // 
             // barDockControlBottom
             // 
-            barDockControlBottom.CausesValidation = false;
-            barDockControlBottom.Dock = DockStyle.Bottom;
-            barDockControlBottom.Location = new Point(0, 548);
-            barDockControlBottom.Manager = barManager1;
-            barDockControlBottom.Size = new Size(911, 0);
+            this.barDockControlBottom.CausesValidation = false;
+            this.barDockControlBottom.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.barDockControlBottom.Location = new System.Drawing.Point(0, 548);
+            this.barDockControlBottom.Manager = this.barManager1;
+            this.barDockControlBottom.Size = new System.Drawing.Size(911, 0);
             // 
             // barDockControlLeft
             // 
-            barDockControlLeft.CausesValidation = false;
-            barDockControlLeft.Dock = DockStyle.Left;
-            barDockControlLeft.Location = new Point(0, 25);
-            barDockControlLeft.Manager = barManager1;
-            barDockControlLeft.Size = new Size(0, 523);
+            this.barDockControlLeft.CausesValidation = false;
+            this.barDockControlLeft.Dock = System.Windows.Forms.DockStyle.Left;
+            this.barDockControlLeft.Location = new System.Drawing.Point(0, 30);
+            this.barDockControlLeft.Manager = this.barManager1;
+            this.barDockControlLeft.Size = new System.Drawing.Size(0, 518);
             // 
             // barDockControlRight
             // 
-            barDockControlRight.CausesValidation = false;
-            barDockControlRight.Dock = DockStyle.Right;
-            barDockControlRight.Location = new Point(911, 25);
-            barDockControlRight.Manager = barManager1;
-            barDockControlRight.Size = new Size(0, 523);
+            this.barDockControlRight.CausesValidation = false;
+            this.barDockControlRight.Dock = System.Windows.Forms.DockStyle.Right;
+            this.barDockControlRight.Location = new System.Drawing.Point(911, 30);
+            this.barDockControlRight.Manager = this.barManager1;
+            this.barDockControlRight.Size = new System.Drawing.Size(0, 518);
             // 
             // EducationPlanGridForm
             // 
-            AutoScaleDimensions = new SizeF(7F, 16F);
-            AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(911, 548);
-            Controls.Add(gridControl1);
-            Controls.Add(speciality5Btn);
-            Controls.Add(speciality4Btn);
-            Controls.Add(speciality3Btn);
-            Controls.Add(speciality2Btn);
-            Controls.Add(speciality1Btn);
-            Controls.Add(barDockControlLeft);
-            Controls.Add(barDockControlRight);
-            Controls.Add(barDockControlBottom);
-            Controls.Add(barDockControlTop);
-            Name = "EducationPlanGridForm";
-            Text = "EducationPlan";
-            ((System.ComponentModel.ISupportInitialize)gridControl1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)gridView1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)barManager1).EndInit();
-            ResumeLayout(false);
-            PerformLayout();
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(911, 548);
+            this.Controls.Add(this.gridControl1);
+            this.Controls.Add(this.speciality5Btn);
+            this.Controls.Add(this.speciality4Btn);
+            this.Controls.Add(this.speciality3Btn);
+            this.Controls.Add(this.speciality2Btn);
+            this.Controls.Add(this.speciality1Btn);
+            this.Controls.Add(this.barDockControlLeft);
+            this.Controls.Add(this.barDockControlRight);
+            this.Controls.Add(this.barDockControlBottom);
+            this.Controls.Add(this.barDockControlTop);
+            this.Name = "EducationPlanGridForm";
+            this.Text = "EducationPlan";
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.barManager1)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion

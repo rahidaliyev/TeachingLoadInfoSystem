@@ -101,3 +101,7 @@ values
 ('pc0011', N'Hafiz', N'Bayramov', N'Məhərrəv','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
 ('pc0012', N'Haxverdi', N'Mənsimov', N'İsgəndər','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
 ('pc0013', N'Həmdulla', N'Əsgərov', N'Əbil','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1)
+
+insert into Users
+values
+('sa',1)

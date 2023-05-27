@@ -1,4 +1,7 @@
 ﻿using System.Data;
+using TeachingLoadInfoSystem.Models;
+using TeachingLoadInfoSystem.Repositories;
+using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;
 
 namespace TeachingLoadInfoSystem
@@ -9,6 +12,7 @@ namespace TeachingLoadInfoSystem
         public EducationPlanGridForm()
         {
             InitializeComponent();
+            _educationPlanServices = new EducationPlanServices(new Repository<EducationPlan>(new AppDbContext.TLDbContext()));
         }
 
         private void speciality1Btn_Click(object sender, EventArgs e)

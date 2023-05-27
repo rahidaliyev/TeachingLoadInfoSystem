@@ -118,7 +118,8 @@ namespace TeachingLoadInfoSystem.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     SubjectCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: true)
+                    SubjectName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    Category = table.Column<string>(type: "nvarchar(max)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -237,6 +238,35 @@ namespace TeachingLoadInfoSystem.Migrations
                         name: "FK_TLExcludeds_Departments_DepartmentID",
                         column: x => x.DepartmentID,
                         principalTable: "Departments",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EducationPlans",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SpecialityCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    SubjectID = table.Column<int>(type: "int", nullable: false),
+                    CreditCount = table.Column<int>(type: "int", nullable: false),
+                    TotalHours = table.Column<int>(type: "int", nullable: false),
+                    OutsideAuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    AuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    LectureHours = table.Column<int>(type: "int", nullable: false),
+                    SeminarHours = table.Column<int>(type: "int", nullable: false),
+                    LaboratoryHours = table.Column<int>(type: "int", nullable: false),
+                    Semestr = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    WeeklyCourseLoad = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EducationPlans", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_EducationPlans_Subjects_SubjectID",
+                        column: x => x.SubjectID,
+                        principalTable: "Subjects",
                         principalColumn: "ID",
                         onDelete: ReferentialAction.Cascade);
                 });
@@ -488,6 +518,11 @@ namespace TeachingLoadInfoSystem.Migrations
                 column: "TeacherInfoID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_EducationPlans_SubjectID",
+                table: "EducationPlans",
+                column: "SubjectID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PreferedSubjects_SubjectID",
                 table: "PreferedSubjects",
                 column: "SubjectID");
@@ -566,6 +601,9 @@ namespace TeachingLoadInfoSystem.Migrations
 
             migrationBuilder.DropTable(
                 name: "Certificates");
+
+            migrationBuilder.DropTable(
+                name: "EducationPlans");
 
             migrationBuilder.DropTable(
                 name: "LayoutInfos");

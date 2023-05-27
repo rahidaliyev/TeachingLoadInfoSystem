@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230519172231_unec")]
+    [Migration("20230523194847_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -98,6 +98,56 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Departments");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.EducationPlan", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("AuditoriumHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreditCount")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LaboratoryHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LectureHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OutsideAuditoriumHours")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Semestr")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SeminarHours")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpecialityCode")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubjectID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WeeklyCourseLoad")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("SubjectID");
+
+                    b.ToTable("EducationPlans");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.Gender", b =>
@@ -284,6 +334,9 @@ namespace TeachingLoadInfoSystem.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("Category")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("SubjectCode")
                         .HasColumnType("nvarchar(max)");
@@ -717,6 +770,17 @@ namespace TeachingLoadInfoSystem.Migrations
                         .IsRequired();
 
                     b.Navigation("Subject");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.EducationPlan", b =>
+                {
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subjects")
+                        .WithMany()
+                        .HasForeignKey("SubjectID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subjects");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.PreferedSubject", b =>

@@ -12,10 +12,10 @@
         public int LectureHours { get; set; }
         public int SeminarHours { get; set; }
         public int LaboratoryHours { get; set; }
-        public virtual Subject? PrerekvizitSubjects { get; set; }
-        public int PrerekvizitSubjectsID { get; set; }
-        public virtual Subject? KorrekvizitSubjects { get; set; }
-        public int KorrekvizitSubjectsID { get; set; }
+        //public virtual Subject? PrerekvizitSubjects { get; set; }
+        //public int PrerekvizitSubjectsID { get; set; }
+        //public virtual Subject? KorrekvizitSubjects { get; set; }
+        //public int KorrekvizitSubjectsID { get; set; }
         public string Semestr { get; set; } 
         public int WeeklyCourseLoad { get; set; }
     }
