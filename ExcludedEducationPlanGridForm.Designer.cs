@@ -55,7 +55,7 @@
             // 
             // speciality1Btn
             // 
-            this.speciality1Btn.Location = new System.Drawing.Point(277, 36);
+            this.speciality1Btn.Location = new System.Drawing.Point(31, 36);
             this.speciality1Btn.Name = "speciality1Btn";
             this.speciality1Btn.Size = new System.Drawing.Size(329, 36);
             this.speciality1Btn.TabIndex = 0;
@@ -64,7 +64,7 @@
             // 
             // speciality2Btn
             // 
-            this.speciality2Btn.Location = new System.Drawing.Point(277, 88);
+            this.speciality2Btn.Location = new System.Drawing.Point(31, 88);
             this.speciality2Btn.Name = "speciality2Btn";
             this.speciality2Btn.Size = new System.Drawing.Size(329, 36);
             this.speciality2Btn.TabIndex = 1;
@@ -73,7 +73,7 @@
             // 
             // speciality3Btn
             // 
-            this.speciality3Btn.Location = new System.Drawing.Point(277, 143);
+            this.speciality3Btn.Location = new System.Drawing.Point(31, 143);
             this.speciality3Btn.Name = "speciality3Btn";
             this.speciality3Btn.Size = new System.Drawing.Size(329, 36);
             this.speciality3Btn.TabIndex = 2;
@@ -82,7 +82,7 @@
             // 
             // speciality4Btn
             // 
-            this.speciality4Btn.Location = new System.Drawing.Point(277, 194);
+            this.speciality4Btn.Location = new System.Drawing.Point(31, 194);
             this.speciality4Btn.Name = "speciality4Btn";
             this.speciality4Btn.Size = new System.Drawing.Size(329, 36);
             this.speciality4Btn.TabIndex = 3;
@@ -91,7 +91,7 @@
             // 
             // speciality5Btn
             // 
-            this.speciality5Btn.Location = new System.Drawing.Point(277, 247);
+            this.speciality5Btn.Location = new System.Drawing.Point(31, 247);
             this.speciality5Btn.Name = "speciality5Btn";
             this.speciality5Btn.Size = new System.Drawing.Size(329, 36);
             this.speciality5Btn.TabIndex = 4;
@@ -167,7 +167,7 @@
             // 
             // simpleButton1
             // 
-            this.simpleButton1.Location = new System.Drawing.Point(277, 301);
+            this.simpleButton1.Location = new System.Drawing.Point(31, 301);
             this.simpleButton1.Name = "simpleButton1";
             this.simpleButton1.Size = new System.Drawing.Size(329, 36);
             this.simpleButton1.TabIndex = 10;
@@ -176,7 +176,7 @@
             // 
             // simpleButton2
             // 
-            this.simpleButton2.Location = new System.Drawing.Point(277, 354);
+            this.simpleButton2.Location = new System.Drawing.Point(31, 354);
             this.simpleButton2.Name = "simpleButton2";
             this.simpleButton2.Size = new System.Drawing.Size(329, 36);
             this.simpleButton2.TabIndex = 11;
@@ -185,7 +185,7 @@
             // 
             // simpleButton3
             // 
-            this.simpleButton3.Location = new System.Drawing.Point(277, 415);
+            this.simpleButton3.Location = new System.Drawing.Point(31, 415);
             this.simpleButton3.Name = "simpleButton3";
             this.simpleButton3.Size = new System.Drawing.Size(329, 36);
             this.simpleButton3.TabIndex = 12;
@@ -194,7 +194,7 @@
             // 
             // simpleButton4
             // 
-            this.simpleButton4.Location = new System.Drawing.Point(277, 477);
+            this.simpleButton4.Location = new System.Drawing.Point(31, 477);
             this.simpleButton4.Name = "simpleButton4";
             this.simpleButton4.Size = new System.Drawing.Size(329, 36);
             this.simpleButton4.TabIndex = 13;

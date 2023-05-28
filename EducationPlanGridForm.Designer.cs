@@ -51,48 +51,43 @@
             // 
             // speciality1Btn
             // 
-            this.speciality1Btn.Location = new System.Drawing.Point(378, 111);
+            this.speciality1Btn.Location = new System.Drawing.Point(39, 97);
             this.speciality1Btn.Name = "speciality1Btn";
             this.speciality1Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality1Btn.TabIndex = 0;
             this.speciality1Btn.Text = "Ixtisas I";
-            speciality1Btn.Click += speciality1Btn_Click;
             // 
             // speciality2Btn
             // 
-            this.speciality2Btn.Location = new System.Drawing.Point(378, 173);
+            this.speciality2Btn.Location = new System.Drawing.Point(39, 159);
             this.speciality2Btn.Name = "speciality2Btn";
             this.speciality2Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality2Btn.TabIndex = 1;
             this.speciality2Btn.Text = "İxtisas II";
-            speciality2Btn.Click += specaility2Btn_Click;
             // 
             // speciality3Btn
             // 
-            this.speciality3Btn.Location = new System.Drawing.Point(378, 234);
+            this.speciality3Btn.Location = new System.Drawing.Point(39, 220);
             this.speciality3Btn.Name = "speciality3Btn";
             this.speciality3Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality3Btn.TabIndex = 2;
             this.speciality3Btn.Text = "İxtisas III";
-            speciality3Btn.Click += speciality3Btn_Click;
             // 
             // speciality4Btn
             // 
-            this.speciality4Btn.Location = new System.Drawing.Point(378, 299);
+            this.speciality4Btn.Location = new System.Drawing.Point(39, 285);
             this.speciality4Btn.Name = "speciality4Btn";
             this.speciality4Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality4Btn.TabIndex = 3;
             this.speciality4Btn.Text = "İxtisas IV";
-            speciality4Btn.Click += speciality4Btn_Click;
             // 
             // speciality5Btn
             // 
-            this.speciality5Btn.Location = new System.Drawing.Point(378, 368);
+            this.speciality5Btn.Location = new System.Drawing.Point(39, 354);
             this.speciality5Btn.Name = "speciality5Btn";
             this.speciality5Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality5Btn.TabIndex = 4;
             this.speciality5Btn.Text = "Ixtisas V";
-            speciality5Btn.Click += speciality5Btn_Click;
             // 
             // gridControl1
             // 
@@ -142,7 +137,7 @@
             this.backBtn.Caption = "Geri";
             this.backBtn.Id = 0;
             this.backBtn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("backBtn.ImageOptions.SvgImage")));
-            backBtn.ItemClick += backBtn_ItemClick;
+            this.backBtn.Name = "backBtn";
             this.backBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
             // 
             // barDockControlTop
