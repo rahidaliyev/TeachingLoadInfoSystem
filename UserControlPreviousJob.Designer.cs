@@ -39,6 +39,7 @@
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.toDate.Properties)).BeginInit();
@@ -50,6 +51,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -68,9 +70,9 @@
             // 
             // jobNameTxt
             // 
-            this.jobNameTxt.Location = new System.Drawing.Point(74, 12);
+            this.jobNameTxt.Location = new System.Drawing.Point(89, 12);
             this.jobNameTxt.Name = "jobNameTxt";
-            this.jobNameTxt.Size = new System.Drawing.Size(176, 77);
+            this.jobNameTxt.Size = new System.Drawing.Size(161, 37);
             this.jobNameTxt.TabIndex = 8;
             this.jobNameTxt.Text = "";
             this.jobNameTxt.TextChanged += new System.EventHandler(this.jobNameTxt_TextChanged);
@@ -78,14 +80,14 @@
             // toDate
             // 
             this.toDate.EditValue = null;
-            this.toDate.Location = new System.Drawing.Point(316, 38);
+            this.toDate.Location = new System.Drawing.Point(331, 38);
             this.toDate.Name = "toDate";
             this.toDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.toDate.Properties.CalendarTimeProperties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
             this.toDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
-            this.toDate.Size = new System.Drawing.Size(165, 22);
+            this.toDate.Size = new System.Drawing.Size(150, 22);
             this.toDate.StyleController = this.layoutControl1;
             this.toDate.TabIndex = 7;
             this.toDate.EditValueChanged += new System.EventHandler(this.toDate_EditValueChanged);
@@ -93,7 +95,7 @@
             // fromDate
             // 
             this.fromDate.EditValue = null;
-            this.fromDate.Location = new System.Drawing.Point(316, 12);
+            this.fromDate.Location = new System.Drawing.Point(331, 12);
             this.fromDate.Name = "fromDate";
             this.fromDate.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -105,7 +107,7 @@
             this.fromDate.Properties.EditFormat.FormatType = DevExpress.Utils.FormatType.DateTime;
             this.fromDate.Properties.MaskSettings.Set("mask", "dd-MM-yyyy");
             this.fromDate.Properties.UseMaskAsDisplayFormat = true;
-            this.fromDate.Size = new System.Drawing.Size(165, 22);
+            this.fromDate.Size = new System.Drawing.Size(150, 22);
             this.fromDate.StyleController = this.layoutControl1;
             this.fromDate.TabIndex = 6;
             this.fromDate.EditValueChanged += new System.EventHandler(this.fromDate_EditValueChanged);
@@ -129,7 +131,8 @@
             this.layoutControlItem3,
             this.layoutControlItem2,
             this.layoutControlItem4,
-            this.layoutControlItem5});
+            this.layoutControlItem5,
+            this.emptySpaceItem1});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(519, 101);
             this.Root.TextVisible = false;
@@ -150,7 +153,7 @@
             this.layoutControlItem2.Name = "layoutControlItem2";
             this.layoutControlItem2.Size = new System.Drawing.Size(231, 26);
             this.layoutControlItem2.Text = "Tarixdən";
-            this.layoutControlItem2.TextSize = new System.Drawing.Size(50, 16);
+            this.layoutControlItem2.TextSize = new System.Drawing.Size(65, 16);
             // 
             // layoutControlItem4
             // 
@@ -159,16 +162,24 @@
             this.layoutControlItem4.Name = "layoutControlItem4";
             this.layoutControlItem4.Size = new System.Drawing.Size(231, 55);
             this.layoutControlItem4.Text = "Tarixə";
-            this.layoutControlItem4.TextSize = new System.Drawing.Size(50, 16);
+            this.layoutControlItem4.TextSize = new System.Drawing.Size(65, 16);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.jobNameTxt;
             this.layoutControlItem5.Location = new System.Drawing.Point(0, 0);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(242, 81);
-            this.layoutControlItem5.Text = "İşin adı";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(50, 16);
+            this.layoutControlItem5.Size = new System.Drawing.Size(242, 41);
+            this.layoutControlItem5.Text = "Təşkilat adı";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(65, 16);
+            // 
+            // emptySpaceItem1
+            // 
+            this.emptySpaceItem1.AllowHotTrack = false;
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 41);
+            this.emptySpaceItem1.Name = "emptySpaceItem1";
+            this.emptySpaceItem1.Size = new System.Drawing.Size(242, 40);
+            this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // UserControlPreviousJob
             // 
@@ -188,6 +199,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -204,5 +216,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
         private RichTextBox jobNameTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
     }
 }

@@ -74,7 +74,7 @@
             // 
             // subjectCmb
             // 
-            this.subjectCmb.Location = new System.Drawing.Point(96, 64);
+            this.subjectCmb.Location = new System.Drawing.Point(96, 38);
             this.subjectCmb.Name = "subjectCmb";
             this.subjectCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
@@ -96,7 +96,7 @@
             // 
             // countryTxt
             // 
-            this.countryTxt.Location = new System.Drawing.Point(96, 38);
+            this.countryTxt.Location = new System.Drawing.Point(96, 64);
             this.countryTxt.Name = "countryTxt";
             this.countryTxt.Size = new System.Drawing.Size(320, 22);
             this.countryTxt.StyleController = this.layoutControl1;
@@ -177,18 +177,18 @@
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.countryTxt;
-            this.layoutControlItem4.Location = new System.Drawing.Point(0, 26);
+            this.layoutControlItem4.Location = new System.Drawing.Point(0, 52);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(408, 26);
-            this.layoutControlItem4.Text = "Ölkə";
+            this.layoutControlItem4.Size = new System.Drawing.Size(408, 32);
+            this.layoutControlItem4.Text = "Təşkilat";
             this.layoutControlItem4.TextSize = new System.Drawing.Size(72, 16);
             // 
             // layoutControlItem5
             // 
             this.layoutControlItem5.Control = this.subjectCmb;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem5.Location = new System.Drawing.Point(0, 26);
             this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(408, 32);
+            this.layoutControlItem5.Size = new System.Drawing.Size(408, 26);
             this.layoutControlItem5.Text = "Fənn";
             this.layoutControlItem5.TextSize = new System.Drawing.Size(72, 16);
             // 

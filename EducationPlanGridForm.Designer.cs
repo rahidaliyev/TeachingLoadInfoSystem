@@ -56,6 +56,7 @@
             this.speciality1Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality1Btn.TabIndex = 0;
             this.speciality1Btn.Text = "Ixtisas I";
+            this.speciality1Btn.Click += new System.EventHandler(this.speciality1Btn_Click);
             // 
             // speciality2Btn
             // 
@@ -64,6 +65,7 @@
             this.speciality2Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality2Btn.TabIndex = 1;
             this.speciality2Btn.Text = "İxtisas II";
+            this.speciality2Btn.Click += new System.EventHandler(this.specaility2Btn_Click);
             // 
             // speciality3Btn
             // 
@@ -72,6 +74,7 @@
             this.speciality3Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality3Btn.TabIndex = 2;
             this.speciality3Btn.Text = "İxtisas III";
+            this.speciality3Btn.Click += new System.EventHandler(this.speciality3Btn_Click);
             // 
             // speciality4Btn
             // 
@@ -80,6 +83,7 @@
             this.speciality4Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality4Btn.TabIndex = 3;
             this.speciality4Btn.Text = "İxtisas IV";
+            this.speciality4Btn.Click += new System.EventHandler(this.speciality4Btn_Click);
             // 
             // speciality5Btn
             // 
@@ -88,6 +92,7 @@
             this.speciality5Btn.Size = new System.Drawing.Size(118, 36);
             this.speciality5Btn.TabIndex = 4;
             this.speciality5Btn.Text = "Ixtisas V";
+            this.speciality5Btn.Click += new System.EventHandler(this.speciality5Btn_Click);
             // 
             // gridControl1
             // 
@@ -139,6 +144,7 @@
             this.backBtn.ImageOptions.SvgImage = ((DevExpress.Utils.Svg.SvgImage)(resources.GetObject("backBtn.ImageOptions.SvgImage")));
             this.backBtn.Name = "backBtn";
             this.backBtn.PaintStyle = DevExpress.XtraBars.BarItemPaintStyle.CaptionGlyph;
+            this.backBtn.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.backBtn_ItemClick);
             // 
             // barDockControlTop
             // 
