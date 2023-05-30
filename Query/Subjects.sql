@@ -343,7 +343,7 @@ INSERT INTO EducationPlans values
 ('050509',	71,	30,	900,	900,	0,	0,	0,	0,	'Y-4',	0);
 
 
-/*050509 - Kompüter elmləri */
+/*050619 - Kommunikasiya sistemləri mühəndisliyi */
 INSERT INTO EducationPlans values
 ('050509',	1,	4,	120,	60,	60,	0,	60,	0,	'Y-1',	4),
 ('050509',	2,	5,	150,	90,	60,	30,	30,	0,	'P-1',	4),
