@@ -3,6 +3,8 @@ using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Services.Intefaces;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 
 namespace TeachingLoadInfoSystem
 {
@@ -44,6 +46,7 @@ namespace TeachingLoadInfoSystem
             _workTimeServices = new WorkTimeServices(new Repository<WorkTime>(db));
             _languageServices  = new LanguageServices(new Repository<Language>(db));
             _teacherLanguageServices = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
+            gridControlL.DataSource = _teacherLanguageServices.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == teacherinfo.ID);
             LoadComboboxes();
             LoadData();
         }
@@ -62,7 +65,7 @@ namespace TeachingLoadInfoSystem
             teacherinfo.WorkTime = _workTime;
             teacherinfo.Books = GetBooks();
             teacherinfo.Certificates = GetCertificates();
-            teacherinfo.TeacherLanguages = GetTeacherLanguages();
+            //teacherinfo.TeacherLanguages = GetTeacherLanguages();
             teacherinfo.PreviousJobs = GetPreviousJobs();
         }
         public void LoadData()
@@ -80,7 +83,7 @@ namespace TeachingLoadInfoSystem
             workTimeCmb.EditValue = teacherinfo.WorkTime;
             GetBooksToPanel(teacherinfo.Books);
             GetCertificatesToPanel(teacherinfo.Certificates);
-            GetLanguagesToPanel(teacherinfo.TeacherLanguages);
+            //GetLanguagesToPanel(teacherinfo.TeacherLanguages);
             GetJobsToPanel(teacherinfo.PreviousJobs);
         }
 
@@ -138,15 +141,15 @@ namespace TeachingLoadInfoSystem
             }
             return certificates;
         }
-        private List<TeacherLanguage> GetTeacherLanguages() 
-        {
-            var languages = new List<TeacherLanguage>();
-            foreach (UserControlTeacherLanguage control in languagePanelControl.Controls)
-            {
-                languages.Add(control.TeacherLanguages);
-            }
-            return languages;
-        }
+        //private List<TeacherLanguage> GetTeacherLanguages() 
+        //{
+        //    var languages = new List<TeacherLanguage>();
+        //    foreach (UserControlTeacherLanguage control in languagePanelControl.Controls)
+        //    {
+        //        languages.Add(control.TeacherLanguages);
+        //    }
+        //    return languages;
+        //}
         private List<PreviousJob> GetPreviousJobs()
         {
             var jobs = new List<PreviousJob>();
@@ -156,18 +159,18 @@ namespace TeachingLoadInfoSystem
             }
             return jobs;
         }
-        private void GetLanguagesToPanel(List<TeacherLanguage> languages)
-        {
-            foreach (var item in languages)
-            {
-                var userControl = new UserControlTeacherLanguage(db, item)
-                {
-                    Dock = DockStyle.Top
-                };
-                languagePanelControl.AutoScroll = true;
-                languagePanelControl.Controls.Add(userControl);
-            }
-        }
+        //private void GetLanguagesToPanel(List<TeacherLanguage> languages)
+        //{
+        //    foreach (var item in languages)
+        //    {
+        //        var userControl = new UserControlTeacherLanguage(db, item)
+        //        {
+        //            Dock = DockStyle.Top
+        //        };
+        //        languagePanelControl.AutoScroll = true;
+        //        languagePanelControl.Controls.Add(userControl);
+        //    }
+        //}
         private void GetJobsToPanel(List<PreviousJob> jobs)
         {
             foreach (var item in jobs)
@@ -223,11 +226,11 @@ namespace TeachingLoadInfoSystem
         }
         private void addlanguageBtn_Click(object sender, EventArgs e)
         {
-            var userControl = new UserControlTeacherLanguage(db)
-            {
-                Dock = DockStyle.Fill,
-            };
-            languagePanelControl.Controls.Add(userControl);
+            //var userControl = new UserControlTeacherLanguage(db)
+            //{
+            //    Dock = DockStyle.Fill,
+            //};
+            //languagePanelControl.Controls.Add(userControl);
         }
 
         private void addPreviousJobBtn_Click(object sender, EventArgs e)

@@ -3,6 +3,7 @@ using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;
+using Microsoft.EntityFrameworkCore;
 
 namespace TeachingLoadInfoSystem
 {

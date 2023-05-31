@@ -58,5 +58,13 @@ namespace TeachingLoadInfoSystem
             else if (Books != null)
                 BookList.Remove(Books);
         }
+
+        private void comboBox1_TextChanged(object sender, EventArgs e)
+        {
+            if (comboBox1.Text ==  "Məqalə")
+                comboBox2.Enabled = true;
+            else
+                comboBox2.Enabled = false;
+        }
     }
 }

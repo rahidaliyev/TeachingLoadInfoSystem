@@ -1,4 +1,5 @@
-﻿using TeachingLoadInfoSystem.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories.Interfaces;
 using TeachingLoadInfoSystem.Services.Intefaces;
 
@@ -14,7 +15,10 @@ namespace TeachingLoadInfoSystem.Services
         }
         public EducationPlan GetEducationPlanByID(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository.GetAll
+                  //.Include(x => x.SubjectID)
+                .Include(x => x.Subjects)
+                .FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
         public void InsertEducationPlan(EducationPlan educationPlan)
@@ -32,7 +36,12 @@ namespace TeachingLoadInfoSystem.Services
         }
         public IEnumerable<EducationPlan> GetAllEducationPlans()
         {
-            return _repository.GetAll;
+            return _repository
+
+                .GetAll
+                //.Include(x => x.SubjectID)
+                .Include(x => x.Subjects)
+                ;
         }
     }
 }

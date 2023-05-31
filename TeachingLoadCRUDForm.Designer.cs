@@ -30,174 +30,255 @@
         {
             this.components = new System.ComponentModel.Container();
             this.layoutControl1 = new DevExpress.XtraLayout.LayoutControl();
-            this.dateTxt = new DevExpress.XtraEditors.TextEdit();
-            this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
-            this.teacherNameTxt = new DevExpress.XtraEditors.TextEdit();
-            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
-            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.colTeachingLoadID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSubjects = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSubjectID = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExerciseFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLectureFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLaboratoryFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRecommendationFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExamFirstSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFirstSemSum = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExerciseSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLectureSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colLaboratorySecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colRecommendationSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colExamSecondSem = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPrLeader = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colPractise = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colEPedTETedTTKITA = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colThesis = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colMasterThesis = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colDoctorate = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSecondSemSum = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colFinalResult = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.teacherCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.lastYearLoadBtn = new DevExpress.XtraEditors.SimpleButton();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
+            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
+            this.gridControl1 = new DevExpress.XtraGrid.GridControl();
+            this.educationPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
+            this.colSpecialityCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSubjects = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSubjectID = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colCreditCount = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colTotalHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colOutsideAuditoriumHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colAuditoriumHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLectureHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSeminarHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colLaboratoryHours = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colSemestr = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colWeeklyCourseLoad = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.colID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.closeBtn = new DevExpress.XtraEditors.SimpleButton();
             this.saveBtn = new DevExpress.XtraEditors.SimpleButton();
             this.Root = new DevExpress.XtraLayout.LayoutControlGroup();
             this.emptySpaceItem1 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem3 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem4 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.teacherCode = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem2 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem1 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
-            this.emptySpaceItem4 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.emptySpaceItem7 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.layoutControlItem9 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationPlansBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
-            this.layoutControl1.Controls.Add(this.dateTxt);
-            this.layoutControl1.Controls.Add(this.addTeachingLoad);
-            this.layoutControl1.Controls.Add(this.teacherNameTxt);
-            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.teacherCmb);
+            this.layoutControl1.Controls.Add(this.lastYearLoadBtn);
+            this.layoutControl1.Controls.Add(this.richTextBox1);
+            this.layoutControl1.Controls.Add(this.textEdit5);
+            this.layoutControl1.Controls.Add(this.textEdit4);
+            this.layoutControl1.Controls.Add(this.textEdit3);
+            this.layoutControl1.Controls.Add(this.textEdit2);
+            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.comboBox1);
+            this.layoutControl1.Controls.Add(this.addTeachingLoad);
+            this.layoutControl1.Controls.Add(this.gridControl1);
             this.layoutControl1.Controls.Add(this.closeBtn);
             this.layoutControl1.Controls.Add(this.saveBtn);
             this.layoutControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.layoutControl1.Location = new System.Drawing.Point(0, 0);
             this.layoutControl1.Name = "layoutControl1";
             this.layoutControl1.Root = this.Root;
-            this.layoutControl1.Size = new System.Drawing.Size(1179, 567);
+            this.layoutControl1.Size = new System.Drawing.Size(1262, 699);
             this.layoutControl1.TabIndex = 0;
             this.layoutControl1.Text = "layoutControl1";
             // 
-            // dateTxt
+            // teacherCmb
             // 
-            this.dateTxt.Location = new System.Drawing.Point(109, 64);
-            this.dateTxt.Name = "dateTxt";
-            this.dateTxt.Size = new System.Drawing.Size(459, 22);
-            this.dateTxt.StyleController = this.layoutControl1;
-            this.dateTxt.TabIndex = 8;
+            this.teacherCmb.Location = new System.Drawing.Point(425, 12);
+            this.teacherCmb.Name = "teacherCmb";
+            this.teacherCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.teacherCmb.Properties.NullText = "";
+            this.teacherCmb.Properties.PopupView = this.searchLookUpEdit1View;
+            this.teacherCmb.Size = new System.Drawing.Size(338, 22);
+            this.teacherCmb.StyleController = this.layoutControl1;
+            this.teacherCmb.TabIndex = 2;
+            // 
+            // searchLookUpEdit1View
+            // 
+            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
+            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
+            // 
+            // lastYearLoadBtn
+            // 
+            this.lastYearLoadBtn.Location = new System.Drawing.Point(767, 63);
+            this.lastYearLoadBtn.Name = "lastYearLoadBtn";
+            this.lastYearLoadBtn.Size = new System.Drawing.Size(263, 27);
+            this.lastYearLoadBtn.StyleController = this.layoutControl1;
+            this.lastYearLoadBtn.TabIndex = 6;
+            this.lastYearLoadBtn.Text = "Keçən ilin tədris yükü";
+            this.lastYearLoadBtn.Click += new System.EventHandler(this.lastYearLoadBtn_Click);
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Location = new System.Drawing.Point(124, 94);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(586, 103);
+            this.richTextBox1.TabIndex = 10;
+            this.richTextBox1.Text = "";
+            // 
+            // textEdit5
+            // 
+            this.textEdit5.Location = new System.Drawing.Point(425, 64);
+            this.textEdit5.Name = "textEdit5";
+            this.textEdit5.Size = new System.Drawing.Size(338, 22);
+            this.textEdit5.StyleController = this.layoutControl1;
+            this.textEdit5.TabIndex = 8;
+            // 
+            // textEdit4
+            // 
+            this.textEdit4.Location = new System.Drawing.Point(879, 37);
+            this.textEdit4.Name = "textEdit4";
+            this.textEdit4.Size = new System.Drawing.Size(151, 22);
+            this.textEdit4.StyleController = this.layoutControl1;
+            this.textEdit4.TabIndex = 3;
+            // 
+            // textEdit3
+            // 
+            this.textEdit3.Location = new System.Drawing.Point(425, 38);
+            this.textEdit3.Name = "textEdit3";
+            this.textEdit3.Size = new System.Drawing.Size(338, 22);
+            this.textEdit3.StyleController = this.layoutControl1;
+            this.textEdit3.TabIndex = 4;
+            // 
+            // textEdit2
+            // 
+            this.textEdit2.Location = new System.Drawing.Point(124, 68);
+            this.textEdit2.Name = "textEdit2";
+            this.textEdit2.Size = new System.Drawing.Size(185, 22);
+            this.textEdit2.StyleController = this.layoutControl1;
+            this.textEdit2.TabIndex = 9;
+            // 
+            // textEdit1
+            // 
+            this.textEdit1.Location = new System.Drawing.Point(124, 42);
+            this.textEdit1.Name = "textEdit1";
+            this.textEdit1.Size = new System.Drawing.Size(185, 22);
+            this.textEdit1.StyleController = this.layoutControl1;
+            this.textEdit1.TabIndex = 5;
+            // 
+            // comboBox1
+            // 
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "2023-2024",
+            "2022-2023"});
+            this.comboBox1.Location = new System.Drawing.Point(124, 12);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(185, 24);
+            this.comboBox1.TabIndex = 0;
             // 
             // addTeachingLoad
             // 
-            this.addTeachingLoad.Location = new System.Drawing.Point(963, 38);
+            this.addTeachingLoad.Location = new System.Drawing.Point(1034, 63);
             this.addTeachingLoad.Name = "addTeachingLoad";
-            this.addTeachingLoad.Size = new System.Drawing.Size(204, 27);
+            this.addTeachingLoad.Size = new System.Drawing.Size(216, 27);
             this.addTeachingLoad.StyleController = this.layoutControl1;
-            this.addTeachingLoad.TabIndex = 3;
-            this.addTeachingLoad.Text = "Tədris yükünü yarat";
+            this.addTeachingLoad.TabIndex = 7;
+            this.addTeachingLoad.Text = "Yeni tədris yükü";
             this.addTeachingLoad.Click += new System.EventHandler(this.addTeachingLoad_Click);
-            // 
-            // teacherNameTxt
-            // 
-            this.teacherNameTxt.Location = new System.Drawing.Point(109, 38);
-            this.teacherNameTxt.Name = "teacherNameTxt";
-            this.teacherNameTxt.Size = new System.Drawing.Size(469, 22);
-            this.teacherNameTxt.StyleController = this.layoutControl1;
-            this.teacherNameTxt.TabIndex = 2;
             // 
             // gridControl1
             // 
-            this.gridControl1.DataSource = this.teachingLoadSubjectsBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 90);
+            this.gridControl1.DataSource = this.educationPlansBindingSource;
+            this.gridControl1.Location = new System.Drawing.Point(12, 250);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1155, 434);
-            this.gridControl1.TabIndex = 6;
+            this.gridControl1.Size = new System.Drawing.Size(1238, 406);
+            this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
             // 
-            // teachingLoadSubjectsBindingSource
+            // educationPlansBindingSource
             // 
-            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
+            this.educationPlansBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.EducationPlan);
             // 
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.colTeachingLoadID,
+            this.colSpecialityCode,
             this.colSubjects,
             this.colSubjectID,
-            this.colExerciseFirstSem,
-            this.colLectureFirstSem,
-            this.colLaboratoryFirstSem,
-            this.colRecommendationFirstSem,
-            this.colExamFirstSem,
-            this.colFirstSemSum,
-            this.colExerciseSecondSem,
-            this.colLectureSecondSem,
-            this.colLaboratorySecondSem,
-            this.colRecommendationSecondSem,
-            this.colExamSecondSem,
-            this.colPrLeader,
-            this.colPractise,
-            this.colEPedTETedTTKITA,
-            this.colThesis,
-            this.colMasterThesis,
-            this.colDoctorate,
-            this.colSecondSemSum,
-            this.colFinalResult,
+            this.colCreditCount,
+            this.colTotalHours,
+            this.colOutsideAuditoriumHours,
+            this.colAuditoriumHours,
+            this.colLectureHours,
+            this.colSeminarHours,
+            this.colLaboratoryHours,
+            this.colSemestr,
+            this.colWeeklyCourseLoad,
             this.colID});
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // colTeachingLoadID
+            // colSpecialityCode
             // 
-            this.colTeachingLoadID.Caption = "Fənnin kodu";
-            this.colTeachingLoadID.FieldName = "Subjects.SubjectCode";
-            this.colTeachingLoadID.MinWidth = 25;
-            this.colTeachingLoadID.Name = "colTeachingLoadID";
-            this.colTeachingLoadID.Visible = true;
-            this.colTeachingLoadID.VisibleIndex = 0;
-            this.colTeachingLoadID.Width = 94;
+            this.colSpecialityCode.FieldName = "SpecialityCode";
+            this.colSpecialityCode.MinWidth = 25;
+            this.colSpecialityCode.Name = "colSpecialityCode";
+            this.colSpecialityCode.Visible = true;
+            this.colSpecialityCode.VisibleIndex = 0;
+            this.colSpecialityCode.Width = 94;
             // 
             // colSubjects
             // 
-            this.colSubjects.Caption = "Fənn";
             this.colSubjects.FieldName = "Subjects.SubjectName";
             this.colSubjects.MinWidth = 25;
             this.colSubjects.Name = "colSubjects";
@@ -214,176 +295,86 @@
             this.colSubjectID.VisibleIndex = 2;
             this.colSubjectID.Width = 94;
             // 
-            // colExerciseFirstSem
+            // colCreditCount
             // 
-            this.colExerciseFirstSem.FieldName = "ExerciseFirstSem";
-            this.colExerciseFirstSem.MinWidth = 25;
-            this.colExerciseFirstSem.Name = "colExerciseFirstSem";
-            this.colExerciseFirstSem.Visible = true;
-            this.colExerciseFirstSem.VisibleIndex = 3;
-            this.colExerciseFirstSem.Width = 94;
+            this.colCreditCount.FieldName = "CreditCount";
+            this.colCreditCount.MinWidth = 25;
+            this.colCreditCount.Name = "colCreditCount";
+            this.colCreditCount.Visible = true;
+            this.colCreditCount.VisibleIndex = 3;
+            this.colCreditCount.Width = 94;
             // 
-            // colLectureFirstSem
+            // colTotalHours
             // 
-            this.colLectureFirstSem.FieldName = "LectureFirstSem";
-            this.colLectureFirstSem.MinWidth = 25;
-            this.colLectureFirstSem.Name = "colLectureFirstSem";
-            this.colLectureFirstSem.Visible = true;
-            this.colLectureFirstSem.VisibleIndex = 4;
-            this.colLectureFirstSem.Width = 94;
+            this.colTotalHours.FieldName = "TotalHours";
+            this.colTotalHours.MinWidth = 25;
+            this.colTotalHours.Name = "colTotalHours";
+            this.colTotalHours.Visible = true;
+            this.colTotalHours.VisibleIndex = 4;
+            this.colTotalHours.Width = 94;
             // 
-            // colLaboratoryFirstSem
+            // colOutsideAuditoriumHours
             // 
-            this.colLaboratoryFirstSem.FieldName = "LaboratoryFirstSem";
-            this.colLaboratoryFirstSem.MinWidth = 25;
-            this.colLaboratoryFirstSem.Name = "colLaboratoryFirstSem";
-            this.colLaboratoryFirstSem.Visible = true;
-            this.colLaboratoryFirstSem.VisibleIndex = 5;
-            this.colLaboratoryFirstSem.Width = 94;
+            this.colOutsideAuditoriumHours.FieldName = "OutsideAuditoriumHours";
+            this.colOutsideAuditoriumHours.MinWidth = 25;
+            this.colOutsideAuditoriumHours.Name = "colOutsideAuditoriumHours";
+            this.colOutsideAuditoriumHours.Visible = true;
+            this.colOutsideAuditoriumHours.VisibleIndex = 5;
+            this.colOutsideAuditoriumHours.Width = 94;
             // 
-            // colRecommendationFirstSem
+            // colAuditoriumHours
             // 
-            this.colRecommendationFirstSem.FieldName = "RecommendationFirstSem";
-            this.colRecommendationFirstSem.MinWidth = 25;
-            this.colRecommendationFirstSem.Name = "colRecommendationFirstSem";
-            this.colRecommendationFirstSem.Visible = true;
-            this.colRecommendationFirstSem.VisibleIndex = 6;
-            this.colRecommendationFirstSem.Width = 94;
+            this.colAuditoriumHours.FieldName = "AuditoriumHours";
+            this.colAuditoriumHours.MinWidth = 25;
+            this.colAuditoriumHours.Name = "colAuditoriumHours";
+            this.colAuditoriumHours.Visible = true;
+            this.colAuditoriumHours.VisibleIndex = 6;
+            this.colAuditoriumHours.Width = 94;
             // 
-            // colExamFirstSem
+            // colLectureHours
             // 
-            this.colExamFirstSem.FieldName = "ExamFirstSem";
-            this.colExamFirstSem.MinWidth = 25;
-            this.colExamFirstSem.Name = "colExamFirstSem";
-            this.colExamFirstSem.Visible = true;
-            this.colExamFirstSem.VisibleIndex = 7;
-            this.colExamFirstSem.Width = 94;
+            this.colLectureHours.FieldName = "LectureHours";
+            this.colLectureHours.MinWidth = 25;
+            this.colLectureHours.Name = "colLectureHours";
+            this.colLectureHours.Visible = true;
+            this.colLectureHours.VisibleIndex = 7;
+            this.colLectureHours.Width = 94;
             // 
-            // colFirstSemSum
+            // colSeminarHours
             // 
-            this.colFirstSemSum.FieldName = "FirstSemSum";
-            this.colFirstSemSum.MinWidth = 25;
-            this.colFirstSemSum.Name = "colFirstSemSum";
-            this.colFirstSemSum.Visible = true;
-            this.colFirstSemSum.VisibleIndex = 8;
-            this.colFirstSemSum.Width = 94;
+            this.colSeminarHours.FieldName = "SeminarHours";
+            this.colSeminarHours.MinWidth = 25;
+            this.colSeminarHours.Name = "colSeminarHours";
+            this.colSeminarHours.Visible = true;
+            this.colSeminarHours.VisibleIndex = 8;
+            this.colSeminarHours.Width = 94;
             // 
-            // colExerciseSecondSem
+            // colLaboratoryHours
             // 
-            this.colExerciseSecondSem.FieldName = "ExerciseSecondSem";
-            this.colExerciseSecondSem.MinWidth = 25;
-            this.colExerciseSecondSem.Name = "colExerciseSecondSem";
-            this.colExerciseSecondSem.Visible = true;
-            this.colExerciseSecondSem.VisibleIndex = 9;
-            this.colExerciseSecondSem.Width = 94;
+            this.colLaboratoryHours.FieldName = "LaboratoryHours";
+            this.colLaboratoryHours.MinWidth = 25;
+            this.colLaboratoryHours.Name = "colLaboratoryHours";
+            this.colLaboratoryHours.Visible = true;
+            this.colLaboratoryHours.VisibleIndex = 9;
+            this.colLaboratoryHours.Width = 94;
             // 
-            // colLectureSecondSem
+            // colSemestr
             // 
-            this.colLectureSecondSem.FieldName = "LectureSecondSem";
-            this.colLectureSecondSem.MinWidth = 25;
-            this.colLectureSecondSem.Name = "colLectureSecondSem";
-            this.colLectureSecondSem.Visible = true;
-            this.colLectureSecondSem.VisibleIndex = 10;
-            this.colLectureSecondSem.Width = 94;
+            this.colSemestr.FieldName = "Semestr";
+            this.colSemestr.MinWidth = 25;
+            this.colSemestr.Name = "colSemestr";
+            this.colSemestr.Visible = true;
+            this.colSemestr.VisibleIndex = 10;
+            this.colSemestr.Width = 94;
             // 
-            // colLaboratorySecondSem
+            // colWeeklyCourseLoad
             // 
-            this.colLaboratorySecondSem.FieldName = "LaboratorySecondSem";
-            this.colLaboratorySecondSem.MinWidth = 25;
-            this.colLaboratorySecondSem.Name = "colLaboratorySecondSem";
-            this.colLaboratorySecondSem.Visible = true;
-            this.colLaboratorySecondSem.VisibleIndex = 11;
-            this.colLaboratorySecondSem.Width = 94;
-            // 
-            // colRecommendationSecondSem
-            // 
-            this.colRecommendationSecondSem.FieldName = "RecommendationSecondSem";
-            this.colRecommendationSecondSem.MinWidth = 25;
-            this.colRecommendationSecondSem.Name = "colRecommendationSecondSem";
-            this.colRecommendationSecondSem.Visible = true;
-            this.colRecommendationSecondSem.VisibleIndex = 12;
-            this.colRecommendationSecondSem.Width = 94;
-            // 
-            // colExamSecondSem
-            // 
-            this.colExamSecondSem.FieldName = "ExamSecondSem";
-            this.colExamSecondSem.MinWidth = 25;
-            this.colExamSecondSem.Name = "colExamSecondSem";
-            this.colExamSecondSem.Visible = true;
-            this.colExamSecondSem.VisibleIndex = 13;
-            this.colExamSecondSem.Width = 94;
-            // 
-            // colPrLeader
-            // 
-            this.colPrLeader.FieldName = "PrLeader";
-            this.colPrLeader.MinWidth = 25;
-            this.colPrLeader.Name = "colPrLeader";
-            this.colPrLeader.Visible = true;
-            this.colPrLeader.VisibleIndex = 14;
-            this.colPrLeader.Width = 94;
-            // 
-            // colPractise
-            // 
-            this.colPractise.FieldName = "Practise";
-            this.colPractise.MinWidth = 25;
-            this.colPractise.Name = "colPractise";
-            this.colPractise.Visible = true;
-            this.colPractise.VisibleIndex = 15;
-            this.colPractise.Width = 94;
-            // 
-            // colEPedTETedTTKITA
-            // 
-            this.colEPedTETedTTKITA.FieldName = "EPedTETedTTKITA";
-            this.colEPedTETedTTKITA.MinWidth = 25;
-            this.colEPedTETedTTKITA.Name = "colEPedTETedTTKITA";
-            this.colEPedTETedTTKITA.Visible = true;
-            this.colEPedTETedTTKITA.VisibleIndex = 16;
-            this.colEPedTETedTTKITA.Width = 94;
-            // 
-            // colThesis
-            // 
-            this.colThesis.FieldName = "Thesis";
-            this.colThesis.MinWidth = 25;
-            this.colThesis.Name = "colThesis";
-            this.colThesis.Visible = true;
-            this.colThesis.VisibleIndex = 17;
-            this.colThesis.Width = 94;
-            // 
-            // colMasterThesis
-            // 
-            this.colMasterThesis.FieldName = "MasterThesis";
-            this.colMasterThesis.MinWidth = 25;
-            this.colMasterThesis.Name = "colMasterThesis";
-            this.colMasterThesis.Visible = true;
-            this.colMasterThesis.VisibleIndex = 18;
-            this.colMasterThesis.Width = 94;
-            // 
-            // colDoctorate
-            // 
-            this.colDoctorate.FieldName = "Doctorate";
-            this.colDoctorate.MinWidth = 25;
-            this.colDoctorate.Name = "colDoctorate";
-            this.colDoctorate.Visible = true;
-            this.colDoctorate.VisibleIndex = 19;
-            this.colDoctorate.Width = 94;
-            // 
-            // colSecondSemSum
-            // 
-            this.colSecondSemSum.FieldName = "SecondSemSum";
-            this.colSecondSemSum.MinWidth = 25;
-            this.colSecondSemSum.Name = "colSecondSemSum";
-            this.colSecondSemSum.Visible = true;
-            this.colSecondSemSum.VisibleIndex = 20;
-            this.colSecondSemSum.Width = 94;
-            // 
-            // colFinalResult
-            // 
-            this.colFinalResult.FieldName = "FinalResult";
-            this.colFinalResult.MinWidth = 25;
-            this.colFinalResult.Name = "colFinalResult";
-            this.colFinalResult.Visible = true;
-            this.colFinalResult.VisibleIndex = 21;
-            this.colFinalResult.Width = 94;
+            this.colWeeklyCourseLoad.FieldName = "WeeklyCourseLoad";
+            this.colWeeklyCourseLoad.MinWidth = 25;
+            this.colWeeklyCourseLoad.Name = "colWeeklyCourseLoad";
+            this.colWeeklyCourseLoad.Visible = true;
+            this.colWeeklyCourseLoad.VisibleIndex = 11;
+            this.colWeeklyCourseLoad.Width = 94;
             // 
             // colID
             // 
@@ -391,49 +382,26 @@
             this.colID.MinWidth = 25;
             this.colID.Name = "colID";
             this.colID.Visible = true;
-            this.colID.VisibleIndex = 22;
+            this.colID.VisibleIndex = 12;
             this.colID.Width = 94;
-            // 
-            // teacherCmb
-            // 
-            this.teacherCmb.Location = new System.Drawing.Point(109, 12);
-            this.teacherCmb.Name = "teacherCmb";
-            this.teacherCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
-            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
-            this.teacherCmb.Properties.DisplayMember = "TeacherCode";
-            this.teacherCmb.Properties.NullText = "";
-            this.teacherCmb.Properties.PopupView = this.searchLookUpEdit1View;
-            this.teacherCmb.Properties.ValueMember = "ID";
-            this.teacherCmb.Size = new System.Drawing.Size(469, 22);
-            this.teacherCmb.StyleController = this.layoutControl1;
-            this.teacherCmb.TabIndex = 0;
-            this.teacherCmb.QueryPopUp += new System.ComponentModel.CancelEventHandler(this.teacherCmb_QueryPopUp);
-            this.teacherCmb.EditValueChanged += new System.EventHandler(this.teacherCmb_EditValueChanged);
-            // 
-            // searchLookUpEdit1View
-            // 
-            this.searchLookUpEdit1View.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
-            this.searchLookUpEdit1View.Name = "searchLookUpEdit1View";
-            this.searchLookUpEdit1View.OptionsSelection.EnableAppearanceFocusedCell = false;
-            this.searchLookUpEdit1View.OptionsView.ShowGroupPanel = false;
             // 
             // closeBtn
             // 
-            this.closeBtn.Location = new System.Drawing.Point(879, 528);
+            this.closeBtn.Location = new System.Drawing.Point(941, 660);
             this.closeBtn.Name = "closeBtn";
-            this.closeBtn.Size = new System.Drawing.Size(288, 27);
+            this.closeBtn.Size = new System.Drawing.Size(309, 27);
             this.closeBtn.StyleController = this.layoutControl1;
-            this.closeBtn.TabIndex = 7;
+            this.closeBtn.TabIndex = 13;
             this.closeBtn.Text = "Çıxış";
             this.closeBtn.Click += new System.EventHandler(this.closeBtn_Click);
             // 
             // saveBtn
             // 
-            this.saveBtn.Location = new System.Drawing.Point(590, 528);
+            this.saveBtn.Location = new System.Drawing.Point(632, 660);
             this.saveBtn.Name = "saveBtn";
-            this.saveBtn.Size = new System.Drawing.Size(285, 27);
+            this.saveBtn.Size = new System.Drawing.Size(305, 27);
             this.saveBtn.StyleController = this.layoutControl1;
-            this.saveBtn.TabIndex = 6;
+            this.saveBtn.TabIndex = 12;
             this.saveBtn.Text = "Yadda saxla";
             this.saveBtn.Click += new System.EventHandler(this.SaveBtn_Click);
             // 
@@ -445,143 +413,228 @@
             this.emptySpaceItem1,
             this.layoutControlItem3,
             this.layoutControlItem4,
-            this.teacherCode,
             this.layoutControlItem2,
-            this.layoutControlItem5,
             this.layoutControlItem1,
-            this.emptySpaceItem2,
             this.emptySpaceItem3,
-            this.emptySpaceItem4,
-            this.layoutControlItem7});
+            this.layoutControlItem6,
+            this.layoutControlItem7,
+            this.emptySpaceItem5,
+            this.layoutControlItem8,
+            this.layoutControlItem11,
+            this.layoutControlItem13,
+            this.emptySpaceItem7,
+            this.layoutControlItem9,
+            this.layoutControlItem10,
+            this.layoutControlItem12,
+            this.layoutControlItem14,
+            this.emptySpaceItem2});
             this.Root.Name = "Root";
-            this.Root.Size = new System.Drawing.Size(1179, 567);
+            this.Root.Size = new System.Drawing.Size(1262, 699);
             this.Root.TextVisible = false;
             // 
             // emptySpaceItem1
             // 
             this.emptySpaceItem1.AllowHotTrack = false;
-            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 516);
+            this.emptySpaceItem1.Location = new System.Drawing.Point(0, 648);
             this.emptySpaceItem1.Name = "emptySpaceItem1";
-            this.emptySpaceItem1.Size = new System.Drawing.Size(578, 31);
+            this.emptySpaceItem1.Size = new System.Drawing.Size(620, 31);
             this.emptySpaceItem1.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem3
             // 
             this.layoutControlItem3.Control = this.saveBtn;
-            this.layoutControlItem3.Location = new System.Drawing.Point(578, 516);
+            this.layoutControlItem3.Location = new System.Drawing.Point(620, 648);
             this.layoutControlItem3.Name = "layoutControlItem3";
-            this.layoutControlItem3.Size = new System.Drawing.Size(289, 31);
+            this.layoutControlItem3.Size = new System.Drawing.Size(309, 31);
             this.layoutControlItem3.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem3.TextVisible = false;
             // 
             // layoutControlItem4
             // 
             this.layoutControlItem4.Control = this.closeBtn;
-            this.layoutControlItem4.Location = new System.Drawing.Point(867, 516);
+            this.layoutControlItem4.Location = new System.Drawing.Point(929, 648);
             this.layoutControlItem4.Name = "layoutControlItem4";
-            this.layoutControlItem4.Size = new System.Drawing.Size(292, 31);
+            this.layoutControlItem4.Size = new System.Drawing.Size(313, 31);
             this.layoutControlItem4.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem4.TextVisible = false;
-            // 
-            // teacherCode
-            // 
-            this.teacherCode.Control = this.teacherCmb;
-            this.teacherCode.Location = new System.Drawing.Point(0, 0);
-            this.teacherCode.Name = "teacherCode";
-            this.teacherCode.Size = new System.Drawing.Size(570, 26);
-            this.teacherCode.Text = "Müəllimin kodu";
-            this.teacherCode.TextSize = new System.Drawing.Size(85, 16);
             // 
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 78);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 238);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1159, 438);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1242, 410);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
-            // 
-            // layoutControlItem5
-            // 
-            this.layoutControlItem5.Control = this.teacherNameTxt;
-            this.layoutControlItem5.Location = new System.Drawing.Point(0, 26);
-            this.layoutControlItem5.Name = "layoutControlItem5";
-            this.layoutControlItem5.Size = new System.Drawing.Size(570, 26);
-            this.layoutControlItem5.Text = "Ad";
-            this.layoutControlItem5.TextSize = new System.Drawing.Size(85, 16);
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.addTeachingLoad;
-            this.layoutControlItem1.Location = new System.Drawing.Point(951, 26);
+            this.layoutControlItem1.Location = new System.Drawing.Point(1022, 51);
             this.layoutControlItem1.Name = "layoutControlItem1";
-            this.layoutControlItem1.Size = new System.Drawing.Size(208, 52);
+            this.layoutControlItem1.Size = new System.Drawing.Size(220, 31);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem1.TextVisible = false;
-            // 
-            // emptySpaceItem2
-            // 
-            this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(570, 26);
-            this.emptySpaceItem2.Name = "emptySpaceItem2";
-            this.emptySpaceItem2.Size = new System.Drawing.Size(381, 52);
-            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // emptySpaceItem3
             // 
             this.emptySpaceItem3.AllowHotTrack = false;
-            this.emptySpaceItem3.Location = new System.Drawing.Point(570, 0);
+            this.emptySpaceItem3.Location = new System.Drawing.Point(1022, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(589, 26);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(220, 51);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
-            // emptySpaceItem4
+            // layoutControlItem6
             // 
-            this.emptySpaceItem4.AllowHotTrack = false;
-            this.emptySpaceItem4.Location = new System.Drawing.Point(560, 52);
-            this.emptySpaceItem4.Name = "emptySpaceItem4";
-            this.emptySpaceItem4.Size = new System.Drawing.Size(10, 26);
-            this.emptySpaceItem4.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem6.Control = this.comboBox1;
+            this.layoutControlItem6.Location = new System.Drawing.Point(0, 0);
+            this.layoutControlItem6.Name = "layoutControlItem6";
+            this.layoutControlItem6.Size = new System.Drawing.Size(301, 30);
+            this.layoutControlItem6.Text = "Tədris yükünün ili";
+            this.layoutControlItem6.TextSize = new System.Drawing.Size(100, 16);
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.dateTxt;
-            this.layoutControlItem7.Location = new System.Drawing.Point(0, 52);
+            this.layoutControlItem7.Control = this.textEdit1;
+            this.layoutControlItem7.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem7.Name = "layoutControlItem7";
-            this.layoutControlItem7.Size = new System.Drawing.Size(560, 26);
-            this.layoutControlItem7.Text = "Tarix";
-            this.layoutControlItem7.TextSize = new System.Drawing.Size(85, 16);
+            this.layoutControlItem7.Size = new System.Drawing.Size(301, 26);
+            this.layoutControlItem7.Text = "Vəzifəsi";
+            this.layoutControlItem7.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // emptySpaceItem5
+            // 
+            this.emptySpaceItem5.AllowHotTrack = false;
+            this.emptySpaceItem5.Location = new System.Drawing.Point(755, 0);
+            this.emptySpaceItem5.Name = "emptySpaceItem5";
+            this.emptySpaceItem5.Size = new System.Drawing.Size(267, 25);
+            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem8
+            // 
+            this.layoutControlItem8.Control = this.textEdit2;
+            this.layoutControlItem8.Location = new System.Drawing.Point(0, 56);
+            this.layoutControlItem8.Name = "layoutControlItem8";
+            this.layoutControlItem8.Size = new System.Drawing.Size(301, 26);
+            this.layoutControlItem8.Text = "Elmi adı";
+            this.layoutControlItem8.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // layoutControlItem11
+            // 
+            this.layoutControlItem11.Control = this.textEdit5;
+            this.layoutControlItem11.Location = new System.Drawing.Point(301, 52);
+            this.layoutControlItem11.Name = "layoutControlItem11";
+            this.layoutControlItem11.Size = new System.Drawing.Size(454, 30);
+            this.layoutControlItem11.Text = "Elmi dərəcəsi";
+            this.layoutControlItem11.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // layoutControlItem13
+            // 
+            this.layoutControlItem13.Control = this.richTextBox1;
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 82);
+            this.layoutControlItem13.Name = "layoutControlItem13";
+            this.layoutControlItem13.Size = new System.Drawing.Size(702, 107);
+            this.layoutControlItem13.Text = "Sertifikatlar";
+            this.layoutControlItem13.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // emptySpaceItem7
+            // 
+            this.emptySpaceItem7.AllowHotTrack = false;
+            this.emptySpaceItem7.Location = new System.Drawing.Point(702, 82);
+            this.emptySpaceItem7.Name = "emptySpaceItem7";
+            this.emptySpaceItem7.Size = new System.Drawing.Size(540, 156);
+            this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // layoutControlItem9
+            // 
+            this.layoutControlItem9.Control = this.textEdit3;
+            this.layoutControlItem9.Location = new System.Drawing.Point(301, 26);
+            this.layoutControlItem9.Name = "layoutControlItem9";
+            this.layoutControlItem9.Size = new System.Drawing.Size(454, 26);
+            this.layoutControlItem9.Text = "Dili";
+            this.layoutControlItem9.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // layoutControlItem10
+            // 
+            this.layoutControlItem10.Control = this.textEdit4;
+            this.layoutControlItem10.Location = new System.Drawing.Point(755, 25);
+            this.layoutControlItem10.Name = "layoutControlItem10";
+            this.layoutControlItem10.Size = new System.Drawing.Size(267, 26);
+            this.layoutControlItem10.Text = "Ştatı";
+            this.layoutControlItem10.TextLocation = DevExpress.Utils.Locations.Left;
+            this.layoutControlItem10.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // layoutControlItem12
+            // 
+            this.layoutControlItem12.Control = this.lastYearLoadBtn;
+            this.layoutControlItem12.Location = new System.Drawing.Point(755, 51);
+            this.layoutControlItem12.Name = "layoutControlItem12";
+            this.layoutControlItem12.Size = new System.Drawing.Size(267, 31);
+            this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
+            this.layoutControlItem12.TextVisible = false;
+            // 
+            // layoutControlItem14
+            // 
+            this.layoutControlItem14.Control = this.teacherCmb;
+            this.layoutControlItem14.Location = new System.Drawing.Point(301, 0);
+            this.layoutControlItem14.Name = "layoutControlItem14";
+            this.layoutControlItem14.Size = new System.Drawing.Size(454, 26);
+            this.layoutControlItem14.Text = "Müəllimin adı";
+            this.layoutControlItem14.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // teachingLoadSubjectsBindingSource
+            // 
+            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
+            // 
+            // emptySpaceItem2
+            // 
+            this.emptySpaceItem2.AllowHotTrack = false;
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 189);
+            this.emptySpaceItem2.Name = "emptySpaceItem2";
+            this.emptySpaceItem2.Size = new System.Drawing.Size(702, 49);
+            this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
             // 
             // TeachingLoadCRUDForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1179, 567);
+            this.ClientSize = new System.Drawing.Size(1262, 699);
             this.Controls.Add(this.layoutControl1);
             this.Name = "TeachingLoadCRUDForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
-            this.Text = "Kafedra haqqında";
+            this.Text = "Tədris yükünün bölünməsi";
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).EndInit();
             this.layoutControl1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dateTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherNameTxt.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.educationPlansBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Root)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teacherCode)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -595,45 +648,49 @@
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem3;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem4;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
         private DevExpress.XtraGrid.GridControl gridControl1;
         private DevExpress.XtraGrid.Views.Grid.GridView gridView1;
-        private DevExpress.XtraEditors.SearchLookUpEdit teacherCmb;
-        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
-        private DevExpress.XtraLayout.LayoutControlItem teacherCode;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem2;
-        private DevExpress.XtraEditors.TextEdit teacherNameTxt;
-        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
         private DevExpress.XtraEditors.SimpleButton addTeachingLoad;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem1;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem3;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem4;
         private BindingSource teachingLoadSubjectsBindingSource;
-        private DevExpress.XtraGrid.Columns.GridColumn colTeachingLoadID;
+        private BindingSource educationPlansBindingSource;
+        private DevExpress.XtraGrid.Columns.GridColumn colSpecialityCode;
         private DevExpress.XtraGrid.Columns.GridColumn colSubjects;
         private DevExpress.XtraGrid.Columns.GridColumn colSubjectID;
-        private DevExpress.XtraGrid.Columns.GridColumn colExerciseFirstSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colLectureFirstSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colLaboratoryFirstSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colRecommendationFirstSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colExamFirstSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colFirstSemSum;
-        private DevExpress.XtraGrid.Columns.GridColumn colExerciseSecondSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colLectureSecondSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colLaboratorySecondSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colRecommendationSecondSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colExamSecondSem;
-        private DevExpress.XtraGrid.Columns.GridColumn colPrLeader;
-        private DevExpress.XtraGrid.Columns.GridColumn colPractise;
-        private DevExpress.XtraGrid.Columns.GridColumn colEPedTETedTTKITA;
-        private DevExpress.XtraGrid.Columns.GridColumn colThesis;
-        private DevExpress.XtraGrid.Columns.GridColumn colMasterThesis;
-        private DevExpress.XtraGrid.Columns.GridColumn colDoctorate;
-        private DevExpress.XtraGrid.Columns.GridColumn colSecondSemSum;
-        private DevExpress.XtraGrid.Columns.GridColumn colFinalResult;
+        private DevExpress.XtraGrid.Columns.GridColumn colCreditCount;
+        private DevExpress.XtraGrid.Columns.GridColumn colTotalHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colOutsideAuditoriumHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colAuditoriumHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colLectureHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colSeminarHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colLaboratoryHours;
+        private DevExpress.XtraGrid.Columns.GridColumn colSemestr;
+        private DevExpress.XtraGrid.Columns.GridColumn colWeeklyCourseLoad;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraEditors.TextEdit dateTxt;
+        private ComboBox comboBox1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
+        private DevExpress.XtraEditors.TextEdit textEdit1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
+        private DevExpress.XtraEditors.TextEdit textEdit4;
+        private DevExpress.XtraEditors.TextEdit textEdit3;
+        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
+        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
+        private DevExpress.XtraEditors.SimpleButton lastYearLoadBtn;
+        private RichTextBox richTextBox1;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
+        private DevExpress.XtraEditors.SearchLookUpEdit teacherCmb;
+        private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
+        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
     }
 }
 

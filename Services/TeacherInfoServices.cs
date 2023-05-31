@@ -15,6 +15,7 @@ namespace TeachingLoadInfoSystem.Services
         public TeacherInfo GetTeacherInfoByID(int id)
         {
             var selectedTeacher = _repository.GetAll
+                //.Include(x=>x.)
                 .Include(x => x.Department)
                 .Include(x => x.Gender)
                 .Include(x => x.ScientificName)
