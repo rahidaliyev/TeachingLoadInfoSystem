@@ -77,8 +77,8 @@
             this.layoutControlItem10 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem12 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
+            this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).BeginInit();
@@ -109,8 +109,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
@@ -582,10 +582,6 @@
             this.layoutControlItem14.Text = "Müəllimin adı";
             this.layoutControlItem14.TextSize = new System.Drawing.Size(100, 16);
             // 
-            // teachingLoadSubjectsBindingSource
-            // 
-            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
-            // 
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
@@ -593,6 +589,10 @@
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(702, 49);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
+            // 
+            // teachingLoadSubjectsBindingSource
+            // 
+            this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
             // 
             // TeachingLoadCRUDForm
             // 
@@ -633,8 +633,8 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem10)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
