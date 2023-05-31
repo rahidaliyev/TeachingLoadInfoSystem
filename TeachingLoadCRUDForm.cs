@@ -18,6 +18,7 @@ namespace TeachingLoadInfoSystem
         ITeachingLoadSubjectServices _teachingLoadSubjectServices { get; set; }
         IEducationPlanServices _educationPlanServices { get; set; }
         IPreferedSubjectServices _preferedSubjects { get; set; }
+        ITeacherLanguageServices _teacherLanguage { get; set; }
         private TeacherInfo _teacherInfo { get; set; } = new TeacherInfo();
         public TeachingLoadCRUDForm()
         {
@@ -27,6 +28,7 @@ namespace TeachingLoadInfoSystem
             _teachingLoadSubjectServices = new TeachingLoadSubjectServices(new Repository<TeachingLoadSubject>(db));
             _educationPlanServices = new EducationPlanServices(new Repository<EducationPlan>(db));
             _preferedSubjects = new PreferedSubjectServices(new Repository<PreferedSubject>(db));
+            _teacherLanguage = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
             this.teachingload = teachingload;
             teacherCmb.Properties.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
             LoadData();
@@ -34,10 +36,10 @@ namespace TeachingLoadInfoSystem
         public void AddSubjects()
         {
             var subjects = _preferedSubjects.GetAllPreferedSubjects().ToList();
-            var educationPlans = _educationPlanServices.GetAllEducationPlans().ToList();    
+            var educationPlans = _educationPlanServices.GetAllEducationPlans().ToList();
             for (int i = 0; i < _teacherInfo.WorkTime.WorkTimeFactor * 550; i++)
             {
-               var list =  educationPlans.Join(subjects,e =>e.SubjectID, p => p.SubjectID,(e,p) => new EducationPlan
+                var list = educationPlans.Join(subjects, e => e.SubjectID, p => p.SubjectID, (e, p) => new EducationPlan
                 {
                     SubjectID = p.SubjectID,
                     SeminarHours = e.SeminarHours,
@@ -105,36 +107,29 @@ namespace TeachingLoadInfoSystem
         {
             AddSubjects();
         }
-
-        private void teacherCmb_EditValueChanged(object sender, EventArgs e)
-        {
-            //_teacherInfo = teacherCmb.GetSelectedDataRow() as TeacherInfo;
-            if (_teacherInfo != null)
-            {
-                //teacherNameTxt.Text = _teacherInfo.TeacherName + " " + _teacherInfo.TeacherSurname + " " + _teacherInfo.TeacherFather;
-                var teachingLoads = _teachingLoadServices.GetAllTeachingLoads().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
-                if (teachingLoads.Count == 0)
-                    gridControl1.DataSource = null;
-                foreach (var item in teachingLoads)
-                {
-                    //dateTxt.Text = item.SemesterTime;
-                    gridControl1.DataSource = item.TeachingLoadSubjects;
-                }
-                gridControl1.Refresh();
-            }
-        }
-        private void teacherCmb_QueryPopUp(object sender, System.ComponentModel.CancelEventArgs e)
-        {
-            //for (int i = 4; i <= 19; i++)
-            //    teacherCmb.Properties.View.Columns[i].Visible = false;
-            //teacherCmb.Properties.View.Columns[1].Caption = "Müəllimlər haqqında";
-            //teacherCmb.Properties.PopupFormSize = new Size(500, 250);
-        }
-
         private void lastYearLoadBtn_Click(object sender, EventArgs e)
         {
             var frm = new LastYearTeachinLoadGridForm();
             frm.ShowDialog();
+        }
+        private void teacherCmb_EditValueChanged_1(object sender, EventArgs e)
+        {
+            _teacherInfo = teacherCmb.GetSelectedDataRow() as TeacherInfo;
+            if (_teacherInfo != null)
+            {
+                scientificDegreeTxt.Text = _teacherInfo.ScientificDegree.DegreeName;
+                scientificName.Text = _teacherInfo.ScientificName.Name;
+                workHourTxt.Text = _teacherInfo.WorkTime.WorkTimeName;
+                positionTxt.Text = _teacherInfo.Profession.Name;
+                var list = _teacherLanguage.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                foreach (var teacherLanguage in list)
+                {
+                    string joined = string.Join(",", list);
+                    joined = teacherLanguage.Language.LanguageName;
+                    languageTxt.Text = joined;
+                }
+            }
+
         }
     }
 }

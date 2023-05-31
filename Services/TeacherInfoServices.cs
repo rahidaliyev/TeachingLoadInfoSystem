@@ -17,6 +17,7 @@ namespace TeachingLoadInfoSystem.Services
             var selectedTeacher = _repository.GetAll
                 //.Include(x=>x.)
                 .Include(x => x.Department)
+                .Include(x=>x.Profession)
                 .Include(x => x.Gender)
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)
@@ -47,6 +48,7 @@ namespace TeachingLoadInfoSystem.Services
         {
             return _repository.GetAll
                 .Include(x => x.Gender)
+                .Include(x => x.Profession)
                 .Include(x => x.Department)
                 .Include(x => x.ScientificName)
                 .Include(x => x.ScientificDegree)

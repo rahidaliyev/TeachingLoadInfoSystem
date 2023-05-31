@@ -33,12 +33,12 @@
             this.teacherCmb = new DevExpress.XtraEditors.SearchLookUpEdit();
             this.searchLookUpEdit1View = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.lastYearLoadBtn = new DevExpress.XtraEditors.SimpleButton();
-            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
-            this.textEdit5 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit4 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit3 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit2 = new DevExpress.XtraEditors.TextEdit();
-            this.textEdit1 = new DevExpress.XtraEditors.TextEdit();
+            this.certificateBox = new System.Windows.Forms.RichTextBox();
+            this.scientificDegreeTxt = new DevExpress.XtraEditors.TextEdit();
+            this.workHourTxt = new DevExpress.XtraEditors.TextEdit();
+            this.languageTxt = new DevExpress.XtraEditors.TextEdit();
+            this.scientificName = new DevExpress.XtraEditors.TextEdit();
+            this.positionTxt = new DevExpress.XtraEditors.TextEdit();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.addTeachingLoad = new DevExpress.XtraEditors.SimpleButton();
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
@@ -83,11 +83,11 @@
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificDegreeTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workHourTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languageTxt.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificName.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionTxt.Properties)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationPlansBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).BeginInit();
@@ -117,12 +117,12 @@
             // 
             this.layoutControl1.Controls.Add(this.teacherCmb);
             this.layoutControl1.Controls.Add(this.lastYearLoadBtn);
-            this.layoutControl1.Controls.Add(this.richTextBox1);
-            this.layoutControl1.Controls.Add(this.textEdit5);
-            this.layoutControl1.Controls.Add(this.textEdit4);
-            this.layoutControl1.Controls.Add(this.textEdit3);
-            this.layoutControl1.Controls.Add(this.textEdit2);
-            this.layoutControl1.Controls.Add(this.textEdit1);
+            this.layoutControl1.Controls.Add(this.certificateBox);
+            this.layoutControl1.Controls.Add(this.scientificDegreeTxt);
+            this.layoutControl1.Controls.Add(this.workHourTxt);
+            this.layoutControl1.Controls.Add(this.languageTxt);
+            this.layoutControl1.Controls.Add(this.scientificName);
+            this.layoutControl1.Controls.Add(this.positionTxt);
             this.layoutControl1.Controls.Add(this.comboBox1);
             this.layoutControl1.Controls.Add(this.addTeachingLoad);
             this.layoutControl1.Controls.Add(this.gridControl1);
@@ -142,11 +142,14 @@
             this.teacherCmb.Name = "teacherCmb";
             this.teacherCmb.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
             new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.teacherCmb.Properties.DisplayMember = "TeacherFullName";
             this.teacherCmb.Properties.NullText = "";
             this.teacherCmb.Properties.PopupView = this.searchLookUpEdit1View;
+            this.teacherCmb.Properties.ValueMember = "ID";
             this.teacherCmb.Size = new System.Drawing.Size(338, 22);
             this.teacherCmb.StyleController = this.layoutControl1;
             this.teacherCmb.TabIndex = 2;
+            this.teacherCmb.EditValueChanged += new System.EventHandler(this.teacherCmb_EditValueChanged_1);
             // 
             // searchLookUpEdit1View
             // 
@@ -165,53 +168,53 @@
             this.lastYearLoadBtn.Text = "Keçən ilin tədris yükü";
             this.lastYearLoadBtn.Click += new System.EventHandler(this.lastYearLoadBtn_Click);
             // 
-            // richTextBox1
+            // certificateBox
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(124, 94);
-            this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(586, 103);
-            this.richTextBox1.TabIndex = 10;
-            this.richTextBox1.Text = "";
+            this.certificateBox.Location = new System.Drawing.Point(124, 94);
+            this.certificateBox.Name = "certificateBox";
+            this.certificateBox.Size = new System.Drawing.Size(586, 103);
+            this.certificateBox.TabIndex = 10;
+            this.certificateBox.Text = "";
             // 
-            // textEdit5
+            // scientificDegreeTxt
             // 
-            this.textEdit5.Location = new System.Drawing.Point(425, 64);
-            this.textEdit5.Name = "textEdit5";
-            this.textEdit5.Size = new System.Drawing.Size(338, 22);
-            this.textEdit5.StyleController = this.layoutControl1;
-            this.textEdit5.TabIndex = 8;
+            this.scientificDegreeTxt.Location = new System.Drawing.Point(425, 64);
+            this.scientificDegreeTxt.Name = "scientificDegreeTxt";
+            this.scientificDegreeTxt.Size = new System.Drawing.Size(338, 22);
+            this.scientificDegreeTxt.StyleController = this.layoutControl1;
+            this.scientificDegreeTxt.TabIndex = 8;
             // 
-            // textEdit4
+            // workHourTxt
             // 
-            this.textEdit4.Location = new System.Drawing.Point(879, 37);
-            this.textEdit4.Name = "textEdit4";
-            this.textEdit4.Size = new System.Drawing.Size(151, 22);
-            this.textEdit4.StyleController = this.layoutControl1;
-            this.textEdit4.TabIndex = 3;
+            this.workHourTxt.Location = new System.Drawing.Point(879, 37);
+            this.workHourTxt.Name = "workHourTxt";
+            this.workHourTxt.Size = new System.Drawing.Size(151, 22);
+            this.workHourTxt.StyleController = this.layoutControl1;
+            this.workHourTxt.TabIndex = 3;
             // 
-            // textEdit3
+            // languageTxt
             // 
-            this.textEdit3.Location = new System.Drawing.Point(425, 38);
-            this.textEdit3.Name = "textEdit3";
-            this.textEdit3.Size = new System.Drawing.Size(338, 22);
-            this.textEdit3.StyleController = this.layoutControl1;
-            this.textEdit3.TabIndex = 4;
+            this.languageTxt.Location = new System.Drawing.Point(425, 38);
+            this.languageTxt.Name = "languageTxt";
+            this.languageTxt.Size = new System.Drawing.Size(338, 22);
+            this.languageTxt.StyleController = this.layoutControl1;
+            this.languageTxt.TabIndex = 4;
             // 
-            // textEdit2
+            // scientificName
             // 
-            this.textEdit2.Location = new System.Drawing.Point(124, 68);
-            this.textEdit2.Name = "textEdit2";
-            this.textEdit2.Size = new System.Drawing.Size(185, 22);
-            this.textEdit2.StyleController = this.layoutControl1;
-            this.textEdit2.TabIndex = 9;
+            this.scientificName.Location = new System.Drawing.Point(124, 68);
+            this.scientificName.Name = "scientificName";
+            this.scientificName.Size = new System.Drawing.Size(185, 22);
+            this.scientificName.StyleController = this.layoutControl1;
+            this.scientificName.TabIndex = 9;
             // 
-            // textEdit1
+            // positionTxt
             // 
-            this.textEdit1.Location = new System.Drawing.Point(124, 42);
-            this.textEdit1.Name = "textEdit1";
-            this.textEdit1.Size = new System.Drawing.Size(185, 22);
-            this.textEdit1.StyleController = this.layoutControl1;
-            this.textEdit1.TabIndex = 5;
+            this.positionTxt.Location = new System.Drawing.Point(124, 42);
+            this.positionTxt.Name = "positionTxt";
+            this.positionTxt.Size = new System.Drawing.Size(185, 22);
+            this.positionTxt.StyleController = this.layoutControl1;
+            this.positionTxt.TabIndex = 5;
             // 
             // comboBox1
             // 
@@ -495,7 +498,7 @@
             // 
             // layoutControlItem7
             // 
-            this.layoutControlItem7.Control = this.textEdit1;
+            this.layoutControlItem7.Control = this.positionTxt;
             this.layoutControlItem7.Location = new System.Drawing.Point(0, 30);
             this.layoutControlItem7.Name = "layoutControlItem7";
             this.layoutControlItem7.Size = new System.Drawing.Size(301, 26);
@@ -512,7 +515,7 @@
             // 
             // layoutControlItem8
             // 
-            this.layoutControlItem8.Control = this.textEdit2;
+            this.layoutControlItem8.Control = this.scientificName;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem8.Name = "layoutControlItem8";
             this.layoutControlItem8.Size = new System.Drawing.Size(301, 26);
@@ -521,7 +524,7 @@
             // 
             // layoutControlItem11
             // 
-            this.layoutControlItem11.Control = this.textEdit5;
+            this.layoutControlItem11.Control = this.scientificDegreeTxt;
             this.layoutControlItem11.Location = new System.Drawing.Point(301, 52);
             this.layoutControlItem11.Name = "layoutControlItem11";
             this.layoutControlItem11.Size = new System.Drawing.Size(454, 30);
@@ -530,7 +533,7 @@
             // 
             // layoutControlItem13
             // 
-            this.layoutControlItem13.Control = this.richTextBox1;
+            this.layoutControlItem13.Control = this.certificateBox;
             this.layoutControlItem13.Location = new System.Drawing.Point(0, 82);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(702, 107);
@@ -547,7 +550,7 @@
             // 
             // layoutControlItem9
             // 
-            this.layoutControlItem9.Control = this.textEdit3;
+            this.layoutControlItem9.Control = this.languageTxt;
             this.layoutControlItem9.Location = new System.Drawing.Point(301, 26);
             this.layoutControlItem9.Name = "layoutControlItem9";
             this.layoutControlItem9.Size = new System.Drawing.Size(454, 26);
@@ -556,7 +559,7 @@
             // 
             // layoutControlItem10
             // 
-            this.layoutControlItem10.Control = this.textEdit4;
+            this.layoutControlItem10.Control = this.workHourTxt;
             this.layoutControlItem10.Location = new System.Drawing.Point(755, 25);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(267, 26);
@@ -607,11 +610,11 @@
             this.layoutControl1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1View)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit5.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit4.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit3.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit2.Properties)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.textEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificDegreeTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.workHourTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.languageTxt.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.scientificName.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.positionTxt.Properties)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.educationPlansBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView1)).EndInit();
@@ -671,19 +674,19 @@
         private DevExpress.XtraGrid.Columns.GridColumn colID;
         private ComboBox comboBox1;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
-        private DevExpress.XtraEditors.TextEdit textEdit1;
+        private DevExpress.XtraEditors.TextEdit positionTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
-        private DevExpress.XtraEditors.TextEdit textEdit4;
-        private DevExpress.XtraEditors.TextEdit textEdit3;
-        private DevExpress.XtraEditors.TextEdit textEdit2;
+        private DevExpress.XtraEditors.TextEdit workHourTxt;
+        private DevExpress.XtraEditors.TextEdit languageTxt;
+        private DevExpress.XtraEditors.TextEdit scientificName;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem8;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem9;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem10;
-        private DevExpress.XtraEditors.TextEdit textEdit5;
+        private DevExpress.XtraEditors.TextEdit scientificDegreeTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem11;
         private DevExpress.XtraEditors.SimpleButton lastYearLoadBtn;
-        private RichTextBox richTextBox1;
+        private RichTextBox certificateBox;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem13;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem7;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem12;
