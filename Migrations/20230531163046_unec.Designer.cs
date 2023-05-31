@@ -12,7 +12,7 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230523194847_unec")]
+    [Migration("20230531163046_unec")]
     partial class unec
     {
         /// <inheritdoc />
@@ -533,15 +533,7 @@ namespace TeachingLoadInfoSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TeacherFather")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeacherName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeacherSurname")
+                    b.Property<string>("TeacherFullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

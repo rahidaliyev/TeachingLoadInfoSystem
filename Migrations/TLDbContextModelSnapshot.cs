@@ -530,15 +530,7 @@ namespace TeachingLoadInfoSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TeacherFather")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeacherName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeacherSurname")
+                    b.Property<string>("TeacherFullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 

@@ -90,9 +90,10 @@ values
 	
 insert into TeacherInfos
 values
-('pc0003','Heyran','Həsənova','Rəhim','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
-('pc0004', N'Aida', N'Quliyeva', N'Aydın','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
-('pc0005', N'Sevda', N'Bədəlova', N'Ağababa','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
+('pc0003',N'Həsənova Heyran Rəhim','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
+('pc0004', N'Quliyeva Aida Aydın','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
+
+('pc0005', N'Bədəlova Sevda Ağababa','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
 ('pc0006', N'Ceyran', N'Xəlilova', N'Musa','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
 ('pc0007', N'Dilarə', N'Əbdüləziz', N'Abas','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),
 ('pc0008', N'Gülnar', N'Mirzəyeva', N'Rövşən','12-12-12','default@gmail.com','501110011',1,1,1,1,1,1),

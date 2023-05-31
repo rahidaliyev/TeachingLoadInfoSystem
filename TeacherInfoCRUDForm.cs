@@ -3,8 +3,6 @@ using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Services.Intefaces;
 using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 
 namespace TeachingLoadInfoSystem
 {
@@ -52,9 +50,7 @@ namespace TeachingLoadInfoSystem
         }
         public void InsertData()
         {
-            teacherinfo.TeacherName = nameTxt.Text;
-            teacherinfo.TeacherSurname = surnameTxt.Text;
-            teacherinfo.TeacherFather = teacherFatherNameTxt.Text;
+            teacherinfo.TeacherFullName = nameTxt.Text;
             teacherinfo.BirthDate = DateTime.ParseExact(birthDate.Text, "dd-MM-yyyy", null);
             teacherinfo.Email = mailTxt.Text;
             teacherinfo.PhoneNumber = numberTxt.Text;
@@ -65,14 +61,11 @@ namespace TeachingLoadInfoSystem
             teacherinfo.WorkTime = _workTime;
             teacherinfo.Books = GetBooks();
             teacherinfo.Certificates = GetCertificates();
-            //teacherinfo.TeacherLanguages = GetTeacherLanguages();
             teacherinfo.PreviousJobs = GetPreviousJobs();
         }
         public void LoadData()
         {
-            nameTxt.Text = teacherinfo.TeacherName;
-            surnameTxt.Text = teacherinfo.TeacherSurname;
-            teacherFatherNameTxt.Text = teacherinfo.TeacherFather;
+            nameTxt.Text = teacherinfo.TeacherFullName;
             birthDate.Text = teacherinfo.BirthDate.ToString("MM-dd-yyyy");
             mailTxt.Text = teacherinfo.Email;
             numberTxt.Text = teacherinfo.PhoneNumber;
@@ -83,7 +76,6 @@ namespace TeachingLoadInfoSystem
             workTimeCmb.EditValue = teacherinfo.WorkTime;
             GetBooksToPanel(teacherinfo.Books);
             GetCertificatesToPanel(teacherinfo.Certificates);
-            //GetLanguagesToPanel(teacherinfo.TeacherLanguages);
             GetJobsToPanel(teacherinfo.PreviousJobs);
         }
 
@@ -141,15 +133,6 @@ namespace TeachingLoadInfoSystem
             }
             return certificates;
         }
-        //private List<TeacherLanguage> GetTeacherLanguages() 
-        //{
-        //    var languages = new List<TeacherLanguage>();
-        //    foreach (UserControlTeacherLanguage control in languagePanelControl.Controls)
-        //    {
-        //        languages.Add(control.TeacherLanguages);
-        //    }
-        //    return languages;
-        //}
         private List<PreviousJob> GetPreviousJobs()
         {
             var jobs = new List<PreviousJob>();
@@ -159,18 +142,6 @@ namespace TeachingLoadInfoSystem
             }
             return jobs;
         }
-        //private void GetLanguagesToPanel(List<TeacherLanguage> languages)
-        //{
-        //    foreach (var item in languages)
-        //    {
-        //        var userControl = new UserControlTeacherLanguage(db, item)
-        //        {
-        //            Dock = DockStyle.Top
-        //        };
-        //        languagePanelControl.AutoScroll = true;
-        //        languagePanelControl.Controls.Add(userControl);
-        //    }
-        //}
         private void GetJobsToPanel(List<PreviousJob> jobs)
         {
             foreach (var item in jobs)
@@ -223,14 +194,6 @@ namespace TeachingLoadInfoSystem
                 Dock = DockStyle.Fill,
             };
             certificatePanelControl.Controls.Add(userControl);
-        }
-        private void addlanguageBtn_Click(object sender, EventArgs e)
-        {
-            //var userControl = new UserControlTeacherLanguage(db)
-            //{
-            //    Dock = DockStyle.Fill,
-            //};
-            //languagePanelControl.Controls.Add(userControl);
         }
 
         private void addPreviousJobBtn_Click(object sender, EventArgs e)

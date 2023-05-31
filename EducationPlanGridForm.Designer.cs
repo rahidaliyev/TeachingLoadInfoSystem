@@ -38,10 +38,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.educationPlansBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
-            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSpecialityCode = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSubjects = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSubjectID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreditCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalHours = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOutsideAuditoriumHours = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -130,10 +128,8 @@
             // gridView1
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
-            this.gridColumn1,
             this.colSpecialityCode,
             this.colSubjects,
-            this.colSubjectID,
             this.colCreditCount,
             this.colTotalHours,
             this.colOutsideAuditoriumHours,
@@ -147,122 +143,114 @@
             this.gridView1.GridControl = this.gridControl1;
             this.gridView1.Name = "gridView1";
             // 
-            // gridColumn1
-            // 
-            this.gridColumn1.Caption = "gridColumn1";
-            this.gridColumn1.FieldName = "Subjects.SubjectCode";
-            this.gridColumn1.MinWidth = 25;
-            this.gridColumn1.Name = "gridColumn1";
-            this.gridColumn1.Visible = true;
-            this.gridColumn1.VisibleIndex = 0;
-            this.gridColumn1.Width = 94;
-            // 
             // colSpecialityCode
             // 
+            this.colSpecialityCode.Caption = "İxtisasın kodu";
             this.colSpecialityCode.FieldName = "SpecialityCode";
             this.colSpecialityCode.MinWidth = 25;
             this.colSpecialityCode.Name = "colSpecialityCode";
             this.colSpecialityCode.Visible = true;
-            this.colSpecialityCode.VisibleIndex = 1;
+            this.colSpecialityCode.VisibleIndex = 0;
             this.colSpecialityCode.Width = 94;
             // 
             // colSubjects
             // 
-            this.colSubjects.FieldName = "SubjectName";
+            this.colSubjects.Caption = "Fənnin adı";
+            this.colSubjects.FieldName = "Subjects.SubjectName";
             this.colSubjects.MinWidth = 25;
             this.colSubjects.Name = "colSubjects";
             this.colSubjects.Visible = true;
-            this.colSubjects.VisibleIndex = 2;
+            this.colSubjects.VisibleIndex = 1;
             this.colSubjects.Width = 94;
-            // 
-            // colSubjectID
-            // 
-            this.colSubjectID.FieldName = "SubjectID";
-            this.colSubjectID.MinWidth = 25;
-            this.colSubjectID.Name = "colSubjectID";
-            this.colSubjectID.Visible = true;
-            this.colSubjectID.VisibleIndex = 3;
-            this.colSubjectID.Width = 94;
             // 
             // colCreditCount
             // 
+            this.colCreditCount.Caption = "Kredit";
             this.colCreditCount.FieldName = "CreditCount";
             this.colCreditCount.MinWidth = 25;
             this.colCreditCount.Name = "colCreditCount";
             this.colCreditCount.Visible = true;
-            this.colCreditCount.VisibleIndex = 4;
+            this.colCreditCount.VisibleIndex = 2;
             this.colCreditCount.Width = 94;
             // 
             // colTotalHours
             // 
+            this.colTotalHours.Caption = "Ümumi saatlar";
             this.colTotalHours.FieldName = "TotalHours";
             this.colTotalHours.MinWidth = 25;
             this.colTotalHours.Name = "colTotalHours";
             this.colTotalHours.Visible = true;
-            this.colTotalHours.VisibleIndex = 5;
+            this.colTotalHours.VisibleIndex = 3;
             this.colTotalHours.Width = 94;
             // 
             // colOutsideAuditoriumHours
             // 
+            this.colOutsideAuditoriumHours.Caption = "Auditoriyadan kənar saatlar";
             this.colOutsideAuditoriumHours.FieldName = "OutsideAuditoriumHours";
             this.colOutsideAuditoriumHours.MinWidth = 25;
             this.colOutsideAuditoriumHours.Name = "colOutsideAuditoriumHours";
             this.colOutsideAuditoriumHours.Visible = true;
-            this.colOutsideAuditoriumHours.VisibleIndex = 6;
+            this.colOutsideAuditoriumHours.VisibleIndex = 4;
             this.colOutsideAuditoriumHours.Width = 94;
             // 
             // colAuditoriumHours
             // 
+            this.colAuditoriumHours.Caption = "Auditoriya saatları";
             this.colAuditoriumHours.FieldName = "AuditoriumHours";
             this.colAuditoriumHours.MinWidth = 25;
             this.colAuditoriumHours.Name = "colAuditoriumHours";
             this.colAuditoriumHours.Visible = true;
-            this.colAuditoriumHours.VisibleIndex = 7;
+            this.colAuditoriumHours.VisibleIndex = 5;
             this.colAuditoriumHours.Width = 94;
             // 
             // colLectureHours
             // 
+            this.colLectureHours.Caption = "Mühazirə";
             this.colLectureHours.FieldName = "LectureHours";
             this.colLectureHours.MinWidth = 25;
             this.colLectureHours.Name = "colLectureHours";
             this.colLectureHours.Visible = true;
-            this.colLectureHours.VisibleIndex = 8;
+            this.colLectureHours.VisibleIndex = 6;
             this.colLectureHours.Width = 94;
             // 
             // colSeminarHours
             // 
+            this.colSeminarHours.Caption = "Məşğələ";
             this.colSeminarHours.FieldName = "SeminarHours";
             this.colSeminarHours.MinWidth = 25;
             this.colSeminarHours.Name = "colSeminarHours";
             this.colSeminarHours.Visible = true;
-            this.colSeminarHours.VisibleIndex = 9;
+            this.colSeminarHours.VisibleIndex = 7;
             this.colSeminarHours.Width = 94;
             // 
             // colLaboratoryHours
             // 
+            this.colLaboratoryHours.Caption = "Laboratoriya";
             this.colLaboratoryHours.FieldName = "LaboratoryHours";
             this.colLaboratoryHours.MinWidth = 25;
             this.colLaboratoryHours.Name = "colLaboratoryHours";
             this.colLaboratoryHours.Visible = true;
-            this.colLaboratoryHours.VisibleIndex = 10;
+            this.colLaboratoryHours.VisibleIndex = 8;
             this.colLaboratoryHours.Width = 94;
             // 
             // colSemestr
             // 
+            this.colSemestr.Caption = "Semestr";
             this.colSemestr.FieldName = "Semestr";
             this.colSemestr.MinWidth = 25;
             this.colSemestr.Name = "colSemestr";
             this.colSemestr.Visible = true;
-            this.colSemestr.VisibleIndex = 11;
+            this.colSemestr.VisibleIndex = 9;
             this.colSemestr.Width = 94;
             // 
             // colWeeklyCourseLoad
             // 
+            this.colWeeklyCourseLoad.Caption = "Həftəlik tədris yükü";
             this.colWeeklyCourseLoad.FieldName = "WeeklyCourseLoad";
             this.colWeeklyCourseLoad.MinWidth = 25;
             this.colWeeklyCourseLoad.Name = "colWeeklyCourseLoad";
             this.colWeeklyCourseLoad.Visible = true;
-            this.colWeeklyCourseLoad.VisibleIndex = 12;
+            this.colWeeklyCourseLoad.VisibleIndex = 10;
             this.colWeeklyCourseLoad.Width = 94;
             // 
             // colID
@@ -271,7 +259,7 @@
             this.colID.MinWidth = 25;
             this.colID.Name = "colID";
             this.colID.Visible = true;
-            this.colID.VisibleIndex = 13;
+            this.colID.VisibleIndex = 11;
             this.colID.Width = 94;
             // 
             // barManager1
@@ -386,7 +374,6 @@
         private BindingSource educationPlansBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSpecialityCode;
         private DevExpress.XtraGrid.Columns.GridColumn colSubjects;
-        private DevExpress.XtraGrid.Columns.GridColumn colSubjectID;
         private DevExpress.XtraGrid.Columns.GridColumn colCreditCount;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalHours;
         private DevExpress.XtraGrid.Columns.GridColumn colOutsideAuditoriumHours;
@@ -397,6 +384,5 @@
         private DevExpress.XtraGrid.Columns.GridColumn colSemestr;
         private DevExpress.XtraGrid.Columns.GridColumn colWeeklyCourseLoad;
         private DevExpress.XtraGrid.Columns.GridColumn colID;
-        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

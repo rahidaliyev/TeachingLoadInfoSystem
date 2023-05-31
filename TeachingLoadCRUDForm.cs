@@ -59,8 +59,8 @@ namespace TeachingLoadInfoSystem
         public void InsertData()
         {
             teachingload.TeacherInfoID = _teacherInfo.ID;
-            teachingload.TeacherName = _teacherInfo.TeacherName;
-            teachingload.TeacherSurname = _teacherInfo.TeacherSurname;
+            //teachingload.TeacherName = _teacherInfo.TeacherName;
+            //teachingload.TeacherSurname = _teacherInfo.TeacherSurname;
             //teachingload.SemesterTime = dateTxt.Text;
         }
         public void LoadData()

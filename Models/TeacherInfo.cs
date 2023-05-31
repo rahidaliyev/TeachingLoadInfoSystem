@@ -19,9 +19,7 @@ namespace TeachingLoadInfoSystem.Models
             PreferedSubjects = new List<PreferedSubject>();
         }
         public string TeacherCode { get; set; }
-        public string TeacherName { get; set; }
-        public string TeacherSurname { get; set; }
-        public string TeacherFather { get; set; }
+        public string TeacherFullName { get; set; }
         public DateTime BirthDate { get; set; }
         public string? Email { get; set; }
         public string? PhoneNumber { get; set; }

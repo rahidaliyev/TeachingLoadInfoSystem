@@ -187,11 +187,11 @@ namespace TeachingLoadInfoSystem
                     var importRow = new TeacherInfo();
                     importRow.ID = 0;
                     if (ws.Cells[i, 1].Value != null)
-                        importRow.TeacherName = ws.Cells[i, 1].Value.ToString();
+                        //importRow.TeacherName = ws.Cells[i, 1].Value.ToString();
                     if (ws.Cells[i, 2].Value != null)
-                        importRow.TeacherSurname = ws.Cells[i, 2].Value.ToString();
+                        //importRow.TeacherSurname = ws.Cells[i, 2].Value.ToString();
                     if (ws.Cells[i, 3].Value != null)
-                        importRow.TeacherFather = ws.Cells[i, 3].Value.ToString();
+                        //importRow.TeacherFather = ws.Cells[i, 3].Value.ToString();
                     if (ws.Cells[i, 4].Value != null)
                         importRow.BirthDate = DateTime.Parse(ws.Cells[i, 4].Value.ToString());
                     else

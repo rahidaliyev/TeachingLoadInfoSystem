@@ -25,7 +25,7 @@ namespace TeachingLoadInfoSystem
         private void specaility2Btn_Click(object sender, EventArgs e)
         {
             gridControl1.Visible = true;
-            gridControl1.DataSource = _educationPlanServices.GetAllEducationPlans().Where(x => x.SpecialityCode == "xxxxx").ToList();
+            gridControl1.DataSource = _educationPlanServices.GetAllEducationPlans().Where(x => x.SpecialityCode == "050619").ToList();
         }
 
         private void speciality3Btn_Click(object sender, EventArgs e)
