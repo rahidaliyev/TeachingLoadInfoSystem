@@ -19,6 +19,7 @@ namespace TeachingLoadInfoSystem
         IEducationPlanServices _educationPlanServices { get; set; }
         IPreferedSubjectServices _preferedSubjects { get; set; }
         ITeacherLanguageServices _teacherLanguage { get; set; }
+        ICertificateServices _certificateServices { get; set; }
         private TeacherInfo _teacherInfo { get; set; } = new TeacherInfo();
         public TeachingLoadCRUDForm()
         {
@@ -29,6 +30,7 @@ namespace TeachingLoadInfoSystem
             _educationPlanServices = new EducationPlanServices(new Repository<EducationPlan>(db));
             _preferedSubjects = new PreferedSubjectServices(new Repository<PreferedSubject>(db));
             _teacherLanguage = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
+            _certificateServices = new CertificateServices(new Repository<Certificate>(db));
             this.teachingload = teachingload;
             teacherCmb.Properties.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
             LoadData();
@@ -121,15 +123,23 @@ namespace TeachingLoadInfoSystem
                 scientificName.Text = _teacherInfo.ScientificName.Name;
                 workHourTxt.Text = _teacherInfo.WorkTime.WorkTimeName;
                 positionTxt.Text = _teacherInfo.Profession.Name;
-                var list = _teacherLanguage.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
-                foreach (var teacherLanguage in list)
+                var listLanguage = _teacherLanguage.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                List<string> languageNames = new List<string>();
+                for (int i = 0; i < listLanguage.Count; i++)
                 {
-                    string joined = string.Join(",", list);
-                    joined = teacherLanguage.Language.LanguageName;
-                    languageTxt.Text = joined;
+                    languageNames.Add(listLanguage[i].Language.LanguageName);
                 }
+                string joinedLanguages = string.Join(", ", languageNames);
+                languageTxt.Text = joinedLanguages;
+                var listCertificates = _certificateServices.GetAllCertificates().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                List<string> certificates = new List<string>();
+                for (int i = 0; i < listCertificates.Count; i++)
+                {
+                    certificates.Add(listCertificates[i].CertificateName);
+                }
+                string joinedCertificates = string.Join(", ", certificates);
+                certificateBox.Text = joinedCertificates;
             }
-
         }
     }
 }
