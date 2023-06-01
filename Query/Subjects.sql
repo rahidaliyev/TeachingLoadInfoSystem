@@ -1,4 +1,3 @@
-
 INSERT INTO Subjects VALUES 
 ('00004',N'Azərbaycan dilində biznes və akademik ünsiyyət',N'Ümumi fənlər'),
 ('00005',N'Azərbaycan tarixi',N'Ümumi fənlər'),
