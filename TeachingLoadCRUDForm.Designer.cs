@@ -68,7 +68,6 @@
             this.emptySpaceItem3 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem6 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem7 = new DevExpress.XtraLayout.LayoutControlItem();
-            this.emptySpaceItem5 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.layoutControlItem8 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem11 = new DevExpress.XtraLayout.LayoutControlItem();
             this.layoutControlItem13 = new DevExpress.XtraLayout.LayoutControlItem();
@@ -79,6 +78,9 @@
             this.layoutControlItem14 = new DevExpress.XtraLayout.LayoutControlItem();
             this.emptySpaceItem2 = new DevExpress.XtraLayout.EmptySpaceItem();
             this.teachingLoadSubjectsBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.searchLookUpEdit1 = new DevExpress.XtraEditors.SearchLookUpEdit();
+            this.layoutControlItem5 = new DevExpress.XtraLayout.LayoutControlItem();
+            this.gridView2 = new DevExpress.XtraGrid.Views.Grid.GridView();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControl1)).BeginInit();
             this.layoutControl1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.teacherCmb.Properties)).BeginInit();
@@ -100,7 +102,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).BeginInit();
@@ -111,10 +112,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).BeginInit();
             this.SuspendLayout();
             // 
             // layoutControl1
             // 
+            this.layoutControl1.Controls.Add(this.searchLookUpEdit1);
             this.layoutControl1.Controls.Add(this.teacherCmb);
             this.layoutControl1.Controls.Add(this.lastYearLoadBtn);
             this.layoutControl1.Controls.Add(this.certificateBox);
@@ -160,7 +165,7 @@
             // 
             // lastYearLoadBtn
             // 
-            this.lastYearLoadBtn.Location = new System.Drawing.Point(767, 63);
+            this.lastYearLoadBtn.Location = new System.Drawing.Point(767, 64);
             this.lastYearLoadBtn.Name = "lastYearLoadBtn";
             this.lastYearLoadBtn.Size = new System.Drawing.Size(263, 27);
             this.lastYearLoadBtn.StyleController = this.layoutControl1;
@@ -170,7 +175,7 @@
             // 
             // certificateBox
             // 
-            this.certificateBox.Location = new System.Drawing.Point(124, 94);
+            this.certificateBox.Location = new System.Drawing.Point(124, 95);
             this.certificateBox.Name = "certificateBox";
             this.certificateBox.Size = new System.Drawing.Size(586, 103);
             this.certificateBox.TabIndex = 10;
@@ -186,7 +191,7 @@
             // 
             // workHourTxt
             // 
-            this.workHourTxt.Location = new System.Drawing.Point(879, 37);
+            this.workHourTxt.Location = new System.Drawing.Point(879, 38);
             this.workHourTxt.Name = "workHourTxt";
             this.workHourTxt.Size = new System.Drawing.Size(151, 22);
             this.workHourTxt.StyleController = this.layoutControl1;
@@ -229,7 +234,7 @@
             // 
             // addTeachingLoad
             // 
-            this.addTeachingLoad.Location = new System.Drawing.Point(1034, 63);
+            this.addTeachingLoad.Location = new System.Drawing.Point(1034, 64);
             this.addTeachingLoad.Name = "addTeachingLoad";
             this.addTeachingLoad.Size = new System.Drawing.Size(216, 27);
             this.addTeachingLoad.StyleController = this.layoutControl1;
@@ -240,10 +245,10 @@
             // gridControl1
             // 
             this.gridControl1.DataSource = this.educationPlansBindingSource;
-            this.gridControl1.Location = new System.Drawing.Point(12, 250);
+            this.gridControl1.Location = new System.Drawing.Point(12, 251);
             this.gridControl1.MainView = this.gridView1;
             this.gridControl1.Name = "gridControl1";
-            this.gridControl1.Size = new System.Drawing.Size(1238, 406);
+            this.gridControl1.Size = new System.Drawing.Size(1238, 405);
             this.gridControl1.TabIndex = 11;
             this.gridControl1.ViewCollection.AddRange(new DevExpress.XtraGrid.Views.Base.BaseView[] {
             this.gridView1});
@@ -421,7 +426,6 @@
             this.emptySpaceItem3,
             this.layoutControlItem6,
             this.layoutControlItem7,
-            this.emptySpaceItem5,
             this.layoutControlItem8,
             this.layoutControlItem11,
             this.layoutControlItem13,
@@ -430,7 +434,8 @@
             this.layoutControlItem10,
             this.layoutControlItem12,
             this.layoutControlItem14,
-            this.emptySpaceItem2});
+            this.emptySpaceItem2,
+            this.layoutControlItem5});
             this.Root.Name = "Root";
             this.Root.Size = new System.Drawing.Size(1262, 699);
             this.Root.TextVisible = false;
@@ -464,16 +469,16 @@
             // layoutControlItem2
             // 
             this.layoutControlItem2.Control = this.gridControl1;
-            this.layoutControlItem2.Location = new System.Drawing.Point(0, 238);
+            this.layoutControlItem2.Location = new System.Drawing.Point(0, 239);
             this.layoutControlItem2.Name = "layoutControlItem2";
-            this.layoutControlItem2.Size = new System.Drawing.Size(1242, 410);
+            this.layoutControlItem2.Size = new System.Drawing.Size(1242, 409);
             this.layoutControlItem2.TextSize = new System.Drawing.Size(0, 0);
             this.layoutControlItem2.TextVisible = false;
             // 
             // layoutControlItem1
             // 
             this.layoutControlItem1.Control = this.addTeachingLoad;
-            this.layoutControlItem1.Location = new System.Drawing.Point(1022, 51);
+            this.layoutControlItem1.Location = new System.Drawing.Point(1022, 52);
             this.layoutControlItem1.Name = "layoutControlItem1";
             this.layoutControlItem1.Size = new System.Drawing.Size(220, 31);
             this.layoutControlItem1.TextSize = new System.Drawing.Size(0, 0);
@@ -484,7 +489,7 @@
             this.emptySpaceItem3.AllowHotTrack = false;
             this.emptySpaceItem3.Location = new System.Drawing.Point(1022, 0);
             this.emptySpaceItem3.Name = "emptySpaceItem3";
-            this.emptySpaceItem3.Size = new System.Drawing.Size(220, 51);
+            this.emptySpaceItem3.Size = new System.Drawing.Size(220, 52);
             this.emptySpaceItem3.TextSize = new System.Drawing.Size(0, 0);
             // 
             // layoutControlItem6
@@ -505,20 +510,12 @@
             this.layoutControlItem7.Text = "Vəzifəsi";
             this.layoutControlItem7.TextSize = new System.Drawing.Size(100, 16);
             // 
-            // emptySpaceItem5
-            // 
-            this.emptySpaceItem5.AllowHotTrack = false;
-            this.emptySpaceItem5.Location = new System.Drawing.Point(755, 0);
-            this.emptySpaceItem5.Name = "emptySpaceItem5";
-            this.emptySpaceItem5.Size = new System.Drawing.Size(267, 25);
-            this.emptySpaceItem5.TextSize = new System.Drawing.Size(0, 0);
-            // 
             // layoutControlItem8
             // 
             this.layoutControlItem8.Control = this.scientificName;
             this.layoutControlItem8.Location = new System.Drawing.Point(0, 56);
             this.layoutControlItem8.Name = "layoutControlItem8";
-            this.layoutControlItem8.Size = new System.Drawing.Size(301, 26);
+            this.layoutControlItem8.Size = new System.Drawing.Size(301, 27);
             this.layoutControlItem8.Text = "Elmi adı";
             this.layoutControlItem8.TextSize = new System.Drawing.Size(100, 16);
             // 
@@ -527,14 +524,14 @@
             this.layoutControlItem11.Control = this.scientificDegreeTxt;
             this.layoutControlItem11.Location = new System.Drawing.Point(301, 52);
             this.layoutControlItem11.Name = "layoutControlItem11";
-            this.layoutControlItem11.Size = new System.Drawing.Size(454, 30);
+            this.layoutControlItem11.Size = new System.Drawing.Size(454, 31);
             this.layoutControlItem11.Text = "Elmi dərəcəsi";
             this.layoutControlItem11.TextSize = new System.Drawing.Size(100, 16);
             // 
             // layoutControlItem13
             // 
             this.layoutControlItem13.Control = this.certificateBox;
-            this.layoutControlItem13.Location = new System.Drawing.Point(0, 82);
+            this.layoutControlItem13.Location = new System.Drawing.Point(0, 83);
             this.layoutControlItem13.Name = "layoutControlItem13";
             this.layoutControlItem13.Size = new System.Drawing.Size(702, 107);
             this.layoutControlItem13.Text = "Sertifikatlar";
@@ -543,7 +540,7 @@
             // emptySpaceItem7
             // 
             this.emptySpaceItem7.AllowHotTrack = false;
-            this.emptySpaceItem7.Location = new System.Drawing.Point(702, 82);
+            this.emptySpaceItem7.Location = new System.Drawing.Point(702, 83);
             this.emptySpaceItem7.Name = "emptySpaceItem7";
             this.emptySpaceItem7.Size = new System.Drawing.Size(540, 156);
             this.emptySpaceItem7.TextSize = new System.Drawing.Size(0, 0);
@@ -560,7 +557,7 @@
             // layoutControlItem10
             // 
             this.layoutControlItem10.Control = this.workHourTxt;
-            this.layoutControlItem10.Location = new System.Drawing.Point(755, 25);
+            this.layoutControlItem10.Location = new System.Drawing.Point(755, 26);
             this.layoutControlItem10.Name = "layoutControlItem10";
             this.layoutControlItem10.Size = new System.Drawing.Size(267, 26);
             this.layoutControlItem10.Text = "Ştatı";
@@ -570,7 +567,7 @@
             // layoutControlItem12
             // 
             this.layoutControlItem12.Control = this.lastYearLoadBtn;
-            this.layoutControlItem12.Location = new System.Drawing.Point(755, 51);
+            this.layoutControlItem12.Location = new System.Drawing.Point(755, 52);
             this.layoutControlItem12.Name = "layoutControlItem12";
             this.layoutControlItem12.Size = new System.Drawing.Size(267, 31);
             this.layoutControlItem12.TextSize = new System.Drawing.Size(0, 0);
@@ -588,7 +585,7 @@
             // emptySpaceItem2
             // 
             this.emptySpaceItem2.AllowHotTrack = false;
-            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 189);
+            this.emptySpaceItem2.Location = new System.Drawing.Point(0, 190);
             this.emptySpaceItem2.Name = "emptySpaceItem2";
             this.emptySpaceItem2.Size = new System.Drawing.Size(702, 49);
             this.emptySpaceItem2.TextSize = new System.Drawing.Size(0, 0);
@@ -596,6 +593,34 @@
             // teachingLoadSubjectsBindingSource
             // 
             this.teachingLoadSubjectsBindingSource.DataSource = typeof(TeachingLoadInfoSystem.Models.TeachingLoadSubject);
+            // 
+            // searchLookUpEdit1
+            // 
+            this.searchLookUpEdit1.Location = new System.Drawing.Point(879, 12);
+            this.searchLookUpEdit1.Name = "searchLookUpEdit1";
+            this.searchLookUpEdit1.Properties.Buttons.AddRange(new DevExpress.XtraEditors.Controls.EditorButton[] {
+            new DevExpress.XtraEditors.Controls.EditorButton(DevExpress.XtraEditors.Controls.ButtonPredefines.Combo)});
+            this.searchLookUpEdit1.Properties.NullText = "";
+            this.searchLookUpEdit1.Properties.PopupView = this.gridView2;
+            this.searchLookUpEdit1.Size = new System.Drawing.Size(151, 22);
+            this.searchLookUpEdit1.StyleController = this.layoutControl1;
+            this.searchLookUpEdit1.TabIndex = 14;
+            // 
+            // layoutControlItem5
+            // 
+            this.layoutControlItem5.Control = this.searchLookUpEdit1;
+            this.layoutControlItem5.Location = new System.Drawing.Point(755, 0);
+            this.layoutControlItem5.Name = "layoutControlItem5";
+            this.layoutControlItem5.Size = new System.Drawing.Size(267, 26);
+            this.layoutControlItem5.Text = "Rating";
+            this.layoutControlItem5.TextSize = new System.Drawing.Size(100, 16);
+            // 
+            // gridView2
+            // 
+            this.gridView2.FocusRectStyle = DevExpress.XtraGrid.Views.Grid.DrawFocusRectStyle.RowFocus;
+            this.gridView2.Name = "gridView2";
+            this.gridView2.OptionsSelection.EnableAppearanceFocusedCell = false;
+            this.gridView2.OptionsView.ShowGroupPanel = false;
             // 
             // TeachingLoadCRUDForm
             // 
@@ -627,7 +652,6 @@
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem8)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem13)).EndInit();
@@ -638,6 +662,9 @@
             ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem14)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.emptySpaceItem2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.teachingLoadSubjectsBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.searchLookUpEdit1.Properties)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.layoutControlItem5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.gridView2)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -676,7 +703,6 @@
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem6;
         private DevExpress.XtraEditors.TextEdit positionTxt;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem7;
-        private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem5;
         private DevExpress.XtraEditors.TextEdit workHourTxt;
         private DevExpress.XtraEditors.TextEdit languageTxt;
         private DevExpress.XtraEditors.TextEdit scientificName;
@@ -694,6 +720,9 @@
         private DevExpress.XtraGrid.Views.Grid.GridView searchLookUpEdit1View;
         private DevExpress.XtraLayout.LayoutControlItem layoutControlItem14;
         private DevExpress.XtraLayout.EmptySpaceItem emptySpaceItem2;
+        private DevExpress.XtraEditors.SearchLookUpEdit searchLookUpEdit1;
+        private DevExpress.XtraGrid.Views.Grid.GridView gridView2;
+        private DevExpress.XtraLayout.LayoutControlItem layoutControlItem5;
     }
 }
 
