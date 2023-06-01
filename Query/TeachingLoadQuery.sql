@@ -42,7 +42,6 @@ insert into Languages
 values
 ('AZE','Azərbaycan'),
 ('ENG','İngilis'),
-('TR','Türk'),
 ('RUS','Rus')
 
 insert into TLIncludeds 

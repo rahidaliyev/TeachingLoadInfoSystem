@@ -131,6 +131,7 @@ namespace TeachingLoadInfoSystem
                 }
                 string joinedLanguages = string.Join(", ", languageNames);
                 languageTxt.Text = joinedLanguages;
+
                 var listCertificates = _certificateServices.GetAllCertificates().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
                 List<string> certificates = new List<string>();
                 for (int i = 0; i < listCertificates.Count; i++)
