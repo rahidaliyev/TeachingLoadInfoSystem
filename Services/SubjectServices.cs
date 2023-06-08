@@ -16,8 +16,8 @@ namespace TeachingLoadInfoSystem.Services
         {
             var selectedTeacher = _repository
                 .GetAll
-                .AsNoTracking()
                 .FirstOrDefault(x => x.ID == id);
+            
             return selectedTeacher;
         }
         public void InsertSubject(Subject subject)
@@ -36,7 +36,6 @@ namespace TeachingLoadInfoSystem.Services
         public IEnumerable<Subject> GetAllSubjects()
         {
             return _repository.GetAll
-                .AsNoTracking()
                 ;
         }
     }

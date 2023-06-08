@@ -18,8 +18,7 @@ namespace TeachingLoadInfoSystem.Services
             var selectedTeacher = _repository
                 .GetAll
                 .Include(x => x.TeachingLoadSubjects)
-                .Include(x => x.TeachingLoadSubjects).ThenInclude(y => y.Subjects)
-                .AsNoTracking()
+                .Include(x=>x.TeachingLoadSubjects).ThenInclude(x=>x.Subjects)
                 .FirstOrDefault(x => x.ID == id)
                 ;
             return selectedTeacher;
@@ -42,8 +41,7 @@ namespace TeachingLoadInfoSystem.Services
             return _repository
                 .GetAll
                 .Include(x => x.TeachingLoadSubjects)
-                .Include(x => x.TeachingLoadSubjects).ThenInclude(y => y.Subjects)
-                .AsNoTracking()
+                .Include(x => x.TeachingLoadSubjects).ThenInclude(x => x.Subjects)
                 ;
         }
     }

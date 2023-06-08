@@ -32,5 +32,7 @@ namespace TeachingLoadInfoSystem.AppDbContext
         public DbSet<TeachingLoad> TeachingLoads { get; set; }
         public DbSet<TeachingLoadSubject> TeachingLoadSubjects { get; set; }
         public DbSet<EducationPlan> EducationPlans { get; set; }
+        public DbSet<Group> Groups { get; set; }
+        public DbSet<EducationPlanPerGroup> EducationPlanPerGroups { get; set; }
     }
 }

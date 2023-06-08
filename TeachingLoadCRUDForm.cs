@@ -4,23 +4,39 @@ using TeachingLoadInfoSystem.Repositories;
 using TeachingLoadInfoSystem.Services;
 using TeachingLoadInfoSystem.Services.Intefaces;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore;
 
 namespace TeachingLoadInfoSystem
 {
     public partial class TeachingLoadCRUDForm : DevExpress.XtraEditors.XtraForm
     {
+        public List<EducationPlanPerGroup> educationPlanPerGroupView = new List<EducationPlanPerGroup>();
+        public static List<int> EducationPlanIDs = new List<int>();
         TeachingLoad teachingload = new TeachingLoad();
         TeachingLoadSubject teachingLoadSubject = new TeachingLoadSubject();
         TLDbContext db = new TLDbContext();
+        EducationPlanPerGroup EducationPlanPerGroup = new EducationPlanPerGroup();
         ITeachingLoadServices _teachingLoadServices { get; set; }
         ITeacherInfoServices _teacherInfoServices { get; set; }
         ITeachingLoadSubjectServices _teachingLoadSubjectServices { get; set; }
         IEducationPlanServices _educationPlanServices { get; set; }
         IPreferedSubjectServices _preferedSubjects { get; set; }
-        ITeacherLanguageServices _teacherLanguage { get; set; }
+        ITeacherLanguageServices _teacherLanguageServices { get; set; }
         ICertificateServices _certificateServices { get; set; }
+        IGroupServices _groupServices { get; set; }
+        IEducationPlanPerGroupServices _educationPlanPerGroupServices { get; set; }
+        ITeachingLoadSubjectServices _teachingLoadSubjects { get; set; }
+        ISubjectServices _subjectServices { get; set; }
+
         private TeacherInfo _teacherInfo { get; set; } = new TeacherInfo();
+        private Subject _subject { get; set; } = new Subject();
+        private TeacherLanguage _teacherLanguage { get; set; } = new TeacherLanguage();
+        public void RefreshGrid()
+        {
+            var list = SelectRows();
+            gridControl1.DataSource = list;
+            if (list.Count != 0)
+                gridView1.SelectRows(0, list.Count - 1);
+        }
         public TeachingLoadCRUDForm()
         {
             InitializeComponent();
@@ -29,50 +45,90 @@ namespace TeachingLoadInfoSystem
             _teachingLoadSubjectServices = new TeachingLoadSubjectServices(new Repository<TeachingLoadSubject>(db));
             _educationPlanServices = new EducationPlanServices(new Repository<EducationPlan>(db));
             _preferedSubjects = new PreferedSubjectServices(new Repository<PreferedSubject>(db));
-            _teacherLanguage = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
+            _teacherLanguageServices = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
             _certificateServices = new CertificateServices(new Repository<Certificate>(db));
+            _educationPlanPerGroupServices = new EducationPlanPerGroupServices(new Repository<EducationPlanPerGroup>(db));
+            _groupServices = new GroupServices(new Repository<Group>(db));
+            _teachingLoadSubjects = new TeachingLoadSubjectServices(new Repository<TeachingLoadSubject>(db));
+            _subjectServices = new SubjectServices(new Repository<Subject>(db));
             this.teachingload = teachingload;
             teacherCmb.Properties.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
+            subjectCmb.Properties.DataSource = _subjectServices.GetAllSubjects().ToList();
             LoadData();
         }
-        public void AddSubjects()
-        {
-            var subjects = _preferedSubjects.GetAllPreferedSubjects().ToList();
-            var educationPlans = _educationPlanServices.GetAllEducationPlans().ToList();
-            for (int i = 0; i < _teacherInfo.WorkTime.WorkTimeFactor * 550; i++)
-            {
-                var list = educationPlans.Join(subjects, e => e.SubjectID, p => p.SubjectID, (e, p) => new EducationPlan
-                {
-                    SubjectID = p.SubjectID,
-                    SeminarHours = e.SeminarHours,
-                    CreditCount = e.CreditCount,
-                    TotalHours = e.TotalHours,
-                    OutsideAuditoriumHours = e.OutsideAuditoriumHours,
-                    AuditoriumHours = e.AuditoriumHours,
-                    LectureHours = e.LectureHours,
-                    LaboratoryHours = e.LaboratoryHours,
-                    Semestr = e.Semestr,
-                    WeeklyCourseLoad = e.WeeklyCourseLoad,
-                    SpecialityCode = e.SpecialityCode,
-                    Subjects = e.Subjects,
-                }).ToList();
-                gridControl1.DataSource = list;
-                //teachingload.TeachingLoadSubjects.Add(teachingLoadSubject);
-            }
-        }
-        public void InsertData()
+
+        public bool InsertData()
         {
             teachingload.TeacherInfoID = _teacherInfo.ID;
-            //teachingload.TeacherName = _teacherInfo.TeacherName;
-            //teachingload.TeacherSurname = _teacherInfo.TeacherSurname;
-            //teachingload.SemesterTime = dateTxt.Text;
+            teachingload.TeacherFullName = _teacherInfo.TeacherFullName;
+            teachingload.SemesterTime = teachingLoadYearCmb.Text;
+            var list = SelectRows();
+            if (_teacherInfo == null)
+                return false;
+            if (_teacherInfo.WorkTime == null)
+                return false;
+            if (list.Sum(x => x.TotalHours) > _teacherInfo.WorkTime.WorkTimeFactor * 650)
+            {
+                MessageBox.Show($"Seçilmiş müəllimin {_teacherInfo.WorkTime.WorkTimeFactor * 650} saatdan artıq dərs yükü ola bilməz!");
+                return false;
+            }
+            //var certificateList = _teacherInfo.Certificates;
+            //if (_teacherInfo != null)
+            //{
+            //    if (_teacherInfo.ProfessionID == 1)
+            //    {
+            //        return true;
+            //    }
+            //    bool hasCertificate = false; 
+            //    foreach (var item in certificateList)
+            //    {
+            //            if (item.SubjectID == _subject.ID)
+            //            {
+            //                hasCertificate = true;
+            //                break;
+            //            }
+            //    }
+            //    if (!hasCertificate)
+            //        MessageBox.Show($"{_teacherInfo.TeacherFullName} does not have a certificate for the subject {_subject.SubjectName}!");
+            //    return hasCertificate; 
+            //}
+            //else
+            //{
+            //    MessageBox.Show("Teacher not found!");
+            //    return false;
+            //}
+            for (int i = 0; i < list.Count; i++)
+            {
+                var item = new TeachingLoadSubject();
+                item.ID = 0;
+                item.SpecialityCode = list[i].SpecialityCode;
+                item.Subjects = list[i].Subject;
+                item.SubjectID = list[i].SubjectID;
+                item.CreditCount = list[i].CreditCount;
+                item.TotalHours = list[i].TotalHours;
+                item.OutsideAuditoriumHours = list[i].OutsideAuditoriumHours;
+                item.AuditoriumHours = list[i].AuditoriumHours;
+                item.LectureHours = list[i].LectureHours;
+                item.SeminarHours = list[i].SeminarHours;
+                item.LaboratoryHours = list[i].LaboratoryHours;
+                item.Semestr = list[i].Semestr;
+                item.WeeklyCourseLoad = list[i].WeeklyCourseLoad;
+                item.GroupName = list[i].GroupName;
+                item.GroupCourse = list[i].GroupCourse;
+                item.LanguageID = list[i].LanguageID;
+                teachingload.TeachingLoadSubjects.Add(item);
+            }
+            return true;
         }
         public void LoadData()
         {
+            RefreshGrid();
         }
         private void SaveBtn_Click(object sender, EventArgs e)
         {
-            InsertData();
+            var answer = InsertData();
+            if (answer == false)
+                return;
             if (teachingload.ID != 0)
             {
                 try
@@ -89,9 +145,9 @@ namespace TeachingLoadInfoSystem
             {
                 try
                 {
-                    this._teachingLoadServices.InsertTeachingLoad(teachingload);
 
-                    MessageBox.Show("Yeni məlumat əlavə edildi.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this._teachingLoadServices.InsertTeachingLoad(teachingload);
+                    MessageBox.Show($"{_teacherInfo.TeacherFullName}-in {_teacherInfo.WorkTime.WorkTimeName} əlavə edildi.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 catch (Exception)
                 {
@@ -107,13 +163,16 @@ namespace TeachingLoadInfoSystem
 
         private void addTeachingLoad_Click(object sender, EventArgs e)
         {
-            AddSubjects();
+            RefreshGrid();
         }
         private void lastYearLoadBtn_Click(object sender, EventArgs e)
         {
-            var frm = new LastYearTeachinLoadGridForm();
-            frm.ShowDialog();
+            var listLanguage = _teacherLanguageServices.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).OrderByDescending(x => x.PreferenceLevel).ToList();
+            var listOfSubjects = _teachingLoadSubjects.GetAllTeachingLoadSubjects().ToList(); //.Where(x => x.Subjects.DepartmentID == 1) kommentden cixar after model changed
+            var frm = new EducationPlanGridPerTeacher(listOfSubjects);
+            frm.Show();
         }
+
         private void teacherCmb_EditValueChanged_1(object sender, EventArgs e)
         {
             _teacherInfo = teacherCmb.GetSelectedDataRow() as TeacherInfo;
@@ -123,15 +182,7 @@ namespace TeachingLoadInfoSystem
                 scientificName.Text = _teacherInfo.ScientificName.Name;
                 workHourTxt.Text = _teacherInfo.WorkTime.WorkTimeName;
                 positionTxt.Text = _teacherInfo.Profession.Name;
-                var listLanguage = _teacherLanguage.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
-                List<string> languageNames = new List<string>();
-                for (int i = 0; i < listLanguage.Count; i++)
-                {
-                    languageNames.Add(listLanguage[i].Language.LanguageName);
-                }
-                string joinedLanguages = string.Join(", ", languageNames);
-                languageTxt.Text = joinedLanguages;
-
+                ratingTxt.Text = _teacherInfo.Rating.ToString();
                 var listCertificates = _certificateServices.GetAllCertificates().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
                 List<string> certificates = new List<string>();
                 for (int i = 0; i < listCertificates.Count; i++)
@@ -140,7 +191,61 @@ namespace TeachingLoadInfoSystem
                 }
                 string joinedCertificates = string.Join(", ", certificates);
                 certificateBox.Text = joinedCertificates;
+                languageCmb.Properties.DataSource = _teacherLanguageServices.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == _teacherInfo.ID).ToList();
+                if (_teacherInfo.ProfessionID == 1)
+                    certificateBox.Enabled = false;
+                else
+                    certificateBox.Enabled = true;
             }
+            gridControl1.DataSource = new List<EducationPlanPerGroup>();
+            subjectCmb.EditValue = null;
+        }
+
+        private void teacherCmb_QueryPopUp(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            teacherCmb.Properties.View.Columns[0].Visible = false;
+            teacherCmb.Properties.View.Columns[18].Visible = false;
+            for (int i = 2; i <= 16; i++)
+                teacherCmb.Properties.View.Columns[i].Visible = false;
+        }
+
+        private void languageCmb_EditValueChanged(object sender, EventArgs e)
+        {
+            GetEducationPlans();
+        }
+
+        private void subjectCmb_EditValueChanged(object sender, EventArgs e)
+        {
+            GetEducationPlans();
+        }
+
+        private void GetEducationPlans()
+        {
+            var previouslySelected = SelectRows();
+            _subject = subjectCmb.GetSelectedDataRow() as Subject;
+            if (_subject == null)
+                subjectCmb.EditValue = _subjectServices.GetSubjectByID(EducationPlanPerGroup.SubjectID);
+            _teacherLanguage = languageCmb.GetSelectedDataRow() as TeacherLanguage;
+            var list = new List<EducationPlanPerGroup>();
+            foreach (var selected in previouslySelected)
+                list.Add(selected);
+            if (_subject != null && _teacherLanguage != null)
+                list.AddRange(_educationPlanPerGroupServices.GetAllEducationPlanPerGroups().Where(x => x.Subject.ID == _subject.ID && x.LanguageID == _teacherLanguage.LanguageID).ToList());
+            gridControl1.DataSource = list;
+            if (previouslySelected.Count != 0)
+                gridView1.SelectRows(0, previouslySelected.Count - 1);
+        }
+        private List<EducationPlanPerGroup> SelectRows()
+        {
+            var arr = gridView1.GetSelectedRows();
+            var selected = new List<EducationPlanPerGroup>();
+            for (int i = 0; i < arr.Length; i++)
+            {
+                var educationPlanPerGroupID = Convert.ToInt32(gridView1.GetRowCellValue(arr[i], "ID"));
+                var educationPlanPerGroup = _educationPlanPerGroupServices.GetEducationPlanPerGroupByID(educationPlanPerGroupID);
+                selected.Add(educationPlanPerGroup);
+            }
+            return selected;
         }
     }
 }

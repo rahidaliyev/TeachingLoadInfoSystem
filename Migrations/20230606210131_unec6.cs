@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace TeachingLoadInfoSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class unec : Migration
+    public partial class unec6 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -133,9 +133,7 @@ namespace TeachingLoadInfoSystem.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TeacherInfoID = table.Column<int>(type: "int", nullable: false),
-                    TeacherName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TeacherSurname = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    TeacherFather = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    TeacherFullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     SemesterTime = table.Column<string>(type: "nvarchar(max)", nullable: false)
                 },
                 constraints: table =>
@@ -243,6 +241,60 @@ namespace TeachingLoadInfoSystem.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Groups",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SpecialityCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupCourse = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LanguageID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Groups", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_Groups_Languages_LanguageID",
+                        column: x => x.LanguageID,
+                        principalTable: "Languages",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "EducationPlanPerGroups",
+                columns: table => new
+                {
+                    ID = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SpecialityCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SubjectID = table.Column<int>(type: "int", nullable: false),
+                    CreditCount = table.Column<int>(type: "int", nullable: false),
+                    TotalHours = table.Column<int>(type: "int", nullable: false),
+                    OutsideAuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    AuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    LectureHours = table.Column<int>(type: "int", nullable: false),
+                    SeminarHours = table.Column<int>(type: "int", nullable: false),
+                    LaboratoryHours = table.Column<int>(type: "int", nullable: false),
+                    Semestr = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WeeklyCourseLoad = table.Column<int>(type: "int", nullable: false),
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupCourse = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LanguageID = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_EducationPlanPerGroups", x => x.ID);
+                    table.ForeignKey(
+                        name: "FK_EducationPlanPerGroups_Subjects_SubjectID",
+                        column: x => x.SubjectID,
+                        principalTable: "Subjects",
+                        principalColumn: "ID",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "EducationPlans",
                 columns: table => new
                 {
@@ -278,26 +330,20 @@ namespace TeachingLoadInfoSystem.Migrations
                     ID = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     TeachingLoadID = table.Column<int>(type: "int", nullable: false),
+                    SpecialityCode = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     SubjectID = table.Column<int>(type: "int", nullable: false),
-                    ExerciseFirstSem = table.Column<int>(type: "int", nullable: false),
-                    LectureFirstSem = table.Column<int>(type: "int", nullable: false),
-                    LaboratoryFirstSem = table.Column<int>(type: "int", nullable: false),
-                    RecommendationFirstSem = table.Column<int>(type: "int", nullable: false),
-                    ExamFirstSem = table.Column<int>(type: "int", nullable: false),
-                    FirstSemSum = table.Column<int>(type: "int", nullable: false),
-                    ExerciseSecondSem = table.Column<int>(type: "int", nullable: false),
-                    LectureSecondSem = table.Column<int>(type: "int", nullable: false),
-                    LaboratorySecondSem = table.Column<int>(type: "int", nullable: false),
-                    RecommendationSecondSem = table.Column<int>(type: "int", nullable: false),
-                    ExamSecondSem = table.Column<int>(type: "int", nullable: false),
-                    PrLeader = table.Column<int>(type: "int", nullable: false),
-                    Practise = table.Column<int>(type: "int", nullable: false),
-                    EPedTETedTTKITA = table.Column<int>(type: "int", nullable: false),
-                    Thesis = table.Column<int>(type: "int", nullable: false),
-                    MasterThesis = table.Column<int>(type: "int", nullable: false),
-                    Doctorate = table.Column<int>(type: "int", nullable: false),
-                    SecondSemSum = table.Column<int>(type: "int", nullable: false),
-                    FinalResult = table.Column<int>(type: "int", nullable: false)
+                    CreditCount = table.Column<int>(type: "int", nullable: false),
+                    TotalHours = table.Column<int>(type: "int", nullable: false),
+                    OutsideAuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    AuditoriumHours = table.Column<int>(type: "int", nullable: false),
+                    LectureHours = table.Column<int>(type: "int", nullable: false),
+                    SeminarHours = table.Column<int>(type: "int", nullable: false),
+                    LaboratoryHours = table.Column<int>(type: "int", nullable: false),
+                    Semestr = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WeeklyCourseLoad = table.Column<int>(type: "int", nullable: false),
+                    GroupName = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    GroupCourse = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    LanguageID = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -332,7 +378,8 @@ namespace TeachingLoadInfoSystem.Migrations
                     ScientificDegreeID = table.Column<int>(type: "int", nullable: false),
                     DepartmentID = table.Column<int>(type: "int", nullable: false),
                     ProfessionID = table.Column<int>(type: "int", nullable: false),
-                    WorkTimeID = table.Column<int>(type: "int", nullable: false)
+                    WorkTimeID = table.Column<int>(type: "int", nullable: false),
+                    Rating = table.Column<double>(type: "float", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -516,9 +563,19 @@ namespace TeachingLoadInfoSystem.Migrations
                 column: "TeacherInfoID");
 
             migrationBuilder.CreateIndex(
+                name: "IX_EducationPlanPerGroups_SubjectID",
+                table: "EducationPlanPerGroups",
+                column: "SubjectID");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_EducationPlans_SubjectID",
                 table: "EducationPlans",
                 column: "SubjectID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Groups_LanguageID",
+                table: "Groups",
+                column: "LanguageID");
 
             migrationBuilder.CreateIndex(
                 name: "IX_PreferedSubjects_SubjectID",
@@ -601,7 +658,13 @@ namespace TeachingLoadInfoSystem.Migrations
                 name: "Certificates");
 
             migrationBuilder.DropTable(
+                name: "EducationPlanPerGroups");
+
+            migrationBuilder.DropTable(
                 name: "EducationPlans");
+
+            migrationBuilder.DropTable(
+                name: "Groups");
 
             migrationBuilder.DropTable(
                 name: "LayoutInfos");

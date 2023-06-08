@@ -69,6 +69,7 @@
             this.barButtonItem29 = new DevExpress.XtraBars.BarButtonItem();
             this.usernameTxt = new DevExpress.XtraBars.BarStaticItem();
             this.exitBtn = new DevExpress.XtraBars.BarButtonItem();
+            this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
             this.ribbonPageCategory1 = new DevExpress.XtraBars.Ribbon.RibbonPageCategory();
             this.ribbonPage1 = new DevExpress.XtraBars.Ribbon.RibbonPage();
             this.ribbonPageGroup1 = new DevExpress.XtraBars.Ribbon.RibbonPageGroup();
@@ -150,10 +151,11 @@
             this.barButtonItem28,
             this.barButtonItem29,
             this.usernameTxt,
-            this.exitBtn});
+            this.exitBtn,
+            this.barButtonItem30});
             this.ribbon.Location = new System.Drawing.Point(0, 0);
             this.ribbon.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            this.ribbon.MaxItemId = 83;
+            this.ribbon.MaxItemId = 84;
             this.ribbon.Name = "ribbon";
             this.ribbon.OptionsCustomizationForm.FormIcon = ((System.Drawing.Icon)(resources.GetObject("resource.FormIcon")));
             this.ribbon.PageCategories.AddRange(new DevExpress.XtraBars.Ribbon.RibbonPageCategory[] {
@@ -383,6 +385,13 @@
             this.exitBtn.Id = 76;
             this.exitBtn.Name = "exitBtn";
             // 
+            // barButtonItem30
+            // 
+            this.barButtonItem30.Caption = "barButtonItem30";
+            this.barButtonItem30.Id = 83;
+            this.barButtonItem30.Name = "barButtonItem30";
+            this.barButtonItem30.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barButtonItem30_ItemClick);
+            // 
             // ribbonPageCategory1
             // 
             this.ribbonPageCategory1.Name = "ribbonPageCategory1";
@@ -399,6 +408,7 @@
             // 
             // ribbonPageGroup1
             // 
+            this.ribbonPageGroup1.ItemLinks.Add(this.barButtonItem30);
             this.ribbonPageGroup1.Name = "ribbonPageGroup1";
             this.ribbonPageGroup1.Text = "ribbonPageGroup1";
             // 
@@ -660,5 +670,6 @@
         private DevExpress.XtraBars.Navigation.AccordionControlElement excludedBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement teachingLoadBtn;
         private DevExpress.XtraBars.Navigation.AccordionControlElement specialityBtn;
+        private DevExpress.XtraBars.BarButtonItem barButtonItem30;
     }
 }

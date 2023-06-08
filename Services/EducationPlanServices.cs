@@ -16,7 +16,6 @@ namespace TeachingLoadInfoSystem.Services
         public EducationPlan GetEducationPlanByID(int id)
         {
             var selectedTeacher = _repository.GetAll
-                  //.Include(x => x.SubjectID)
                 .Include(x => x.Subjects)
                 .FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
@@ -37,9 +36,7 @@ namespace TeachingLoadInfoSystem.Services
         public IEnumerable<EducationPlan> GetAllEducationPlans()
         {
             return _repository
-
                 .GetAll
-                //.Include(x => x.SubjectID)
                 .Include(x => x.Subjects)
                 ;
         }

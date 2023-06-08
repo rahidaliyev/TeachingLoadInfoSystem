@@ -63,6 +63,7 @@ namespace TeachingLoadInfoSystem
             this.barDockControlBottom = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlLeft = new DevExpress.XtraBars.BarDockControl();
             this.barDockControlRight = new DevExpress.XtraBars.BarDockControl();
+            this.gridColumn1 = new DevExpress.XtraGrid.Columns.GridColumn();
             ((System.ComponentModel.ISupportInitialize)(this.gridControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.teacherInfosBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.gridView)).BeginInit();
@@ -89,6 +90,7 @@ namespace TeachingLoadInfoSystem
             // gridView
             // 
             this.gridView.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
+            this.gridColumn1,
             this.colTeacherName,
             this.colBirthDate,
             this.colEmail,
@@ -110,7 +112,7 @@ namespace TeachingLoadInfoSystem
             this.colTeacherName.MinWidth = 25;
             this.colTeacherName.Name = "colTeacherName";
             this.colTeacherName.Visible = true;
-            this.colTeacherName.VisibleIndex = 0;
+            this.colTeacherName.VisibleIndex = 1;
             this.colTeacherName.Width = 94;
             // 
             // colBirthDate
@@ -124,7 +126,7 @@ namespace TeachingLoadInfoSystem
             this.colBirthDate.MinWidth = 25;
             this.colBirthDate.Name = "colBirthDate";
             this.colBirthDate.Visible = true;
-            this.colBirthDate.VisibleIndex = 1;
+            this.colBirthDate.VisibleIndex = 2;
             this.colBirthDate.Width = 94;
             // 
             // colEmail
@@ -134,7 +136,7 @@ namespace TeachingLoadInfoSystem
             this.colEmail.MinWidth = 25;
             this.colEmail.Name = "colEmail";
             this.colEmail.Visible = true;
-            this.colEmail.VisibleIndex = 2;
+            this.colEmail.VisibleIndex = 3;
             this.colEmail.Width = 94;
             // 
             // colPhoneNumber
@@ -144,7 +146,7 @@ namespace TeachingLoadInfoSystem
             this.colPhoneNumber.MinWidth = 25;
             this.colPhoneNumber.Name = "colPhoneNumber";
             this.colPhoneNumber.Visible = true;
-            this.colPhoneNumber.VisibleIndex = 3;
+            this.colPhoneNumber.VisibleIndex = 4;
             this.colPhoneNumber.Width = 94;
             // 
             // colGender
@@ -154,7 +156,7 @@ namespace TeachingLoadInfoSystem
             this.colGender.MinWidth = 25;
             this.colGender.Name = "colGender";
             this.colGender.Visible = true;
-            this.colGender.VisibleIndex = 4;
+            this.colGender.VisibleIndex = 5;
             this.colGender.Width = 94;
             // 
             // colScientificName
@@ -164,7 +166,7 @@ namespace TeachingLoadInfoSystem
             this.colScientificName.MinWidth = 25;
             this.colScientificName.Name = "colScientificName";
             this.colScientificName.Visible = true;
-            this.colScientificName.VisibleIndex = 5;
+            this.colScientificName.VisibleIndex = 6;
             this.colScientificName.Width = 94;
             // 
             // colScientificDegree
@@ -174,7 +176,7 @@ namespace TeachingLoadInfoSystem
             this.colScientificDegree.MinWidth = 25;
             this.colScientificDegree.Name = "colScientificDegree";
             this.colScientificDegree.Visible = true;
-            this.colScientificDegree.VisibleIndex = 6;
+            this.colScientificDegree.VisibleIndex = 7;
             this.colScientificDegree.Width = 94;
             // 
             // colDepartment
@@ -184,7 +186,7 @@ namespace TeachingLoadInfoSystem
             this.colDepartment.MinWidth = 25;
             this.colDepartment.Name = "colDepartment";
             this.colDepartment.Visible = true;
-            this.colDepartment.VisibleIndex = 7;
+            this.colDepartment.VisibleIndex = 8;
             this.colDepartment.Width = 94;
             // 
             // colWorkTime
@@ -194,7 +196,7 @@ namespace TeachingLoadInfoSystem
             this.colWorkTime.MinWidth = 25;
             this.colWorkTime.Name = "colWorkTime";
             this.colWorkTime.Visible = true;
-            this.colWorkTime.VisibleIndex = 8;
+            this.colWorkTime.VisibleIndex = 9;
             this.colWorkTime.Width = 94;
             // 
             // colID
@@ -203,7 +205,7 @@ namespace TeachingLoadInfoSystem
             this.colID.MinWidth = 25;
             this.colID.Name = "colID";
             this.colID.Visible = true;
-            this.colID.VisibleIndex = 9;
+            this.colID.VisibleIndex = 10;
             this.colID.Width = 94;
             // 
             // barManager1
@@ -394,6 +396,16 @@ namespace TeachingLoadInfoSystem
             this.barDockControlRight.Manager = this.barManager1;
             this.barDockControlRight.Size = new System.Drawing.Size(0, 529);
             // 
+            // gridColumn1
+            // 
+            this.gridColumn1.Caption = "gridColumn1";
+            this.gridColumn1.FieldName = "TeacherCode";
+            this.gridColumn1.MinWidth = 25;
+            this.gridColumn1.Name = "gridColumn1";
+            this.gridColumn1.Visible = true;
+            this.gridColumn1.VisibleIndex = 0;
+            this.gridColumn1.Width = 94;
+            // 
             // TeacherInfoGridForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 16F);
@@ -449,5 +461,6 @@ namespace TeachingLoadInfoSystem
         private DevExpress.XtraBars.BarButtonItem saveLayoutBtn;
         private DevExpress.XtraBars.BarButtonItem downloadTemplateBtn;
         private DevExpress.XtraBars.BarButtonItem importBtn;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn1;
     }
 }

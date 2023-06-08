@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using TeachingLoadInfoSystem.AppDbContext;
 
@@ -11,9 +12,11 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    partial class TLDbContextModelSnapshot : ModelSnapshot
+    [Migration("20230607063458_unec8")]
+    partial class unec8
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -962,7 +965,7 @@ namespace TeachingLoadInfoSystem.Migrations
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoadSubject", b =>
                 {
-                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subjects")
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subject")
                         .WithMany()
                         .HasForeignKey("SubjectID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -974,7 +977,7 @@ namespace TeachingLoadInfoSystem.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Subjects");
+                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>

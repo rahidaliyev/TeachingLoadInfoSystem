@@ -20,25 +20,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="IncludedEducationPlanGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Update="ExcludedEducationPlanGridForm.cs">
-      <SubType>Form</SubType>
-    </Compile>
+    <Compile Update="IncludedEducationPlanGridForm.cs" />
+    <Compile Update="ExcludedEducationPlanGridForm.cs" />
     <Compile Update="TeachingLoadCRUDForm.cs" />
     <Compile Update="TLExcludedInnerGridForm.cs" />
     <Compile Update="TLExcludedGridForm.cs" />
     <Compile Update="TLIncludedGridForm.cs" />
-    <Compile Update="LanguageCRUDForm.cs" />
-    <Compile Update="LanguageGridForm.cs" />
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <Compile Update="ScientificNameCRUDForm.cs" />
-    <Compile Update="ScientificNameGridForm.cs" />
     <Compile Update="SubjectCRUDForm.cs" />
     <Compile Update="SubjectGridForm.cs" />
     <Compile Update="UserControlPreviousJob.cs">
@@ -50,11 +42,7 @@
     <Compile Update="UserControlCertificate.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Update="ScientificDegreeCRUDForm.cs" />
-    <Compile Update="WorkTimeCRUDForm.cs" />
     <Compile Update="TeacherInfoGridForm.cs" />
-    <Compile Update="ScientificDegreeGridForm.cs" />
-    <Compile Update="WorkTimeGridForm.cs" />
   </ItemGroup>
 
   <ItemGroup>

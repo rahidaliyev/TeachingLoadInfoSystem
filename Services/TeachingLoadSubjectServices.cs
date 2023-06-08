@@ -16,8 +16,9 @@ namespace TeachingLoadInfoSystem.Services
         public TeachingLoadSubject GetTeachingLoadSubjectByID(int id)
         {
             var selectedTeacher = _repository
-                .GetAll
-                .FirstOrDefault(x => x.ID == id);
+                .GetAll.Include(x=>x.Subjects)
+                .FirstOrDefault(x => x.ID == id)
+                ;
             return selectedTeacher;
         }
         public void InsertTeachingLoadSubject(TeachingLoadSubject TeachingLoadSubject)
@@ -30,13 +31,13 @@ namespace TeachingLoadInfoSystem.Services
         }
         public void DeleteTeachingLoadSubject(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository.GetAll.Include(x=>x.Subjects).FirstOrDefault(x => x.ID == id);
             _repository.Delete(selectedTeacher);
         }
         public IEnumerable<TeachingLoadSubject> GetAllTeachingLoadSubjects()
         {
             return _repository
-                .GetAll
+                .GetAll.Include(x=>x.Subjects)
                 ;
         }
     }

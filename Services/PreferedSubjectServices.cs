@@ -1,4 +1,5 @@
-﻿using TeachingLoadInfoSystem.Models;
+﻿using Microsoft.EntityFrameworkCore;
+using TeachingLoadInfoSystem.Models;
 using TeachingLoadInfoSystem.Repositories.Interfaces;
 using TeachingLoadInfoSystem.Services.Intefaces;
 
@@ -14,7 +15,7 @@ namespace TeachingLoadInfoSystem.Services
         }
         public PreferedSubject GetPreferedSubjectByID(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository.GetAll.Include(x=>x.Subject).FirstOrDefault(x => x.ID == id);
             return selectedTeacher;
         }
         public void InsertPreferedSubject(PreferedSubject PreferedSubject)
@@ -27,12 +28,12 @@ namespace TeachingLoadInfoSystem.Services
         }
         public void DeletePreferedSubject(int id)
         {
-            var selectedTeacher = _repository.GetAll.FirstOrDefault(x => x.ID == id);
+            var selectedTeacher = _repository.GetAll.Include(x=>x.Subject).FirstOrDefault(x => x.ID == id);
             _repository.Delete(selectedTeacher);
         }
         public IEnumerable<PreferedSubject> GetAllPreferedSubjects()
         {
-            return _repository.GetAll;
+            return _repository.GetAll.Include(x=>x.Subject);
         }
     }
 }

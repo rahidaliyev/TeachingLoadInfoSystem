@@ -35,6 +35,7 @@ namespace TeachingLoadInfoSystem.Models
         public int ProfessionID { get; set; }   
         public virtual WorkTime? WorkTime { get; set; }
         public int WorkTimeID { get; set; }
+        public double Rating { get; set; }  
         public virtual List<Book>? Books { get; set; }
         public virtual List<Certificate>? Certificates { get; set; }
         public virtual List<PreviousJob>? PreviousJobs { get; set; }

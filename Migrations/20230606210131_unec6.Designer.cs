@@ -12,8 +12,8 @@ using TeachingLoadInfoSystem.AppDbContext;
 namespace TeachingLoadInfoSystem.Migrations
 {
     [DbContext(typeof(TLDbContext))]
-    [Migration("20230531163046_unec")]
-    partial class unec
+    [Migration("20230606210131_unec6")]
+    partial class unec6
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -150,6 +150,63 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.ToTable("EducationPlans");
                 });
 
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.EducationPlanPerGroup", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<int>("AuditoriumHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("CreditCount")
+                        .HasColumnType("int");
+
+                    b.Property<string>("GroupCourse")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LaboratoryHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LanguageID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("LectureHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("OutsideAuditoriumHours")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Semestr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SeminarHours")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpecialityCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SubjectID")
+                        .HasColumnType("int");
+
+                    b.Property<int>("TotalHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WeeklyCourseLoad")
+                        .HasColumnType("int");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("SubjectID");
+
+                    b.ToTable("EducationPlanPerGroups");
+                });
+
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.Gender", b =>
                 {
                     b.Property<int>("ID")
@@ -167,6 +224,33 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.HasKey("ID");
 
                     b.ToTable("Genders");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Group", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
+
+                    b.Property<string>("GroupCourse")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LanguageID")
+                        .HasColumnType("int");
+
+                    b.Property<string>("SpecialityCode")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("ID");
+
+                    b.HasIndex("LanguageID");
+
+                    b.ToTable("Groups");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.Language", b =>
@@ -523,6 +607,9 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Property<int>("ProfessionID")
                         .HasColumnType("int");
 
+                    b.Property<double>("Rating")
+                        .HasColumnType("float");
+
                     b.Property<int>("ScientificDegreeID")
                         .HasColumnType("int");
 
@@ -595,20 +682,12 @@ namespace TeachingLoadInfoSystem.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("TeacherFather")
+                    b.Property<string>("TeacherFullName")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("TeacherInfoID")
                         .HasColumnType("int");
-
-                    b.Property<string>("TeacherName")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("TeacherSurname")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ID");
 
@@ -623,59 +702,38 @@ namespace TeachingLoadInfoSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("ID"));
 
-                    b.Property<int>("Doctorate")
+                    b.Property<int>("AuditoriumHours")
                         .HasColumnType("int");
 
-                    b.Property<int>("EPedTETedTTKITA")
+                    b.Property<int>("CreditCount")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExamFirstSem")
+                    b.Property<string>("GroupCourse")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("GroupName")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("LaboratoryHours")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExamSecondSem")
+                    b.Property<int>("LanguageID")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExerciseFirstSem")
+                    b.Property<int>("LectureHours")
                         .HasColumnType("int");
 
-                    b.Property<int>("ExerciseSecondSem")
+                    b.Property<int>("OutsideAuditoriumHours")
                         .HasColumnType("int");
 
-                    b.Property<int>("FinalResult")
+                    b.Property<string>("Semestr")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int>("SeminarHours")
                         .HasColumnType("int");
 
-                    b.Property<int>("FirstSemSum")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LaboratoryFirstSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LaboratorySecondSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LectureFirstSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("LectureSecondSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("MasterThesis")
-                        .HasColumnType("int");
-
-                    b.Property<int>("PrLeader")
-                        .HasColumnType("int");
-
-                    b.Property<int>("Practise")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecommendationFirstSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("RecommendationSecondSem")
-                        .HasColumnType("int");
-
-                    b.Property<int>("SecondSemSum")
-                        .HasColumnType("int");
+                    b.Property<string>("SpecialityCode")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<int>("SubjectID")
                         .HasColumnType("int");
@@ -683,7 +741,10 @@ namespace TeachingLoadInfoSystem.Migrations
                     b.Property<int>("TeachingLoadID")
                         .HasColumnType("int");
 
-                    b.Property<int>("Thesis")
+                    b.Property<int>("TotalHours")
+                        .HasColumnType("int");
+
+                    b.Property<int>("WeeklyCourseLoad")
                         .HasColumnType("int");
 
                     b.HasKey("ID");
@@ -773,6 +834,28 @@ namespace TeachingLoadInfoSystem.Migrations
                         .IsRequired();
 
                     b.Navigation("Subjects");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.EducationPlanPerGroup", b =>
+                {
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subject")
+                        .WithMany()
+                        .HasForeignKey("SubjectID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Subject");
+                });
+
+            modelBuilder.Entity("TeachingLoadInfoSystem.Models.Group", b =>
+                {
+                    b.HasOne("TeachingLoadInfoSystem.Models.Language", "Language")
+                        .WithMany()
+                        .HasForeignKey("LanguageID")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Language");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.PreferedSubject", b =>
@@ -882,7 +965,7 @@ namespace TeachingLoadInfoSystem.Migrations
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeachingLoadSubject", b =>
                 {
-                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subjects")
+                    b.HasOne("TeachingLoadInfoSystem.Models.Subject", "Subject")
                         .WithMany()
                         .HasForeignKey("SubjectID")
                         .OnDelete(DeleteBehavior.Cascade)
@@ -894,7 +977,7 @@ namespace TeachingLoadInfoSystem.Migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.Navigation("Subjects");
+                    b.Navigation("Subject");
                 });
 
             modelBuilder.Entity("TeachingLoadInfoSystem.Models.TeacherInfo", b =>

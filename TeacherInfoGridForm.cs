@@ -78,7 +78,7 @@ namespace TeachingLoadInfoSystem
         private void newBtn_ItemClick(object sender, DevExpress.XtraBars.ItemClickEventArgs e)
         {
             TeacherInfoCRUDForm frm = new TeacherInfoCRUDForm(teacherinfo, _teacherInfoServices);
-            frm.ShowDialog();
+            frm.Show();
             RefreshGrid();
             teacherinfo = new TeacherInfo();
         }

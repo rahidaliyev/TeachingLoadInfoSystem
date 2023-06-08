@@ -30,55 +30,27 @@ namespace TeachingLoadInfoSystem
             }
         }
 
-        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            newTabbedForm(new TeacherInfoGridForm(), "Müəllim haqqında");
-        }
-
-        private void barButtonItem31_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            newTabbedForm(new WorkTimeGridForm(), "Ştat");
-        }
-
-        private void barButtonItem32_ItemClick(object sender, ItemClickEventArgs e)
-        {
-            newTabbedForm(new DepartmentGridForm(), "Kafedra");
-        }
-
         private void subjectAccBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new SubjectGridForm(), "Fənn");
         }
 
-        private void scientificNameAccBtn_Click(object sender, EventArgs e)
-        {
-            newTabbedForm(new ScientificNameGridForm(), "Elmi ad");
-        }
+    
 
         private void teacherInfoAccBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new TeacherInfoGridForm(), "Müəllim haqqında");
         }
 
-        private void WorkHoursAccBtn_Click(object sender, EventArgs e)
-        {
-            newTabbedForm(new WorkTimeGridForm(), "Ştat");
-        }
+    
 
         private void departmentAccBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new DepartmentGridForm(), "Kafedra");
         }
 
-        private void scientificDegreeAccBtn_Click(object sender, EventArgs e)
-        {
-            newTabbedForm(new ScientificDegreeGridForm(), "Elmi dərəcə");
-        }
-        private void languageAccBtn_Click(object sender, EventArgs e)
-        {
-            newTabbedForm(new LanguageGridForm(), "Dil haqqında");
-        }
-
+   
+    
         private void exitBtn_ItemClick(object sender, ItemClickEventArgs e)
         {
             Dispose();
@@ -104,6 +76,11 @@ namespace TeachingLoadInfoSystem
         private void specialityBtn_Click(object sender, EventArgs e)
         {
             newTabbedForm(new EducationPlanGridForm(), "Tədris planı");
+        }
+
+        private void barButtonItem30_ItemClick(object sender, ItemClickEventArgs e)
+        {
+            newTabbedForm(new JoinForGroupAndEducationPlanForm(), "sadas");
         }
     }
 }

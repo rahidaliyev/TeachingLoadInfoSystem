@@ -1,5 +1,6 @@
 using TeachingLoadInfoSystem;
 using TeachingLoadInfoSystem;
+using TeachingLoadInfoSystem.Models;
 
 namespace TeachingLoadInfoSystem
 {
@@ -14,8 +15,14 @@ namespace TeachingLoadInfoSystem
             // To customize application configuration such as set high DPI settings or default font,
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
-            //Application.Run(new TLMenu());
+            User user = new User() 
+            {
+                UserName = "sa",
+                UserPassword= "1",
+            };
+            //Application.Run(new TLMenu(user));
             Application.Run(new Login());
+            //Application.Run(new JoinForGroupAndEducationPlanForm());
         }
     }
 }

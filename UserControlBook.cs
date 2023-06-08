@@ -17,7 +17,7 @@ namespace TeachingLoadInfoSystem
             InitializeComponent();
             this.db = db;
             _bookServices = new BookServices(new Repository<Book>(db));
-            layoutControl1.AutoScroll = false;
+            //layoutControl1.AutoScroll = false;
         }
         public UserControlBook(TLDbContext db, Book books)
         {
@@ -25,7 +25,7 @@ namespace TeachingLoadInfoSystem
             Books = books;
             InitializeComponent();
             _bookServices = new BookServices(new Repository<Book>(db));
-            layoutControl1.AutoScroll = false;
+            //layoutControl1.AutoScroll = false;
             LoadBooks();
         }
         public void LoadBooks()

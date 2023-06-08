@@ -18,11 +18,13 @@ namespace TeachingLoadInfoSystem
         IWorkTimeServices _workTimeServices { get; set; }
         ILanguageServices _languageServices { get; set; }
         ITeacherLanguageServices _teacherLanguageServices { get; set; }
+        IProfessionServices _professionServices { get; set; }
         private Gender _gender { get; set; } = new Gender();
         private ScientificName _scientificName { get; set; } = new ScientificName();
         private ScientificDegree _scientificDegree { get; set; } = new ScientificDegree();
         private Department _department { get; set; } = new Department();
         private WorkTime _workTime { get; set; } = new WorkTime();
+        private Profession _profession { get; set; } = new Profession();
         public void LoadComboboxes()
         {
             genderCmb.Properties.DataSource = _genderServices.GetAllGenders().ToList();
@@ -30,6 +32,7 @@ namespace TeachingLoadInfoSystem
             degreeCmb.Properties.DataSource = _degreeServices.GetAllScientificDegrees().ToList();
             departmentCmb.Properties.DataSource = _departmentServices.GetAllDepartments().ToList();
             workTimeCmb.Properties.DataSource = _workTimeServices.GetAllWorkTimes().ToList();
+            positionCmb.Properties.DataSource = _professionServices.GetAllProfessions().ToList();
         }
         public TeacherInfoCRUDForm(TeacherInfo teacherInfo, ITeacherInfoServices services)
         {
@@ -44,12 +47,14 @@ namespace TeachingLoadInfoSystem
             _workTimeServices = new WorkTimeServices(new Repository<WorkTime>(db));
             _languageServices  = new LanguageServices(new Repository<Language>(db));
             _teacherLanguageServices = new TeacherLanguageServices(new Repository<TeacherLanguage>(db));
+            _professionServices = new ProfessionServices(new Repository<Profession>(db));
             gridControlL.DataSource = _teacherLanguageServices.GetAllTeacherLanguages().Where(x => x.TeacherInfoID == teacherinfo.ID);
             LoadComboboxes();
             LoadData();
         }
         public void InsertData()
         {
+            teacherinfo.TeacherCode = teacherCodeTxt.Text;
             teacherinfo.TeacherFullName = nameTxt.Text;
             teacherinfo.BirthDate = DateTime.ParseExact(birthDate.Text, "dd-MM-yyyy", null);
             teacherinfo.Email = mailTxt.Text;
@@ -59,12 +64,14 @@ namespace TeachingLoadInfoSystem
             teacherinfo.ScientificDegree = _scientificDegree;
             teacherinfo.ScientificName = _scientificName;
             teacherinfo.WorkTime = _workTime;
+            teacherinfo.Profession = _profession;
             teacherinfo.Books = GetBooks();
             teacherinfo.Certificates = GetCertificates();
             teacherinfo.PreviousJobs = GetPreviousJobs();
         }
         public void LoadData()
         {
+            teacherCodeTxt.Text = teacherinfo.TeacherCode;
             nameTxt.Text = teacherinfo.TeacherFullName;
             birthDate.Text = teacherinfo.BirthDate.ToString("MM-dd-yyyy");
             mailTxt.Text = teacherinfo.Email;
@@ -74,6 +81,7 @@ namespace TeachingLoadInfoSystem
             scientificNameCmb.EditValue = teacherinfo.ScientificName;
             departmentCmb.EditValue = teacherinfo.Department;
             workTimeCmb.EditValue = teacherinfo.WorkTime;
+            positionCmb.EditValue = teacherinfo.Profession;
             GetBooksToPanel(teacherinfo.Books);
             GetCertificatesToPanel(teacherinfo.Certificates);
             GetJobsToPanel(teacherinfo.PreviousJobs);
@@ -184,7 +192,7 @@ namespace TeachingLoadInfoSystem
             {
                 Dock = DockStyle.Fill,
             };
-            bookPanelControl.AutoScroll = true;
+            //bookPanelControl.AutoScroll = true;
             bookPanelControl.Controls.Add(userControl);
         }
         private void addCertificateBtn_Click(object sender, EventArgs e)
@@ -209,46 +217,42 @@ namespace TeachingLoadInfoSystem
         {
             _scientificName = scientificNameCmb.GetSelectedDataRow() as ScientificName;
             if (_scientificName == null)
-            {
                 scientificNameCmb.EditValue = _scientificNameServices.GetScientificNameByID(teacherinfo.ScientificNameID);
-            }
         }
 
         private void departmentCmb_EditValueChanged(object sender, EventArgs e)
         {
             _department = departmentCmb.GetSelectedDataRow() as Department;
             if (_department == null)
-            {
                 departmentCmb.EditValue = _departmentServices.GetDepartmentByID(teacherinfo.DepartmentID);
-            }
         }
 
         private void degreeCmb_EditValueChanged(object sender, EventArgs e)
         {
             _scientificDegree = degreeCmb.GetSelectedDataRow() as ScientificDegree;
             if (_scientificDegree == null)
-            {
                 degreeCmb.EditValue = _degreeServices.GetScientificDegreeByID(teacherinfo.ScientificDegreeID);
-            }
         }
 
         private void workTimeCmb_EditValueChanged(object sender, EventArgs e)
         {
             _workTime = workTimeCmb.GetSelectedDataRow() as WorkTime;
             if (_workTime == null)
-            {
                 workTimeCmb.EditValue = _workTimeServices.GetWorkTimeByID(teacherinfo.WorkTimeID);
-            }
         }
 
         private void genderCmb_EditValueChanged(object sender, EventArgs e)
         {
             _gender = genderCmb.GetSelectedDataRow() as Gender;
             if (_gender == null)
-            {
                 genderCmb.EditValue = _genderServices.GetGenderByID(teacherinfo.GenderID);
-            }
         }
 
+        private void positionCmb_EditValueChanged(object sender, EventArgs e)
+        {
+            _profession  = positionCmb.GetSelectedDataRow() as Profession;
+            if (_profession == null)
+                positionCmb.EditValue = _professionServices.GetProfessionByID(teacherinfo.ProfessionID);
+        }
     }
 }
