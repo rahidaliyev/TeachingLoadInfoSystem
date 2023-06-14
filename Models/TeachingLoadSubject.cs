@@ -18,5 +18,6 @@
         public string? GroupName { get; set; }
         public string? GroupCourse { get; set; }
         public int LanguageID { get; set; }
+        public int EducationPlanPerGroupID { get; set; } 
     }
 }

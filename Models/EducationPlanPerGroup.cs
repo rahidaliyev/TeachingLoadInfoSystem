@@ -8,10 +8,6 @@ namespace TeachingLoadInfoSystem.Models
 {
     public class EducationPlanPerGroup : EntityBase
     {
-        //public EducationPlanPerGroup() 
-        //{
-        //    Subject = new Subject();
-        //}  
         public string? SpecialityCode { get; set; }  
         public virtual Subject? Subject { get; set; }
         public int SubjectID { get; set; }

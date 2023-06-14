@@ -19,7 +19,7 @@ namespace TeachingLoadInfoSystem
         WorkTime _workTime { get; set; }
         public void RefreshGrid()
         {
-            gridControl.DataSource = _teacherInfoServices.GetAllTeacherInfos().ToList();
+            gridControl.DataSource = _teacherInfoServices.GetAllTeacherInfos().OrderByDescending(x=>x.Rating).ToList();
         }
         private void TeacherInfoGridForm_Load(object sender, EventArgs e)
         {
