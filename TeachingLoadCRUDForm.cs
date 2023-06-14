@@ -55,6 +55,7 @@ namespace TeachingLoadInfoSystem
             this.teachingload = teachingload;
             teacherCmb.Properties.DataSource = _teacherInfoServices.GetAllTeacherInfos().OrderByDescending(x=>x.Rating).ToList();
             subjectCmb.Properties.DataSource = _subjectServices.GetAllSubjects().ToList();
+            teachingLoadYearCmb.SelectedIndex = 0;
             LoadData();
         }
 

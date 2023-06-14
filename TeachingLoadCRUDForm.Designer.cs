@@ -53,8 +53,8 @@
             this.gridControl1 = new DevExpress.XtraGrid.GridControl();
             this.gridView1 = new DevExpress.XtraGrid.Views.Grid.GridView();
             this.colSpecialityCode = new DevExpress.XtraGrid.Columns.GridColumn();
+            this.gridColumn5 = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colSubject = new DevExpress.XtraGrid.Columns.GridColumn();
-            this.colSubjectID = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colCreditCount = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colTotalHours = new DevExpress.XtraGrid.Columns.GridColumn();
             this.colOutsideAuditoriumHours = new DevExpress.XtraGrid.Columns.GridColumn();
@@ -369,8 +369,8 @@
             // 
             this.gridView1.Columns.AddRange(new DevExpress.XtraGrid.Columns.GridColumn[] {
             this.colSpecialityCode,
+            this.gridColumn5,
             this.colSubject,
-            this.colSubjectID,
             this.colCreditCount,
             this.colTotalHours,
             this.colOutsideAuditoriumHours,
@@ -399,6 +399,16 @@
             this.colSpecialityCode.VisibleIndex = 1;
             this.colSpecialityCode.Width = 94;
             // 
+            // gridColumn5
+            // 
+            this.gridColumn5.Caption = "Fənnin kodu";
+            this.gridColumn5.FieldName = "Subject.SubjectCode";
+            this.gridColumn5.MinWidth = 25;
+            this.gridColumn5.Name = "gridColumn5";
+            this.gridColumn5.Visible = true;
+            this.gridColumn5.VisibleIndex = 2;
+            this.gridColumn5.Width = 94;
+            // 
             // colSubject
             // 
             this.colSubject.Caption = "Subject";
@@ -406,17 +416,8 @@
             this.colSubject.MinWidth = 25;
             this.colSubject.Name = "colSubject";
             this.colSubject.Visible = true;
-            this.colSubject.VisibleIndex = 2;
+            this.colSubject.VisibleIndex = 3;
             this.colSubject.Width = 94;
-            // 
-            // colSubjectID
-            // 
-            this.colSubjectID.FieldName = "SubjectID";
-            this.colSubjectID.MinWidth = 25;
-            this.colSubjectID.Name = "colSubjectID";
-            this.colSubjectID.Visible = true;
-            this.colSubjectID.VisibleIndex = 3;
-            this.colSubjectID.Width = 94;
             // 
             // colCreditCount
             // 
@@ -891,7 +892,6 @@
         private BindingSource educationPlanPerGroupsBindingSource;
         private DevExpress.XtraGrid.Columns.GridColumn colSpecialityCode;
         private DevExpress.XtraGrid.Columns.GridColumn colSubject;
-        private DevExpress.XtraGrid.Columns.GridColumn colSubjectID;
         private DevExpress.XtraGrid.Columns.GridColumn colCreditCount;
         private DevExpress.XtraGrid.Columns.GridColumn colTotalHours;
         private DevExpress.XtraGrid.Columns.GridColumn colOutsideAuditoriumHours;
@@ -918,6 +918,7 @@
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn2;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn3;
         private DevExpress.XtraGrid.Columns.GridColumn gridColumn4;
+        private DevExpress.XtraGrid.Columns.GridColumn gridColumn5;
     }
 }
 
